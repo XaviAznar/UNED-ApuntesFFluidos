@@ -3064,12 +3064,13 @@ reference "fig:1.1.1 Esquema básico"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename imgs/fig-01.png
+	scale 80
 
 \end_inset
 
@@ -3083,7 +3084,7 @@ status collapsed
 Discontinuidad en la componente tangencial de la velocidad.
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:1 Discontinuidad en la componente tangencial de la velocidad"
+name "L01 p22 fig:1 Discontinuidad en la componente tangencial de la velocidad"
 
 \end_inset
 
@@ -3092,10 +3093,6 @@ name "fig:1 Discontinuidad en la componente tangencial de la velocidad"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -3535,7 +3532,7 @@ Existe una diferencia importante entre la ecucación de Bernoulli para el
  para todo el fluido.
 \begin_inset Formula 
 \begin{eqnarray*}
-\text{Flujo general} & \rightarrow & \frac{1}{2}v^{2}+w=c_{i}\quad\text{(una \ensuremath{c_{i}} para cada línea de corriente)}\\
+\text{Flujo general} & \rightarrow & \frac{1}{2}v^{2}+w=c_{i}\quad\text{(una \ensuremath{c_{i}}para cada línea de corriente)}\\
 \text{Flujo potencial} & \rightarrow & \frac{1}{2}v^{2}+w=C\quad(\forall\text{ líneas de de corriente del fluido})
 \end{eqnarray*}
 
@@ -3550,7 +3547,1042 @@ Fluidos incompresibles
 \end_layout
 
 \begin_layout Standard
-Pag25 al final
+En un gran número de casos el flujo de fluidos (y gases) se puede suponer
+ que la densidad es invariable en el tiempo (a lo largo del movimiento)
+ y en el espacio (en todo el fluido).
+ Es decir, no existe compresión o dilatación apreciable del fluido.
+ En este caso hablamos de un 
+\emph on
+fluido incompresible
+\emph default
+.
+\begin_inset Formula 
+\[
+\text{Fluido incompresible}\iff\rho=\text{constante}
+\]
+
+\end_inset
+
+En este caso la ecuación de Euler no varía de forma, pero podemos incluir
+ 
+\begin_inset Formula $\rho$
+\end_inset
+
+ en el operador gradiente de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L01 p7 eq:2.4 Ecuación de Euler (con gravedad)"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\mathbf{grad}\left(\frac{p}{\rho}\right)+\mathbf{g}\label{L01 p27 eq:10.1 Ec. de Euler (fluido incompresible)}
+\end{equation}
+
+\end_inset
+
+La ecuación de continuidad para un fluido incompresible se simplifica
+\begin_inset Formula 
+\begin{equation}
+div\,\mathbf{v}=0\label{L01 p27 eq:10.2 Ec. continuidad (fluido incompresible)}
+\end{equation}
+
+\end_inset
+
+Como 
+\begin_inset Formula $\rho$
+\end_inset
+
+ deja de ser una función desconocida, el sistema fundamental de ecuaciones
+ de la dinámica de fluidos incompresible puede considerarse como un conjunto
+ de ecuaciones en el que sólo interviene la velocidad.
+ Por ejemplo, la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 eq:10.2 Ec. continuidad (fluido incompresible)"
+
+\end_inset
+
+ y la ecuación de Euler en función sólo de la velocidad (ecuación 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L01 p9 eq: 2.11 Ec. Euler (sólo velocidad)"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\mathbf{rot\, v}\right)=\mathbf{rot\left(v\times rot\, v\right)}\label{L01 p27 eq:10.3 Ec. Euler (sólo velocidad)}
+\end{equation}
+
+\end_inset
+
+ La ecuación de Bernoulli para un fluido incompresible también se simplifica.
+ La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 eq:10.1 Ec. de Euler (fluido incompresible)"
+
+\end_inset
+
+ difiere de la ecuación general 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L01 p8 eq: 2.9 Ec. Euler (termodinámica)"
+
+\end_inset
+
+ en que hay que escribir 
+\begin_inset Formula $\mathbf{grad}\left(\frac{p}{\rho}\right)$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $\mathbf{grad}w$
+\end_inset
+
+.
+ Así podemos escribir directamente la ecuación de Bernoulli cambiando la
+ entalpía 
+\begin_inset Formula $w$
+\end_inset
+
+ por 
+\begin_inset Formula $\frac{p}{\rho}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}v^{2}+\frac{p}{\rho}+gz=\text{constante}\label{L01 p27 eq:10.4 Ec. de Bernoulli (fluidos incompresibles)}
+\end{equation}
+
+\end_inset
+
+Podemos hacer lo mismo para la ecuación del flujo de energía en 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L01 p16 eq:6.3 Densidad de flujo de energía"
+
+\end_inset
+
+.
+ A partir de la relación termodinámica sabemos que 
+\begin_inset Formula $d\epsilon=Tds-pdV$
+\end_inset
+
+ corresponde a la variación de la energía interna.
+ Para 
+\begin_inset Formula $s=$
+\end_inset
+
+constante y 
+\begin_inset Formula $V=\frac{1}{\rho}=$
+\end_inset
+
+constante resulta 
+\begin_inset Formula $d\epsilon=0$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $\epsilon=$
+\end_inset
+
+constante.
+ Como los términos constantes en la energía no tienen importancia, podemos
+ omitir 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ en 
+\begin_inset Formula $w=\epsilon+\frac{p}{\rho}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En el caso de un flujo potencial de un fluido incompresible, las ecuaciones
+ se simplifican todavía más.
+ La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 eq:10.3 Ec. Euler (sólo velocidad)"
+
+\end_inset
+
+ se verifica idénticamente, pues en el flujo potencial 
+\begin_inset Formula $\mathbf{rot\, v}=0$
+\end_inset
+
+.
+ La ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 eq:10.2 Ec. continuidad (fluido incompresible)"
+
+\end_inset
+
+, al sustituir 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+ se transforma en 
+\begin_inset Formula 
+\begin{equation}
+\Delta\phi=\nabla^{2}\phi=0\label{L01 p27 eq:10.6 Ecuación de Laplace (flujo potencial en fluido incompresible)}
+\end{equation}
+
+\end_inset
+
+es decir, en la ecuación de Laplace para el potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación de Laplace 
+\begin_inset Formula $\Delta\phi=\nabla^{2}\phi=0$
+\end_inset
+
+ (para el potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+; flujo potencial de fluido incompresible).
+ 
+\end_layout
+
+\end_inset
+
+.
+ Esta ecuación debe complementarse con las condiciones límite en la superficie
+ donde el fluido se encuentra con cuerpos sólidos.
+ En las superficies sólidas fijas la componente de la velocidad del fluido
+ 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ normal a la superficie debe ser nula, mientras que en superficies móviles
+ debe ser igual a la componente normal de la velocidad de la superficie
+ (que es una función del tiempo).
+ Pero la velocidad 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ es la derivada normal del potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+, 
+\begin_inset Formula $v_{n}=\frac{\partial\phi}{\partial n}$
+\end_inset
+
+.
+ Entonces, las condiciones límite generales son que 
+\begin_inset Formula $\frac{\partial\phi}{\partial n}$
+\end_inset
+
+ es una función determinada de las coordenadas y el tiempo en los límites
+ del fluido.
+\end_layout
+
+\begin_layout Standard
+En el flujo potencial la velocidad está relacionada con la presión mediante
+ la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p25 eq:9.3"
+
+\end_inset
+
+.
+ En un fluido incompresible podemos sustituir 
+\begin_inset Formula $w$
+\end_inset
+
+ por 
+\begin_inset Formula $\frac{p}{\rho}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+\frac{p}{\rho}=f\left(t\right)\label{L01 p27 eq:10.7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora obtenemos otra importante propiedad del flujo potencial de un fluido
+ incompresible.
+ Suponemos que un cuerpo sólido se está moviendo a través de un fluido.
+ Si el resultado es un flujo potencial, en un instante cualquiera depende
+ sólo de la velocidad del cuerpo móvil en dicho instante y no, por ejemplo,
+ de su aceleración.
+ La ecuación de Laplace 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 eq:10.6 Ecuación de Laplace (flujo potencial en fluido incompresible)"
+
+\end_inset
+
+ no contiene explícitamente el tiempo, el cual entra en la solución sólo
+ a través de las condiciones límite y éstas sólo contienen la velocidad
+ del cuerpo móvil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-02.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Punto de estancamiento
+\begin_inset CommandInset label
+LatexCommand label
+name "L01 p27 fig:2 Punto de estancamiento"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la ecuación de Bernoulli 
+\begin_inset Formula $\frac{1}{2}v^{2}+\frac{p}{\rho}=$
+\end_inset
+
+constante vemos que el flujo estacionario de un fluido incompresible (que
+ no está en un campo gravitatorio) la presión más alta se presenta en puntos
+ donde la velocidad es nula.
+ Este punto normalmente se presenta en la superficie de un cuerpo a lo largo
+ del cual se está moviendo el fluido (el punto 
+\begin_inset Formula $O$
+\end_inset
+
+ en la figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 fig:2 Punto de estancamiento"
+
+\end_inset
+
+) y se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Punto de estancamiento
+\end_layout
+
+\end_inset
+
+punto de estancamiento
+\emph default
+.
+ Si 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es la velocidad de la corriente incidente (es decir, la velocidad del fluido
+ en el infinito) y 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ es la presión en el infinito, la presión en el punto de estancamiento es:
+\begin_inset Formula 
+\begin{equation}
+p_{max}=p_{0}+\frac{1}{2}\rho u^{2}\label{L01 p27 eq:10.8 Presión en el punto de estancamiento}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Si la distribución de velocidades en un fluido móvil depende sólo de dos
+ coordenadas, por ejemplo 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+, y la velocidad es en todas partes paralela al plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ entonces se dice que el 
+\emph on
+flujo es bidimensional
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Flujo bidimensional
+\end_layout
+
+\end_inset
+
+
+\emph default
+ o 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Flujo plano
+\end_layout
+
+\end_inset
+
+flujo plano.
+\end_layout
+
+\begin_layout Standard
+Para resolver problemas de flujo bidimensional a veces es conveniente expresar
+ la velocidad en función de lo que se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Función de corriente 
+\begin_inset Formula $\psi$
+\end_inset
+
+
+\emph default
+ 
+\end_layout
+
+\end_inset
+
+función de corriente
+\emph default
+ 
+\begin_inset Formula $\psi$
+\end_inset
+
+.
+ A partir de la ecuación de continuidad 
+\begin_inset Formula $div\,\mathbf{v}=\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y}=0$
+\end_inset
+
+ vemos que las ecuaciones de la velocidad pueden escribirse como derivadas
+ de cierta función 
+\begin_inset Formula $\psi\left(x,y\right)$
+\end_inset
+
+ denominada 
+\emph on
+función de corriente
+\emph default
+: 
+\begin_inset Formula 
+\begin{equation}
+v_{x}=\frac{\partial\text{\psi}}{\partial y}\quad v_{y}=-\frac{\partial\text{\psi}}{\partial x}\label{L01 p28 eq:10.9 Velocidad en función de la "función de corriente"}
+\end{equation}
+
+\end_inset
+
+La ecuación de continuidad, así, se satisface automáticamente.
+ Para resolver el problema del flujo plano ahora vemos qué condiciones debe
+ satisfacer 
+\begin_inset Formula $\psi$
+\end_inset
+
+ introduciendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p28 eq:10.9 Velocidad en función de la \"función de corriente\""
+
+\end_inset
+
+ en la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p27 eq:10.3 Ec. Euler (sólo velocidad)"
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+A continuación obtenemos el primer término de la ecuación de Euler para
+ la función de corriente 
+\begin_inset Formula $\frac{\partial}{\partial t}\mathbf{rot\, v}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\mathbf{rot\, v}=\frac{\partial}{\partial t}\left|\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+v_{x} & v_{y} & 0
+\end{array}\right|=\frac{\partial}{\partial t}\left[\mathbf{k}\left(\frac{\partial v_{y}}{\partial x}-\frac{\partial v_{x}}{\partial y}\right)\right]=\frac{\partial}{\partial t}\left[\mathbf{k}\left(\frac{\partial^{2}\psi}{\partial x^{2}}+\frac{\partial^{2}\psi}{\partial y^{2}}\right)\right]=\frac{\partial}{\partial t}\left(\nabla^{2}\psi\right)=\frac{\partial}{\partial t}\Delta\psi
+\]
+
+\end_inset
+
+El resto de términos se obtienen del mismo modo.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\Delta\psi-\frac{\partial\psi}{\partial x}\frac{\partial}{\partial y}\Delta\psi+\frac{\partial\psi}{\partial y}\frac{\partial}{\partial x}\Delta\psi=0\label{L01 p28 eq:10.10 Ec de Euler para la función de corriente}
+\end{equation}
+
+\end_inset
+
+Si conocemos la función de corriente podemos determinar inmediatamente la
+ forma de las líneas de corriente en el caso del flujo estacionario.
+ La ecuación diferencial de las líneas de corriente (en el flujo bidimensional)
+ es
+\begin_inset Formula 
+\[
+\frac{dx}{v_{x}}=\frac{dy}{v_{y}}\rightarrow v_{y}dx-v_{x}dy=0
+\]
+
+\end_inset
+
+Esta ecuación expresa el hecho de que la dirección de la tangente a una
+ línea de corriente es la dirección de la velocidad.
+ Sustituyendo la velocidad en función de la función de corriente (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p28 eq:10.9 Velocidad en función de la \"función de corriente\""
+
+\end_inset
+
+) tenemos:
+\begin_inset Formula 
+\[
+\frac{\partial\psi}{\partial x}dx+\frac{\partial\psi}{\partial y}dy=d\psi=0
+\]
+
+\end_inset
+
+de donde 
+\begin_inset Formula $\psi=constante$
+\end_inset
+
+.
+ Es decir, las líneas de corriente son la familia de curvas obtenida haciendo
+ la función de corriente 
+\begin_inset Formula $\psi\left(x,y\right)$
+\end_inset
+
+ igual a una constante arbitraria.
+\end_layout
+
+\begin_layout Standard
+Si dibujamos una curva entre dos puntos A y B en el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+, el flujo de masa 
+\begin_inset Formula $Q$
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Flujo de masa Q 
+\end_layout
+
+\end_inset
+
+ a través de esta curva viene dada por la diferencia de los valores de la
+ función de corriente en esos dos puntos, independientemente de la forma
+ de la curva.
+ Porque si 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ es la componente de la velocidad normal a la curva en un puntu cualquiera,
+ tenemos
+\begin_inset Formula 
+\[
+Q=\rho\oint_{A}^{B}v_{n}dl=\rho\oint_{A}^{B}\left(-v_{y}dx+v_{x}dy\right)=\rho\oint_{A}^{B}d\psi
+\]
+
+\end_inset
+
+de manera que
+\begin_inset Formula 
+\begin{equation}
+Q=\rho\left(\psi_{B}-\psi_{A}\right)\label{L01 p28 eq:10.11 Flujo de masa entre dos puntos de una línea de corriente}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Existen potentes métodos para resolver problemas de un flujo potencial bidimensi
+onal en el caso de un fluido incompresible que rodea a cuerpos de diversos
+ perfiles en los que interviene la aplicación de la teoría de funciones
+ de una variable compleja.
+ La base de los métodos es la siguiente.
+\end_layout
+
+\begin_layout Standard
+La función potencial y la corriente están relacionadas con las componentes
+ de la velocidad por 
+\begin_inset Formula 
+\[
+v_{x}=\frac{\partial\phi}{\partial x}=\frac{\partial\psi}{\partial y}\quad v_{y}=\frac{\partial\phi}{\partial y}=-\frac{\partial\psi}{\partial x}
+\]
+
+\end_inset
+
+ Estas relaciones entre las derivadas de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\psi$
+\end_inset
+
+ son, matemáticamente, las mismas que las condiciones de Cauchy-Riemann
+ para que una expresión compleja
+\begin_inset Formula 
+\begin{equation}
+w=\phi+i\psi\label{L01 eq29 10.12 Potencial complejo}
+\end{equation}
+
+\end_inset
+
+sea una función analítica del argumento complejo 
+\begin_inset Formula $z=x+iy$
+\end_inset
+
+.
+ Esto significa que la función 
+\begin_inset Formula $w\left(z\right)$
+\end_inset
+
+ tiene en cada punto una derivada bien definida
+\begin_inset Formula 
+\begin{equation}
+\frac{dw}{dz}=\frac{\partial\phi}{\partial x}+i\frac{\partial\phi}{\partial y}=v_{x}-iv_{y}\label{L01 p29 eq:10.13 Velocidad compleja}
+\end{equation}
+
+\end_inset
+
+ La función 
+\begin_inset Formula $w$
+\end_inset
+
+ se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Potencial complejo 
+\begin_inset Formula $w=\phi+i\psi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+potencial complejo
+\emph default
+ y 
+\begin_inset Formula $\frac{dw}{dz}$
+\end_inset
+
+ se llama 
+\emph on
+velocidad compleja
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Velocidad compleja 
+\begin_inset Formula $\frac{dw}{dz}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ El módulo y el argumento de esta última dan el módulo 
+\begin_inset Formula $v$
+\end_inset
+
+ de la velocidad y el ángulo 
+\begin_inset Formula $\theta$
+\end_inset
+
+ formado por la dirección de la velocidad con el eje 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\frac{dw}{dx}=ve^{-i\theta}\label{L01 p29 eq:10.14}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En una superficie sólida, alrededor de la cual tiene lugar el flujo, la
+ velocidad debe estar dirigida sobre la tangente.
+ Es decir, el contorno del perfil de la superficie debe ser una línea de
+ corriente.
+ O lo que es lo mismo, 
+\begin_inset Formula $\psi=constante$
+\end_inset
+
+ a lo largo de la misma.
+ La constante puede considerarse como cero y entonces el problema del fluo
+ que rodea un contorno determinado se reduce a la determinación de una función
+ analítica 
+\begin_inset Formula $w\left(z\right)$
+\end_inset
+
+ que tome valores reales en el contorno.
+ El enunciado del problema es más complicado cuando el fluido tiene una
+ superficie libre.
+\end_layout
+
+\begin_layout Standard
+La integral de una función analítica a lo largo de cualquier contorno cerrado
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ es 
+\begin_inset Formula $2\pi i$
+\end_inset
+
+ veces la suma de los residuos de la función en sus polos simples en el
+ interior de 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\oint w'dz=2\pi i\sum_{k}A_{k}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ son los residuos de la velocidad compleja.
+ También tenemos
+\begin_inset Formula 
+\begin{eqnarray*}
+\oint w'dz & = & \oint\left(v_{x}-iv_{y}\right)\left(dx+idy\right)=\\
+ & = & \oint\left(v_{x}dx+v_{y}dy\right)+i\oint\left(v_{x}dy-v_{y}dx\right)
+\end{eqnarray*}
+
+\end_inset
+
+La parte real de esta expresión es precisamente la circulación de la velocidad
+ 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ a lo largo del contorno 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ La parte imaginaria, multiplicada por 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es el flujo de masa que atraviesa 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Si no existen fuentes de fluido dentro del contorno, este flujo es cero
+ y por tanto
+\begin_inset Formula 
+\begin{equation}
+\Gamma=2\pi i\sum_{k}A_{k}\label{L01 p30 eq:10.15 Circulación (como suma de residuos complejos)}
+\end{equation}
+
+\end_inset
+
+siendo en este caso todos los residuos 
+\begin_inset Formula $A_{k}$
+\end_inset
+
+ imaginarios puros.
+\end_layout
+
+\begin_layout Standard
+Para acabar, consideramos 
+\series bold
+en qué condiciones se puede considerar un fluido como incompresible
+\series default
+.
+ Cuando la presión varía adiabáticamente en 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+, la densidad varía en 
+\begin_inset Formula $\Delta\rho=\left(\frac{\partial\rho}{\partial p}\right)_{s}\Delta p$
+\end_inset
+
+.
+ Sin embargo, de acuerdo con la ecuación de Bernoulli, 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $\rho v^{2}$
+\end_inset
+
+ en flujo estacionario.
+ De manera que 
+\begin_inset Formula $\Delta\rho\sim\left(\frac{\partial\rho}{\partial p}\right)_{s}\rho v^{2}$
+\end_inset
+
+.
+ Más adelante se demostrará que la derivada 
+\begin_inset Formula $\left(\frac{\partial p}{\partial\rho}\right)_{s}$
+\end_inset
+
+ es el cuadrado de la velocidad de sonido 
+\begin_inset Formula $c$
+\end_inset
+
+ en el fluido, de modo que 
+\begin_inset Formula $\Delta\rho\sim\frac{\rho v^{2}}{c^{2}}$
+\end_inset
+
+.
+ El fluido puede considerarse incompresible si 
+\begin_inset Formula $\frac{\Delta\rho}{\rho}\ll1$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\text{Fluido incompresible}\iff\frac{\Delta\rho}{\rho}\ll1
+\]
+
+\end_inset
+
+Una condición necesaria para que se cumpla ésto es que la velocidad del
+ fluido sea pequeña comparada con la del sonido:
+\begin_inset Formula 
+\begin{equation}
+\text{Fluido incompresible (flujo estacionario)}\iff v\ll c\label{L01 p30 eq:10.16 Condición para considerar fluido incompresible v<<c (flujo estacionario)}
+\end{equation}
+
+\end_inset
+
+La condición (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p30 eq:10.16 Condición para considerar fluido incompresible v<<c (flujo estacionario)"
+
+\end_inset
+
+) sólo es suficiente en flujo estacionario.
+\end_layout
+
+\begin_layout Standard
+En un flujo no estacionario, debe cumplirse, además, otra condición.
+ Sean 
+\begin_inset Formula $\tau$
+\end_inset
+
+ y 
+\begin_inset Formula $l$
+\end_inset
+
+ un tiempo y una longitud del orden de los tiempos y distancias en los que
+ la velocidad del fluido sufre una variación significativa.
+ Si son comparables los términos 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{\rho}\mathbf{grad}p$
+\end_inset
+
+ en la ecuación de Euler, encontramos, en términos de órdenes de magnitud,
+ 
+\begin_inset Formula $\frac{v}{\tau}\sim\frac{\Delta p}{l\rho}$
+\end_inset
+
+ o 
+\begin_inset Formula $\Delta p\sim\frac{l\rho v}{\tau}$
+\end_inset
+
+, y la variación correspondiente en 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es 
+\begin_inset Formula $\Delta\rho\sim\frac{l\rho v}{\tau c^{2}}$
+\end_inset
+
+.
+ Comparando a continuación los términos 
+\begin_inset Formula $\frac{\partial\rho}{\partial t}$
+\end_inset
+
+ y 
+\begin_inset Formula $\rho\, div\mathbf{v}$
+\end_inset
+
+ en la ecuación de continuidad, vemos que puede despreciarse la derivada
+ 
+\begin_inset Formula $\frac{\partial\rho}{\partial t}$
+\end_inset
+
+ (es decir, puede suponerse que 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es constante) si 
+\begin_inset Formula $\frac{\Delta\rho}{\tau}\ll\frac{\rho v}{l}$
+\end_inset
+
+, o sea
+\begin_inset Formula 
+\begin{equation}
+\text{Fluido incompresible (flujo no estacionario)}\iff\tau\gg\frac{l}{c}\label{L01 p30 eq:10.17 Condición de fluido incompresible (flujo no estacionario)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se satisfacen simultáneamente las condiones (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p30 eq:10.16 Condición para considerar fluido incompresible v<<c (flujo estacionario)"
+
+\end_inset
+
+) y (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p30 eq:10.17 Condición de fluido incompresible (flujo no estacionario)"
+
+\end_inset
+
+) puede considerarse que un fluido es incompresible.
+ 
+\end_layout
+
+\begin_layout Standard
+La condición (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p30 eq:10.17 Condición de fluido incompresible (flujo no estacionario)"
+
+\end_inset
+
+) tiene un significado evidente: el tiempo 
+\begin_inset Formula $\frac{l}{c}$
+\end_inset
+
+ que emplea una señal sonora en recorrer la distancia 
+\begin_inset Formula $l$
+\end_inset
+
+ debe ser pequeña en comparación con el tiempo 
+\begin_inset Formula $\tau$
+\end_inset
+
+ durante el cual varía apreciablemente el flujo, de manera que la propagación
+ de las interacciones en el fluido pueda considerarse como instantánea.
+\end_layout
+
+\begin_layout Standard
+PAG30
 \end_layout
 
 \end_body
