@@ -2784,7 +2784,14 @@ reference "L01 p8 eq: 2.9 Ec. Euler (termodinámica)"
 \end_layout
 
 \begin_layout Section
-Flujo potencial
+Flujo potencial 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: 9 Flujo-potencial"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5527,6 +5534,568 @@ Hacemos la constante de integración igual a cero, puesto que la velocidad
 \end_inset
 
 , como era de esperar.
+\end_layout
+
+\begin_layout Section
+Ondas de gravedad 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: 1.12-Ondas de gravedad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La superficie libre de un líquido en equilibrio en un campo gravitatorio
+ es plana.
+ Si una perturbación externa afecta a la superficie en un punto determinado,
+ aparece un movimiento en el líquido.
+ El movimiento se propaga a lo largo de la superficie en forma de 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ondas de gravedad
+\end_layout
+
+\end_inset
+
+
+\emph on
+ondas de gravedad
+\emph default
+.
+ Estas ondas afectan a la superficie y al interior del fluido, aunque su
+ efecto disminuye con la profundidad.
+\end_layout
+
+\begin_layout Standard
+Consideramos ondas de gravedad en las que la velocidad de las partículas
+ del fluido es tan pequeña que podemos despreciar el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ en comparación con 
+\begin_inset Formula $\partial\mathbf{v}/\partial t$
+\end_inset
+
+ en la ecuación de Euler.
+\end_layout
+
+\begin_layout Standard
+Durante el intervalor de tiempo 
+\begin_inset Formula $\tau$
+\end_inset
+
+, del orden del periodo de las oscilaciones de las partículas el fluido
+ en la onda, estas recorren una distancia del orden de la amplitud de onda
+ 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Por tanto, su velocidad es del orden de 
+\begin_inset Formula $a/\tau$
+\end_inset
+
+.
+ Por tanto, la derivada temporal de la velocidad es del orden de 
+\begin_inset Formula $\frac{1}{\tau}\frac{da}{dt}\simeq\frac{v}{\tau}$
+\end_inset
+
+ y las derivadas espaciales del orden de 
+\begin_inset Formula $\frac{d}{dr}\left(\frac{a}{\tau}\right)\simeq\frac{1}{\tau}\left(\sim\frac{1}{s}\frac{m}{m}=\frac{m/s}{m}\right)=\frac{v}{\lambda}$
+\end_inset
+
+.
+ Así, la condición 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ es equivalente a
+\begin_inset Formula 
+\[
+\frac{1}{\lambda}\left(\frac{a}{\tau}\right)^{2}\ll\frac{a}{\tau}\frac{1}{\tau}
+\]
+
+\end_inset
+
+o sea,
+\begin_inset Formula 
+\begin{equation}
+a\ll\lambda\label{L01 p44 eq:12.1 Condición de flujo potencial}
+\end{equation}
+
+\end_inset
+
+es decir, las amplitudes de las oscilaciones en la onda deben ser pequeñas
+ en comparación con su longitud de onda.
+ En este caso, como vimos en la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: 9 Flujo-potencial"
+
+\end_inset
+
+, cuando puede despreciarse 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ en la ecuación de Euler tenemos un flujo potencial.
+ Si además, el flujo es incompresible, podemos utilizar las ecuaciones (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p27 eq:10.6 Ecuación de Laplace (flujo potencial en fluido incompresible)"
+
+\end_inset
+
+) (ec.
+ de Laplace) y (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p27 eq:10.7"
+
+\end_inset
+
+).
+ Podemos despreciar el término 
+\begin_inset Formula $\frac{1}{2}v^{2}$
+\end_inset
+
+ porque contiene el cuadrado de la velocidad, haciendo 
+\begin_inset Formula $f\left(t\right)=0$
+\end_inset
+
+ e incluyendo un término 
+\begin_inset Formula $\rho gz$
+\end_inset
+
+ para tener el campo gravitario, obtenemos:
+\begin_inset Formula 
+\begin{equation}
+p=-\rho gz-\rho\frac{\partial\phi}{\partial t}\label{L01 p44 eq:12.2}
+\end{equation}
+
+\end_inset
+
+Tomamos el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ como vertical hacia arriba y el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ sobre la superficie en equilibrio del fluido.
+ Llamamos 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ a la coordenada 
+\begin_inset Formula $z$
+\end_inset
+
+ de un punto de la superficie.
+ 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ es función de 
+\begin_inset Formula $x,y,z$
+\end_inset
+
+ y 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ En equilibrio 
+\begin_inset Formula $\zeta=0$
+\end_inset
+
+, de modo que 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ da el desplazamiento vertical de la superficie en las oscilaciones.
+ Suponemos que sobre la superficie actúa una presión constante 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+.
+ Entonces, usando (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p44 eq:12.2"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+p_{0}=-\rho g\zeta-\rho\frac{\partial\phi}{\partial t}
+\]
+
+\end_inset
+
+Si elegimos el potencial 
+\begin_inset Formula $\phi'=\phi+\frac{p_{0}}{\rho}t$
+\end_inset
+
+ no supone ninguna diferencia, ya que 
+\begin_inset Formula $\mathbf{grad}\phi=\mathbf{grad}\phi'$
+\end_inset
+
+.
+ Sin embargo, de esta manera se elimina el término 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ de la ecuación anterior (y si prescindimos de la prima), obtenemos la condición
+ de la superficie
+\begin_inset Formula 
+\begin{equation}
+g\zeta+\left(\frac{\partial\phi}{\partial t}\right)_{z=\zeta}=0\label{L01 p45 eq:12.3 Ec. de la sup. de un fluido (campo gravitatorio)}
+\end{equation}
+
+\end_inset
+
+ Cuando la amplitud de las oscilaciones es pequeña, el desplazamiento 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ también es pequeño.
+ Aquí podemos suponer, con el mismo grado de aproximación, que la componente
+ vertical de la velocidad de los puntos en la superficie es simplemente
+ la derivada respecto al tiempo de 
+\begin_inset Formula $\zeta$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+v_{z}=\frac{\partial\zeta}{\partial t}
+\]
+
+\end_inset
+
+Pero 
+\begin_inset Formula $v_{z}=\frac{\partial\phi}{\partial t}$
+\end_inset
+
+ de modo que
+\begin_inset Formula 
+\[
+\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}=\frac{\partial\zeta}{\partial t}
+\]
+
+\end_inset
+
+Sustituyendo 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ a partir de (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p45 eq:12.3 Ec. de la sup. de un fluido (campo gravitatorio)"
+
+\end_inset
+
+) tenemos
+\begin_inset Formula 
+\[
+\left(\frac{\partial\phi}{\partial z}+\frac{1}{g}\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=\zeta}=0
+\]
+
+\end_inset
+
+Cuando las oscilaciones son pequeñas, podemos tomar el valor del paréntesis
+ en 
+\begin_inset Formula $z=0$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $z=\zeta$
+\end_inset
+
+.
+ Así pues, tenemos un sistema de ecuaciones para determinar el movimiento
+ de la superficie de un fluido en un campo gravitatorio:
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta\phi & = & 0\label{L01 p45 eq:12.4}\\
+\left(\frac{\partial\phi}{\partial z}+\frac{1}{g}\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=0} & = & 0\label{L01 p45 eq:12.5 Condición límite}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponemos que tenemos un fluido de profundidad infinita.
+ De esta forma, el área del fluido es ilimitada y la longitud de onda será
+ pequeña en comparación con la profundidad del fluido.
+ En esta situación evitamos las condiciones límite en los bordes y en la
+ parte inferior del fluido.
+\end_layout
+
+\begin_layout Standard
+Consideramos una onda de gravedad que se propaga a lo largo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y que es uniforme en la dirección 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ En esta onda todas las magnitudes son independientes de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Buscamos una solución que sea una función periódica simple del tiempo y
+ de la coordenada 
+\begin_inset Formula $x$
+\end_inset
+
+, es decir, de la forma 
+\begin_inset Formula 
+\[
+\phi=f\left(z\right)\cos\left(kx-\omega t\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\omega$
+\end_inset
+
+ es lo que se denomina 
+\emph on
+frecuencia angular
+\emph default
+ de la onda; 
+\begin_inset Formula $2\pi/\omega$
+\end_inset
+
+ es el periodo del movimiento en un punto determinado; 
+\begin_inset Formula $k$
+\end_inset
+
+ se denomina 
+\emph on
+número de onda
+\emph default
+; y 
+\begin_inset Formula $\lambda=\frac{2\pi}{k}$
+\end_inset
+
+ es la longitud de onda.
+\end_layout
+
+\begin_layout Standard
+Sustituyendo en la ecuación
+\begin_inset Formula 
+\[
+\Delta\phi=\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial z^{2}}=0
+\]
+
+\end_inset
+
+tenemos
+\begin_inset Formula 
+\[
+\frac{d^{2}f}{dz^{2}}-k^{2}f=0
+\]
+
+\end_inset
+
+Esta ecuación tiene como soluciones 
+\begin_inset Formula $e^{kz}$
+\end_inset
+
+ y 
+\begin_inset Formula $e^{-kz}$
+\end_inset
+
+.
+ Elegimos la primera, porque la segunda da un aumento de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ cuando pasamos al interior del fluido (que ocupa la región 
+\begin_inset Formula $z<0$
+\end_inset
+
+).
+ Así, obtenemos el potencial para la velocidad:
+\begin_inset Formula 
+\begin{equation}
+\phi=Ae^{kz}\cos\left(kx-\omega t\right)\label{L01 p46 eq:12.6 Potencial de velocidad}
+\end{equation}
+
+\end_inset
+
+Nos falta aplicar las condiciones límite (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p45 eq:12.5 Condición límite"
+
+\end_inset
+
+).
+ Sustituyendo (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p46 eq:12.6 Potencial de velocidad"
+
+\end_inset
+
+) obtenemos
+\begin_inset Formula 
+\[
+k-\frac{\omega^{2}}{g}=0
+\]
+
+\end_inset
+
+O sea
+\begin_inset Formula 
+\begin{equation}
+\omega^{2}=kg\label{L01 p46 eq:12.7 Relación entre número de onda y frec. de una onda de gravedad}
+\end{equation}
+
+\end_inset
+
+ Esto nos proporciona la relación existente entre el número de onda y la
+ frecuencia de una onda de gravedad.
+\end_layout
+
+\begin_layout Standard
+La distribución de velocidades en el fluido móvil se encuentra tomando las
+ derivadas espaciales de 
+\begin_inset Formula $\phi$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+v_{x}=-Ake^{kz}\sin\left(kx-\omega t\right)\quad v_{z}=Ake^{kx}\cos\left(kx-\omega t\right)\label{L01 p46 eq:12.8 Velocidades del fluido móvil}
+\end{equation}
+
+\end_inset
+
+Como vemos, la velocidad disminuye exponencialmente al penetrar en el fluido.
+ En un punto determinado cualquiera del espacio (es decir, fijados 
+\begin_inset Formula $x,z$
+\end_inset
+
+) el vector velocidad gira uniformemente en el plano 
+\begin_inset Formula $xz$
+\end_inset
+
+, permaneciendo su módulo constante e igual a 
+\begin_inset Formula $Ake^{kz}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El siguiente paso es determinar las trayectorias de las partículas del fluido
+ en la onda.
+ Temporalmente designaremos por 
+\begin_inset Formula $x,z$
+\end_inset
+
+ las coordenadas de una partícula del fluido móvil y no las de un punto
+ fijo del espacio, siendo 
+\begin_inset Formula $x_{0},z_{0}$
+\end_inset
+
+ los valores de 
+\begin_inset Formula $x,z$
+\end_inset
+
+ en la posición de equilibrio de una partícula.
+ Entonces 
+\begin_inset Formula $v_{x}=\frac{dx}{dt}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{z}=\frac{dz}{dt}$
+\end_inset
+
+, y podemos aproximar el segundo miembro de (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p46 eq:12.8 Velocidades del fluido móvil"
+
+\end_inset
+
+) escribiendo 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+, puesto que las oscilaciones son pequeñas.
+ Una integración respecto al tiempo nos da:
+\begin_inset Formula 
+\begin{eqnarray}
+x-x_{0} & = & -A\frac{k}{\omega}e^{kz_{0}}\cos\left(kx_{0}-\omega t\right)\nonumber \\
+z-z_{0} & = & -A\frac{k}{\omega}e^{kz_{0}}\sin\left(kx_{0}-\omega t\right)\label{L01 p47 eq:12.0 Ecs. de las trayectorias de las partículas del fluido}
+\end{eqnarray}
+
+\end_inset
+
+Así pues, las partículas del fluido describen circunferencias de radio 
+\begin_inset Formula $\left(\frac{Ak}{\omega}\right)e^{kz_{0}}$
+\end_inset
+
+ alrededor de los puntos 
+\begin_inset Formula $\left(x_{0},z_{0}\right)$
+\end_inset
+
+; este radio disminuye exponencialmente al aumentar la profundidad.
+\end_layout
+
+\begin_layout Standard
+La velocidad de propagación 
+\begin_inset Formula $U$
+\end_inset
+
+ de la onda es (como se demostrará más adelante) 
+\begin_inset Formula $U=\frac{\partial\omega}{\partial k}$
+\end_inset
+
+.
+ Sustituyendo 
+\begin_inset Formula $\omega=\sqrt{kg}$
+\end_inset
+
+ vemos que la velocidad de propagación de las ondas de gravedad en el caso
+ de una superficie sin limitaciones de un fluido de profundidad infinita
+ es
+\begin_inset Formula 
+\begin{equation}
+U=\frac{1}{2}\sqrt{\frac{g}{k}}=\frac{1}{2}\sqrt{\frac{g\lambda}{2\pi}}\label{L01 p47 eq:12.10 Velocidad de propagación de las ondas de gravedad}
+\end{equation}
+
+\end_inset
+
+ Esta velocidad aumenta con la longitud de onda.
 \end_layout
 
 \end_body
