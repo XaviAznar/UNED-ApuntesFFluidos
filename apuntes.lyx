@@ -3543,7 +3543,14 @@ Existe una diferencia importante entre la ecucación de Bernoulli para el
 \end_layout
 
 \begin_layout Section
-Fluidos incompresibles
+Fluidos incompresibles 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: 1.10 Fluidos incompresibles"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4573,7 +4580,7 @@ reference "L01 p30 eq:10.17 Condición de fluido incompresible (flujo no estacio
 \begin_inset Formula $l$
 \end_inset
 
- debe ser pequeña en comparación con el tiempo 
+ debe ser pequeño en comparación con el tiempo 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -4581,8 +4588,945 @@ reference "L01 p30 eq:10.17 Condición de fluido incompresible (flujo no estacio
  de las interacciones en el fluido pueda considerarse como instantánea.
 \end_layout
 
+\begin_layout Section
+Fuerza de arrastre en un flujo potencial que rodea un cuerpo
+\end_layout
+
 \begin_layout Standard
-PAG30
+Ahora consideramos el problema del flujo potencial de un fluido ideal incompresi
+ble que rodea un cuerpo sólido.
+ Esto es equivalente a pensar que el fluido está en reposo y es el cuerpo
+ el que se mueve a través de él.
+ Lo único que tenemos que hacer para pasar de un problema a otro es cambiar
+ a un sistema de coordenadas en las cuales el fluido está en reposo en el
+ infinito.
+ De hecho, a partir de ahora 
+\series bold
+siempre consideraremos que es el cuerpo el que se está moviendo a través
+ del fluido
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Vamos a calcular la 
+\series bold
+\emph on
+distribución de velocidades del fluido a una distancia grande del cuerpo
+\series default
+\emph default
+ móvil.
+ El flujo potencial de un fluido incompresible satisface la ecuación de
+ Laplace 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+.
+ Las soluciones que buscamos tienen que anularse en en infinito, pues allí
+ el fluido está en reposo.
+ Consideraremos que el origen está en algún lugar del interior del cuerpo
+ móvil, por lo que el sistema de coordenadas se mueve con el cuerpo, aunque
+ consideraremos la distribución de velocidades del fluido en un instante
+ en particular.
+ Sabemos que la ecuación de Laplace tiene una solución 
+\begin_inset Formula $\frac{1}{r}$
+\end_inset
+
+ donde 
+\begin_inset Formula $r$
+\end_inset
+
+ es la distancia respecto al origen.
+ También son soluciones el gradiente de 
+\begin_inset Formula $1/r$
+\end_inset
+
+ y todas las derivadas espaciales de orden superior.
+ Todas ellas y sus combinaciones lineales son soluciones que se anulan en
+ el infinito.
+ Por tanto, la forma general de la solución que buscamos para la ecuación
+ de Laplace a gran distancia del cuerpo es
+\begin_inset Formula 
+\[
+\phi=-\frac{a}{r}+\mathbf{A}\cdot\mathbf{grad}\frac{1}{r}+\cdots
+\]
+
+\end_inset
+
+en donde 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ son independientes de las coordenadas.
+\end_layout
+
+\begin_layout Standard
+Vamos a ver que la constante 
+\begin_inset Formula $a$
+\end_inset
+
+ debe ser nula.
+ Para el potencial 
+\begin_inset Formula $\phi=-a/r$
+\end_inset
+
+ se obtiene una velocidad
+\begin_inset Formula 
+\[
+\mathbf{v}=-\mathbf{grad}\left(\frac{a}{r}\right)=a\frac{\mathbf{r}}{r^{3}}
+\]
+
+\end_inset
+
+Calculamos el flujo de masa a través de alguna superficie cerrada, como
+ por ejemplo una esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ En esta superficie, la velocidad es constante e igual a 
+\begin_inset Formula $\frac{a}{R^{2}}$
+\end_inset
+
+.
+ El flujo total es 
+\begin_inset Formula 
+\[
+\rho\frac{a}{R^{2}}4\pi R^{2}=4\pi\rho a
+\]
+
+\end_inset
+
+Pero el flujo de un fluido incompresible a través de cualquier superficie
+ cerrada debe ser nulo, por lo que llegamos a la conclusión de que 
+\begin_inset Formula $a=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Entonces, 
+\begin_inset Formula $\phi$
+\end_inset
+
+ contiene términos de orden 
+\begin_inset Formula $\frac{1}{r^{2}}$
+\end_inset
+
+ y superiores.
+ Como estamos interesados en la velocidad a grandes distancias del cuerpo,
+ podemos despreciar los términos de orden superior y quedarnos con
+\begin_inset Formula 
+\begin{equation}
+\phi=\mathbf{A}\cdot\mathbf{grad}\left(\frac{1}{r}\right)=-\mathbf{A}\cdot\frac{\mathbf{n}}{r^{2}}\label{L01 p38 eq:11.1 Forma general del potencial para flujo potencial}
+\end{equation}
+
+\end_inset
+
+y la velocidad 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\left(\mathbf{A}\cdot\mathbf{grad}\right)\mathbf{grad}\frac{1}{r}=\frac{3\left(\mathbf{A}\cdot\mathbf{n}\right)\mathbf{n}-\mathbf{A}}{r^{3}}\label{L01 p38  eq:11.2 Velocidad a partir del potencial general}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector unitario en la dirección de 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+.
+ Vemos que a distancias grandes la velocidad disminuye como 
+\begin_inset Formula $1/r^{3}$
+\end_inset
+
+.
+ El vector 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ depende de la forma real y de la velocidad del cuerpo y sólo puede determinarse
+ resolviendo por completo la ecuación 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+ a todas las distancias, teniendo en cuenta las condiciones límites apropiadas
+ en la superficie del cuerpo móvil.
+\end_layout
+
+\begin_layout Standard
+El vector 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ que aparece en (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p38  eq:11.2 Velocidad a partir del potencial general"
+
+\end_inset
+
+) está relacionado de un modo definido con el impulso y la energía totales
+ del fluido en su movimiento alrededor del cuerpo.
+ La energía cinética del fluido (
+\series bold
+\emph on
+la energía interna de un fluido incompresible es constante
+\series default
+\emph default
+) es 
+\begin_inset Formula $E=\frac{1}{2}\int\rho v^{2}dV$
+\end_inset
+
+, integrando en todo el espacio exterior al cuerpo.
+ Consideramos la región de integración una esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+ grande, cuyo centro está en el origen y hacemos tender 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ después de integrar.
+ Vamos a modificar la integral:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int v^{2}\, dV=\int dV\left(v^{2}+u^{2}-u^{2}\right)=\int u^{2}dV+\int\left(\mathbf{v}+\mathbf{u}\right)\left(\mathbf{v}-\mathbf{u}\right)dV
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es la velocidad del cuerpo.
+ Como 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es independiente de las coordenadas, la primera integral resulta ser 
+\begin_inset Formula $\int u^{2}dV=u^{2}\left(V-V_{0}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ es el volumen del cuerpo.
+ En la segunda integral, escribimos 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}=\mathbf{grad}\left(\phi+\mathbf{u\cdot}\mathbf{r}\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula 
+\[
+\left(\mathbf{v}+\mathbf{u}\right)\left(\mathbf{v}-\mathbf{u}\right)=\mathbf{grad}\left(\phi+\mathbf{u\cdot}\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)=\mathbf{v}\cdot\mathbf{grad}\left(\phi+\mathbf{u\cdot r}\right)-\mathbf{u\cdot grad}\left(\phi\right)+\mathbf{u\cdot r}=\cdots
+\]
+
+\end_inset
+
+Ahora utilizamos la identidad vectorial 
+\begin_inset Formula 
+\[
+div\left(f\mathbf{A}\right)=\left(\mathbf{grad}f\right)\cdot\mathbf{A}+f\left(div\mathbf{A}\right)
+\]
+
+\end_inset
+
+para convertir cada uno de los términos anteriores en
+\begin_inset Formula 
+\begin{eqnarray*}
+\cdots & = & div\left(\mathbf{v}\left(\mathbf{\phi+\mathbf{u\cdot r}}\right)\right)-\left(\phi+\mathbf{u\cdot r}\right)div\mathbf{v}+\\
+ & + & div\left(\mathbf{-u}\left(\mathbf{\phi+\mathbf{u\cdot r}}\right)\right)-\left(\phi+\mathbf{u\cdot r}\right)div\mathbf{\left(-u\right)=\cdots}
+\end{eqnarray*}
+
+\end_inset
+
+Y ahora utilizando que 
+\begin_inset Formula $div\mathbf{v}=0$
+\end_inset
+
+ (ecuación de continuidad) y 
+\begin_inset Formula $div\mathbf{u}=0$
+\end_inset
+
+ (porque el cuerpo es sólido), obtenemos
+\begin_inset Formula 
+\[
+\cdots=div\left(\left(\phi+\mathbf{u\cdot r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right)
+\]
+
+\end_inset
+
+Así que al final, la integral de la energía cinética queda:
+\begin_inset Formula 
+\[
+\int v^{2}dV=u^{2}\left(V-V_{0}\right)+\int div\left(\left(\phi+\mathbf{u\cdot r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right)dV=\cdots
+\]
+
+\end_inset
+
+Transformamos la segunda integral en una integral sobre la superficie 
+\begin_inset Formula $S$
+\end_inset
+
+ de la esfera y la superficie 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ del cuerpo
+\begin_inset Formula 
+\[
+\cdots=u^{2}\left(V-V_{0}\right)+\oint_{S+S_{0}}\left(\phi+\mathbf{u\cdot r}\right)\left(\mathbf{v}-\mathbf{u}\right)\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+En la superficie del cuerpo, las componentes normales de 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ tienen que ser iguales (por las condiciones límite); como el vector 
+\begin_inset Formula $d\mathbf{f}$
+\end_inset
+
+ es normal a la superficie, la integral sobre 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ se anula (
+\begin_inset Formula $\left(\mathbf{v}-\mathbf{u}\right)\cdot d\mathbf{f}=v_{n}-u_{n}=0$
+\end_inset
+
+).
+ En la superficie remota 
+\begin_inset Formula $S$
+\end_inset
+
+, sustituimos las expresiones de las ecuaciones (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p38 eq:11.1 Forma general del potencial para flujo potencial"
+
+\end_inset
+
+) y (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p38  eq:11.2 Velocidad a partir del potencial general"
+
+\end_inset
+
+) para 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y se desprecian los términos que se anulan cuando 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+.
+ Escribiendo el elemento de superficie de la esfera 
+\begin_inset Formula $S$
+\end_inset
+
+ en la forma 
+\begin_inset Formula $d\mathbf{f}=\mathbf{n}R^{2}do$
+\end_inset
+
+, donde 
+\begin_inset Formula $do$
+\end_inset
+
+ es un elemento de ángulo sólido, obtenemos:
+\begin_inset Formula 
+\[
+\int v^{2}dV=u^{2}\left(\frac{4}{3}\pi R^{3}-V_{0}\right)+\int\left[3\left(\mathbf{A}\cdot\mathbf{n}\right)\left(\mathbf{u}\cdot\mathbf{n}\right)-\left(\mathbf{u\cdot n}\right)^{2}R^{3}\right]do
+\]
+
+\end_inset
+
+Finalmente, realizamos la integración 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+La integración respecto al ángulo sólido 
+\begin_inset Formula $do$
+\end_inset
+
+ es equivalente a promediar integrando respecto a todas las direcciones
+ del vector 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ y multiplicar por 
+\begin_inset Formula $4\pi$
+\end_inset
+
+.
+ Para promediar las expresiones del tipo 
+\begin_inset Formula $\mathbf{\left(\mathbf{A\cdot n}\right)\left(\mathbf{B\cdot n}\right)=A_{i}n_{i}B_{k}n_{k}}$
+\end_inset
+
+, observamos que los valores medios 
+\begin_inset Formula $n_{i}n_{k}$
+\end_inset
+
+ forman un tensor simétrico que puede expresarse en función del tensor unidad:
+ 
+\begin_inset Formula $\delta_{ik}=n_{i}n_{k}=a_{ik}\delta_{ik}$
+\end_inset
+
+.
+ Contrayendo respto a los sufijos 
+\begin_inset Formula $i,k$
+\end_inset
+
+ y recordando que 
+\begin_inset Formula $n_{i}n_{k}=1$
+\end_inset
+
+ se halla que 
+\begin_inset Formula $a=1/3$
+\end_inset
+
+, por lo que 
+\begin_inset Formula 
+\[
+\overline{\left(\mathbf{A\cdot n}\right)\left(\mathbf{B\cdot n}\right)}=\frac{1}{3}\delta_{ik}A_{i}B_{k}=\frac{1}{3}\mathbf{A\cdot B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ y multiplicando por 
+\begin_inset Formula $\frac{1}{2}\rho$
+\end_inset
+
+ tenemos la expresión para la energía total del fluido:
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}\rho\left(4\pi\mathbf{A\cdot u}-V_{0}u^{2}\right)\label{L01 p39 eq:11.3 Energía total del fluido}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+El cálculo exacto del vector 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ exige una solución completa de la ecuación 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+ teniendo en cuenta las condiciones límite particulares en la superficie
+ del cuerpo.
+ Sin embargo, podemos hacernos una idea de la dependencia de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ con respecto a la velocidad 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ del cuerpo teniendo en cuenta que la ecuación es lineal en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y que las condiciones límite son lineales tanto en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ como en 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ De esto deducimos que 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ debe ser una función lineal de las componentes de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ La energía obtenida en la ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p39 eq:11.3 Energía total del fluido"
+
+\end_inset
+
+) será una función cuadrática de las componentes de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ y podrá escribirse en la forma
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}m_{ik}u_{i}u_{k}\label{L01 p40 eq:11.4 Energía del fluido en función del tensor de masas asociadas}
+\end{equation}
+
+\end_inset
+
+siendo 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+ un tensor simétrico constante cuyos términos pueden calcularse a partir
+ de los de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+; al tensor 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+ se le denomina 
+\emph on
+tensor de masas asociadas
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Tensor de masas asociadas 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Conociendo la energía 
+\begin_inset Formula $E$
+\end_inset
+
+ podemos obtener una expresión para el impulso total 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ del fluido.
+ Las variaciones infinitesimales en 
+\begin_inset Formula $E$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ están relacionadas mediante 
+\begin_inset Formula $dE=\mathbf{u}\cdot d\mathbf{P}$
+\end_inset
+
+, por lo que si expresamos la energía 
+\begin_inset Formula $E$
+\end_inset
+
+ según la ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p40 eq:11.4 Energía del fluido en función del tensor de masas asociadas"
+
+\end_inset
+
+), las componentes de 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ deben ser
+\begin_inset Formula 
+\begin{equation}
+P_{i}=m_{ik}u_{k}\label{L01 p40 eq:11.5}
+\end{equation}
+
+\end_inset
+
+Finalmente, comparando las fórmulas (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p39 eq:11.3 Energía total del fluido"
+
+\end_inset
+
+), (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p40 eq:11.4 Energía del fluido en función del tensor de masas asociadas"
+
+\end_inset
+
+) y (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p40 eq:11.5"
+
+\end_inset
+
+) se ve que 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ viene dado en función de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ por 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{P}=4\pi\rho\mathbf{A}-\rho V_{0}\mathbf{u}\label{L01 p40 eq:11.6 Momento total P en funcion de A}
+\end{equation}
+
+\end_inset
+
+ El impulso transmitido al fluido por el cuerpo en la unidad de tiempo es
+ 
+\begin_inset Formula $d\mathbf{P}/dt$
+\end_inset
+
+.
+ Cambiar el signo da la reacción 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ del fluido, es decir, la fuerza que actúa sobre el cuerpo:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=-\frac{d\mathbf{P}}{dt}\label{L01 p40 eq:11.7 Fuerza del fluido sobre el cuerpo}
+\end{equation}
+
+\end_inset
+
+La componente de 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ paralela a la velocidad del cuerpo se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Fuerza de arrastre
+\end_layout
+
+\end_inset
+
+fuerza de arrastre
+\emph default
+ y la componente perpendicular se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Fuerza de sustentación
+\end_layout
+
+\end_inset
+
+fuerza de sustentación
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Si fuese posible tener un flujo potencial en alrededor de un cuerpo moviéndose
+ uniformemente dentro del fluido ideal (
+\begin_inset Formula $\mathbf{u}=constante$
+\end_inset
+
+), deberíamos tener 
+\begin_inset Formula $\mathbf{P}=constante$
+\end_inset
+
+, y por tanto 
+\begin_inset Formula $\mathbf{F=0}$
+\end_inset
+
+.
+ Es decir, no habría fuerza de arrastre o sustentación; las fuerzas de presión
+ ejercidas sobre el cuerpo por el fluido estarían equilibradas.
+ Este resultado se denomina 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Paradoja d'Alambert
+\end_layout
+
+\end_inset
+
+Paradoja d'Alambert.
+ Vamos a ver porqué es una paradoja.
+ Tener una fuerza de arrastre en un movimiento uniforme significa que, para
+ mantener el cuerpo en movimiento, debería realizarse continuamente un trabajo
+ por alguna fuerza externa.
+ Este trabajo se disiparía dentro del fluido o se convertiría en energía
+ cinética del mismo.
+ El resultado sería un flujo de energía continuo hacia el infinito en el
+ interior del fluido.
+ Pero en un fluido ideal no hay disipación de energía (por definición de
+ fluido ideal).
+ Además la velocidad del fluido puesto en movimiento por el cuerpo disminuye
+ muy rápidamente en cuanto nos alejamos del cuerpo con lo que no puede haber
+ flujo de energía hacia el infinito.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, estos argumentos sólo son válidos en relación con el movimiento
+ de un cuerpo dentro de un volumen infinito de fluido.
+ Si el fluido tiene una superficie libre, un cuerpo que tuviese un movimiento
+ uniforme paralelo a esta superficie experimentaría la acción de un arrastre.
+ La aparición de esta fuerza (denominada 
+\emph on
+resistencia de onda
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Resistencia de onda
+\end_layout
+
+\end_inset
+
+
+\emph default
+) se debe a la presencia de un sistema de ondas propagadas en la superficie
+ libre, que continuamente van eliminando energía hacia el infinito.
+\end_layout
+
+\begin_layout Standard
+Si el movimiento del cuerpo es oscilante, debido a una fuerza externa 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ y en las condiciones consideradas en la sección anterior (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: 1.10 Fluidos incompresibles"
+
+\end_inset
+
+), el fluido que rodea el cuerpo se mueve con un flujo potencial y podemos
+ utilizar todos los resultados obtenidos para deducir las ecuaciones de
+ movimiento del cuerpo.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{f} & = & \frac{d\mathbf{P}}{dt}=\frac{d}{dt}\mathbf{P}_{cuerpo}+\frac{d}{dt}\mathbf{P}_{fluido}=\frac{d}{dt}\left(M\mathbf{u}\right)+\frac{d}{dt}\mathbf{P}_{fluido}\\
+f_{i} & = & M\frac{du_{i}}{dt}+m_{ik}\frac{du_{k}}{dt}
+\end{eqnarray*}
+
+\end_inset
+
+que puede escribirse como:
+\begin_inset Formula 
+\begin{equation}
+\frac{du_{k}}{dt}\left(M\delta_{ik}+m_{ik}\right)=f_{i}\label{L01 p41 11.8 Ec. de mov. de un cuerpo en un fluido ideal}
+\end{equation}
+
+\end_inset
+
+Esta es la ecuación de movimiento de un cuerpo sumergido en un fluido ideal.
+\end_layout
+
+\begin_layout Standard
+A continuación consideramos el problema de obtener las ecuaciones del movimiento
+ de un cuerpo sumergido en un fluido que oscila por alguna causa externa
+ al cuerpo 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Por ejemplo, una onda sonora de longitud de onda larga comparada con las
+ dimensiones del cuerpo.
+\end_layout
+
+\end_inset
+
+.
+ Estas oscilaciones del fluido pondrán en movimiento al cuerpo.
+\end_layout
+
+\begin_layout Standard
+Suponemos que la velocidad del fluido varía ligeramente en distancias del
+ orden de la dimensión del cuerpo.
+ Sea 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ la velocidad del fluido que existiría en la posición ocupada por el cuerpo
+ si no hubiera cuerpo.
+ Es decir, 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es la velocidad del flujo no perturbado.
+ Con esta suposición podemos suponer que 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es constante en todo el volumen ocupado por el cuerpo.
+ La velocidad del cuerpo es 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+, como antes.
+\end_layout
+
+\begin_layout Standard
+Si el cuerpo fuera totalmente transportado por el fluido, es decir, 
+\begin_inset Formula $\mathbf{v}=\mathbf{u}$
+\end_inset
+
+, la fuerza que actuase sobre él debería ser la misma que la fuerza que
+ actua sobre el líquido en el mismo volumen si el cuerpo no estuviera.
+ El impulso de este volumen de fluido es 
+\begin_inset Formula $\rho V_{0}\mathbf{v}$
+\end_inset
+
+, y por tanto la fuerza sobre el mismo es 
+\begin_inset Formula $\rho V_{0}\frac{d\mathbf{v}}{dt}$
+\end_inset
+
+.
+ Pero en realidad el cuerpo no es totalmente transportado con el fluido;
+ existe un cierto movimiento respecto a éste, por lo que el fluido adquiere
+ un cierto movimiento adicional.
+ El impulso adicional resultante del fluido es 
+\begin_inset Formula $m_{ik}\left(u_{k}-v_{k}\right)$
+\end_inset
+
+, ya que ahora debemos sustituir 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ por la velocidad del cuerpo respecto al fluido 
+\begin_inset Formula $\mathbf{u}-\mathbf{v}$
+\end_inset
+
+ en la ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p40 eq:11.5"
+
+\end_inset
+
+).
+ La variación de este impulso con respecto al tiempo da como resultado la
+ aparición de una fuerza sobr el cuerpo 
+\begin_inset Formula $-m_{ik}\frac{d}{dt}\left(u_{k}-v_{k}\right)$
+\end_inset
+
+.
+ Así, la fuerza total que actúa sobre el cuerpo es
+\begin_inset Formula 
+\[
+\rho V_{0}\frac{dv_{i}}{dt}-m_{ik}\frac{d}{dt}\left(u_{k}-v_{k}\right)
+\]
+
+\end_inset
+
+ Esta fuerza tiene que igualarse a la derivada temporal del impuslo del
+ cuerpo, obteniendo la ecuación del movimiento:
+\begin_inset Formula 
+\[
+\frac{d}{dt}\left(Mu_{i}\right)=\rho V_{0}\frac{dv_{i}}{dt}-m_{ik}\frac{d}{dt}\left(u_{k}-v_{k}\right)
+\]
+
+\end_inset
+
+Integrando ambos miembros, tenemos:
+\begin_inset Formula 
+\[
+Mu_{i}=\rho V_{0}v_{i}-m_{ik}\left(u_{k}-v_{k}\right)
+\]
+
+\end_inset
+
+o lo que es lo mismo:
+\begin_inset Formula 
+\begin{equation}
+\left(M\delta_{ik}+m_{ik}\right)u_{k}=\left(m_{ik}+\rho V_{0}\delta_{ik}\right)v_{k}\label{L01 p42 eq:11.9 Ec. de mov. de un cuerpo en fluido oscilante}
+\end{equation}
+
+\end_inset
+
+Hacemos la constante de integración igual a cero, puesto que la velocidad
+ del cuerpo en su movimiento producido por el fluido debe anularse cuando
+ 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ se hace cero.
+ La relación obtenida determina la velocidad del cuerpo a partir de la velocidad
+ del fluido.
+ Si la densidad del cuerpo es igual a la del fluido (
+\begin_inset Formula $M=\rho V_{0}$
+\end_inset
+
+), tenemos 
+\begin_inset Formula $\mathbf{v}=\mathbf{u}$
+\end_inset
+
+, como era de esperar.
 \end_layout
 
 \end_body
