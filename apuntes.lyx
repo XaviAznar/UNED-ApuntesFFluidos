@@ -6098,5 +6098,426 @@ U=\frac{1}{2}\sqrt{\frac{g}{k}}=\frac{1}{2}\sqrt{\frac{g\lambda}{2\pi}}\label{L0
  Esta velocidad aumenta con la longitud de onda.
 \end_layout
 
+\begin_layout Section
+Ondas de gravedad largas
+\begin_inset CommandInset label
+LatexCommand label
+name "L01 sec:13 Ondas-de-gravedad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hasta ahora hemos estudiado las ondas de gravedad con una longitud de onda
+ pequeña en comparación con la profundidad del fluido.
+ Ahora nos concentramos en el caso contrario, es decir, en ondas de longitud
+ grande en comparación con la profundidad.
+ Estas ondas se denominan 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Ondas largas
+\end_layout
+
+\end_inset
+
+ondas largas
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Para ello, vamos a estudiar la propagación de ondas largas en un canal.
+ Se supone que el canal está dirigido a lo largo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y que tiene longitud infinita.
+ La sección recta del canal puede tener cualquier forma y puede variar a
+ lo largo de su longitud.
+ Denotamos el área de la sección transversal del canal como 
+\begin_inset Formula $S=S\left(x,t\right)$
+\end_inset
+
+.
+ Suponemos que la anchura y la profundidad del canal son pequeñas en comparación
+ con la longitud de onda.
+ Sólo tendremos en cuenta ondas longitudinales en las que el fluido se mueve
+ a lo largo del canal.
+ En este tipo de ondas la velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ es grande en comparación con las componentes 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{z}$
+\end_inset
+
+.
+ Para simplificar, llamamos 
+\begin_inset Formula $v$
+\end_inset
+
+ a 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ y prescindimos de las otras componentes (pequeñas en comparación).
+\end_layout
+
+\begin_layout Standard
+La componente 
+\begin_inset Formula $x$
+\end_inset
+
+ de la ecuación de Euler se escribe:
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial t}=-\frac{1}{\rho}\frac{\partial p}{\partial x}
+\]
+
+\end_inset
+
+ y la componente 
+\begin_inset Formula $z$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{\rho}\frac{\partial p}{\partial z}=-g
+\]
+
+\end_inset
+
+ Despreciamos los términos cuadráticos en la velocidad, porque suponemos
+ que es pequeña en comparación con la longitud de onda.
+ En la superficie libre (
+\begin_inset Formula $z=\zeta$
+\end_inset
+
+) la presión es 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+, así que a partir de la segunda ecuación:
+\begin_inset Formula 
+\[
+p=p_{0}+g\rho\left(\zeta-z\right)
+\]
+
+\end_inset
+
+Y ahora introduciendo este resultado en la primera ecuación
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial v}{\partial t}=-\frac{1}{\rho}\frac{\partial p}{\partial x}=-g\frac{\partial\zeta}{\partial x}\label{L01 p50 eq:13.1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Necesitamos otra ecuación para poder determinar las dos incógnitas, 
+\begin_inset Formula $v$
+\end_inset
+
+ y 
+\begin_inset Formula $\zeta$
+\end_inset
+
+.
+ Utilizando la ecuación de continuidad en este escenario, considerando un
+ volumen de fluido limitado por dos secciones rectas planas del canal distantes
+ entre sí una distancia 
+\begin_inset Formula $dx$
+\end_inset
+
+.
+ En una unidad de tiempo fluye a través de los planos un volumen 
+\begin_inset Formula $\left(Sv\right)_{x}$
+\end_inset
+
+ de fluido y a través del otro un volumen 
+\begin_inset Formula $\left(Sv\right)_{x+dx}$
+\end_inset
+
+.
+ Por tanto, el volumen de fluido entre los dos planos varía una cantidad:
+\begin_inset Formula 
+\[
+\left(Sv\right)_{x+dx}-\left(Sv\right)_{x}=\frac{\partial\left(Sv\right)}{\partial x}dx
+\]
+
+\end_inset
+
+Pero como el fluido es incompresible, esta variación será simplemente la
+ variación del nivel del fluido.
+ El cambio por unidad de tiempo del volumen de fluido.
+ El cambio por unidad de tiempo del volumen de fluido comprendido entre
+ dos planos es 
+\begin_inset Formula $\left(\partial S/\partial t\right)dx$
+\end_inset
+
+.
+ Por tanto, podemos escribir:
+\begin_inset Formula 
+\[
+\frac{\partial S}{\partial t}dx=-\frac{\partial\left(Sv\right)}{\partial x}dx
+\]
+
+\end_inset
+
+es decir,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial S}{\partial t}+\frac{\partial\left(Sv\right)}{\partial x}=0\label{L01 p51 eq:13.2 Ec. de continuidad en un canal}
+\end{equation}
+
+\end_inset
+
+Esta es la ecuación de continuidad que buscábamos.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ es el área de la sección recta de equilibrio del fluido del canal, entonces
+ 
+\begin_inset Formula $S=S_{0}+S'$
+\end_inset
+
+, donde 
+\begin_inset Formula $S'$
+\end_inset
+
+ es la variación en la sección recta producida por la onda.
+ Como el cambio en el nivel del fluido es pequeño, podemos escribir 
+\begin_inset Formula $S'$
+\end_inset
+
+ en la forma 
+\begin_inset Formula $b\zeta$
+\end_inset
+
+, donde 
+\begin_inset Formula $b$
+\end_inset
+
+ es el ancho del canal en la superficie del fluido.
+ La ecuación anterior (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p51 eq:13.2 Ec. de continuidad en un canal"
+
+\end_inset
+
+) se transforma entonces en
+\begin_inset Formula 
+\begin{equation}
+b\frac{\partial\zeta}{\partial t}+\frac{\partial\left(S_{0}v\right)}{\partial x}=0\label{L01 p51 eq:13.3}
+\end{equation}
+
+\end_inset
+
+Derivando (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p51 eq:13.3"
+
+\end_inset
+
+) respecto a 
+\begin_inset Formula $t$
+\end_inset
+
+ y sustituyendo 
+\begin_inset Formula $\frac{\partial v}{\partial t}$
+\end_inset
+
+ según lo encontrado en la ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p50 eq:13.1"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}\zeta}{\partial t^{2}}-\frac{g}{b}\frac{\partial}{\partial x}\left(S_{0}\frac{\partial\zeta}{\partial x}\right)=0\label{L01 p51 eq:13.4}
+\end{equation}
+
+\end_inset
+
+Si la sección recta del canal es la misma en todos los puntos, entonces
+ 
+\begin_inset Formula $S_{0}=constante$
+\end_inset
+
+ y 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}\zeta}{\partial t^{2}}-\frac{gS_{0}}{b}\frac{\partial^{2}\zeta}{\partial x^{2}}=0\label{L01 p51 eq:13.5 Ecuación de onda (en un canal de sección constante)}
+\end{equation}
+
+\end_inset
+
+Esta ecuación se denomina 
+\emph on
+ecuación de onda
+\emph default
+ y corresponde a la propagación de ondas con una velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+ que es independiente de la frecuencia y es la raíz cuadrada de 
+\begin_inset Formula $\frac{\partial^{2}\zeta}{\partial x^{2}}$
+\end_inset
+
+.
+ Así pues, la velocidad de propagación de ondas de gravedad largas en canales
+ es
+\begin_inset Formula 
+\begin{equation}
+U=\sqrt{\frac{gS_{0}}{b}}\label{L01 p51 eq:13.6 Velocidad de propagación de ondas en un canal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la misma manera podemos considerar ondas largas en un depósito grande,
+ que podemos suponer infinito en dos direcciones (las correspondientes a
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+).
+ Se designa 
+\begin_inset Formula $h$
+\end_inset
+
+ a la profundidad del fluido del depósito.
+ En este caso ahora 
+\begin_inset Formula $v_{z}$
+\end_inset
+
+ es pequeña.
+ La ecuación de Euler toma una forma parecida a (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p50 eq:13.1"
+
+\end_inset
+
+).
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial v_{x}}{\partial t}+g\frac{\partial\zeta}{\partial x}=0\quad\frac{\partial v_{y}}{\partial t}+g\frac{\partial\zeta}{\partial y}=0\label{L01 p52 ec:13.7}
+\end{equation}
+
+\end_inset
+
+Del mismo modo que antes para (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p51 eq:13.2 Ec. de continuidad en un canal"
+
+\end_inset
+
+), deducimos la ecuación de continuidad como
+\begin_inset Formula 
+\[
+\frac{\partial h}{\partial t}+\frac{\partial\left(hv_{x}\right)}{\partial x}+\frac{\partial\left(hv_{y}\right)}{\partial y}=0
+\]
+
+\end_inset
+
+Si escribimos la profundidad 
+\begin_inset Formula $h$
+\end_inset
+
+ como 
+\begin_inset Formula $h_{0}+\zeta$
+\end_inset
+
+, donde 
+\begin_inset Formula $h_{0}$
+\end_inset
+
+ es la profundidad de equilibrio, entonces,
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\zeta}{\partial t}+\frac{\partial\left(h_{0}v_{x}\right)}{\partial x}+\frac{\partial\left(h_{0}v_{y}\right)}{\partial y}=0\label{L01 p52 ec:13.8}
+\end{equation}
+
+\end_inset
+
+ Si el depósito tiene un fondo horizontal de manera que 
+\begin_inset Formula $h_{0}=constante$
+\end_inset
+
+, derivando (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p52 ec:13.8"
+
+\end_inset
+
+) respecto a 
+\begin_inset Formula $t$
+\end_inset
+
+ y sustituyendo el valor de (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p52 ec:13.7"
+
+\end_inset
+
+) obtenemos
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}\zeta}{\partial t^{2}}+gh\left(\frac{\partial^{2}\zeta}{\partial x^{2}}+\frac{\partial^{2}\zeta}{\partial y^{2}}\right)=0\label{L01 p52 ec:13.0 Ec. de onda bidimensional (depósito)}
+\end{equation}
+
+\end_inset
+
+Esta es la ecuación de onda (bidimensional) y corresponde a ondas que se
+ propagan con una velocidad
+\begin_inset Formula 
+\begin{equation}
+U=\sqrt{gh}\label{L01 p52 ec:13.10 Velocidad ondas bidimensionales (depósito)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
