@@ -1348,7 +1348,14 @@ Entalpía libre o potencial de Gibss, que suele representarse como
 \end_layout
 
 \begin_layout Section
-Caso en que la convección está ausente
+Caso en que la convección está ausente 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec: 4 1.4 Caso en que la convección está ausente"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6512,6 +6519,364 @@ Esta es la ecuación de onda (bidimensional) y corresponde a ondas que se
 \begin_inset Formula 
 \begin{equation}
 U=\sqrt{gh}\label{L01 p52 ec:13.10 Velocidad ondas bidimensionales (depósito)}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Ondas en un fluido incompresible 
+\begin_inset CommandInset label
+LatexCommand label
+name "L01 sec:14 Ondas-en-un fluido incompresible"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existe un tipo de onda de gravedad que puede propagarse en el interior de
+ un fluido incompresible.
+ Dichas ondas se deben a una inhomogeneidad del fluido producida por el
+ campo gravitatorio.
+ La presión (y también la entropía 
+\begin_inset Formula $s$
+\end_inset
+
+) varían con la altura, por lo que si desplazamos una partícula de fluido
+ destruimos el equilibrio mecánico y se produce un movimiento oscilante.
+ Como el movimiento es adiabático, la partícula se lleva con ella la entropía
+ 
+\begin_inset Formula $s$
+\end_inset
+
+, que no es la que corresponde a la posición de equilibrio en su nueva posición.
+\end_layout
+
+\begin_layout Standard
+Suponemos que la longitud de onda es pequeña en comparación con las distancias
+ sobre las que el campo gravitatorio produce una variación notable de la
+ densidad, además de considerar el fluido como incompresible.
+ Así podemos despreciar las variaciones producidas en su interior por la
+ variación de presión de la onda.
+ La modificación de la densidad producida por la dilatación términa no puede
+ despreciarse, pues es la que origina el movimiento que estamos estudiando.
+\end_layout
+
+\begin_layout Standard
+Vamos a buscar las ecuaciones que describen este movimiento.
+ Utilizamos el sufijo 
+\begin_inset Formula $_{0}$
+\end_inset
+
+ para distinguir los valores de las magnitudes correspondientes al equilibrio
+ mecánico y una prima 
+\begin_inset Formula $'$
+\end_inset
+
+ para marcar las pequeñas desviaciones de estos valores.
+\end_layout
+
+\begin_layout Standard
+Con estas suposiciones podemos escribir la ecuación de conservación de la
+ entropía 
+\begin_inset Formula $s=s_{0}+s'$
+\end_inset
+
+ hasta el primer orden,
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial s'}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s_{0}=0\label{L01 p53 ec:14.1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $s_{0}$
+\end_inset
+
+, igual que el resto de los valores de equilibrio de otras magnitudes, es
+ una función determinada de la coordenada vertical 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como antes, ahora despreciamos el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ de la ecuación de Euler, pues las oscilaciones son pequeñas.
+ Además, como la distribución de presiones de equilibrio viene dada por
+ 
+\begin_inset Formula $\mathbf{grad}p_{0}=\rho_{0}\mathbf{g}$
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}=-\frac{\mathbf{grad}p}{\rho}+\mathbf{g}=-\frac{\mathbf{grad}p'}{\rho_{0}}+\frac{\mathbf{grad}p_{0}}{\rho_{0}}\rho'
+\]
+
+\end_inset
+
+Como hemos visto antes, la variación de la densidad se debe únicamente al
+ cambio de entropía y no a la variación de presión, por lo que podemos escribir
+\begin_inset Formula 
+\[
+\rho'=\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'
+\]
+
+\end_inset
+
+y se obtiene la ecuación de Euler en la forma
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}=\frac{\mathbf{g}}{\rho_{0}}\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'-\mathbf{grad}\frac{p'}{\rho_{0}}\label{L01 p53 ec:14.2 Ec. de Euler}
+\end{equation}
+
+\end_inset
+
+Podemos introducir 
+\begin_inset Formula $\rho_{0}$
+\end_inset
+
+ dentro del operador gradiente, pues despreciamos la variación de la densidad
+ de equilibrio en distancias del orden de la longitud de onda.
+ Por esta misma razón se puede suponer constante la densidad en la ecuación
+ de continuidad, que entonces queda:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+div\mathbf{v}=0\label{L01 p53 ec:14.3 Ec. de continuidad}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Buscaremos una solución de las ecuaciones (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p53 ec:14.1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p53 ec:14.2 Ec. de Euler"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p53 ec:14.3 Ec. de continuidad"
+
+\end_inset
+
+) en forma de onda plana
+\begin_inset Formula 
+\[
+\mathbf{v}=constante\times e^{i\left(\mathbf{k}\cdot\mathbf{r}-\omega t\right)}
+\]
+
+\end_inset
+
+y análogamente para 
+\begin_inset Formula $s'$
+\end_inset
+
+ y 
+\begin_inset Formula $p'$
+\end_inset
+
+.
+ Sustituyendo la ecuación de continuidad (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p53 ec:14.3 Ec. de continuidad"
+
+\end_inset
+
+) se tiene
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}\cdot\mathbf{k}=0\label{L01 p53 ec:14.4}
+\end{equation}
+
+\end_inset
+
+es decir, que la velocidad del fluido es siempre perpendicular al 
+\emph on
+vector de onda
+\emph default
+ 
+\begin_inset Formula $\mathbf{k}$
+\end_inset
+
+ (onda transversal).
+ Las ecuaciones (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p53 ec:14.1"
+
+\end_inset
+
+) y (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p53 ec:14.2 Ec. de Euler"
+
+\end_inset
+
+) dan
+\begin_inset Formula 
+\begin{eqnarray*}
+i\omega s' & = & \mathbf{v}\cdot\mathbf{grad}s_{0}\\
+-i\omega\mathbf{v} & = & \frac{1}{\rho_{0}}\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'\mathbf{g}-\frac{i\mathbf{k}}{\rho_{0}}p'
+\end{eqnarray*}
+
+\end_inset
+
+ La condición 
+\begin_inset Formula $\mathbf{v}\cdot\mathbf{k}=0$
+\end_inset
+
+ junto a la segunda de las ecuaciones da
+\begin_inset Formula 
+\[
+ik^{2}p'=\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'\mathbf{g}\cdot\mathbf{k}
+\]
+
+\end_inset
+
+ y eliminando 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y 
+\begin_inset Formula $s'$
+\end_inset
+
+ de ambas ecuaciones, obtenemos la relación entre el vector de onda y la
+ frecuencia:
+\begin_inset Formula 
+\begin{equation}
+\omega^{2}=-\frac{1}{\rho}\left(\frac{\partial\rho}{\partial s}\right)_{p}g\frac{ds}{dz}\sin^{2}\theta\label{L01 p54 ec:14.5 Relación entre k y w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De ahora en adelante omitiremos el sufijo cero para los valores de equilibrio
+ de las magnitudes termodinámicas; el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ es vertical y hacia arriba y 
+\begin_inset Formula $\theta$
+\end_inset
+
+ es el ángulo entre el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ y la dirección de 
+\begin_inset Formula $\mathbf{k}$
+\end_inset
+
+.
+ Si la expresión en el segundo miembro de (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p54 ec:14.5 Relación entre k y w"
+
+\end_inset
+
+) es positiva, se cumple la condición para la estabilidad de la distribución
+ de equilibrio 
+\begin_inset Formula $s\left(z\right)$
+\end_inset
+
+ (condición de que la convección esté ausente, como se vió en la sección
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec: 4 1.4 Caso en que la convección está ausente"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Vemos que la frecuencia depende sólo de la dirección del vector de onda
+ y no de su valor.
+ Para 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+, por lo que no pueden existir ondas del tipo considerado con su vector
+ de onda vertical.
+\end_layout
+
+\begin_layout Standard
+Si el fluido está en equilibrio mecánico y en equilibrio térmico, su temperatura
+ es constante y podemos escribir
+\begin_inset Formula 
+\[
+\frac{ds}{dz}=\left(\frac{\partial s}{\partial p}\right)_{T}\frac{dp}{dz}=-\rho g\left(\frac{\partial s}{\partial p}\right)_{T}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Finalmente, usando las relaciones termodinámicas
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\frac{\partial s}{\partial p}\right)_{T} & = & \frac{1}{\rho^{2}}\left(\frac{\partial\rho}{\partial T}\right)_{p}\\
+\left(\frac{\partial\rho}{\partial s}\right)_{p} & = & \frac{T}{c_{p}}\left(\frac{\partial\rho}{\partial T}\right)_{p}
+\end{eqnarray*}
+
+\end_inset
+
+en donde 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+ es el calor específico por unidad de masa, encontramos
+\begin_inset Formula 
+\begin{equation}
+\omega=\sqrt{\frac{T}{c_{p}}\frac{g}{\rho}\left(\frac{\partial\rho}{\partial T}\right)_{p}\sin\theta}\label{L01 p54 ec:14.6}
+\end{equation}
+
+\end_inset
+
+En el caso particular de un gas perfecto:
+\begin_inset Formula 
+\begin{equation}
+\omega=\frac{g}{\sqrt{c_{p}T}}\sin\theta\label{L01 p54 ec:14.7 (gas perfecto)}
 \end{equation}
 
 \end_inset
