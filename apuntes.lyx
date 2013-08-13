@@ -31,6 +31,7 @@ eqs-within-sections
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement h
 \paperfontsize default
 \spacing onehalf
 \use_hyperref false
@@ -1351,7 +1352,7 @@ Entalpía libre o potencial de Gibss, que suele representarse como
 Caso en que la convección está ausente 
 \begin_inset CommandInset label
 LatexCommand label
-name "sec: 4 1.4 Caso en que la convección está ausente"
+name "sec:4 Caso en que la convección está ausente"
 
 \end_inset
 
@@ -2190,7 +2191,14 @@ El primer término es la energía (cinética más interna) transportada por
 \end_layout
 
 \begin_layout Section
-Flujo de impulso o cantidad de movimiento
+Flujo de impulso o cantidad de movimiento 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:7 Flujo-de-impulso"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2794,7 +2802,7 @@ reference "L01 p8 eq: 2.9 Ec. Euler (termodinámica)"
 Flujo potencial 
 \begin_inset CommandInset label
 LatexCommand label
-name "sec: 9 Flujo-potencial"
+name "sec:9 Flujo-potencial"
 
 \end_inset
 
@@ -3560,7 +3568,7 @@ Existe una diferencia importante entre la ecucación de Bernoulli para el
 Fluidos incompresibles 
 \begin_inset CommandInset label
 LatexCommand label
-name "sec: 1.10 Fluidos incompresibles"
+name "sec:10 Fluidos incompresibles"
 
 \end_inset
 
@@ -5371,7 +5379,7 @@ Si el movimiento del cuerpo es oscilante, debido a una fuerza externa
  y en las condiciones consideradas en la sección anterior (
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec: 1.10 Fluidos incompresibles"
+reference "sec:10 Fluidos incompresibles"
 
 \end_inset
 
@@ -5547,7 +5555,7 @@ Hacemos la constante de integración igual a cero, puesto que la velocidad
 Ondas de gravedad 
 \begin_inset CommandInset label
 LatexCommand label
-name "sec: 1.12-Ondas de gravedad"
+name "sec:12 Ondas de gravedad"
 
 \end_inset
 
@@ -5642,7 +5650,7 @@ es decir, las amplitudes de las oscilaciones en la onda deben ser pequeñas
  En este caso, como vimos en la sección 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec: 9 Flujo-potencial"
+reference "sec:9 Flujo-potencial"
 
 \end_inset
 
@@ -6816,7 +6824,7 @@ reference "L01 p54 ec:14.5 Relación entre k y w"
  
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "sec: 4 1.4 Caso en que la convección está ausente"
+reference "sec:4 Caso en que la convección está ausente"
 
 \end_inset
 
@@ -6878,6 +6886,897 @@ En el caso particular de un gas perfecto:
 \begin{equation}
 \omega=\frac{g}{\sqrt{c_{p}T}}\sin\theta\label{L01 p54 ec:14.7 (gas perfecto)}
 \end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Fluidos viscosos 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:2 Fluidos-viscosos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ecuación de movimiento de un fluido viscoso 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:15 Ecuación de movimiento de un fluido viscoso"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora estudiaremos el efecto producido por la disipación de la energía que
+ se produce durante el movimiento del fluido sobre el propio movimiento.
+ Este proceso es consecuencia de la irreversibilidad termodinámica del movimient
+o, que 
+\series bold
+siempre
+\series default
+ está presente en alguna medida, debida a la 
+\series bold
+fricción interna (viscosidad) y 
+\series default
+a la 
+\series bold
+conducción térmica
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+En general, para obtener las ecuaciones de movimiento de un fluido viscoso,
+ tenemos que añadir algunos términos a la ecuación de movimiento del fluido
+ ideal.
+\end_layout
+
+\begin_layout Standard
+La ecuación de continuidad es válida para cualquier fluido, independientemente
+ de si es viscoso o no.
+\end_layout
+
+\begin_layout Standard
+La ecuación de Euler debe modificarse cuando el fluido es viscoso.
+ En la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:7 Flujo-de-impulso"
+
+\end_inset
+
+ vimos que la ecuación de Euler puede escribirse en la forma
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\rho v_{i}\right)=-\frac{\partial\Pi_{ik}}{\partial x_{k}}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ es el tensor de densidad de flujos de impulso.
+ El flujo de impulso en la fórmula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p18 eq:7.2 Tensor densidad de flujo de Impulso"
+
+\end_inset
+
+) representa una transferencia de impulso 
+\series bold
+completamente reversible
+\series default
+ debida al transporte mecánico de las partículas de fludio de un lugar a
+ otro y a las fuerzas de presión que actúan en el fluido.
+ La viscosidad (rozamiento interno) se debe a una transferencia de impulso,
+ 
+\series bold
+irreversible
+\series default
+, de unos puntos donde la velocidad es grande a otros donde la velocidad
+ es pequeña.
+\end_layout
+
+\begin_layout Standard
+Por tanto, a la ecuación de movimiento de un fluido ideal (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L01 p18 eq:7.2 Tensor densidad de flujo de Impulso"
+
+\end_inset
+
+) le añadiremos un término 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ que tenga en cuenta la transferencia de impulso 
+\emph on
+viscoso
+\emph default
+ irreversible en el fluido.
+\begin_inset Formula 
+\begin{equation}
+\Pi_{ik}=p\delta_{ik}+\rho v_{i}v_{k}-\sigma'_{ik}=\rho v_{i}v_{k}-\sigma_{ik}\label{L02 p4 ec:15.1 Tensor de densidad de impulso (ideal+viscoso)}
+\end{equation}
+
+\end_inset
+
+ El tensor 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{ik}=-p\delta_{ik}+\sigma'_{ik}\label{L02 p4 ec:15.2 Tensor de tensiones de la viscosidad}
+\end{equation}
+
+\end_inset
+
+se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Tensor de tensiones 
+\begin_inset Formula $\sigma_{ik}=-p\delta_{ik}+\sigma'_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+tensor de tensiones
+\emph default
+ y 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ es el 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Tensor de tensiones de la viscosidad 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+tensor de tensiones de la viscosidad
+\emph default
+.
+ 
+\begin_inset Formula $\sigma_{ik}$
+\end_inset
+
+ expresa la parte del fujo de impulso que no se debe a transferencia directa
+ de impulso con la masa del fluido móvil.
+\end_layout
+
+\begin_layout Standard
+Como el rozamiento interno aparece sólo cuando distintas partículas se mueven
+ con velocidades diferentes, 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ dependerá de las derivadas espaciales de la velocidad.
+ Si los gradientes de velocidad son pequeños, podemos suponer que la transferenc
+ia de impulso debida a la viscosidad depende sólo de las primeras derivadas
+ de la velocidad.
+ Con la misma aproximación podemos considerar que 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ es una función lineal de las derivadas 
+\begin_inset Formula $\frac{\partial v_{i}}{\partial x_{k}}$
+\end_inset
+
+, sin términos independientes de estas derivadas, ya que 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ tiene que anularse para 
+\begin_inset Formula $v=constante$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ también tiene que anularse cuando el fluido completo está en rotación uniforme,
+ ya que entonces tampoco hay rozamiento interno.
+ En el caso d
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 p5 ec:15.3 Tensor de tensiones de viscosidad (forma más conveniente)"
+
+\end_inset
+
+e rotación uniforme con velocidad angular 
+\begin_inset Formula $\Omega$
+\end_inset
+
+, la velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es igual a 
+\begin_inset Formula $\mathbf{\Omega}\times\mathbf{r}$
+\end_inset
+
+.
+ Las sumas 
+\begin_inset Formula 
+\[
+\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}
+\]
+
+\end_inset
+
+ son combinaciones lineales de las derivadas 
+\begin_inset Formula $\partial v_{i}/\partial x_{k}$
+\end_inset
+
+ y se anulan cuando 
+\begin_inset Formula $\mathbf{v}=\Omega\times\mathbf{r}$
+\end_inset
+
+.
+ De aquí deducimos que 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ deberá contener exactamente estas combinaciones simétricas en las derivadas
+ 
+\begin_inset Formula $\partial v_{i}/\partial x_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El tensor más general de rango dos que satisface las condiciones anteriores
+ es
+\begin_inset Formula 
+\[
+\sigma'_{ik}=a\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)+b\frac{\partial v_{l}}{\partial x_{l}}\delta_{ik}
+\]
+
+\end_inset
+
+ siendo 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ independientes de la velocidad.
+ Sin embargo, es conveniente escribir este tensor de una forma diferente
+\begin_inset Formula 
+\begin{equation}
+\sigma'_{ik}=\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}\right)+\zeta\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}\label{L02 p5 ec:15.3}
+\end{equation}
+
+\end_inset
+
+La expresión entre paréntesis tiene la propiedad de anularse por contracción
+ respecto a 
+\begin_inset Formula $i$
+\end_inset
+
+ y 
+\begin_inset Formula $k$
+\end_inset
+
+, es decir, cuando se hace la suma de las componentes en el caso 
+\begin_inset Formula $i=k$
+\end_inset
+
+.
+ Las constantes 
+\begin_inset Formula $\eta$
+\end_inset
+
+ y 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ se denominan 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficientes de viscosidad 
+\begin_inset Formula $\eta,\zeta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+coeficientes de viscosidad
+\emph default
+.
+ Más adelante veremos que los dos son positivos:
+\begin_inset Formula 
+\begin{equation}
+\eta>0\quad\zeta>0\label{L01 p6 ec:15.4 Coeficientes de viscosidad}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora ya podemos obtener la ecuación de Euler para un fluido viscoso, añadiendo
+ las expresiones 
+\begin_inset Formula $\partial\sigma'_{ik}/\partial x_{k}$
+\end_inset
+
+ en el segundo miembro:
+\begin_inset Formula 
+\begin{eqnarray}
+\rho\left(\frac{\partial v_{i}}{\partial t}+v_{k}\frac{\partial v_{i}}{\partial x_{k}}\right) & = & -\frac{\partial p}{\partial x_{i}}+\nonumber \\
+ & + & \frac{\partial}{\partial x_{k}}\left\{ \eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}\right)\right\} +\frac{\partial}{\partial x_{i}}\left(\zeta\frac{\partial v_{l}}{\partial x_{l}}\right)\label{L02 p6 ec:15.5 Ec. Euler (fluido viscoso)}
+\end{eqnarray}
+
+\end_inset
+
+ Esta forma de la ecuación de Euler para el movimiento de un fluido viscoso
+ es la más general de todas.
+ Las magnitudes 
+\begin_inset Formula $\eta$
+\end_inset
+
+ y 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ son funciones de la presión y la temperatura.
+\begin_inset Formula 
+\begin{eqnarray*}
+\eta=\eta\left(p,T\right) & \quad & \zeta=\zeta\left(p,T\right)\\
+ & \Downarrow\\
+p,T=f\left(\mathbf{x}\right) & \Rightarrow & \eta,\zeta=f\left(\mathbf{x}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ En general 
+\begin_inset Formula $p$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ no son constantes en todo el fluido, de manera que 
+\begin_inset Formula $\eta$
+\end_inset
+
+ y 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ no pueden extraerse fuera del operador gradiente.
+ 
+\end_layout
+
+\begin_layout Standard
+Sin embargo, en la mayor parte de los casos, 
+\series bold
+los coeficientes de viscosidad no varían demasiado en el fluido, por lo
+ que pueden considerarse como constantes
+\series default
+.
+\begin_inset Formula 
+\[
+\eta,\zeta\text{ varían poco en el fluido }\Rightarrow\eta,\zeta\sim constantes
+\]
+
+\end_inset
+
+En este caso
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\sigma'_{ik}}{\partial x_{k}} & = & \eta\left(\frac{\partial^{2}v_{i}}{\partial x_{k}\partial x_{k}}+\frac{\partial}{\partial x_{i}}\frac{\partial v_{k}}{\partial x_{k}}-\frac{2}{3}\frac{\partial}{\partial x_{i}}\frac{\partial v_{l}}{\partial x_{l}}\right)+\zeta\frac{\partial}{\partial x_{i}}\frac{\partial v_{l}}{\partial x_{l}}=\\
+ & = & \eta\frac{\partial^{2}v_{i}}{\partial x_{k}\partial x_{k}}+\left(\zeta+\frac{1}{3}\eta\right)\frac{\partial}{\partial x_{i}}\frac{\partial v_{l}}{\partial x_{l}}
+\end{eqnarray*}
+
+\end_inset
+
+Pero
+\begin_inset Formula 
+\[
+\frac{\partial v_{l}}{\partial x_{l}}\equiv div\mathbf{v}\quad\frac{\partial^{2}v_{i}}{\partial x_{k}\partial x_{k}}\equiv\Delta v_{i}
+\]
+
+\end_inset
+
+Por lo que podemos escribir la ecuación del movimiento de un fluido viscoso
+ en forma vectorial
+\begin_inset Formula 
+\begin{equation}
+\rho\left[\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\right]=-\mathbf{grad}p+\eta\Delta\mathbf{v}+\left(\zeta+\frac{1}{3}\eta\right)\mathbf{grad}\left(div\,\mathbf{v}\right)\label{L02 p6 ec:15.6 Ec. Euler fluido viscoso (formato vectorial)}
+\end{equation}
+
+\end_inset
+
+ Si el fluido es incompresible, 
+\begin_inset Formula $div\,\mathbf{v}=0$
+\end_inset
+
+, por lo que el último término de (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L02 p6 ec:15.6 Ec. Euler fluido viscoso (formato vectorial)"
+
+\end_inset
+
+) es cero.
+ La ecuación de movimiento de un fluido viscoso incompresible es
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\frac{1}{\rho}\mathbf{grad}p+\frac{\eta}{\rho}\Delta\mathbf{v}\label{L02 p7 ec:15.7 Ec. de Navier-Stokes (fluido viscoso incompresible)}
+\end{equation}
+
+\end_inset
+
+Esta ecuación se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Ecuación de Navier-Stokes 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\frac{1}{\rho}\mathbf{grad}p+\frac{\eta}{\rho}\Delta\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Ecuación de Navier-Stokes
+\emph default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+El tensor de tensiones en un fluido incompresible es
+\begin_inset Formula 
+\begin{equation}
+\sigma_{ik}=-p\delta_{ik}+\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)\label{L02 p7 ec:15.8 Tensor de tensiones en un fluido incompresible}
+\end{equation}
+
+\end_inset
+
+ Como vemos, la viscosidad de un fluido incompresible queda determinada
+ sólo por un coeficiente.
+ Como la mayoría de los fluidos se pueden considerar como incompresibles,
+ el coeficiente de viscosidad 
+\begin_inset Formula $\eta$
+\end_inset
+
+ es el que tiene importancia.
+ El cociente
+\begin_inset Formula 
+\begin{equation}
+\nu=\frac{\eta}{\rho}\label{L02 p7 ec:15.9 Viscosidad cinemática}
+\end{equation}
+
+\end_inset
+
+se denomina 
+\emph on
+viscosidad cinemática
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Viscosidad cinemática
+\emph default
+ 
+\begin_inset Formula $\nu$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ mientras que 
+\begin_inset Formula $\eta$
+\end_inset
+
+ se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Viscosidad dinámica 
+\begin_inset Formula $\eta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+viscosidad dinámica
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+La viscosidad dinámica de un gas a una temperatura determinada es independiente
+ de la presión, mientras que la viscosidad cinemática es inversamente proporcion
+al a la presión.
+\begin_inset Formula 
+\[
+\text{Gas (T constante)}\Rightarrow\begin{cases}
+\eta\neq f\left(p\right) & \text{(Viscosidad dinámica)}\\
+\nu\propto\frac{1}{p} & \text{(Viscosidad cinemática)}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La presión puede eliminarse de la ecuación de Navier-Stokes del mismo modo
+ que se hizo en la ecuación de Euler: tomando rotacionales a ambos lados
+ de la ecuación (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L02 p7 ec:15.7 Ec. de Navier-Stokes (fluido viscoso incompresible)"
+
+\end_inset
+
+)
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\mathbf{rot\, v}=\mathbf{rot}\left(\mathbf{v}\times\mathbf{rot\, v}\right)+\mathbf{v}\Delta\left(\mathbf{rot\, v}\right)\label{L02 p7 ec:15.10 Ec. Navier-Stokes (sólo velocidad)}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+El siguiente paso es escribir las condiciones límite que actúan sobre las
+ ecuaciones de movimiento de un fluido viscoso.
+\end_layout
+
+\begin_layout Standard
+Las fuerzas de atracción molecular entre el fluido y la pared del cuerpo
+ sólido con el que está en contacto hacen que la capa de fluido junto al
+ cuerpo 
+\emph on
+se pegue
+\emph default
+ y quede totalmente en reposo.
+ Por ello, las condiciones límites exigen que la velocidad del fluido viscoso
+ se anule en las superficies sólidas fijas:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=0\text{ en una superficie sólida fija}\label{L02 p7 ec:15.11 Condiciones límite fluido viscoso}
+\end{equation}
+
+\end_inset
+
+ Como vemos, en un fluido viscoso deben anularse tanto la componente normal
+ como la tangencial, mientras que en un fluido ideal sólo tiene que anularse
+ la componente normal a la superficie.
+ En el caso de una superficie móvil, la velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ debe ser igual a la velocidad de la superficie.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="50text%">
+<column alignment="center" valignment="top" width="50text%">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Condiciones límite en contacto con una superficie sólida fija
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fluido ideal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fluido Viscoso
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $v_{n}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbf{v}=0\quad(v_{n}=0,v_{\parallel}=0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Ahora buscamos la fuerza que actúa sobre una superficie sólida que limita
+ el fluido.
+ La fuerza que actúa sobre un elemento de la superficie coincide con el
+ flujo de impulso a través de dicho elemento.
+ El flujo de impulso a través del elemento de superficie 
+\begin_inset Formula $d\mathbf{f}$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\Pi_{ik}df_{k}=\left(\rho v_{i}v_{k}-\sigma_{ik}\right)df_{k}
+\]
+
+\end_inset
+
+Escribiendo 
+\begin_inset Formula $df_{k}=n_{k}df$
+\end_inset
+
+, donde 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector unidad a lo largo de la normal y teniendo en cuenta que 
+\begin_inset Formula $\mathbf{v}=0$
+\end_inset
+
+ en la superficie sólida, encontramos que la fuerza 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ que actúa sobre una unidad de superficie es
+\begin_inset Formula 
+\begin{equation}
+P_{i}=-\sigma_{ik}n_{k}=pn_{i}-\sigma'_{ik}n_{k}\label{L02 p8 ec:15.12 Fuerza sobre unidad de superficie}
+\end{equation}
+
+\end_inset
+
+El primer término es la presión del fluido, mientras que el segundo es la
+ fuerza de rozamiento debida a la viscosidad.
+ 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ apunta hacia fuera del fluido, es decir, 
+\emph on
+hacia adentro
+\emph default
+ en la superficie sólida que limita al fluido.
+\end_layout
+
+\begin_layout Standard
+Si tenemos una superficie de separación entre dos fluidos inmiscibles, las
+ velocidades de los fluidos deben ser iguales en la superficie y las fuerzas
+ que se ejercen entre sí deben ser iguales y opuestas.
+ Esta condición se escribe como
+\begin_inset Formula 
+\[
+n_{1,k}\sigma_{1,ik}+n_{2,k}\sigma_{2,ik}=0
+\]
+
+\end_inset
+
+donde los sufijos 1 y 2 se refieren a los dos fluidos.
+ Los vectores normales, en este caso, tienen sentidos opuestos, por lo que
+ 
+\begin_inset Formula $n_{1,i}=-n_{2,i}=n_{i}$
+\end_inset
+
+, por lo que la condición anterior se puede escribir como
+\begin_inset Formula 
+\begin{equation}
+n_{i}\sigma_{1,ik}=n_{i}\sigma_{2,ik}\label{L02 p7 ec:15.13 Condicion en la superficie de separacion de dos fluidos viscosos inmiscibles}
+\end{equation}
+
+\end_inset
+
+ En una superificie libre del fluido debe cumplirse la condición
+\begin_inset Formula 
+\begin{equation}
+\sigma_{ik}n_{k}\equiv\sigma'_{ik}n_{k}-pn_{i}=0\label{L02 p8 ec:15.14 Condición en una superifice libre (fluido viscoso)}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Como referencia daremos las expresiones en componentes del tensor de tensiones
+ y la ecuación en Navier-Stokes en coordenadas cilíndricas y esféricas.
+\end_layout
+
+\begin_layout Subsection*
+Ecuación de Navier-Stokes en coordenadas cilíndricas 
+\begin_inset Formula $r,\phi,z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+\sigma_{rr} & = & -p+2\eta\frac{\partial v_{r}}{\partial r}\nonumber \\
+\sigma_{\phi\phi} & = & -p+2\eta\left(\frac{1}{r}\frac{\partial v_{\phi}}{\partial\phi}+\frac{v_{r}}{r}\right)\nonumber \\
+\sigma_{zz} & = & -p+2\eta\frac{\partial v_{z}}{\partial z}\nonumber \\
+\sigma_{r\phi} & = & \eta\left(\frac{1}{r}\frac{\partial v_{r}}{\partial\phi}+\frac{\partial v_{\phi}}{\partial r}-\frac{v_{\phi}}{r}\right)\nonumber \\
+\sigma_{\phi z} & = & \eta\left(\frac{\partial v_{\phi}}{\partial z}+\frac{1}{r}\frac{\partial v_{z}}{\partial\phi}\right)\nonumber \\
+\sigma_{zr} & = & \eta\left(\frac{\partial v_{z}}{\partial r}+\frac{\partial v_{r}}{\partial z}\right)\label{L02 p8 ec:15.15 Tensor de tensiones (coord. cilíndricas)}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las tres componentes de la ecuación de Navier-Stokes (en coordenadas cilíndricas
+):
+\begin_inset Formula 
+\begin{multline*}
+\frac{\partial v_{r}}{\partial t}+v_{r}\frac{\partial v_{r}}{\partial r}+\frac{v_{\phi}}{r}\frac{\partial v_{r}}{\partial\phi}+v_{z}\frac{\partial v_{r}}{\partial z}-\frac{v_{\phi}^{2}}{r}=\\
+=-\frac{1}{\rho}\frac{\partial p}{\partial r}+\nu\left(\frac{\partial^{2}v_{r}}{\partial r^{2}}+\frac{1}{r^{2}}\frac{\partial^{2}v_{r}}{\partial\phi^{2}}+\frac{\partial^{2}v_{r}}{\partial z^{2}}+\frac{1}{r}\frac{\partial v_{r}}{\partial r}-\frac{2}{r}\frac{\partial v_{\phi}}{\partial\phi}-\frac{v_{r}}{r^{2}}\right)
+\end{multline*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+etc...
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Ecuación de Navier-Stokes en coordenadas esféricas 
+\begin_inset Formula $r,\phi,\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAG9
+\end_layout
+
+\begin_layout Section
+Disipación de energía en un fluido incompresible 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:16 Disipación de energía en un fluido incompresible"
 
 \end_inset
 
