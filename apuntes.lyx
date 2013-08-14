@@ -7994,5 +7994,598 @@ reference "L02 p12 ec:16.3"
  es siempre positivo.
 \end_layout
 
+\begin_layout Section
+Flujo en una tubería 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:17 Flujo en una tubería"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta sección nos concentramos en problemas sencillos de movimiento de
+ un fluido viscoso incompresible.
+\end_layout
+
+\begin_layout Standard
+Supongamos que el fluido está encerrado entre dos planos paralelos que se
+ mueven con una velocidad relativa constante 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Tomemos uno de ellos como el plano 
+\begin_inset Formula $xz$
+\end_inset
+
+ con el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ en la dirección 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Todas las magnitudes dependen únicamente de 
+\begin_inset Formula $y$
+\end_inset
+
+ y la velocidad del fluido siempre está en la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ A partir de la ecuación de Navier-Stokes para un fluido viscoso incompresible
+ (
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L02 p7 ec:15.7 Ec. de Navier-Stokes (fluido viscoso incompresible)"
+
+\end_inset
+
+) tenemos para el flujo estacionario
+\begin_inset Formula 
+\[
+\frac{dp}{dy}=0\quad\frac{d^{2}v}{dy^{2}}=0
+\]
+
+\end_inset
+
+La ecuación de continuidad se satisface idénticamente.
+\end_layout
+
+\begin_layout Standard
+Así, 
+\begin_inset Formula $p=constante$
+\end_inset
+
+ y 
+\begin_inset Formula $v=ay+b$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $v\left(y=0\right)=0$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $b=0$
+\end_inset
+
+, y 
+\begin_inset Formula $v\left(y=h\right)=u$
+\end_inset
+
+ tenemos que 
+\begin_inset Formula $a=u/h$
+\end_inset
+
+.
+ Al final, la distribución de velocidad en el canal es lineal, 
+\begin_inset Formula 
+\begin{equation}
+v=\frac{u}{h}y\label{L02 p13 ec:17.1 Distribución de velocidad en el canal de paredes móviles}
+\end{equation}
+
+\end_inset
+
+ La velocidad media del fluido definida como 
+\begin_inset Formula 
+\[
+\overline{v}=\frac{1}{h}\int_{0}^{h}v\, dy
+\]
+
+\end_inset
+
+es
+\begin_inset Formula 
+\begin{equation}
+\overline{v}=\frac{1}{2}u\label{L02 p13 ec:17.2 Velocidad media}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Según la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p8 ec:15.12 Fuerza sobre unidad de superficie"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{i} & = & -\sigma_{ik}n_{k}\\
+\sigma_{ik} & = & -p\delta_{ik}+\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+tenemos que la componente normal de la fuerza sobre cualquiera de los planos
+ es exactamente 
+\begin_inset Formula $p$
+\end_inset
+
+, mientras que la fuerza de rozamiento tangencial sobre el plano 
+\begin_inset Formula $y=0$
+\end_inset
+
+ es
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=\eta\frac{dv}{dy}=\eta\frac{u}{h}\label{L02 p13 ec:17.3}
+\end{equation}
+
+\end_inset
+
+y la fuerza sobre el plano 
+\begin_inset Formula $y=h$
+\end_inset
+
+ es 
+\begin_inset Formula $-\eta u/h$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación consideramos el flujo estacionario entre dos planos paralelos
+ en presencia de un gradiente de presión.
+ Escojemos las coordenadas como antes, el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ es el de la dirección del movimiento del fluido.
+ Las ecuaciones de Navier-Stokes, como la velocidad sólo depende de 
+\begin_inset Formula $y$
+\end_inset
+
+, son
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}v}{\partial y^{2}} & = & \frac{1}{\eta}\frac{\partial p}{\partial x}\\
+\frac{\partial p}{\partial y} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+La segunda ecuación demuestra que la presión es independiente de 
+\begin_inset Formula $y$
+\end_inset
+
+, es decir, que es constante a través de la profundidad del fluido situado
+ entre dos planos.
+ El segundo miembro de la primera ecuación es sólo función de 
+\begin_inset Formula $x$
+\end_inset
+
+, mientras que el primero sólo es función de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Por tanto esta igualdad sólo puede verificarse si los dos miembros son
+ constantes.
+ Si 
+\begin_inset Formula $\frac{\partial p}{\partial x}=constante$
+\end_inset
+
+ entonces 
+\begin_inset Formula $p$
+\end_inset
+
+ es una función lineal de la coordenada 
+\begin_inset Formula $x$
+\end_inset
+
+ a lo largo de la dirección del flujo.
+\end_layout
+
+\begin_layout Standard
+Para la velocidad obtenemos
+\begin_inset Formula 
+\[
+v=\frac{1}{2\eta}\left(\frac{dp}{dx}\right)y^{2}+ay+b
+\]
+
+\end_inset
+
+Determinamos las constantes a partir de las condiciones límite:
+\begin_inset Formula $v=0$
+\end_inset
+
+ en 
+\begin_inset Formula $y=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v=\frac{1}{2\eta}\frac{dp}{dx}y(y-h)
+\]
+
+\end_inset
+
+que por algún motivo que se me escapa, en el libro prefieren retorcer hasta
+ convertirlo en
+\begin_inset Formula 
+\begin{equation}
+v=-\frac{1}{2\eta}\frac{dp}{dx}\left(\frac{1}{4}h^{2}-\left(y-\frac{1}{2}h\right)^{2}\right)\label{L02 p14 ec:17.4}
+\end{equation}
+
+\end_inset
+
+Así, la velocidad varía parabólicamente a través del fluido, alcanzandosu
+ valor máximo en la mitad.
+ La velocidad media del fluido (promediada en toda la profundidad del mismo
+ es:
+\begin_inset Formula 
+\begin{equation}
+\overline{v}=\frac{1}{h}\int_{0}^{h}v\, dy=-\frac{h^{2}}{12\eta}\frac{dp}{dx}\label{L02 p14 ec:17.5}
+\end{equation}
+
+\end_inset
+
+También podemos calcular la fuerza de rozamiento 
+\begin_inset Formula $\sigma_{xy}=\eta\left(\frac{\partial v}{\partial y}\right)_{y=0}$
+\end_inset
+
+ que actúa sobre uno de los planos fijos.
+ La sustitución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p14 ec:17.4"
+
+\end_inset
+
+ da
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=-\frac{1}{2}h\frac{dp}{dx}\label{L02 p14 ec:17.6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, consideramos el flujo estacionario en una tubería de sección
+ recta arbitraria (que es la misma a lo largo de toda la longitud de la
+ misma).
+ Tomaremos el eje de la tubería como el eje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ La velocidad del fluido es en la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+ en todos los puntos y es una función sólo de 
+\begin_inset Formula $y$
+\end_inset
+
+ y 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ La ecuación de continuidad se satisface idénticamente, mientras que las
+ componentes 
+\begin_inset Formula $y$
+\end_inset
+
+ y 
+\begin_inset Formula $z$
+\end_inset
+
+ de la ecuación de Navier-Stokes nos dan de nuevo
+\begin_inset Formula 
+\[
+\frac{\partial p}{\partial y}=\frac{\partial p}{\partial z}=0
+\]
+
+\end_inset
+
+es decir, la presión es constante en toda la sección recta de la tubería.
+ La componente 
+\begin_inset Formula $x$
+\end_inset
+
+ de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p7 ec:15.7 Ec. de Navier-Stokes (fluido viscoso incompresible)"
+
+\end_inset
+
+ nos da
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial^{2}v}{\partial y^{2}}+\frac{\partial^{2}v}{\partial z^{2}}=\frac{1}{\eta}\frac{dp}{dx}\label{L02 p14 17.7}
+\end{equation}
+
+\end_inset
+
+De nuevo se tiene la conclusión de que 
+\begin_inset Formula $dp/dx=constante$
+\end_inset
+
+; el gradiente de presión puede entonces escribirse como 
+\begin_inset Formula $-\Delta p/l$
+\end_inset
+
+, donde 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+ es la diferencia de presiones entre los extremos de la tubería y 
+\begin_inset Formula $l$
+\end_inset
+
+ su longitud.
+\end_layout
+
+\begin_layout Standard
+La distribución de velocidades correspondiente al flujo de una tubería está
+ determinada por una ecuación bidimensional de la forma 
+\begin_inset Formula $\Delta v=constante$
+\end_inset
+
+.
+ Esta ecuación se tiene que resolver con la condición límite 
+\begin_inset Formula $v=0$
+\end_inset
+
+ en la periferia de la sección recta de la tubería.
+ Resolveremos a continuación para una tubería de sección recta circular.
+ Tomando el origen en el centro del círculo y usando coordenadas polares,
+ tenemos por simetría que 
+\begin_inset Formula $v=v\left(r\right)$
+\end_inset
+
+.
+ Utilizando la expresión correspondientes a la laplaciana en coordenadas
+ polares tenemos
+\begin_inset Formula 
+\[
+\frac{1}{r}\frac{d}{dr}\left(r\frac{dv}{dr}\right)=-\frac{\Delta p}{\eta l}
+\]
+
+\end_inset
+
+Integrando 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Mi músculo matemático está oxidado...
+ Así que ahí va, como recordatorio 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{r}\frac{d}{dr}\left(r\frac{dv}{dr}\right) & = & -\frac{\Delta p}{\eta l}\\
+\frac{1}{r}\left(\frac{dv}{dr}+r\frac{d^{2}v}{dr^{2}}\right) & = & -\frac{\Delta p}{\eta l}\\
+\frac{1}{r}\frac{dv}{dr}+\frac{d^{2}v}{dr^{2}} & = & -\frac{\Delta p}{\eta l}
+\end{eqnarray*}
+
+\end_inset
+
+Si llamamos 
+\begin_inset Formula $v'=\frac{dv}{dr}$
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+\frac{v'}{r}+\frac{dv'}{dr}=-\frac{\Delta p}{\eta l}
+\]
+
+\end_inset
+
+Si utilizamos que 
+\begin_inset Formula $1=\frac{dr}{dr}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v'\frac{dr}{dr}+r\frac{dv'}{dr}=-\frac{\Delta p}{\eta l}r
+\]
+
+\end_inset
+
+Usando la regla de la derivada del producto
+\begin_inset Formula 
+\[
+\frac{d\left(v'r\right)}{dr}=-\frac{\Delta p}{\eta l}r
+\]
+
+\end_inset
+
+Ahora integramos
+\begin_inset Formula 
+\[
+\int d\left(v'r\right)=v'r=-\frac{\Delta p}{\eta l}\int r\, dr=-\frac{\Delta p}{2\eta l}r^{2}+a
+\]
+
+\end_inset
+
+Ahora volvemos a 
+\begin_inset Formula $v'=\frac{dv}{dr}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dv}{dr}r & = & -\frac{\Delta p}{2\eta l}r^{2}+a\\
+\int dv & = & -\frac{\Delta p}{2\eta l}\int rdr+a\int\frac{1}{r}dr\\
+v & = & -\frac{\Delta p}{4\eta l}r^{2}+a\log r+b
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Alternativamente podíamos hacer 
+\begin_inset Formula 
+\begin{eqnarray*}
+d\left(r\frac{dv}{dr}\right) & = & -Cr\, dr\\
+r\frac{dv}{dr} & = & -C\frac{r^{2}}{2}+a\\
+dv & = & -\frac{C}{2}r\, dr+\frac{a}{r}dr\\
+v & = & -\frac{C}{4}r^{2}+a\log r+b
+\end{eqnarray*}
+
+\end_inset
+
+donde 
+\begin_inset Formula $C=\frac{\Delta p}{\eta l}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ obtenemos:
+\begin_inset Formula 
+\begin{equation}
+v=-\frac{\Delta p}{4\eta l}r^{2}+a\log r+b\label{L02 p15 ec:17.8}
+\end{equation}
+
+\end_inset
+
+ En el centro de la tubería 
+\begin_inset Formula $r=0\Rightarrow\log0=-\infty$
+\end_inset
+
+, lo que nos indica que 
+\begin_inset Formula $a=0$
+\end_inset
+
+.
+ Para determinar 
+\begin_inset Formula $b$
+\end_inset
+
+, utilizamos la condición de que 
+\begin_inset Formula $v=0$
+\end_inset
+
+ en 
+\begin_inset Formula $r=R$
+\end_inset
+
+, donde 
+\begin_inset Formula $R$
+\end_inset
+
+ es el radio de la tubería.
+ En este caso:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+v=\frac{\Delta p}{4\eta l}\left(R^{2}-r^{2}\right)\label{L02 p15 ec:17.9}
+\end{equation}
+
+\end_inset
+
+Por lo que vemos que la distribución de velocidades a través de la tubería
+ es parabólica.
+\end_layout
+
+\begin_layout Standard
+La masa 
+\begin_inset Formula $Q$
+\end_inset
+
+ de fluido que pasa a través de una sección recta de la tubería por segundo
+ se denomina
+\emph on
+ caudal
+\emph default
+.
+ A través de un elemento anular 
+\begin_inset Formula $2\pi r\, dr$
+\end_inset
+
+ del área de la sección recta pasa por segundo una masa 
+\begin_inset Formula $\rho\cdot2\pi rv\, dr$
+\end_inset
+
+, de donde
+\begin_inset Formula 
+\[
+Q=2\pi\int_{0}^{R}rv\, dr
+\]
+
+\end_inset
+
+Utilizando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p15 ec:17.9"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\begin{equation}
+Q=\frac{\pi\Delta p}{8\nu l}R^{4}\label{L02 p15 ec:17.10}
+\end{equation}
+
+\end_inset
+
+La masa de fluido es proporcional a la cuarta potencia del radio de la tubería
+ (
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fórmula de Poiseuille
+\end_layout
+
+\end_inset
+
+
+\emph on
+fórmula de Poiseuille
+\emph default
+).
+\end_layout
+
 \end_body
 \end_document
