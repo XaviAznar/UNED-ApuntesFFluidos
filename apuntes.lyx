@@ -8389,76 +8389,6 @@ Integrando
 status open
 
 \begin_layout Plain Layout
-Mi músculo matemático está oxidado...
- Así que ahí va, como recordatorio 
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{1}{r}\frac{d}{dr}\left(r\frac{dv}{dr}\right) & = & -\frac{\Delta p}{\eta l}\\
-\frac{1}{r}\left(\frac{dv}{dr}+r\frac{d^{2}v}{dr^{2}}\right) & = & -\frac{\Delta p}{\eta l}\\
-\frac{1}{r}\frac{dv}{dr}+\frac{d^{2}v}{dr^{2}} & = & -\frac{\Delta p}{\eta l}
-\end{eqnarray*}
-
-\end_inset
-
-Si llamamos 
-\begin_inset Formula $v'=\frac{dv}{dr}$
-\end_inset
-
-, tenemos
-\begin_inset Formula 
-\[
-\frac{v'}{r}+\frac{dv'}{dr}=-\frac{\Delta p}{\eta l}
-\]
-
-\end_inset
-
-Si utilizamos que 
-\begin_inset Formula $1=\frac{dr}{dr}$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-v'\frac{dr}{dr}+r\frac{dv'}{dr}=-\frac{\Delta p}{\eta l}r
-\]
-
-\end_inset
-
-Usando la regla de la derivada del producto
-\begin_inset Formula 
-\[
-\frac{d\left(v'r\right)}{dr}=-\frac{\Delta p}{\eta l}r
-\]
-
-\end_inset
-
-Ahora integramos
-\begin_inset Formula 
-\[
-\int d\left(v'r\right)=v'r=-\frac{\Delta p}{\eta l}\int r\, dr=-\frac{\Delta p}{2\eta l}r^{2}+a
-\]
-
-\end_inset
-
-Ahora volvemos a 
-\begin_inset Formula $v'=\frac{dv}{dr}$
-\end_inset
-
-
-\begin_inset Formula 
-\begin{eqnarray*}
-\frac{dv}{dr}r & = & -\frac{\Delta p}{2\eta l}r^{2}+a\\
-\int dv & = & -\frac{\Delta p}{2\eta l}\int rdr+a\int\frac{1}{r}dr\\
-v & = & -\frac{\Delta p}{4\eta l}r^{2}+a\log r+b
-\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Alternativamente podíamos hacer 
 \begin_inset Formula 
 \begin{eqnarray*}
 d\left(r\frac{dv}{dr}\right) & = & -Cr\, dr\\
@@ -8585,6 +8515,238 @@ Fórmula de Poiseuille
 fórmula de Poiseuille
 \emph default
 ).
+\end_layout
+
+\begin_layout Standard
+PROBS pag 15
+\end_layout
+
+\begin_layout Section
+Flujo entre cilindros en rotación 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec: 18 Flujo entre cilindros en rotación"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideramos ahora el movimiento de un fluido entre dos cilindros coaxiales
+ infinitos de radios 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+(
+\begin_inset Formula $R_{2}>R_{1}$
+\end_inset
+
+) girando alrededor de sus ejes con velocidades angulares 
+\begin_inset Formula $\Omega_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\Omega_{2}$
+\end_inset
+
+.
+ Tomamos coordenadas cilíndricas 
+\begin_inset Formula $r,\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $z$
+\end_inset
+
+, con el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ a lo largo de los ejes de los cilindros.
+ Por la simetría del problema es evidente que 
+\begin_inset Formula 
+\begin{eqnarray*}
+v_{z}=v_{r} & = & 0\\
+v_{\phi} & = & v\left(r\right)\\
+p & = & p\left(r\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones de Navier-Stokes en coordenadas cilíndricas en este caso
+ son
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{dp}{dr} & = & \rho\frac{v^{2}}{r}\label{L02 p18 ec:18.1}\\
+\frac{d^{2}v}{dr^{2}}+\frac{1}{r}\frac{dv}{dr}-\frac{v}{r^{2}} & = & 0\label{L02 p18 ec:18.2}
+\end{eqnarray}
+
+\end_inset
+
+La última ecuación tiene una solución de la forma 
+\begin_inset Formula $r^{n}$
+\end_inset
+
+; sustituyendo resulta 
+\begin_inset Formula $n=\pm1$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\[
+v=ar+\frac{b}{r}
+\]
+
+\end_inset
+
+Las constantes 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ se deducen de las condiciones límite: la velocidad del fluido debe coincidir
+ con la velocidad de las superficies de los cilindros: 
+\begin_inset Formula $v=R_{1}\Omega_{1}$
+\end_inset
+
+ para 
+\begin_inset Formula $r=R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $v=R_{2}\Omega_{2}$
+\end_inset
+
+ para 
+\begin_inset Formula $r=R_{2}$
+\end_inset
+
+.
+ Como resultado tenemos la distribución de velocidades:
+\begin_inset Formula 
+\begin{equation}
+v=\frac{\Omega_{2}R_{2}^{2}-\Omega_{1}R_{1}^{2}}{R_{2}^{2}-R_{1}^{2}}r+\frac{\left(\Omega_{2}-\Omega_{1}\right)R_{1}^{2}R_{2}^{2}}{R_{2}^{2}-R_{1}^{2}}\frac{1}{r}\label{L02 p18 ec: 18.3}
+\end{equation}
+
+\end_inset
+
+A partir de la integración de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p18 ec:18.1"
+
+\end_inset
+
+ obtenemos la distribución de presiones.
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $\Omega_{1}=\Omega_{2}=\Omega$
+\end_inset
+
+ tenemos simplemente que 
+\begin_inset Formula $v=\Omega r$
+\end_inset
+
+, es decir, el fluido gira rígidamente con los cilindros.
+ Cuando está ausente el cilindro exterior (es decir 
+\begin_inset Formula $R_{2}=\infty,\Omega_{2}=0$
+\end_inset
+
+), tenemos 
+\begin_inset Formula $v=\frac{\Omega_{1}R_{1}^{2}}{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La fuerza de rozamiento que actúa sobre la unidad de área del cilindro interior
+ está dirigida a lo largo de la tangente a su superficie y según 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p8 ec:15.12 Fuerza sobre unidad de superficie"
+
+\end_inset
+
+ es igual a la componente 
+\begin_inset Formula $\sigma'_{r\phi}$
+\end_inset
+
+ del tensor de tensiones.
+ Utilizando las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p6 ec:15.5 Ec. Euler (fluido viscoso)"
+
+\end_inset
+
+ se tiene
+\begin_inset Formula 
+\begin{eqnarray*}
+\left.\sigma'_{r\phi}\right|_{r=R_{1}} & = & \eta\left.\left(\frac{\partial v}{\partial r}-\frac{v}{r}\right)\right|_{r=R_{1}}=\\
+ & = & -2\eta\frac{\left(\Omega_{1}-\Omega_{2}\right)R_{2}^{2}}{R_{2}^{2}-R_{1}^{2}}
+\end{eqnarray*}
+
+\end_inset
+
+La fuerza que actúa sobre la unidad de longitud del cilindro se obtiene
+ multiplicando por 
+\begin_inset Formula $2\pi R_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Las soluciones encontradas para los escenarios propuestos en las secciones
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "sec:17 Flujo en una tubería"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 sec: 18 Flujo entre cilindros en rotación"
+
+\end_inset
+
+ tienen en común que en estos casos el término no lineal 
+\begin_inset Formula $\mbox{\mathbf{\left(v\cdot\mathbf{grad}\right)v} }$
+\end_inset
+
+ es nulo, de manera que para encontrar la dsitribución de velocidades estamos
+ resolviendo ecuaciones lineales (lo que simplifica mucho el problema).
+ Por este motivo todas las ecuaciones también satisfacen las ecuaciones
+ de movimiento correspondientes a un fluido ideal incompresible.
+ En las soluciones que hemos encontrado no aparece el coeficiente de viscosidad,
+ que sólo aparece en las fórmulas (como la 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p15 ec:17.9"
+
+\end_inset
+
+) que relacionan la velocidad con el gradiente de presiones del fluido.
+ Como la presencia de un gradiente de presión se debe a la viscosidad, un
+ fluido ideal podría fluir por una tubería aunque no existiera ningún gradiente
+ de presión.
 \end_layout
 
 \end_body
