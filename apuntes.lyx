@@ -8749,5 +8749,413 @@ reference "L02 p15 ec:17.9"
  de presión.
 \end_layout
 
+\begin_layout Section
+Ley de semejanza 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:19 Ley de semejanza"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El estudio del movimiento de fluidos viscosos permite obtener un cierto
+ número de resultados importantes a partir de razonamientos sencillos que
+ se refieren a las dimensiones de las diversas magnitudes físicas.
+\end_layout
+
+\begin_layout Standard
+Estudiamos el movimiento de un cuerpo de una forma determinada a través
+ de un fluido.
+ Si el cuerpo no es una esfera, también debemos indicar la dirección del
+ movimiento.
+\end_layout
+
+\begin_layout Standard
+Los cuerpos de la misma forma son geométricamente semejantes, ya que podemos
+ obtener uno del otro cambiando todas las dimensiones lineales en la misma
+ relación.
+ Por ejemplo, si se da la forma del cuerpo, basta con especificar cualquiera
+ de sus dimensiones lineales para determinar por completo sus dimensiones
+ (el radio de una esfera o una tubería cilíndrica, el semieje de un esferoide
+ de excentricidad determinada, etc).
+\end_layout
+
+\begin_layout Standard
+Suponemos que el flujo es estacionario y el fluido incompresible.
+\end_layout
+
+\begin_layout Standard
+De los parámetros que caracterizan el propio fluido, sólo aparece en las
+ ecuaciones de Navier-Stokes la viscosidad cinemática 
+\begin_inset Formula $\nu=\eta/\rho$
+\end_inset
+
+; las funciones incógnitas que queremos encontrar son las ecuaciones de
+ la velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y el cociente entre la presión y la densidad (constante) 
+\begin_inset Formula $p/\rho$
+\end_inset
+
+.
+ Además, el flujo depende de las condiciones límite, de la forma y dimensiones
+ del cuerpo y de su velocidad a través del fluido.
+\end_layout
+
+\begin_layout Standard
+Como suponemos que la forma del cuerpo es conocida, quedan determinadas
+ sus propiedades geométricas mediante una sola dimensión lineal, que designaremo
+s como 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Si la velocidad del flujo principal es 
+\begin_inset Formula $u$
+\end_inset
+
+, entonces cualquier flujo queda determinado por tres parámetros, 
+\begin_inset Formula $\nu,u$
+\end_inset
+
+ y 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Estas magnitudes tienen las siguientes dimensiones:
+\begin_inset Formula 
+\[
+\nu=cm^{2}/s\quad l=cm\quad u=cm/s
+\]
+
+\end_inset
+
+ Sólo puede formarse una magnitud adimensional con las tres anteriores:
+ 
+\begin_inset Formula $ul/\nu$
+\end_inset
+
+.
+ Esta combinación se denomina 
+\emph on
+número de Reynolds
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Número de Reynolds 
+\begin_inset Formula $R=\frac{ul}{\nu}=\frac{\rho ul}{\eta}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+R=\frac{ul}{\nu}=\frac{\rho ul}{\eta}\label{L02 p20 ec:19.1 Número de Reynolds}
+\end{equation}
+
+\end_inset
+
+
+\emph default
+Cualquier otro parámetro adimensional puede escribirse en función de 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación mediremos las longitudes en función de 
+\begin_inset Formula $l$
+\end_inset
+
+ y la velocidad en función de 
+\begin_inset Formula $u$
+\end_inset
+
+, es decir, introduciremos las magnitudes adimensionales 
+\begin_inset Formula $r/l$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{v}/u$
+\end_inset
+
+.
+ Como el único parámetro adimensional es el número de Reynolds, la distribución
+ de velocidad obtenida resolviendo las ecuaciones del flujo incompresible
+ viene dada por una función de la forma
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=u\mathbf{f}\left(\frac{r}{l},R\right)\label{L02 p20 ec:19.2 Velocidad en función de u, r/l y R}
+\end{equation}
+
+\end_inset
+
+A partir de esta expresión se ve que, en dos flujos diferentes del mismo
+ tipo, las velocidades 
+\begin_inset Formula $\mathbf{v}/u$
+\end_inset
+
+ son las mismas funciones del cociente 
+\begin_inset Formula $\mathbf{r}/l$
+\end_inset
+
+ si el número de Reynolds es el mismo para cada flujo.
+ Los flujos que pueden obtenerse unos de otros cambiando la unidad de medida
+ de las coodenadas de velocidades se dice que son 
+\emph on
+semejantes
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Flujos semejantes
+\end_layout
+
+\end_inset
+
+.
+ Los flujos del mismo tipo con los mismos números de Reynolds son semejantes.
+ Esto se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Ley de semejanza
+\end_layout
+
+\end_inset
+
+ley de semejanza
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Puede escribirse una fórmula semejante a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p20 ec:19.2 Velocidad en función de u, r/l y R"
+
+\end_inset
+
+ para la distribución de presiones de los fluidos.
+ Para ello, tenemos que construir alguna magnitud con las dimensiones de
+ presión dividida por densidad a partir de 
+\begin_inset Formula $\nu,l$
+\end_inset
+
+ y 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Esta magnitud puede ser, por ejemplo 
+\begin_inset Formula $u^{2}$
+\end_inset
+
+.
+ Entonces podemos decir que 
+\begin_inset Formula $p/\rho u^{2}$
+\end_inset
+
+ es una función de la variable adimensional 
+\begin_inset Formula $\mathbf{r}/l$
+\end_inset
+
+ y del parámetro adimensional 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Así pues
+\begin_inset Formula 
+\begin{equation}
+p=\rho u^{2}f\left(\frac{\mathbf{r}}{l},R\right)\label{L02 p21 ec:19.3 Presión en función de r/l, u y R}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Del mismo modo podemos aplicar este razonamiento a magnitudes que caracterizan
+ el flujo pero que no son funciones de las coordenadas.
+ Por ejemplo, la fuerza de arrastre 
+\begin_inset Formula $F$
+\end_inset
+
+ que actúa sobre el cuerpo.
+ El cociente adimensional de 
+\begin_inset Formula $F$
+\end_inset
+
+ con alguna magnitud formada con 
+\begin_inset Formula $\nu,u,l,\rho$
+\end_inset
+
+ y que tenga las dimensiones de fuerza debe ser una función sólo del número
+ de Reynolds.
+ Esta combinación puede ser, por ejemplo 
+\begin_inset Formula $\rho u^{2}l^{2}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\begin{equation}
+F=\rho u^{2}l^{2}f\left(R\right)\label{L02 p21 ec:19.4 Fuerza en función de u, r/l y R}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si la fuerza de la gravedad tiene un efecto importante sobre el flujo, entonces
+ éste está determinado por cuatro parámetros: 
+\begin_inset Formula $l,u,\nu$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ Con estas magnitudes podemos construir dos magnitudes independientes adimension
+ales: el número de Reynolds y el 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Número de Froude 
+\begin_inset Formula $F=\frac{u^{2}}{lg}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+número de Froude
+\emph default
+.
+\begin_inset Formula 
+\begin{equation}
+F=\frac{u^{2}}{lg}\label{L02 p21 ec:19.5 Número de Froude}
+\end{equation}
+
+\end_inset
+
+En las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p20 ec:19.1 Número de Reynolds"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p21 ec:19.4 Fuerza en función de u, r/l y R"
+
+\end_inset
+
+ la función 
+\begin_inset Formula $f$
+\end_inset
+
+ depende de dos parámetros, 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ En este caso, dos flujos son semejantes únicamente si los dos números poseen
+ los mismos valores.
+\end_layout
+
+\begin_layout Standard
+Finalmente, en el caso de flujos 
+\series bold
+no estacionarios
+\series default
+, quedarán caracterizados por las magnitudes 
+\begin_inset Formula $\nu,u,l$
+\end_inset
+
+ y también por el tiempo característico 
+\begin_inset Formula $\tau$
+\end_inset
+
+ que determina la variación de flujo respecto al tiempo.
+ A partir de estas cuatro magnitudes se pueden construir dos magnitudes
+ adimensionales independientes, el número de Reynolds y el número 
+\begin_inset Formula 
+\begin{equation}
+S=\frac{u\tau}{l}\label{L02 p22 ec:19.6 Número de Strouhal}
+\end{equation}
+
+\end_inset
+
+denominado 
+\emph on
+número de Strouhal
+\emph default
+.
+ En este caso, dos movimientos son semejantes si estos dos números tienen
+ los mismos valores.
+\end_layout
+
+\begin_layout Standard
+Si las oscilaciones del fluido se presentan espontáneamente (y no bajo la
+ acción de una fuerza excitadora externa determinada) entonces el movimiento
+ de un tipo determinado 
+\begin_inset Formula $S$
+\end_inset
+
+ será una función definida de 
+\begin_inset Formula $R$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+S=f\left(R\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
