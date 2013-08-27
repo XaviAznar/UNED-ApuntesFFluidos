@@ -9157,5 +9157,915 @@ S=f\left(R\right)
 
 \end_layout
 
+\begin_layout Section
+Fórmula de Stokes 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:20 Fórmula de Stokes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ecuación de Navier-Stokes se simplifica mucho en el caso de números de
+ Reynolds pequeños.
+ En el caso de flujo estacionario de un fluido incompresible esta ecuación
+ es
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\frac{1}{\rho}\mathbf{grad}p+\frac{\eta}{\rho}\Delta\mathbf{v}
+\]
+
+\end_inset
+
+El término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ es del orden de magnitud de 
+\begin_inset Formula $u^{2}/l$
+\end_inset
+
+.
+ La magnitud 
+\begin_inset Formula $\left(\eta/\rho\right)\Delta\mathbf{v}$
+\end_inset
+
+ es del orden de magnitud de 
+\begin_inset Formula $\eta u/\rho l^{2}$
+\end_inset
+
+.
+ El cociente de las dos es precisamente el número de Reynolds, por lo que
+ podemos despreciar 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ si es pequeño el número de Reynolds.
+ En este caso, la ecuación de movimiento se reduce a una ecuación lineal
+\begin_inset Formula 
+\begin{equation}
+\eta\Delta\mathbf{v}-\mathbf{grad}p=0\label{L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)}
+\end{equation}
+
+\end_inset
+
+Esta ecuación, junto a la de continuidad
+\begin_inset Formula 
+\begin{equation}
+div\mathbf{v}=0\label{L02 p22 ec:20.2 Ec. continuidad}
+\end{equation}
+
+\end_inset
+
+determina por completo el movimiento.
+ También es interesante la ecuación
+\begin_inset Formula 
+\begin{equation}
+\Delta\mathbf{rot\, v}=0\label{L02 p22 ec:20.3}
+\end{equation}
+
+\end_inset
+
+que se obtiene tomando el rotacional de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Empezamos considerando el movimiento rectilíneo y uniforme de una esfera
+ en un fluido viscoso.
+ El problema del movimiento de una esfera es completamente equivalente al
+ flujo que pasa alrededor de una esfera fija, teniendo el fluido una velocidad
+ determinada 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ en el infinito.
+ La distribución de velocidades en el primer problema se obtiene del segundo
+ restando simplemente la velocidad 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+; el fluido está entonces en reposo en el infinito, mientras que la esfera
+ se mueve con velocidad 
+\begin_inset Formula $-\mathbf{u}$
+\end_inset
+
+.
+ Si consideramos el flujo como estacionario tenemos que el flujo pasa rodeando
+ una esfera fija, pues si la esfera se mueve, entonces la velocidad del
+ fluido en un punto cualquiera varía con el tiempo.
+\end_layout
+
+\begin_layout Standard
+Debemos tener 
+\begin_inset Formula $\mathbf{v}=\mathbf{u}$
+\end_inset
+
+ en el infinito, de manera que hacemos 
+\begin_inset Formula $\mathbf{v=v'}+\mathbf{u}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\mathbf{v'}$
+\end_inset
+
+ se anule en el infinito.
+ Como 
+\begin_inset Formula $div\,\mathbf{v}=div\,\mathbf{v'}=0$
+\end_inset
+
+, entonces puede escribirse como rotacional de un vector 
+\begin_inset Formula $\mathbf{v}=\mathbf{rot}\,\mathbf{A}+\mathbf{u}$
+\end_inset
+
+.
+ El rotacional de un vector polar es un vector axial 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Un vector axial o pseudovector se transforma como un vector ordinario bajo
+ una rotación propia, pero cambia se signo si se transforma como una reflexión
+ (rotación impropia).
+ Todos los vectores formados a partir de un producto vectorial son axiales.
+\end_layout
+
+\end_inset
+
+ y viceversa.
+ Como la velocidad es un vector polar ordinario, 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ debe ser un vector axial.
+ Pero 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es un vector polar y 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ sólo depende del radio vector 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ (tomando el origen en el centro de la esfera) y del parámetro 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+; los dos vectores son polares.
+ Además, 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ debe ser una función lineal de 
+\begin_inset Formula $\mathbf{u}.$
+\end_inset
+
+ El único vector axial que puede construirse para un cuerpo con simetría
+ total (la esfera) con dos vectores polares es el producto vectorial 
+\begin_inset Formula $\mathbf{r}\times\mathbf{u}$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ debe tener la forma 
+\begin_inset Formula $f'\left(r\right)\mathbf{n}\times\mathbf{u}$
+\end_inset
+
+, donde 
+\begin_inset Formula $f'\left(r\right)$
+\end_inset
+
+ es una función escalar de 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector unidad en la dirección del radio vector.
+ El producto 
+\begin_inset Formula $f'\left(r\right)\mathbf{n}$
+\end_inset
+
+ puede escribirse como un gradiente 
+\begin_inset Formula $\mathbf{grad}\, f\left(r\right)$
+\end_inset
+
+ de una función 
+\begin_inset Formula $f\left(r\right)$
+\end_inset
+
+, de manera que la forma general de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\mathbf{A}=\mathbf{grad\,}f\left(r\right)\times\mathbf{u}
+\]
+
+\end_inset
+
+ y la velocidad 
+\begin_inset Formula $\mathbf{v'}$
+\end_inset
+
+ como
+\begin_inset Formula 
+\[
+\mathbf{v'}=\mathbf{rot}\left(\mathbf{grad}f\times\mathbf{u}\right)
+\]
+
+\end_inset
+
+ Como 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es constante, 
+\begin_inset Formula $\mathbf{grad}f\times\mathbf{u}=\mathbf{rot}\left(f\mathbf{u}\right)$
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{grad}f\times\mathbf{u} & = & \left|\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\frac{df}{dx} & \frac{df}{dy} & \frac{df}{dz}\\
+u_{x} & u_{y} & u_{z}
+\end{array}\right|=\mathbf{i}\left(\frac{df}{dy}u_{z}-\frac{df}{dz}u_{y}\right)+\cdots=\\
+\mathbf{rot}\,\left(f\mathbf{u}\right) & = & \left|\begin{array}{ccc}
+\mathbf{i} & \mathbf{j} & \mathbf{k}\\
+\frac{d}{dx} & \frac{d}{dy} & \frac{d}{dz}\\
+fu_{x} & fu_{y} & fu_{z}
+\end{array}\right|=\mathbf{i}\left(\frac{d\left(fu_{z}\right)}{dy}-\frac{d\left(fu_{y}\right)}{dz}\right)+\cdots=\mathbf{i}\left(\frac{df}{dy}u_{z}-\frac{df}{dz}u_{y}\right)+\cdots
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, de manera que
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{rot\, rot}\left(f\mathbf{u}\right)+\mathbf{u}\label{L02 p23 eq:20.4}
+\end{equation}
+
+\end_inset
+
+Para determinar la función 
+\begin_inset Formula $f$
+\end_inset
+
+, utilizamos la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.3"
+
+\end_inset
+
+.
+ Como 
+\begin_inset Formula 
+\[
+\mathbf{rot}\,\mathbf{v}=\mathbf{rot\, rot\, rot}\left(f\mathbf{u}\right)=\left(\mathbf{grad}div-\Delta\right)\mathbf{rot}\left(f\mathbf{u}\right)=-\Delta\mathbf{rot}\left(f\mathbf{u}\right)
+\]
+
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.3"
+
+\end_inset
+
+ toma la forma 
+\begin_inset Formula $\Delta^{2}\mathbf{rot}\left(f\mathbf{u}\right)=0$
+\end_inset
+
+, pero como 
+\begin_inset Formula $\mathbf{u}=constante$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta^{2}\left(\mathbf{grad}f\times\mathbf{u}\right)=\left(\Delta^{2}\mathbf{grad}f\right)\times\mathbf{u}=0
+\]
+
+\end_inset
+
+ de lo que deducimos que 
+\begin_inset Formula 
+\begin{equation}
+\Delta^{2}\mathbf{grad}f=0\label{L02 p23 ec:20.5}
+\end{equation}
+
+\end_inset
+
+Una primera integración da
+\begin_inset Formula 
+\[
+\Delta^{2}f=constante
+\]
+
+\end_inset
+
+ Esta constante debe ser nula.
+ Como la velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ debe anularse en el infinito, también deben hacerlo sus derivadas.
+ La expresión 
+\begin_inset Formula $\Delta^{2}f$
+\end_inset
+
+ contine cuatro derivadas de 
+\begin_inset Formula $f$
+\end_inset
+
+, mientras que la velocidad se da en función de las segundas derivadas de
+ 
+\begin_inset Formula $f$
+\end_inset
+
+, con lo que tenemos
+\begin_inset Formula 
+\[
+\Delta^{2}f\equiv\frac{1}{r^{2}}\frac{d}{dr}\left(r^{2}\frac{d}{dr}\right)\Delta f=0
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\[
+\Delta f=2\frac{a}{r}+A
+\]
+
+\end_inset
+
+La constante 
+\begin_inset Formula $A$
+\end_inset
+
+ debe ser cero, si la velocidad se anula en el infinito.
+ A partir de 
+\begin_inset Formula $\Delta f=2a/r$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+f=ar+\frac{b}{r}\label{L02 p24 ec:20.6}
+\end{equation}
+
+\end_inset
+
+Omitimos la constante aditiva, pues no tiene importancia (ya que la velocidad
+ se obtiene a partir de 
+\begin_inset Formula $f$
+\end_inset
+
+ calculando derivadas).
+\end_layout
+
+\begin_layout Standard
+Si sustituimos en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p23 eq:20.4"
+
+\end_inset
+
+, obtenemos
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{u}-a\frac{\mathbf{u}+\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)}{r}+b\frac{3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)-\mathbf{u}}{r^{3}}\label{L02 p24 ec:20.7}
+\end{equation}
+
+\end_inset
+
+Determinamos las constantes 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ a partir de las condiciones límite: en la superficie de la esfera 
+\begin_inset Formula $\left(r=R\right)$
+\end_inset
+
+ se anula la velocidad 
+\begin_inset Formula $\mathbf{v}=0$
+\end_inset
+
+, es decir:
+\begin_inset Formula 
+\[
+\mathbf{v}=\mathbf{u}-a\frac{\mathbf{u}+\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)}{R}+b\frac{3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)-\mathbf{u}}{R^{3}}=0
+\]
+
+\end_inset
+
+Como esta ecuación debe cumplirse para todo 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+, los coeficientes de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)$
+\end_inset
+
+ deben anularse:
+\begin_inset Formula 
+\[
+1-\frac{a}{R}-\frac{b}{R^{3}}=0\quad-\frac{a}{R}+\frac{3b}{R^{3}}=0
+\]
+
+\end_inset
+
+De donde obtenemos
+\begin_inset Formula 
+\[
+a=\frac{3}{4}R\quad b=\frac{1}{4}R^{3}
+\]
+
+\end_inset
+
+Al final del día obtenemos
+\begin_inset Formula 
+\begin{equation}
+f=\frac{3}{4}Rr+\frac{1}{4}\frac{R^{3}}{r}\label{L02 p24 ec:20.8}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=-\frac{3}{4}R\frac{\mathbf{u}+\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)}{r}-\frac{1}{4}R^{3}\frac{\mathbf{u}-3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)}{r^{3}}+\mathbf{u}\label{L02 p24 ec:20.9}
+\end{equation}
+
+\end_inset
+
+o en componentes esféricas:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{r} & = & u\cos\theta\left(1-\frac{3R}{2r}+\frac{R^{3}}{2r^{3}}\right)\nonumber \\
+v_{\theta} & = & -u\sin\theta\left(1-\frac{3R}{4r}-\frac{R^{3}}{4r^{3}}\right)\label{L02 p24 ec:20.10}
+\end{eqnarray}
+
+\end_inset
+
+Así obtenemos la distribución de velocidades alrededor de una esfera móvil.
+ Para determinar la presión, sustituimos 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p23 eq:20.4"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{grad}p=\eta\Delta\mathbf{v} & = & \eta\Delta\mathbf{rot\, rot}\left(f\mathbf{u}\right)=\\
+ & = & \eta\Delta\left(\mathbf{grad}div\left(f\mathbf{u}\right)-\mathbf{u\Delta f}\right)
+\end{eqnarray*}
+
+\end_inset
+
+ Pero 
+\begin_inset Formula $\Delta^{2}f=0$
+\end_inset
+
+, por lo que
+\begin_inset Formula 
+\[
+\mathbf{grad}p=\mathbf{grad}\left(\eta\Delta div\left(f\mathbf{u}\right)\right)=\mathbf{grad}\left(\eta\mathbf{u}\cdot\mathbf{grad}\Delta f\right)
+\]
+
+\end_inset
+
+de donde obtenemos
+\begin_inset Formula 
+\begin{equation}
+p=\eta\mathbf{u}\cdot\mathbf{grad}\Delta f+p_{0}\label{L02 p24 ec:20.11}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ es la presión del fluido en el infinito.
+ Sustituyendo 
+\begin_inset Formula $f$
+\end_inset
+
+ se tiene como expresión final
+\begin_inset Formula 
+\begin{equation}
+p=p_{0}-\frac{3}{2}\eta\frac{\mathbf{u}\cdot\mathbf{n}}{r^{2}}R\label{L02 p25 ec:20.12}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando las fórmulas anteriores podemos calcular la fuerza 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ ejercida sobre la esfera por el fluido móvil (es decir, el arrastre sobre
+ la esfera cuando se mueve a través del fuido).
+ Para ello, tomamos coordenadas esféricas con el eje polar paralelo a 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Por simetría, todas las magnitudes son únicamente función de 
+\begin_inset Formula $r$
+\end_inset
+
+ y del ángulo polar 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ La fuerza 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ es paralela a la velocidad 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Podemos determinar la fuerza 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ a partir de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p8 ec:15.12 Fuerza sobre unidad de superficie"
+
+\end_inset
+
+.
+ Tomando de esta fórmula las componentes normal y tangencial a la superficie
+ de la fuerza ejercida sobre un elemento de la esfera y proyectando estas
+ componentes en la dirección 
+\begin_inset Formula $\mathbf{u},$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+F=\oint\left(-p\cos\theta+\sigma'_{rr}\cos\theta-\sigma'_{r\theta}\sin\theta\right)df\label{L02 p25 ec:20.13}
+\end{equation}
+
+\end_inset
+
+donde la integración se realiza sobre toda la superficie de la esfera.
+ Sustituyendo las expresiones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p24 ec:20.10"
+
+\end_inset
+
+ en las fórmulas
+\begin_inset Formula 
+\[
+\sigma'_{rr}=2\eta\frac{\partial v_{r}}{\partial r}\quad\sigma'_{r\theta}=\eta\left(\frac{1}{r}\frac{\partial v_{r}}{\partial\theta}+\frac{\partial v_{\theta}}{\partial r}-\frac{v_{\theta}}{r}\right)
+\]
+
+\end_inset
+
+ encontramos que en la superficie de la esfera:
+\begin_inset Formula 
+\[
+\sigma'_{rr}=0\quad\sigma'_{r\theta}=-\frac{3\eta}{2R}u\sin\theta
+\]
+
+\end_inset
+
+ mientras que la presión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p25 ec:20.12"
+
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+p=p_{0}-\frac{3\eta}{2R}u\cos\theta
+\]
+
+\end_inset
+
+Al final, la integral 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p25 ec:20.13"
+
+\end_inset
+
+ se reduce a 
+\begin_inset Formula $F=\frac{3\eta u}{2R}df$
+\end_inset
+
+, o sea que
+\begin_inset Formula 
+\begin{equation}
+F=6\pi R\eta u\label{L02 p25 ec:20.14 Fórmula de Stokes}
+\end{equation}
+
+\end_inset
+
+Esta fórmula (denominada 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Fórmula de Stokes 
+\begin_inset Formula $F=6\pi R\eta u$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+fórmula de Stokes
+\emph default
+) da el arrastre que actúa sobre una esfera que se mueve lentamente en un
+ fluido.
+ Observamos que el arrastre es proporcional a la primera potencia de la
+ velocidad y de la dimensión lineal del cuerpo 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+La fórmula para un elipsoide en movimiento lento es 
+\begin_inset Formula $F=16\eta Ru$
+\end_inset
+
+ y para un disco moviéndose en su plano 
+\begin_inset Formula $F=\frac{32\eta Ru}{3}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Esta dependencia del arrastre con la velocidad y la dimensión es válida
+ para cuerpos que se mueven lentamente, aunque sean de otras formas
+\series default
+.
+ La dirección del arrastre sobre un cuerpo de forma arbitraria no es la
+ misma que la de la velocidad; la forma general de la relación entre 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ puede escribirse como
+\begin_inset Formula 
+\begin{equation}
+F_{i}=a_{ik}u_{k}\label{L02 p26 ec:20.15 Relación entre la fuerza de arrastre y la velocidad}
+\end{equation}
+
+\end_inset
+
+ en donde 
+\begin_inset Formula $a_{ik}$
+\end_inset
+
+ es un tensor de rango dos independiente de la velocidad.
+ El tensor es simétrico 
+\begin_inset Formula $a_{ik}=a_{ki}$
+\end_inset
+
+ en la aproximación lineal respecto a la velocidad.
+\end_layout
+
+\begin_layout Standard
+La solución recién obtenida del flujo alrededor de una esfera no es válida
+ a grandes distancias de ella, aunque el número de Reynolds sea pequeño.
+ Para demostrarlo, estimaremos el valor del término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ que despreciamos al deducir la ecuación de Navier-Stokes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)"
+
+\end_inset
+
+.
+ A grandes distancias, la velocidad es 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ A partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p24 ec:20.9"
+
+\end_inset
+
+ las derivadas de la velocidad a estas distancias son del orden de 
+\begin_inset Formula $uR/r^{2}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $u^{2}R/r^{2}$
+\end_inset
+
+.
+ Los términos retenidos en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)"
+
+\end_inset
+
+, por ejemplo 
+\begin_inset Formula $\left(1/\rho\right)\mathbf{grad}p$
+\end_inset
+
+ son del orden de 
+\begin_inset Formula $\eta Ru/\rho r^{3}$
+\end_inset
+
+.
+ La condición 
+\begin_inset Formula 
+\[
+\frac{u\eta R}{\rho r^{2}}\gg\frac{u^{2}R}{r^{2}}
+\]
+
+\end_inset
+
+ sólo es válida a distancias 
+\begin_inset Formula $r\ll\frac{\nu}{u}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\nu=\frac{\eta}{\rho}$
+\end_inset
+
+.
+ A distancias mayores no podemos despreciar los términos que hemos omitido
+ y por tanto, la distribución de velocidades que hemos obtenido no es correcta.
+\end_layout
+
+\begin_layout Standard
+Para obtener la distribución de velocidades a gran distancia de la esfera,
+ podemos aproximar 
+\begin_inset Formula $\mathbf{v}\sim\mathbf{u}$
+\end_inset
+
+, por lo que 
+\begin_inset Formula $\mathbf{u}\cdot\mathbf{grad}\sim\mathbf{v}\cdot\mathbf{grad}$
+\end_inset
+
+.
+ Entonces, a distancias grandes:
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{u}\cdot\mathbf{grad}\right)\mathbf{v}=-\frac{1}{\rho}\mathbf{grad}p+\nu\Delta\mathbf{v}\label{L02 p26 ec:20.16}
+\end{equation}
+
+\end_inset
+
+A partir de la solución de esta ecuación se obtiene una ecuación más exacta
+ para el arrastre sobre la esfera en la que se incluye el siguiente término
+ del desarrollo del arrastre en potencias del número de Reynolds 
+\begin_inset Formula $uR/\nu$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+F=6\pi\eta uR\left(1+\frac{3uR}{8\nu}\right)\label{L02 p27 ec:20.17 Arrastre sobre una esfera (mejor aproximación)}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Para resolver el mismo problema del flujo que rodea a un cilindro infinito
+ con la corriente perpendicular a su eje, se ha utilizado la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p26 ec:20.16"
+
+\end_inset
+
+ desde el principio, pues la ecuación de Navier-Stokes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)"
+
+\end_inset
+
+ no tiene ninguna solución que satisfaga las condiciones límite en la superficie
+ del cilindro y que al mismo tiempo se anule en el infinito.
+ El arrastre por unidad de longitud del cilindro es
+\begin_inset Formula 
+\begin{equation}
+F=\frac{4\pi\eta u}{\frac{1}{2}-\gamma-\log\frac{uR}{4\nu}}\label{L02 p27 ec:20.18}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\gamma=0.577$
+\end_inset
+
+ es la constante de Euler.
+\end_layout
+
+\begin_layout Section
+Estela laminar 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:21 Estela-laminar"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document
