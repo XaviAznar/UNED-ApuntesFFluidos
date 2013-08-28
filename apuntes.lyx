@@ -10558,5 +10558,389 @@ v\sim\frac{F_{x}}{\rho\nu x}\label{L02 p33 ec:21.4}
 
 \end_layout
 
+\begin_layout Section
+La viscosidad de las suspensiones 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:22 La viscosidad de las suspensiones "
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un fluido en el que están suspendidas numerosas partículas sólidas finas
+ (formando una suspensión) puede considerarse un medio homogéneo si nos
+ referimos a fenómenos cuyas longitudes características son grandes en comparaci
+ón con el tamaño de las partículas.
+ Dicho medio tiene una viscosidad efectiva 
+\begin_inset Formula $\eta$
+\end_inset
+
+ diferente de la viscosidad 
+\begin_inset Formula $\eta_{0}$
+\end_inset
+
+ del fluido en el que están las partículas en suspensión.
+ El valor de 
+\begin_inset Formula $\eta$
+\end_inset
+
+ puede obtenerse cuando la concentración es pequeña (es decir, su volumen
+ total es pequeño en comparación con el del fluido).
+ El cálculo es relativamente sencillo en el caso de partículas esféricas.
+\end_layout
+
+\begin_layout Standard
+Primero calculamos el efecto que tiene sobre un flujo o corriente con gradiente
+ de velocidad constante la presencia de un glóbulo sólido en el fluido.
+ Suponemos que el fluido sin pertubar está descrito por una distribución
+ de velocidades lineal
+\begin_inset Formula 
+\begin{equation}
+v_{0i}=\alpha_{ik}x_{k}\label{L02 p36 ec:22.1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\alpha_{ik}$
+\end_inset
+
+ es un tensor simétrico constante.
+ La presión del fluido es constante:
+\begin_inset Formula 
+\[
+p_{0}=constante
+\]
+
+\end_inset
+
+ y en el futuro tomaremos 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ como cero, de manera que mediremos únicamente variaciones respecto al valor
+ constante.
+ Si el fluido es incompresible (
+\begin_inset Formula $div\left(\mathbf{v_{0}}\right)=0$
+\end_inset
+
+), la suma de los elementos diagonales del tensor 
+\begin_inset Formula $\alpha_{ik}$
+\end_inset
+
+ debe ser nula:
+\begin_inset Formula 
+\begin{equation}
+\alpha_{ii}=0\label{L02 p37 ec:22.2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora suponemos que tenemos una pequeña esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+ en el origen.
+ La velocidad alterada del fluido es 
+\begin_inset Formula $\mathbf{v}=\mathbf{v}_{0}+\mathbf{v}_{1}$
+\end_inset
+
+, con 
+\begin_inset Formula $\mathbf{v_{1}}$
+\end_inset
+
+ que debe anularse en el infinito, pero que cerca de la esfera 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ no es pequeña en comparación con 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+.
+ Por simetría de la corriente, la esfera permance en reposo, de modo que
+ la condición límite es 
+\begin_inset Formula $\mathbf{v}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $r=R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La solución para las ecuaciones del movimiento 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.1 Ec. Navier-Stoles (num. Reynolds pequeños)"
+
+\end_inset
+
+ a 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p22 ec:20.3"
+
+\end_inset
+
+ se pueden obtener de una vez a partir de la solución 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p23 eq:20.4"
+
+\end_inset
+
+ con la función 
+\begin_inset Formula $f$
+\end_inset
+
+ dada por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p24 ec:20.6"
+
+\end_inset
+
+ si nos damos cuenta que las derivadas espaciales de esta solución también
+ son soluciones.
+ En el caso de las suspensiones buscamos una solución que dependa de las
+ componentes del tensor 
+\begin_inset Formula $\alpha_{ik}$
+\end_inset
+
+ de modo paramétrico (y no del vector 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ como en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 sec:20 Fórmula de Stokes"
+
+\end_inset
+
+).
+ Esta solución es:
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{v}_{1} & = & \mathbf{rot\, rot}\left(\left(\alpha\cdot\mathbf{grad}\right)f\right)\\
+p & = & \eta_{0}\alpha_{ik}\frac{\partial^{2}\Delta f}{\partial x_{i}\partial x_{k}}
+\end{eqnarray*}
+
+\end_inset
+
+ en donde 
+\begin_inset Formula $\left(\alpha\cdot\mathbf{grad}\right)f$
+\end_inset
+
+ es un vector cuyas componentes son 
+\begin_inset Formula $\alpha_{ik}\frac{\partial f}{\partial x_{k}}$
+\end_inset
+
+.
+ Desarrollando estas expresiones y determinando las constantes 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ en la función 
+\begin_inset Formula $f=ar+\frac{b}{r}$
+\end_inset
+
+ de modo que satisfaga las condiciones límite en la superficie de la esfera,
+ obtenemos las siguientes fórmulas para la velocidad y la presión:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{1i} & = & \frac{5}{2}\left(\frac{R^{5}}{r^{4}}-\frac{R^{3}}{r^{2}}\right)\alpha_{kl}n_{i}n_{k}n_{l}-\frac{R^{5}}{r^{4}}\alpha_{ik}n_{k}\label{L02 p37 ec:22.3}\\
+p & = & -5\eta_{0}\frac{R^{5}}{r^{3}}\alpha_{ik}n_{i}n_{k}\label{L02 p37 ec:22.4}
+\end{eqnarray}
+
+\end_inset
+
+siendo 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ un vector unidad en la dirección del radio vector.
+\end_layout
+
+\begin_layout Standard
+Volviendo al problema de determinar la viscosidad efectiva de una suspensión,
+ calculamos el valor promedio (respecto al volumen) del tensor densidad
+ de flujo de impulso 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+, que en la aproximación lineal respecto a la velocidad es el mismo que
+ el tensor de tensiones 
+\begin_inset Formula $-\sigma_{ik}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\overline{\sigma_{ik}}=\frac{1}{V}\int\sigma_{ik}dV
+\]
+
+\end_inset
+
+Podemos realizar la integración sobre el volumen 
+\begin_inset Formula $V$
+\end_inset
+
+ de una esfera y después ampliar el radio hasta el infinito.
+ En primer lugar, tenemos la identidad:
+\begin_inset Formula 
+\begin{equation}
+\overline{\sigma_{ik}}=\eta_{0}\left(\overline{\frac{\partial v_{i}}{\partial x_{k}}}+\overline{\frac{\partial v_{k}}{\partial x_{i}}}\right)-p\delta_{ik}+\frac{1}{V}\int\left(\sigma_{ik}-\eta_{0}\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)+p\delta_{ik}\right)dV\label{L02 p37 ec:22.5}
+\end{equation}
+
+\end_inset
+
+El integrando del segundo miembro es cero, dentro de las esferas sólidas.
+ Como se supone que la concentración de la suspensión es pequeña, podemos
+ calcular la integral para una sola esfera como si no hubiera más y luego
+ multiplicar por la concentración 
+\begin_inset Formula $c$
+\end_inset
+
+ de la suspensión (que es el número de esferas por unidad de volumen).
+ Si intentáramos integrar directamente, tendríamos que estudiar las tensiones
+ internas de las esferas.
+ Podemos evitarlo convirtiendo la integral de volumen en una integral de
+ superficie extendida sobre una esfera alejada que está completamente dentro
+ del fluido.
+ Para ello, observamos que la ecuación del movimiento 
+\begin_inset Formula $\partial\sigma_{ik}/\partial x_{i}=0$
+\end_inset
+
+ conduce a la identidad:
+\begin_inset Formula 
+\[
+\sigma_{ik}=\frac{\partial\left(\sigma_{il}x_{k}\right)}{\partial x_{l}}
+\]
+
+\end_inset
+
+de donde la transformación de la integral de volumen en una integral de
+ superficie de
+\begin_inset Formula 
+\[
+\sigma_{ik}=\eta_{0}\left(\overline{\frac{\partial v_{i}}{\partial x_{k}}}+\overline{\frac{\partial v_{k}}{\partial x_{i}}}\right)+c\oint\left(\sigma_{il}x_{k}df_{l}-\eta_{0}\left(v_{i}df_{k}+v_{k}df_{i}\right)\right)
+\]
+
+\end_inset
+
+ Se ha omitido el término 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+ pues la presión media es cero; 
+\begin_inset Formula $\overline{p}$
+\end_inset
+
+ es un escalar que viene dado por una combinación lineal de componentes
+ 
+\begin_inset Formula $\alpha_{ik}$
+\end_inset
+
+ y el único escalar que cumple esta condición es 
+\begin_inset Formula $\alpha_{ii}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Al calcular la integral sobre una esfera de radio muy grande sólo es necesario
+ conservar en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p37 ec:22.3"
+
+\end_inset
+
+ los términos de orden 
+\begin_inset Formula $1/r^{2}$
+\end_inset
+
+ para obtener la velocidad.
+ Realizando la integral:
+\begin_inset Formula 
+\[
+c\eta_{0}20\pi R^{3}\left(5\alpha_{lm}\overline{n_{i}n_{k}n_{l}n_{m}}-\alpha_{il}\overline{n_{k}n_{l}}\right)
+\]
+
+\end_inset
+
+ en donde la barra indica un promedio respecto a las direcciones del vector
+ unidad 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+.
+ Al realizar el promedio 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+\overline{n_{i}n_{k}} & = & \delta_{ik}\\
+\overline{n_{i}n_{k}n_{l}n_{m}} & = & \frac{1}{15}\left(\delta_{ik}\delta_{lm}+\delta_{il}\delta_{km}+\delta_{im}\delta_{kl}\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ se obtiene, al final
+\begin_inset Formula 
+\begin{equation}
+\overline{\sigma_{ik}}=\eta_{0}\left(\overline{\frac{\partial v_{i}}{\partial x_{k}}}+\overline{\frac{\partial v_{k}}{\partial x_{i}}}\right)+5\eta_{0}\alpha_{ik}\frac{4}{3}\pi R^{3}c\label{L02 p38 ec:22.6}
+\end{equation}
+
+\end_inset
+
+El cociente del segundo término al primero determina la corrección relativa
+ requerida para dar la viscosidad efectiva de la suspensión.
+ Si estamos interesados sólo en correcciones de primer orden, podemos tomar
+ el primer término como si fuese 
+\begin_inset Formula $2\eta_{0}\alpha_{ik}$
+\end_inset
+
+.
+ Entonces se obtiene como valor de la viscosidad efectiva de la suspensión
+ 
+\begin_inset Formula 
+\begin{equation}
+\eta=\eta_{0}\left(1+\frac{5}{2}\phi\right)\label{L02 p38 ec:22.7}
+\end{equation}
+
+\end_inset
+
+ en donde 
+\begin_inset Formula $\phi=\frac{4}{3}\pi R^{3}c$
+\end_inset
+
+ es el cociente del volumen total de las esferas al volumen total de la
+ suspensión, que es pequeño.
+\end_layout
+
 \end_body
 \end_document
