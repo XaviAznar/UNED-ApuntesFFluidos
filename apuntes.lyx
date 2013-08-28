@@ -10942,5 +10942,928 @@ El cociente del segundo término al primero determina la corrección relativa
  suspensión, que es pequeño.
 \end_layout
 
+\begin_layout Section
+Movimiento oscilante en un fluido viscoso 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:24 Movimiento oscilante en un fluido viscoso"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora estudiaremos las propiedades características del flujo de un cuerpo
+ oscilando en un fluido viscoso.
+\end_layout
+
+\begin_layout Standard
+Empezamos con un ejemplo sencillo: un fluido incompresible limitado por
+ una superficie plana infinita que realiza una oscilación armónica simple
+ en su propio plano con frecuencia 
+\begin_inset Formula $\omega$
+\end_inset
+
+.
+ Queremos encontrar el movimiento resultante del fluido.
+ Consideramos la superficie sólida como el plano 
+\begin_inset Formula $yz$
+\end_inset
+
+ y la región del fluido como 
+\begin_inset Formula $x>0$
+\end_inset
+
+; se toma el eje 
+\begin_inset Formula $y$
+\end_inset
+
+ en la dirección de la oscilación.
+ La velocidad 
+\begin_inset Formula $u$
+\end_inset
+
+ de la superficie oscilante es una función del tiempo, de la forma 
+\begin_inset Formula $A\cos\left(\omega t+\alpha\right)$
+\end_inset
+
+.
+ Es conveniente escribir esta expresión como la parte real de una magnitud
+ compleja
+\begin_inset Formula 
+\[
+u=\mathrm{re}\left(u_{0}e^{-i\omega t}\right)
+\]
+
+\end_inset
+
+en donde la constante 
+\begin_inset Formula $u_{0}=Ae^{i\alpha}$
+\end_inset
+
+ es, en general, compleja, pero que siempre puede hacerse real mediante
+ una selección adecuada del origen de tiempo.
+\end_layout
+
+\begin_layout Standard
+Siempre que en los cálculos intervengan sólo operaciones lineales respecto
+ a la velocidad 
+\begin_inset Formula $u$
+\end_inset
+
+ podemos omitir el signo 
+\begin_inset Formula $\mathrm{re}\left(\cdots\right)$
+\end_inset
+
+ y proceder como si 
+\begin_inset Formula $u$
+\end_inset
+
+ fuese complejo, tomando la parte real en el resultado final.
+ Así
+\begin_inset Formula 
+\begin{equation}
+u_{y}=u=u_{0}e^{-i\omega t}\label{L02 p49 ec:24.1}
+\end{equation}
+
+\end_inset
+
+La velocidad del fluido debe satisfacer la condición límite 
+\begin_inset Formula $\mathbf{v}=\mathbf{u}$
+\end_inset
+
+ para 
+\begin_inset Formula $x=0$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $v_{x}=v_{z}=0$
+\end_inset
+
+, 
+\begin_inset Formula $v_{y}=u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es evidente, a partir de la simetría del problema, que todas las magnitudes
+ dependerán sólo de la coordenada 
+\begin_inset Formula $x$
+\end_inset
+
+ y del tiempo 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ En la ecuación de continuidad 
+\begin_inset Formula $div\left(\mathbf{v}\right)=0$
+\end_inset
+
+ y por tanto 
+\begin_inset Formula $\partial v_{x}/\partial x=0$
+\end_inset
+
+, de donde 
+\begin_inset Formula $v_{x}=constante=0$
+\end_inset
+
+ (por las condiciones límite).
+ Como todas las magnitudes son independientes de las coordenadas 
+\begin_inset Formula $y$
+\end_inset
+
+ y 
+\begin_inset Formula $z$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=v_{x}\frac{\partial\mathbf{v}}{\partial x}$
+\end_inset
+
+ y como 
+\begin_inset Formula $v_{x}=0$
+\end_inset
+
+, tenemos que 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=0$
+\end_inset
+
+.
+ La ecuación de Navier-Stokes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p7 ec:15.7 Ec. de Navier-Stokes (fluido viscoso incompresible)"
+
+\end_inset
+
+ se transforma en 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho}\mathbf{grad}p+\nu\Delta\mathbf{v}\label{L02 p49 ec:24.2}
+\end{equation}
+
+\end_inset
+
+Esta ecuación es lineal.
+ Su componente 
+\begin_inset Formula $x$
+\end_inset
+
+ es 
+\begin_inset Formula $\partial p/\partial x=0$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $p=constante$
+\end_inset
+
+.
+ Por simetría, la velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ tiene dirección 
+\begin_inset Formula $y$
+\end_inset
+
+ en todos los puntos.
+ Para 
+\begin_inset Formula $v_{y}=v$
+\end_inset
+
+ tenemos, por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p49 ec:24.2"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial v}{\partial t}=\nu\frac{\partial^{2}v}{\partial x^{2}}\label{L02 p49 ec:24.3}
+\end{equation}
+
+\end_inset
+
+ que equivale a la ecuación de conducción térmica monodimensional.
+ Ahora buscamos una solución que sea periódica en 
+\begin_inset Formula $x$
+\end_inset
+
+ y 
+\begin_inset Formula $t$
+\end_inset
+
+ de la forma
+\begin_inset Formula 
+\[
+v=u_{0}e^{i\left(kx-\omega t\right)}
+\]
+
+\end_inset
+
+con una amplitud compleja 
+\begin_inset Formula $u_{0}$
+\end_inset
+
+, de modo que 
+\begin_inset Formula $v=u$
+\end_inset
+
+ para 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ Sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p49 ec:24.3"
+
+\end_inset
+
+ encontramos 
+\begin_inset Formula $i\omega=\nu k^{2}$
+\end_inset
+
+, de donde obtenemos
+\begin_inset Formula 
+\[
+k=\sqrt{\frac{i\omega}{\nu}}=\pm\left(i+1\right)\sqrt{\frac{\omega}{2\nu}}
+\]
+
+\end_inset
+
+de manera que la velocidad 
+\begin_inset Formula $v$
+\end_inset
+
+ (es decir, 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+) es
+\begin_inset Formula 
+\begin{equation}
+v=u_{0}e^{-\sqrt{\frac{\omega}{2\nu}}x}e^{i\left(\sqrt{\frac{\omega}{2\nu}}x-\omega t\right)}\label{L02 p49 ec:24.4}
+\end{equation}
+
+\end_inset
+
+Hemos tomado 
+\begin_inset Formula $k$
+\end_inset
+
+ como si tuviese una parte imaginaria positiva, ya que de lo contrario,
+ la velocidad aumentaría sin límite en el interior del fluido, lo que no
+ es posible físicamente.
+\end_layout
+
+\begin_layout Standard
+La solución obtenida representa una onda transversal: su velocidad 
+\begin_inset Formula $v_{y}=v$
+\end_inset
+
+ es perpendicular a la dirección de propagación.
+ La propiedad más importante de esta onda es que se ve rápidamente amortiguada
+ en el interior del fluido: la amplitud disminuye exponencialmente cuando
+ aumenta la distancia 
+\begin_inset Formula $x$
+\end_inset
+
+ a la superficie sólida, cuyo movimiento genera las ondas.
+\end_layout
+
+\begin_layout Standard
+La distancia 
+\begin_inset Formula $\delta$
+\end_inset
+
+ en la cual la amplitud decae un factor de 
+\begin_inset Formula $e$
+\end_inset
+
+ se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Profundidad de penetración
+\end_layout
+
+\end_inset
+
+profundidad de penetración
+\emph default
+ de la onda.
+ A partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p49 ec:24.4"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\delta=\sqrt{\frac{2\nu}{\omega}}\label{L02 p50 ec:24.5 Profundidad de penetración de la onda}
+\end{equation}
+
+\end_inset
+
+La profundidad de penetración disminuye al aumentar la frecuencia, pero
+ crece con la viscosidad cinemática del fluido.
+\end_layout
+
+\begin_layout Standard
+A continuación calculamos la fuerza de rozamiento que actúa sobre la unidad
+ de área del plano que oscila en el fluido viscoso.
+ La dirección de esta fuerza coincide con el eje 
+\begin_inset Formula $y$
+\end_inset
+
+ y es igual a la componente 
+\begin_inset Formula $\sigma_{xy}=\eta\frac{\partial v_{y}}{\partial x}$
+\end_inset
+
+ del tensor de tensiones; el valor de la derivada debe tomarse en la superficie,
+ es decir, en 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p49 ec:24.4"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=\sqrt{\frac{1}{2}\omega\eta\rho}\left(i-1\right)u\label{L02 p50 ec:24.6}
+\end{equation}
+
+\end_inset
+
+Suponiendo que 
+\begin_inset Formula $u_{0}$
+\end_inset
+
+ es real y tomando la parte real de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p50 ec:24.6"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\[
+\sigma_{xy}=-\sqrt{\omega\eta\rho}u_{0}\cos\left(\omega t+\frac{1}{4}\pi\right)
+\]
+
+\end_inset
+
+Sin embargo, la velocidad de la superficie oscilante es 
+\begin_inset Formula $u=u_{0}\cos\omega t$
+\end_inset
+
+.
+ Por tanto, existe una diferencia de fase entre la velocidad y la fuerza
+ de rozamiento.
+\end_layout
+
+\begin_layout Standard
+También es sencillo calcular el promedio (temporal) de la disipación de
+ energía en el problema anterior.
+ Esto puede hacerse mediante la fórmula general 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p12 ec:16.3"
+
+\end_inset
+
+, pero en este caso es más sencillo calcular el trabajo realizado por las
+ fuerzas de rozamiento.
+ La energía disipada por unidad de tiempo y por unidad de área del plano
+ oscilante es igual al valor medio del producto de la fuerza 
+\begin_inset Formula $\sigma_{xy}$
+\end_inset
+
+ por la velocidad 
+\begin_inset Formula $u_{y}=u$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+-\overline{\sigma_{xy}u}=\frac{1}{2}u_{0}^{2}\sqrt{\frac{1}{2}\omega\eta\rho}\label{L02 p50 ec:24.7 Disipación de energía}
+\end{equation}
+
+\end_inset
+
+Este valor es proporcional a la raíz cuadrada de la frecuencia de las oscilacion
+es y a la raíz cuadrada de la viscosidad.
+\end_layout
+
+\begin_layout Standard
+También puede calcularse una solución explícita para el problema de un fluido
+ puesto en movimiento mediante una superficie plana que se mueve en su plano
+ de acuerdo con una ley 
+\begin_inset Formula $u=u\left(t\right)$
+\end_inset
+
+.
+ El resultado para la fuerza de rozamiento sobre la unidad de área de la
+ superficie viene dada por
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=\sqrt{\frac{\eta\rho}{\pi}}\int_{-\infty}\frac{du\left(\tau\right)}{d\tau}\frac{d\tau}{\sqrt{\left(t-\tau\right)}}\label{L02 p51 ec:24.8}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora consideramos el caso general de un cuerpo oscilante de forma arbitraria.
+ En el caso del plano oscilante, el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ de la ecuación de movimiento era idénticamente nulo.
+ En el caso de un cuerpo de forma arbitraria esto no es así, pero supondremos
+ que el término es pequeño y que puede despreciarse en comparación con el
+ resto de términos.
+\end_layout
+
+\begin_layout Standard
+Empezamos a partir de la ecuación lineal 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p49 ec:24.2"
+
+\end_inset
+
+.
+ Tomamos el rotacional en ambos miembros; el término 
+\begin_inset Formula $\mathbf{rot\, grad}p$
+\end_inset
+
+ se anula idénticamente, dando
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{rot\, v}}{\partial t}=\nu\Delta\mathbf{rot\,}\mathbf{v}\label{L02 p51 ec:24.9}
+\end{equation}
+
+\end_inset
+
+es decir, 
+\begin_inset Formula $\mathbf{rot\, v}$
+\end_inset
+
+ satisface una ecuación de conducción térmica.
+ Pero como hemos visto anteriormente, la solución es una disminución exponencial
+ de la magnitud que satisface la ecuación.
+ Por tanto podemos decir que la vorticidad disminuye hacia el interior del
+ fluido.
+ En otras palabras, el movimiento del fluido producido por oscilaciones
+ del cuerpo es rotacional en una determinada capa alrededor del cuerpo,
+ mientras que a distancias mayores varía rápidamente convirtiéndose en un
+ flujo potencial.
+ La profundidad de penetración del flujo rotacional es 
+\begin_inset Formula $\delta\sim\sqrt{\frac{\nu}{\omega}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Tenemos dos casos límites importantes: la magnitud 
+\begin_inset Formula $\delta$
+\end_inset
+
+ puede ser grande o pequeña en comparación con las dimensiones del cuerpo
+ oscilante.
+ Suponemos que 
+\begin_inset Formula $l$
+\end_inset
+
+ es una magnitud del orden de la dimensión del cuerpo.
+\end_layout
+
+\begin_layout Standard
+En primer lugar, estudiamos el caso 
+\begin_inset Formula $\delta\gg l$
+\end_inset
+
+, lo que implica que 
+\begin_inset Formula $l^{2}\omega\ll\nu$
+\end_inset
+
+.
+ Además, suponemos que el número de Reynolds es pequeño.
+ Si 
+\begin_inset Formula $a$
+\end_inset
+
+ es la amplitud de las oscilaciones, la velocidad del cuerpo es del orden
+ de 
+\begin_inset Formula $a\omega$
+\end_inset
+
+.
+ El número de Reynolds para este movimiento es 
+\begin_inset Formula $\frac{\omega al}{\nu}$
+\end_inset
+
+.
+ Suponemos entonces que
+\begin_inset Formula 
+\begin{equation}
+l^{2}\omega\ll\nu\qquad\frac{\omega al}{\nu}\ll1\label{L02 p51 ec:24.10}
+\end{equation}
+
+\end_inset
+
+Este es el caso de frecuencias bajas de oscilación, lo que significa que
+ la velocidad del cuerpo varía lentamente con el tiempo y que podemos despreciar
+ la derivada 
+\begin_inset Formula $\partial\mathbf{v}/\partial t$
+\end_inset
+
+ en la ecuación general del movimiento.
+ El término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ puede también despreciarse porque el número de Reynolds es pequeño.
+\end_layout
+
+\begin_layout Standard
+Como no tenemos término 
+\begin_inset Formula $\partial\mathbf{v}/\partial t$
+\end_inset
+
+, el flujo es estacionario.
+ Así, para 
+\begin_inset Formula $\delta\gg l$
+\end_inset
+
+ puede considerarse el flujo como estacionario en un instante cualquiera.
+ Esto significa que en cualquier instante el flujo es el mismo que aparecería
+ si el cuerpo se moviera uniformemente con su velocidad instantánea.
+ En el caso de una esfera oscilante en un fluido, por ejemplo, con una frecuenci
+a que verifique las desigualdades 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p51 ec:24.10"
+
+\end_inset
+
+ (donde 
+\begin_inset Formula $l=R$
+\end_inset
+
+), podemos decir que el arrastre sobre la esfera será el dado por la fórmula
+ de Stokes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p25 ec:20.14 Fórmula de Stokes"
+
+\end_inset
+
+ para el caso de un movimiento uniforme de la esfera con números de Reynolds
+ pequeños.
+\end_layout
+
+\begin_layout Standard
+En el otro extremo, cuando 
+\begin_inset Formula $\delta\ll l,$
+\end_inset
+
+ para poder despreciar el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ es necesario que la amplitud de las oscilaciones sea pequeña en comparación
+ con las dimensiones del cuerpo:
+\begin_inset Formula 
+\begin{equation}
+l^{2}\omega\gg\nu\qquad a\ll l\label{L02 p52 ec:24.11}
+\end{equation}
+
+\end_inset
+
+En este caso no es necesario que el número de Reynolds sea pequeño.
+ La desigualdad anterior se obtiene estimando el valor de 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+.
+ El operador 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)$
+\end_inset
+
+ designa una derivación en la dirección de la velocidad.
+ Sin embargo, cerca del cuerpo la velocidad es casi tangencial.
+ En la dirección tangencial la velocidad varía apreciablemente sólo en distancia
+s del orden de la dimensión del cuerpo, de donde
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\sim\frac{v^{2}}{l}\sim\frac{a^{2}\omega^{2}}{l}
+\]
+
+\end_inset
+
+ya que la velocidad es del orden de 
+\begin_inset Formula $a\omega$
+\end_inset
+
+.
+ Sin embargo, 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $v\omega\sim a\omega^{2}$
+\end_inset
+
+.
+ Comparando las dos expresiones vemos que 
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}
+\]
+
+\end_inset
+
+ si 
+\begin_inset Formula $a\ll l$
+\end_inset
+
+.
+ Los términos 
+\begin_inset Formula $\partial\mathbf{v}/\partial t$
+\end_inset
+
+ y 
+\begin_inset Formula $\nu\Delta\mathbf{v}$
+\end_inset
+
+ se ve entonces que son del mismo orden.
+\end_layout
+
+\begin_layout Standard
+A continuación estudiamos la naturaleza del flujo que rodea el cuerpo oscilante
+ cuando se cumplen las condiciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p52 ec:24.11"
+
+\end_inset
+
+.
+ En una capa delgada cercana a la superficie del cuerpo el flujo es rotacional,
+ pero en el resto del cuerpo el flujo es potencial.
+ Por tanto, excepto en la capa cercana al cuerpo, el flujo en el resto de
+ puntos viene dado por las ecuaciones:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{rot\, v}=0\qquad div\,\mathbf{v}=0\label{L02 p53 ec:24.12}
+\end{equation}
+
+\end_inset
+
+De aquí tenemos que 
+\begin_inset Formula $\Delta\mathbf{v}=0$
+\end_inset
+
+ y la ecuación de Navier-Stokes se reduce a la ecuación de Euler.
+ Por tanto, el flujo es ideal en todas partes, excepto en la capa superficial.
+ Como esta capa es delgada, al resolver las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p53 ec:24.12"
+
+\end_inset
+
+ para determinar el flujo tenemos que tomar como condiciones límites aquellas
+ que deben satisfacerse en las superficies del cuerpo, es decir, que la
+ velocidad del fluido es igual a la del cuerpo.
+ Sin embargo las soluciones de las ecuaciones de movimiento para un fluido
+ ideal no pueden satisfacer estas condiciones.
+ Entonces podemos exigir únicamente que se cumpla la condición correspondiente
+ para la componente normal a la superficie de la velocidad del fluido.
+\end_layout
+
+\begin_layout Standard
+Aunque las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p53 ec:24.12"
+
+\end_inset
+
+ no se pueden aplicar en la capa superficial del fluido, la distribución
+ de velocidades obtenida al resolverlas satisface la condición límite necesaria
+ para la componente de velocidad normal y, por consiguiente, la variación
+ real de esta componente carece de propiedades significativas cerca de la
+ superficie.
+ Se podría hallar la componente tangencial resolviendo la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p53 ec:24.12"
+
+\end_inset
+
+ y así se encuentra que tiene valores diferentes a la componente de velocidad
+ correspondiente del cuerpo, aunque estas componentes de velocidad también
+ deberían ser iguales.
+ De aquí que la componente de velocidad tangencial debe variar rápidamente
+ en la capa superficial.
+ Obtener esta variación es sencillo.
+ Consideramos una porción cualquiera de la superficie del cuerpo, de dimensión
+ grande en comparación con 
+\begin_inset Formula $\delta$
+\end_inset
+
+, pero pequeña en comparación con la dimensión del cuerpo.
+ Puede considerarse dicha parte como aproximadamente plana, y por tanto,
+ podemos utilizar los resultados anteriores para una superficie plana.
+ Suponemos que el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ es normal a la parte considerada y que el eje 
+\begin_inset Formula $y$
+\end_inset
+
+ es paralelo a la componente de velocidad tangencial en dicho punto.
+ Llamamos 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ a la componente tangencial de la velocidad del fluido relativa al cuerpo;
+ 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ debe anularse en la superficie.
+ Finalmente, sea 
+\begin_inset Formula $v_{0}e^{-i\omega_{0}t}$
+\end_inset
+
+ el valor de 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ que se encuentra al resolver las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p53 ec:24.12"
+
+\end_inset
+
+.
+ A partir de los resultados obtenidos al principio de esta sección podemos
+ decir que en la capa superficial la cantidad 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ tenderá a cero cuando nos acerquemos a la superficie de acuerdo con
+\begin_inset Formula 
+\begin{equation}
+v_{y}=v_{0}e^{-i\omega t}\left(1-e^{-\left(1-i\right)x\sqrt{\frac{\omega}{2\nu}}}\right)\label{L02 p52 ec:24.13}
+\end{equation}
+
+\end_inset
+
+Finalmente, la contidad total de energía disipada por unidad de tiempo viene
+ dada por la integral
+\begin_inset Formula 
+\begin{equation}
+\overline{\dot{E_{kin}}}=-\frac{1}{2}\sqrt{\frac{1}{2}\eta\rho\omega}\oint|v_{0}|^{2}df\label{L02 p54 ec:24.14}
+\end{equation}
+
+\end_inset
+
+extendida a toda la superficie del cuerpo oscilante.
+\end_layout
+
+\begin_layout Standard
+Para acabar, haremos algunas consideraciones sobre el arrastre sobre los
+ cuerpos que oscilan en un fluido viscoso.
+ Si escribimos la velocidad en forma compleja 
+\begin_inset Formula $u=u_{0}e^{-i\omega_{0}t}$
+\end_inset
+
+ tenemos una fuerza de arrastre 
+\begin_inset Formula $F$
+\end_inset
+
+ proporcional a la velocidad 
+\begin_inset Formula $u$
+\end_inset
+
+, y también compleja 
+\begin_inset Formula $F=\beta u$
+\end_inset
+
+, donde 
+\begin_inset Formula $\beta=\beta_{1}+i\beta_{2}$
+\end_inset
+
+ es una constante compleja.
+ Esta expresión puede escribirse como la suma de dos términos con coeficientes
+ reales:
+\begin_inset Formula 
+\begin{equation}
+F=\left(\beta_{1}+i\beta_{2}\right)u=\beta_{1}u-\beta_{2}\frac{\dot{u}}{\omega}\label{L02 p54 ec:24.15}
+\end{equation}
+
+\end_inset
+
+uno de los términos es proporcional a la velocidad 
+\begin_inset Formula $u$
+\end_inset
+
+ y otro a la aceleración 
+\begin_inset Formula $\dot{u}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El promedio temporal de la disipación de la energía viene dado por el producto
+ medio del arrastre por la velocidad, donde primero tenemos que tomar las
+ partes reales de las expresiones dadas anteriormente, es decir, 
+\begin_inset Formula $u=\frac{1}{2}\left(u_{0}e^{-i\omega t}+u_{0}^{*}e^{i\omega t}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $F=\frac{1}{2}\left(u_{0}\beta e^{-i\omega t}+u_{0}^{*}\beta^{*}e^{i\omega t}\right)$
+\end_inset
+
+.
+ Como los valores medios de 
+\begin_inset Formula $e^{\pm2i\omega t}$
+\end_inset
+
+ son nulos, tenemos
+\begin_inset Formula 
+\begin{equation}
+\overline{Fu}=\frac{1}{4}\left(\beta+\beta^{*}\right)\left|u_{0}\right|^{2}=\frac{1}{2}\beta_{1}\left|u_{0}\right|^{2}\label{L02 p54 ec:24.16}
+\end{equation}
+
+\end_inset
+
+Vemos que la disipación de energía surge únicamente de la parte real de
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+; la parte correspondiente a la fuerza de arrastre 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p54 ec:24.15"
+
+\end_inset
+
+, proporcional a la velocidad, puede denominarse 
+\emph on
+parte disipativa
+\emph default
+.
+ La otra parte del arrastre, proporcional a la acelearación y determinada
+ por la parte imaginaria de 
+\begin_inset Formula $\beta$
+\end_inset
+
+ no origina disipación de energía y puede denominarse 
+\emph on
+parte inercial
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Las mismas consideraciones pueden realizarse sobre el momento de fuerzas
+ sobre un cuerpo que realiza oscilaciones de rotación en un fluido viscoso.
+\end_layout
+
 \end_body
 \end_document
