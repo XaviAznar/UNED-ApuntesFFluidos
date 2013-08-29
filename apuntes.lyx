@@ -12822,7 +12822,7 @@ name "L03 sec:28 Estabilidad del flujo entre cilindros en rotación"
 \end_layout
 
 \begin_layout Section
-Estabilidad del flujo en una tubería 
+Estabilidad del flujo en una tubería (L) 
 \begin_inset CommandInset label
 LatexCommand label
 name "L03 sec:29 Estabilidad del flujo en una tubería (L)"
@@ -12832,8 +12832,19 @@ name "L03 sec:29 Estabilidad del flujo en una tubería (L)"
 
 \end_layout
 
+\begin_layout Section
+Inestabilidad de las discontinuidades tangenciales (L) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:30 Inestabilidad de las discontinuidades tangenciales (L)"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-PAG14, turbulencia.
+
 \end_layout
 
 \end_body
