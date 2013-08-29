@@ -12151,5 +12151,194 @@ coeficiente de amortiguamiento para ondas de gravedad
 .
 \end_layout
 
+\begin_layout Chapter
+Turbulencia 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:3 Turbulencia"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Estabilidad del flujo estacionario (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:26 Estabilidad del flujo estacionario"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para resolver las ecuaciones del flujo estacionario para fluidos viscosos
+ se tienen que hacer aproximaciones (como el de considerar números de Reynolds
+ pequeños) para simplificar las dificultades matemáticas, lo que hace que
+ las soluciones obtenidas sean de aplicación limitada.
+ Sin embargo, tiene que haber una solución estacionaria exacta de las ecuaciones
+ de la dinámica de fluidos para cualquier problema con condiciones externas
+ estacionarias (para cualquier valor de los números de Reynolds).
+\end_layout
+
+\begin_layout Standard
+Pero ni siquiera todas las soluciones de las ecuaciones del movimiento,
+ aunque sean exactas, pueden producirse en la naturaleza.
+ Estos flujos no sólo deben verificar las ecuaciones de la dinámica de fluidos
+ sino que también tienen que ser estables.
+ Para que el flujo sea estable es necesario que si se producen pequeñas
+ perturbaciones, éstas tiendan a disminuir con el tiempo.
+ En caso contrario, el flujo es inestable.
+\end_layout
+
+\begin_layout Standard
+El estudio de la estabilidad de un flujo determinado respecto a perturbaciones
+ infinitamente pequeñas se realiza de la siguiente manera.
+ Aplicamos una pequeña perturbación no estacionaria 
+\begin_inset Formula $\mathbf{v}_{1}\left(x,y,z,t\right)$
+\end_inset
+
+ sobre una solución estacionaria 
+\begin_inset Formula $\mathbf{v}_{0}\left(x,y,z\right)$
+\end_inset
+
+, de manera que la velocidad resultante 
+\begin_inset Formula $\mathbf{v}=\mathbf{v}_{0}+\mathbf{v}_{1}$
+\end_inset
+
+ satisfaga las ecuaciones del movimiento.
+ Obtenemos 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ sustituyendo en las ecuaciones la velocidad 
+\begin_inset Formula $\mathbf{v}=\mathbf{v}_{0}+\mathbf{v}_{1}$
+\end_inset
+
+ y la presión 
+\begin_inset Formula $p=p_{0}+p_{1}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v} & = & -\frac{1}{\rho}\mathbf{grad}p+\nu\Delta\mathbf{v}\\
+div\,\mathbf{v} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ satisfacen:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\mathbf{v}_{0}\cdot\mathbf{grad}\right)\mathbf{v}_{0} & = & -\frac{1}{\rho}\mathbf{grad}p_{0}+\nu\Delta\mathbf{v}_{0}\\
+div\,\mathbf{v}_{0} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Si omitimos los términos superiores al primer orden en 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ tenemos:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial\mathbf{v}_{1}}{\partial t}+\left(\mathbf{v}_{0}\cdot\mathbf{grad}\right)\mathbf{v}_{1} & +\left(\mathbf{v}_{1}\cdot\mathbf{grad}\right)\mathbf{v}_{0}= & -\frac{1}{\rho}\mathbf{grad}p_{1}+\nu\Delta\mathbf{v}_{1}\nonumber \\
+div\,\mathbf{v}_{1} & = & 0\label{L03 p5 ec:26.1 Ec. movimiento para v1 (perturbacion)}
+\end{eqnarray}
+
+\end_inset
+
+
+\series bold
+La condición límite es que 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ se anule en las superficies sólidas
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Entonces 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ satisface un sistema de ecuaciones diferenciales lineales con coeficientes
+ que son funciones sólo de las coordenadas y no del tiempo.
+ La solución puede representarse como una suma de soluciones particulares
+ en las que 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ depende del tiempo como 
+\begin_inset Formula $e^{-i\omega t}$
+\end_inset
+
+.
+ Las 
+\emph on
+frecuencias
+\emph default
+ 
+\begin_inset Formula $\omega$
+\end_inset
+
+ de las perturbaciones no son arbitrarias, sino que se determinan resolviendo
+ las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p5 ec:26.1 Ec. movimiento para v1 (perturbacion)"
+
+\end_inset
+
+ con las condiciones límite apropiadas.
+ En general, estas frecuencias son complejas.
+ Existen valores de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ cuyas partes imaginarias son positivas, en las que 
+\begin_inset Formula $e^{-i\omega t}$
+\end_inset
+
+ aumentará indefinidamente con el tiempo.
+ En otras palabras, estas perturbaciones aumentarán con el tiempo, dando
+ lugar a un flujo inestable.
+ Para que el flujo perturbado sea estable, es necesario que estas 
+\emph on
+frecuencias
+\emph default
+ sean negativas (así disminuirán exponencialmente con el tiempo).
+\end_layout
+
+\begin_layout Standard
+Matemáticamente, el estudio de la estabilidad es muy complicado y no existe
+ una solución teórica general al problema.
+\end_layout
+
+\begin_layout Section
+Establecimiento de la turbulencia 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:27 Establecimineto de la turbulencia"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
