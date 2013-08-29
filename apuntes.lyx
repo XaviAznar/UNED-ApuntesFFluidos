@@ -11865,5 +11865,291 @@ Las mismas consideraciones pueden realizarse sobre el momento de fuerzas
  sobre un cuerpo que realiza oscilaciones de rotación en un fluido viscoso.
 \end_layout
 
+\begin_layout Section
+Amortiguamiento de las ondas de gravedad (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 sec:25 Amortiguamiento de las ondas de gravedad (E)"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Ahora consideramos el movimiento oscilante que se produce cerca de la superficie
+ (por ejemplo, las ondas de gravedad).
+ Suponemos que son válidas las condiciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p52 ec:24.11"
+
+\end_inset
+
+ cambiando la dimensión 
+\begin_inset Formula $l$
+\end_inset
+
+ por la longitud de onda 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\lambda^{2}\omega\gg\nu\qquad a\gg\lambda\label{L02 p59 ec:25.1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $a$
+\end_inset
+
+ es la amplitud de onda y 
+\begin_inset Formula $\omega$
+\end_inset
+
+ su frecuencia.
+ Podemos decir que el flujo es rotacional sólo en una capa de superficie
+ delgada, mientras que en el resto del fluido tenemos un flujo potencial
+ (como en el caso del fluido ideal).
+\end_layout
+
+\begin_layout Standard
+El movimiento del fluido viscoso debe satisfacer las condiciones límite
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p8 ec:15.14 Condición en una superifice libre (fluido viscoso)"
+
+\end_inset
+
+ en la superficie libre, lo que exige que se anulen ciertas combinaciones
+ de las derivadas especiales de la velocidad.
+ El flujo obtenido resolviendo las ecuaciones de la dinámica para los fluidos
+ ideales no verifica estas condiciones.
+ Como en la sección anterior, al estudiar el comportamiento de 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+, llegamos a la conclusión que sus derivadas espaciales disminuyen rápidamente
+ en el interior de una capa superficial delgada, aunque esto no implica
+ un gradiente de velocidades grande, como pasa cerca de una superficie sólida.
+\end_layout
+
+\begin_layout Standard
+A continuación calculamos la disipación de energía de una onda de gravedad.
+ En este caso debemos considerar la energía mecánica, que incluye la energía
+ cinética y la potencial del campo gravitatorio, a diferencia del caso anterior
+ donde sólo considerábamos la cinética.
+ Sin embargo, está claro que la presencia (o ausencia) de un campo gravitatorio
+ no influye en los procesos de rozamiento interno en el fluido.
+ Por tanto, la variación temporal de la energía mecánica viene dada por
+ la misma fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p12 ec:16.3"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\dot{E}_{mec}=-\frac{1}{2}\eta\int\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)^{2}dV
+\]
+
+\end_inset
+
+Al calcular la integral para una onda de gravedad, hay que tener en cuenta
+ que, al ser pequeño el volumen de la región superficial de flujo de rotación
+ y mientras que el gradiente de velocidad no sea grande ahí, puede ignorarse
+ esta región, a diferencia de lo que sucedía en el caso de oscilaciones
+ de una superficie sólida.
+ En otras parabras, la integración se extiende a todo el volumen del fluido,
+ que se mueve como si fuera ideal (como hemos dicho antes).
+\end_layout
+
+\begin_layout Standard
+El flujo de una onda de gravedad en el caso de un flujo ideal ya se obtuvo
+ en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "sec:12 Ondas de gravedad"
+
+\end_inset
+
+.
+ Como tenemos un flujo potencial
+\begin_inset Formula 
+\[
+\frac{\partial v_{i}}{\partial x_{k}}=\frac{\partial^{2}\phi}{\partial x_{k}\partial x_{i}}=\frac{\partial v_{k}}{\partial x_{i}}
+\]
+
+\end_inset
+
+ por lo que
+\begin_inset Formula 
+\[
+\dot{E}_{mec}=-2\eta\int\left(\frac{\partial^{2}\phi}{\partial x_{i}\partial x_{k}}\right)^{2}dV
+\]
+
+\end_inset
+
+El potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+ tiene la forma
+\begin_inset Formula 
+\[
+\phi=\phi_{0}\cos\left(kx-\omega t+\alpha\right)e^{-kz}
+\]
+
+\end_inset
+
+Estamos interesados en el valor medio respecto al tiempo 
+\begin_inset Formula $\overline{\dot{E}_{mec}}$
+\end_inset
+
+.
+ Si observamos que el valor medio de un seno y un coseno al cuadrado son
+ iguales, tenemos
+\begin_inset Formula 
+\begin{equation}
+\overline{\dot{E}_{mec}}=-8\eta k^{4}\int\overline{\phi^{2}}dV\label{L02 p60 ec:25.2}
+\end{equation}
+
+\end_inset
+
+Podemos calcular la energía mecánica 
+\begin_inset Formula $E_{mec}$
+\end_inset
+
+ en el caso de una onda de gravedad gracias a un teorema de la mecánica
+ que dice que, en un sistema cualquier que realiza pequeñas oscilaciones
+ (es decir, de pequeña amplitud), la energía cinética y la energía potencial
+ media son iguales.
+ Por tanto, podemos escribir 
+\begin_inset Formula $\overline{E_{mec}}$
+\end_inset
+
+ como el doble de la energía cinética:
+\begin_inset CommandInset label
+LatexCommand label
+name "L02 p61 ec:25.4 Coeficiente de amortiguamiento"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\overline{E_{mec}}=\rho\int\overline{v^{2}}dV=\rho\int\overline{\left(\frac{\partial\phi}{\partial x_{i}}\right)^{2}}dV
+\]
+
+\end_inset
+
+ de donde
+\begin_inset Formula 
+\begin{equation}
+\overline{E_{mec}}=2\rho k^{2}\int\overline{\phi^{2}}dV\label{L02 p60 ec:25.3 Energía mecánica media onda gravedad}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El amortiguamiento de las ondas se caracteriza por el 
+\emph on
+coeficiente de amortiguamiento
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de amortiguamiento 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ definido como
+\begin_inset Formula 
+\[
+\gamma=\frac{\left|\overline{\dot{E}_{mec}}\right|}{2\overline{E_{mec}}}
+\]
+
+\end_inset
+
+En el transcurso del tiempo la energía de la onda disminuye de acuerdo con
+ la ley 
+\begin_inset Formula $\overline{E_{mec}}=constante\times e^{-2\gamma t}$
+\end_inset
+
+; como la energía es proporcional al cuadrado de la amplitud, ésta disminuye
+ como 
+\begin_inset Formula $e^{-\gamma t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Utilizando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p60 ec:25.2"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p61 ec:25.4 Coeficiente de amortiguamiento"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+\gamma=2\nu k^{2}\label{L02 p61 ec:25.4 Coef. de amortiguamiento}
+\end{equation}
+
+\end_inset
+
+ Sustituyendo la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 p46 eq:12.7 Relación entre número de onda y frec. de una onda de gravedad"
+
+\end_inset
+
+ para la relación entre el número de onda y la frecuencia, obtenemos
+\begin_inset Formula 
+\begin{equation}
+\gamma=\frac{2\nu\omega^{4}}{g^{2}}\label{L02 p61 ec:25.6 Coef. Amortiguamiento ondas de gravedad}
+\end{equation}
+
+\end_inset
+
+el 
+\series bold
+coeficiente de amortiguamiento para ondas de gravedad
+\series default
+.
+\end_layout
+
 \end_body
 \end_document
