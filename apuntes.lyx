@@ -12821,6 +12821,10 @@ name "L03 sec:28 Estabilidad del flujo entre cilindros en rotación"
 
 \end_layout
 
+\begin_layout Standard
+Esta sección no aparece indicada en la Guía de la Asignatura.
+\end_layout
+
 \begin_layout Section
 Estabilidad del flujo en una tubería (L) 
 \begin_inset CommandInset label
@@ -12830,6 +12834,10 @@ name "L03 sec:29 Estabilidad del flujo en una tubería (L)"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+En la Guía de la Asignatura sólo se recomienda la lectura.
 \end_layout
 
 \begin_layout Section
@@ -12844,7 +12852,536 @@ name "L03 sec:30 Inestabilidad de las discontinuidades tangenciales (L)"
 \end_layout
 
 \begin_layout Standard
+En la Guía de la Asignatura sólo se recomienda la lectura.
+\end_layout
 
+\begin_layout Section
+Turbulencia totalmente desarrollada (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:31 Turbulencia totalmente desarrollada (B) "
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El flujo turbulento a números de Reynolds suficientemente grandes se caracteriza
+ por la presencia de una variación extremadamente irregular de la velocidad
+ con el tiempo en cada punto.
+ Este fenómeno se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Turbulencia totalmente desarrollada
+\end_layout
+
+\end_inset
+
+turbulencia totalmente desarrollada
+\emph default
+.
+ La velocidad fluctúa continuamente alrededor de un determinado valor medio
+ y la amplitud de esta variación no es, en general, pequeña en comparación
+ con la propia velocidad.
+ Estas mismas variaciones irregulares se producen entre diferentes puntos
+ del flujo en un instante determinado.
+ Las trayectorias de las partículas en un flujo turbulento son extremadamente
+ complicadas, dando como resultado una amplia mezcla del fluido.
+\end_layout
+
+\begin_layout Standard
+El flujo turbulento tiene un número muy grande de grados de libertad.
+ Los valores de las fases iniciales 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+, que corresponden a estos grados de libertad, se determinan mediante las
+ condiciones iniciales del flujo.
+ No tiene demasiado sentido especificar las condiciones iniciales exactas
+ para tantas magnitudes, así que no se plantea el problema de esta manera.
+ En vez de eso, se realiza un enfoque estadístico desde un punto de vista
+ macroscópico.
+ Para dar una descripción exacta de la variación respecto al tiempo de la
+ distribución de velocidades del fluido móvil sería necesario dar los valores
+ de todas las fases iniciales 
+\begin_inset Formula $\beta_{j}$
+\end_inset
+
+; entonces se conocerían los valores de todas las fases 
+\begin_inset Formula $\phi_{j}=\omega_{j}t+\beta_{j}$
+\end_inset
+
+ en cada instante.
+ Hemos visto que, pasado un intervalo de tiempo suficientemente largo, el
+ fluido pasa a través de estados arbitrariamente próximos a cualquier estado
+ definido por una selección posible cualquiera de los valores simultáneos
+ de las fases 
+\begin_inset Formula $\phi_{j}$
+\end_inset
+
+.
+ De aquí deducimos que en el flujo turbulento, las condiciones iniciales
+ no tienen ningún efecto pasado un tiempo suficientemente largo, así que
+ lo mejor es realizar un estudio estadístico.
+ Todavía no se ha desarrollado ninguna reoría completa cuantitativa de la
+ turbulencia, aunque se mostrarán varios resultados cualitativos importantes.
+\end_layout
+
+\begin_layout Standard
+Introducimos el concepto de velocidad media
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Velocidad media
+\end_layout
+
+\end_inset
+
+, obtenida a partir del promedio de la velocidad en intervalos largos de
+ tiempo en cada punto.
+ Al promediar, la variación irregular de la velocidad se suaviza y la velocidad
+ media varía suavemente de un punto a otro.
+ En lo que sigue, designamos esta velocidad media por 
+\begin_inset Formula $\mathbf{u}=\overline{\mathbf{v}}$
+\end_inset
+
+.
+ La diferencia 
+\begin_inset Formula $\mathbf{v}'=\mathbf{v}-\mathbf{u}$
+\end_inset
+
+ entre la velocidad verdadera y la velocidad media varía irregularmente
+ de la manera característica propia de la turbulencia; la denominamos 
+\emph on
+parte fluctuante
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Parte fluctuante de la velocidad 
+\begin_inset Formula $\mathbf{v}'=\mathbf{v}-\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ de la velocidad.
+\end_layout
+
+\begin_layout Standard
+Ahora nos fijamos en el movimiento regular que se superpone al flujo medio.
+ Este movimiento se puede imaginar como una superposición de 
+\emph on
+remolinos
+\emph default
+ o 
+\emph on
+torbellinos turbulentos
+\emph default
+ de diferentes tamaños, entendiendo por 
+\begin_inset Quotes eld
+\end_inset
+
+tamaño del torbellino
+\begin_inset Quotes erd
+\end_inset
+
+ el orden de magnitud de la distancia en la que la velocidad varía apreciablemen
+te.
+ Cuando el número de Reynolds aumenta, primero aparecen grandes remolinos;
+ cuando más pequeños sean los remolinos, más tarde aparecen.
+ Para números de Reynolds muy grandes, se presentan remolinos de todos los
+ tamaños.
+ Los remolinos más grandes juegan una parte importante en cualquier flujo
+ turbulento, siendo estos remolinos del orden de la región en la que tiene
+ lugar el flujo.
+ En lo que sigue, designaremos por 
+\begin_inset Formula $l$
+\end_inset
+
+ este orden de magnitud para un flujo determinado cualquiera.
+ Estos grandes remolinos tienen las mayores amplitudes.
+ La velocidad en ellos es comparable con la variación de la velocidad media
+ a lo largo de la distancia 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Designamos mediante 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ el orden de magnitud de esta variación.
+ Las frecuencias correspondientes a estos remolinos son del orden de 
+\begin_inset Formula $u/l$
+\end_inset
+
+, cociente entre la velocidad media 
+\begin_inset Formula $u$
+\end_inset
+
+ (y no de su variación 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+) y la dimensión 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Es la frecuencia lo que determina el periodo con el que se reproduce la
+ imagen del movimiento cuando se observa en un sistema de referencia fijo.
+ Sin embargo, relativamente a dicho sistema, la imagen o esquema completo
+ se mueve con el fluido a una velocidad del orden de 
+\begin_inset Formula $u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los remolinos menores, que corresponden a frecuencias grandes, participan
+ en el flujo turbulento con amplitudes mucho menores.
+ Pueden considerarse como una estructura detallada fina superpuesta sobre
+ los remolinos turbulentos fundamentales grandes.
+ Sólo una parte comparatativamente pequeña de la energía cinética total
+ del fluido radica en estos remolinos pequeños.
+\end_layout
+
+\begin_layout Standard
+Con esta imagen de la turbulencia como una superposición de remolinos grandes
+ y pequeños, podemos obtener una conclusión respecto al modo de variacion
+ de la velocidad fluctuante desde un punto a otro en un instante cualquiera.
+ En distancias grandes (comparables con 
+\begin_inset Formula $l$
+\end_inset
+
+), la variación de la velocidad fluctuante viene dada por la velocidad de
+ los remolinos grandes, y por tanto, es comparable con 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+.
+ En distancias pequeñas (en comparación con 
+\begin_inset Formula $l$
+\end_inset
+
+), viene determinada por los remolinos pequeños, y por tanto es pequeña
+ comparada con 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+.
+ Obtenemos la misma descripción si consideramos la variación de la velocidad
+ con el tiempo en un punto dado cualquiera.
+ En intervalos de tiempo cortos (en comparación con 
+\begin_inset Formula $T\sim l/u$
+\end_inset
+
+), la velocidad no varía apreciablemente, mientras que en intervalos largos,
+ varía en cantidades del orden de 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La longitud 
+\begin_inset Formula $l$
+\end_inset
+
+ aparece como una dimensión característica en el número de Reynolds 
+\begin_inset Formula $R$
+\end_inset
+
+, que determina las propiedades del flujo dado.
+ Además, podemos introducir el concepto cualitativo de los números de Reynolds
+ correspondientes a remolinos turbulentos de diversos tamaños.
+ Si 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es el orden de magnitud del tamaño de un remolino dado y 
+\begin_inset Formula $v_{\lambda}$
+\end_inset
+
+ el orden de magnitud de su velocidad, entonces el número de Reynolds correspond
+iente se define como 
+\begin_inset Formula $R_{\lambda}\sim v_{\lambda}\frac{\lambda}{\nu}$
+\end_inset
+
+.
+ Este número es más pequeño cuanto más pequeño sea el tamaño del remolino.
+\end_layout
+
+\begin_layout Standard
+Cuando se tienen números de Reynolds grandes, los números de Reynolds 
+\begin_inset Formula $R_{\lambda}$
+\end_inset
+
+ de los remolinos grandes también son altos.
+ Sin embargo, números de Reynolds grandes corresponden a viscosidades pequeñas.
+ Por tanto, podemos sacar la conclusión de que en el caso de los remolinos
+ grandes, que son la base de las turbulencias, la viscosidad carece de importanc
+ia y puede hacerse cero, de modo que el 
+\series bold
+movimiento del remolino obedece la ecuación de Euler
+\series default
+.
+ En particular se deduce que 
+\series bold
+no existe ninguna disipación apreciable de energía en remolinos grandes
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+La viscosidad del fluido resulta importante sólo en el caso de remolinos
+ más pequeños, con número de Reynolds comparables con la unidad.
+ Llamamos 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ al tamaño de estos remolinos pequeños.
+ La disipación de energía se produce en estos remolinos, que carecen de
+ importancia respecto al esquema o modelo general del flujo turbulento.
+\end_layout
+
+\begin_layout Standard
+Es decir, la energía pasa de los remolinos grandes a otros más pequeños
+ sin que prácticamente se produzca ninguna disipación en este proceso.
+ Podemos decir que existe un flujo continuo de energía desde los remolinos
+ grandes a los pequeños, es decir, de las frecuencias grandes a las pequeñas.
+ Este flujo de energía se disipa en los remolinos más pequeños, en donde
+ se transforma la energía cinética en calor 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para que se mantenga un estado estacionario es necesario que haya fuentes
+ externas de energía que suministren enegía de modo continuo a los remolinos
+ grandes.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como la viscosidad del fluido sólo tiene importancia en el caso de remolinos
+ pequeños, podemos decir que ninguna de las magnitudes que pertenecen a
+ los remolinos de tamaño 
+\begin_inset Formula $\lambda>\lambda_{0}$
+\end_inset
+
+ puede depender de 
+\begin_inset Formula $\nu$
+\end_inset
+
+ (o lo que es lo mismo, esas cantidades no deben variar si se modifica 
+\begin_inset Formula $\nu$
+\end_inset
+
+ manteniendo el resto de condiciones de movimiento).
+ Esto reduce el número de propiedades del flujo turbulento y da como resultado
+ el que los rozamientos de semejanza, en los que intervienen las dimensiones
+ de las magnitudes disponibles, resulten muy importantes en la investigación
+ de la turbulencia.
+\end_layout
+
+\begin_layout Standard
+Aplicamos estos razonamientos para determinar el orden de magnitud de la
+ disipación de energía en el flujo turbulento.
+ Sea 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ la disipación media de energía en el flujo turbulento por unidad de masa
+ de fluido y por unidad de tiempo.
+ Esta energía se extrae de los remolinos grandes, desde donde se transfiere
+ a los remolinos menores hasta que se disipa en los remolinos de tamaño
+ 
+\begin_inset Formula $\sim\lambda_{0}$
+\end_inset
+
+.
+ Por tanto, aunque la disipación se debe al final a la viscosidad, sólo
+ podemos determinar el orden de magnitud para aquellas magnitudes que caracteriz
+an a los remolinos grandes.
+ Estas son la densidad del fluido 
+\begin_inset Formula $\rho$
+\end_inset
+
+, la dimensión 
+\begin_inset Formula $l$
+\end_inset
+
+ y la velocidad 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+.
+ A partir de estas tres magnitudes sólo podemos formar otra que posea las
+ dimensiones de 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $cm^{2}/s^{3}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\epsilon\sim\frac{\left(\Delta u\right)^{3}}{l}\label{L03 p25 ec:31.1 Disipación media de energía por unidad de masa de fluido y unidad de tiempo}
+\end{equation}
+
+\end_inset
+
+y esta expresión determina el orden de magnitud de la disipación de energía
+ del flujo turbulento.
+\end_layout
+
+\begin_layout Standard
+Otra manera de verlo es decir que podemos describir un fluido turbulento
+ diciendo que tiene una 
+\emph on
+viscosidad turbulenta
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Viscosidad turbulenta 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+ (diferente a la verdadera viscosidad cinética 
+\begin_inset Formula $\nu$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+ caracteriza las propiedades del flujo turbulento y su orden de magnitud
+ está determinado por 
+\begin_inset Formula $\rho,\Delta u$
+\end_inset
+
+ y 
+\begin_inset Formula $l$
+\end_inset
+
+; la única magnitud que puede formarse con las dimensiones de la viscosidad
+ dinámica es
+\begin_inset Formula 
+\begin{equation}
+\nu_{turb}\sim l\Delta u\label{L03 p25 ec:31.2 Viscosidad turbulenta}
+\end{equation}
+
+\end_inset
+
+El cociente entre la viscosidad turbulenta y la viscosidad ordinaria es
+ 
+\begin_inset Formula $\nu_{turb}/\nu\sim R$
+\end_inset
+
+, es decir, aumenta con el número de Reynolds.
+\end_layout
+
+\begin_layout Standard
+La disipación de energía 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ se expresa en función de 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+ por medio de: 
+\begin_inset Formula 
+\begin{equation}
+\epsilon\sim\nu_{turb}\left(\frac{\Delta u}{l}\right)^{2}\label{L03 p25 ec:31.3 Disipación de energía en función de viscosidad turbulenta}
+\end{equation}
+
+\end_inset
+
+de acuerdo con la definición normal de viscosidad.
+ Mientras que 
+\begin_inset Formula $\nu$
+\end_inset
+
+ determina la disipación de energía en función de las derivadas espaciales
+ de la verdadera velocidad, 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+ la relaciona con el gradiente (
+\begin_inset Formula $\sim\frac{\Delta u}{l}$
+\end_inset
+
+) de la velocidad media.
+\end_layout
+
+\begin_layout Standard
+Podemos aplicar razonamientos de semejanza para determinar el orden de magnitud
+ 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+ de la variación de la presión en la región del flujo turbulento.
+ La única magnitud que tiene la dimensión de la presión y que puede formarse
+ con 
+\begin_inset Formula $\rho,l$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ es 
+\begin_inset Formula $\rho\left(\Delta u\right)^{2}$
+\end_inset
+
+, por lo que
+\begin_inset Formula 
+\begin{equation}
+\Delta p\sim\rho\left(\Delta u\right)^{2}\label{L03 p25 ec:31.4 Variación de la presión en turbulencia}
+\end{equation}
+
+\end_inset
+
+ PAG 25
 \end_layout
 
 \end_body
