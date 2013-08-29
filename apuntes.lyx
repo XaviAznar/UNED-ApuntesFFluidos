@@ -12329,8 +12329,53 @@ Matemáticamente, el estudio de la estabilidad es muy complicado y no existe
  una solución teórica general al problema.
 \end_layout
 
+\begin_layout Standard
+Los resultados experimentales parecen indicar que para números de Reynolds
+ más grandes que un determinado 
+\emph on
+número de Reynolds crítico
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Número de Reynolds crítico 
+\begin_inset Formula $R_{cr}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $R_{cr}$
+\end_inset
+
+
+\emph default
+ 
+\series bold
+es imposible tener un flujo estacionario estable
+\series default
+.
+ Este número de Reynolds crítico no es universal, sino es diferente en cada
+ tipo de flujo.
+\end_layout
+
 \begin_layout Section
 Establecimiento de la turbulencia 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sólo páginas 115 y 116 (ver Guía de la Asignatura)
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset CommandInset label
 LatexCommand label
 name "L03 sec:27 Establecimineto de la turbulencia"
@@ -12338,6 +12383,13 @@ name "L03 sec:27 Establecimineto de la turbulencia"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Consideramos el flujo no estacionario que se establece como resultado de
+ la inestabilidad absoluta del flujo estacionario para números de Reynolds
+ grandes.
+ Empezamos 
 \end_layout
 
 \end_body
