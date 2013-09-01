@@ -2537,7 +2537,14 @@ reference "L01 p18 eq:7.4"
 \end_layout
 
 \begin_layout Section
-Conservación de la circulación
+Conservación de la circulación (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L01 sec:8 Conservación de la circulación (G)"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14622,10 +14629,10 @@ B_{tt}=\frac{2}{15}\epsilon\frac{r^{2}}{\nu}\quad B_{rr}=\frac{1}{15}\epsilon\fr
 \end_layout
 
 \begin_layout Section
-Región de turbulencia y el fenómeno de separación 
+Región de turbulencia y el fenómeno de separación (G) 
 \begin_inset CommandInset label
 LatexCommand label
-name "L03 sec:34 Región de turbulencia y el fenómeno de separación"
+name "L03 sec:34 Región de turbulencia y el fenómeno de separación (G)"
 
 \end_inset
 
@@ -14633,7 +14640,288 @@ name "L03 sec:34 Región de turbulencia y el fenómeno de separación"
 \end_layout
 
 \begin_layout Standard
-PAG35.
+El flujo turbulento es, en general, rotacional.
+ Sin embargo la distribución de la vorticidad 
+\begin_inset Formula $\left(\mathbf{\omega}\equiv\mathbf{rot}\,\mathbf{v}\right)$
+\end_inset
+
+ en el fluido tiene ciertas peculiaridades en un flujo turbulento (para
+ 
+\begin_inset Formula $R$
+\end_inset
+
+ muy grande): en el flujo turbulento 
+\emph on
+estacionario
+\emph default
+ que rodea los cuerpos, puede normalmente dividirse el volumen total del
+ fluido en dos regiones separadas.
+ En una de ellas el flujo es rotacional mientras que en la otra la vorticidad
+ es cero y tenemos un flujo potencial.
+ Así, la vorticidad es no nula únicamente en una parte del fluido.
+\end_layout
+
+\begin_layout Standard
+El hecho de que esta región limitada de flujo rotacional pueda existir es
+ una consecuencia de que pueda considerarse el flujo turbulento como el
+ movimiento de un fluido ideal que satisface las ecuaciones de Euler.
+ En la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L01 sec:8 Conservación de la circulación (G)"
+
+\end_inset
+
+ que, en el caso del movimiento de un fluido ideal, es válida la ley de
+ conservación de la circulación.
+ En particular, si en un punto cualquiera de una línea de corriente 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+, entonces es válida igualmente en todos los puntos de dicha línea de corriente.
+ Inversamente, si en un punto de una línea de corriente 
+\begin_inset Formula $\omega\neq0$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\omega\neq0$
+\end_inset
+
+ en toda la línea de corriente.
+ Esto muestra claramente que existen regiones limitadas de flujo rotacional
+ e irrotacional que son compatibles con las ecuaciones de movimiento si
+ la región del flujo rotacional es de tal forma que las líneas de corriente
+ no salgan de la zona rotacional.
+ Dicha distribución de 
+\begin_inset Formula $\omega$
+\end_inset
+
+ será estable y la vorticidad valdrá cero más allá de la superficie de separació
+n.
+ 
+\end_layout
+
+\begin_layout Standard
+Una de las propiedades de la región del flujo turbulento rotacional es que
+ el intercambio de fluido entre esta región y el espacio que la rodea sólo
+ puede producirse en una dirección.
+ El fluido puede entrar en esta región procedente de la región de flujo
+ potencial, pero no puede abandonarla.
+\end_layout
+
+\begin_layout Standard
+Aunque los razonamientos realizados no son una prueba de lo que se ha afirmado
+ en esta sección, experimentalmente se ha confirmado que existen zonas limitadas
+ de flujo turbulento rotacional.
+\end_layout
+
+\begin_layout Standard
+El flujo es turbulento tanto en el caso de la región rotacional como en
+ el de la irrotacional.
+ Sin embargo, la naturaleza de la turbulencia es diferente en las dos regiones.
+ Vamos a ver el porqué de esta diferencia.
+ El flujo potencial obedece la ecuación de Laplace, 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+.
+ Suponemos que el flujo es periódico en el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+, de manera que en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ intervienen 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+ a través de un factor de la forma 
+\begin_inset Formula $e^{ik_{1}x+ik_{2}y}$
+\end_inset
+
+.
+ Entonces
+\begin_inset Formula 
+\[
+\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial y^{2}}=-\left(k_{1}^{2}+k_{2}^{2}\right)\phi=-k^{2}\phi
+\]
+
+\end_inset
+
+y como la suma de las derivadas de segundo orden debe ser nula, la derivada
+ segunda de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ respecto a 
+\begin_inset Formula $z$
+\end_inset
+
+ debe ser igual a 
+\begin_inset Formula $\phi$
+\end_inset
+
+ multiplicada por un coeficiente positivo: 
+\begin_inset Formula $\partial^{2}\phi/\partial z^{2}=k^{2}\phi$
+\end_inset
+
+.
+ La dependencia de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ con 
+\begin_inset Formula $z$
+\end_inset
+
+ viene dada entonces por un factor de amortiguamiento de la forma 
+\begin_inset Formula $e^{-kz}$
+\end_inset
+
+ para 
+\begin_inset Formula $z>0$
+\end_inset
+
+.
+ Es decir, si el flujo potencial es periódico en un plano, debe amortiguarse
+ en la dirección perpendicular a dicho plano.
+ Además, cuanto mayor sean 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ (es decir, menor el periodo del flujo en el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+), más rápidamente se verá amortiguado el flujo a lo largo del eje 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Todos estos razonamientos permanecen cualitativamente válidos en los casos
+ en los que el movimiento no es estrictamente periódico, pero tiene alguna
+ cualidad periódica.
+\end_layout
+
+\begin_layout Standard
+A partir del resultado anterior obtenemos lo siguiente: fuera de la región
+ de flujo rotacional deben amortiguarse los remolinos turbulentos y deben
+ hacerlo tanto más rápidamente cuanto menor sea su tamaño.
+ En otras palabras, los remolinos pequeños no llegan a penetrar muy lejos
+ en la región de flujo potencial.
+ Así, en esta región sólo tienen importancia los remolinos grandes.
+ Éstos se ven amortiguados a distancias del orden de la dimensión (transversal)
+ de la región rotacional, que coincide con la escala de turbulencia en este
+ caso.
+ A distancias mayores que esta dimensión no existe prácticamente turbulencia
+ y el flujo puede considerarse como laminar.
+\end_layout
+
+\begin_layout Standard
+Anteriormente habíamos visto que la disipación de energía en el flujo turbulento
+ se produce en los remolinos más pequeños; en los remolinos grandes no intervien
+e ninguna disipación apreciable, por lo que es posible aplicar la ecuación
+ de Euler.
+ Por tanto, la disipación de energía se produce principalmente en la región
+ de flujo turbulento rotacional y muy poco en el exterior de esta región.
+\end_layout
+
+\begin_layout Standard
+Recordando todas estas propiedades del flujo rotacional e irrotacional llamaremo
+s, de ahora en adelante a la región de flujo turbulento rotacional simplemente
+ 
+\emph on
+región de flujo turbulento
+\emph default
+ o 
+\emph on
+región turbulenta
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+La región turbulenta debe estar limitada en alguna dirección por parte de
+ la superficie del cuerpo, alrededor del cual tiene lugar el flujo.
+ La línea que limita esta parte de la superficie se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Línea de separación
+\end_layout
+
+\end_inset
+
+línea de separación
+\emph default
+.
+ A partir de ella empieza la superficie de separación entre el fluido turbulento
+ y el resto del mismo.
+ La formación de una región turbulenta en el flujo que rodea un cuerpo se
+ denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Fenómeno de separación
+\end_layout
+
+\end_inset
+
+fenómeno de separación
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+La forma de la región turbulenta queda determinada por las propiedades del
+ flujo en el cuerpo principal del fluido (no en la vecindad inmediata de
+ la superficie).
+ Una teoría completa de la turbulencia (que todavía no existe) debería permitir
+ determinar la forma de esta región utilizando las ecuaciones del movimiento
+ para un fluido ideal, dada la posición de la línea de separación en la
+ superficie del cuerpo.
+ Sin embargo, la posición real de la línea de separación está determinada
+ por las propiedades del flujo en la proximidad inmediata de la superficie
+ (conocida como 
+\emph on
+capa límite
+\emph default
+) donde la viscosidad juega una parte vital (y que se estudiará más adelante).
+\end_layout
+
+\begin_layout Section
+Chorro turbulento (?)
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:35 Chorro turbulento (?)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección no aparece en la Guía de la Asignatura.
 \end_layout
 
 \end_body
