@@ -16,10 +16,10 @@ eqs-within-sections
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman bookman
-\font_sans helvet
+\font_roman default
+\font_sans default
 \font_typewriter default
-\font_default_family rmdefault
+\font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
@@ -970,7 +970,7 @@ dw=Tds+Vdp
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Normalmente la entalpía se representa por la letra 
@@ -2223,7 +2223,7 @@ En lo que resta de sección utilizaremos notación tensorial para escribir
  las ecuaciones.
  
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Los sufijos 
@@ -2723,7 +2723,7 @@ Pero resulta que
 
  
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Este resultado también es válido para un fluido ideal en un campo gravitatorio,
@@ -4115,7 +4115,7 @@ reference "L01 p27 eq:10.3 Ec. Euler (sólo velocidad)"
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 A continuación obtenemos el primer término de la ecuación de Euler para
@@ -5022,7 +5022,7 @@ reference "L01 p38  eq:11.2 Velocidad a partir del potencial general"
 
 Finalmente, realizamos la integración 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 La integración respecto al ángulo sólido 
@@ -5440,7 +5440,7 @@ A continuación consideramos el problema de obtener las ecuaciones del movimient
  de un cuerpo sumergido en un fluido que oscila por alguna causa externa
  al cuerpo 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Por ejemplo, una onda sonora de longitud de onda larga comparada con las
@@ -7549,7 +7549,7 @@ se pegue
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -9297,7 +9297,7 @@ Debemos tener
 .
  El rotacional de un vector polar es un vector axial 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Un vector axial o pseudovector se transforma como un vector ordinario bajo
@@ -9411,7 +9411,7 @@ Un vector axial o pseudovector se transforma como un vector ordinario bajo
 
  
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -9858,7 +9858,7 @@ fórmula de Stokes
  Observamos que el arrastre es proporcional a la primera potencia de la
  velocidad y de la dimensión lineal del cuerpo 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 La fórmula para un elipsoide en movimiento lento es 
@@ -10900,7 +10900,7 @@ c\eta_{0}20\pi R^{3}\left(5\alpha_{lm}\overline{n_{i}n_{k}n_{l}n_{m}}-\alpha_{il
 .
  Al realizar el promedio 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -13177,7 +13177,7 @@ Es decir, la energía pasa de los remolinos grandes a otros más pequeños
  Este flujo de energía se disipa en los remolinos más pequeños, en donde
  se transforma la energía cinética en calor 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Para que se mantenga un estado estacionario es necesario que haya fuentes
@@ -14572,7 +14572,7 @@ reference "L02 p12 ec:16.3"
 
  
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Esta es la ecuación 
@@ -15067,7 +15067,7 @@ reference "L02 p32 ec:21.1"
 
  
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula $F_{x}=-\rho U\iint v_{x}dy\, dz$
@@ -15087,7 +15087,7 @@ reference "L02 p32 ec:21.2 Fuerza de sustentación"
 
  
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Formula 
@@ -15608,6 +15608,671 @@ Teorema de Joukowski
 
 Teorema de Joukowski
 \emph default
+.
+\end_layout
+
+\begin_layout Section
+Turbulencia isótropa (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:38.3 Turbulencia-isótropa (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la sección 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L03 sec:33 Correlación de velocidades (G)"
+
+\end_inset
+
+ se ha comentado el caso particular del flujo turbulento que es completamente
+ homogéneo e isótropo, donde la velocidad media es cero en todo el fluido.
+ Este flujo se puede imaginar como el de un fluido que se agita vigorosamente
+ y que luego se abandona a sí mismo.
+ El movimiento va disminuyendo en el tiempo.
+\end_layout
+
+\begin_layout Standard
+El estudio de la turbulencia isótropa y en particular del modo cómo se amortigua
+ el movimiento a lo largo del tiempo se basa en una ley que -aunque sólo
+ es válida en el caso de la turbulencia isótropa- deriva de la ley general
+ de conservación del momento cinético.
+ 
+\end_layout
+
+\begin_layout Standard
+Aislemos dentro del fluido ilimitado una parte suficientemente grande de
+ volumen y consideremos la cantidad total de momento cinético o angular
+ 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ contenido en ese volumen.
+ 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ tiene un determinado valor aleatorio que en general es diferente a cero.
+ Teniendo en cuenta la interacción de las regiones que la rodean, 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ no permanece estrictamente constante.
+ Pero como la interacción es un efecto superficie, el tiempo 
+\begin_inset Formula $T$
+\end_inset
+
+ durante el cual 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+ varía apreciablemente debe aumentar con la dimensión 
+\begin_inset Formula $L$
+\end_inset
+
+ del volumen seleccionado.
+ El tiempo 
+\begin_inset Formula $T$
+\end_inset
+
+ y la dimensión 
+\begin_inset Formula $L$
+\end_inset
+
+ pueden ser arbitrariamente grandes y en este sentido se conserva el momento
+ cinético 
+\begin_inset Formula $\mathbf{M}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por conveniencia supondremos que el volumen elegido está encerrado en un
+ recipiente con paredes fijas; es evidente que las condiciones límites en
+ la superficie de un gran volumen no pueden tener ningún efecto sobre las
+ propiedades volumétricas del flujo en el que estamos interesados.
+\end_layout
+
+\begin_layout Standard
+De acuerdo con la definición general, el tensor 
+\begin_inset Formula $M_{ik}$
+\end_inset
+
+, que es el momento angular total, es igual a la integral
+\begin_inset Formula 
+\[
+\rho\int\left(x_{i}v_{k}-x_{k}v_{i}\right)dV
+\]
+
+\end_inset
+
+tomada en todo el volumen.
+ Transformaremos esta integral de la siguiente forma:
+\begin_inset Formula 
+\[
+\int x_{k}v_{i}dV=\int\frac{\partial}{\partial x_{l}}\left(x_{i}x_{k}v_{l}\right)dV-\int x_{i}x_{k}\frac{\partial v_{l}}{\partial x_{l}}dV-\int x_{i}v_{k}dV
+\]
+
+\end_inset
+
+La primera integral del segundo miembro, al convertirse en una integral
+ de superficie, resulta cero, puesto que las componentes de velocidad normales
+ en las paredes que limitan el fluido son nulas, de modo que 
+\begin_inset Formula $v_{k}dk_{k}=\mathbf{v}\cdot\mathbf{n}df=0$
+\end_inset
+
+.
+ La segunda integral es cero si el fluido es incompresible 
+\begin_inset Formula $\left(\mathrm{div}\mathbf{v}=0\right)$
+\end_inset
+
+.
+ De manera que
+\begin_inset Formula 
+\[
+\int x_{k}v_{i}dV=-\int x_{i}v_{k}dV
+\]
+
+\end_inset
+
+ y podemos escribir el tensor 
+\begin_inset Formula 
+\[
+M_{ik}=2\rho\int x_{i}v_{k}dV
+\]
+
+\end_inset
+
+ La suma de las componentes al cuadrado de 
+\begin_inset Formula $M_{ik}$
+\end_inset
+
+ es igual al doble del valor absoluto del cuadrado del vector del momento
+ cinético
+\begin_inset Formula 
+\[
+\mathbf{M}=\rho\int\mathbf{r}\times\mathbf{v}dV
+\]
+
+\end_inset
+
+Por tanto tenemos
+\begin_inset Formula 
+\[
+M^{2}=2\rho^{2}\left[\int x_{i}v_{k}dV\right]^{2}
+\]
+
+\end_inset
+
+La integral al cuadrado puede escribirse como una integral doble
+\begin_inset Formula 
+\[
+M^{2}=2\rho^{2}\iint x_{i}x'_{i}v_{k}v'_{k}dV\, dV'
+\]
+
+\end_inset
+
+ Finalmente, esta expresión puede volverse a escribir como
+\begin_inset Formula 
+\begin{equation}
+M^{2}=-\rho^{2}\iint\left(x_{i}-x'_{i}\right)^{2}v_{k}v'_{k}dV\, dV'\label{L03 p50 eq:38.1}
+\end{equation}
+
+\end_inset
+
+Las integrales que contienen los cuadrados 
+\begin_inset Formula $x_{i}^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{i}'^{2}$
+\end_inset
+
+ se anulan, ya que 
+\begin_inset Formula 
+\[
+\iint x{}_{i}'^{2}v_{k}v'_{k}dV\, dV'=\int x{}_{i}'^{2}v'_{k}dV'\int v_{k}dV
+\]
+
+\end_inset
+
+ y 
+\begin_inset Formula $\int v_{k}dV=0$
+\end_inset
+
+ ya que el impulso total de un fluido incompresible en un recipiente fijo
+ es cero.
+\end_layout
+
+\begin_layout Standard
+El factor 
+\begin_inset Formula $v_{k}v'_{k}\equiv\mathbf{v}\cdot\mathbf{v'}$
+\end_inset
+
+ en el integrando de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p50 eq:38.1"
+
+\end_inset
+
+ es el producto escalar de las velocidades en dos puntos que tienen coordenadas
+ 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ y 
+\begin_inset Formula $x'_{k}$
+\end_inset
+
+, estando separados una distancia 
+\begin_inset Formula $r=\sqrt{\left(x_{k}-x'_{k}\right)^{2}}$
+\end_inset
+
+.
+ Promediamos este producto respecto a todas las posiciones de los puntos
+ 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ y 
+\begin_inset Formula $x'_{k}$
+\end_inset
+
+ (para un 
+\begin_inset Formula $r$
+\end_inset
+
+ dado) dentro del volumen que nos ocupa; esta operación de promedio es la
+ misma que utilizamos en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 sec:33 Correlación de velocidades (G)"
+
+\end_inset
+
+ para definir las funciones de correlación.
+ Como el flujo es isótropo, la magnitud 
+\begin_inset Formula $\mathbf{v}\cdot\mathbf{v'}$
+\end_inset
+
+ sólo es función de 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Disminuye rápidamente al aumentar 
+\begin_inset Formula $r$
+\end_inset
+
+, puesto que las velocidades del flujo turbulento en dos puntos separados
+ a una distancia grande puede suponerse que son estadísticamente independientes:
+ el valor medio de su producto se reduce entonces al producto de los valores
+ medios de las velocidades individuales, el cual es cero (puesto que la
+ velocidad media es cero en cualquier punto dentro del flujo considerado).
+\end_layout
+
+\begin_layout Standard
+Efectuando esta operación de promediar bajo el signo de la integral en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p50 eq:38.1"
+
+\end_inset
+
+ se tiene 
+\begin_inset Formula 
+\begin{equation}
+M^{2}=\rho^{2}\int f\, dV\qquad f=-\int\overline{\mathbf{v}\cdot\mathbf{v'}}r^{2}\, dV'\label{L03 p50 ec:38.2}
+\end{equation}
+
+\end_inset
+
+El integrando correspondiente a 
+\begin_inset Formula $f$
+\end_inset
+
+ disminuye rápidamente al aumentar 
+\begin_inset Formula $r$
+\end_inset
+
+ de modo que la integral converge; esto significa que, cuando la dimensión
+ 
+\begin_inset Formula $L$
+\end_inset
+
+ de la región tiende a infinito, 
+\begin_inset Formula $f$
+\end_inset
+
+ tiende a un límite finito.
+ Como el flujo es homogéneo, la magnitud 
+\begin_inset Formula $f$
+\end_inset
+
+ es constante en todas partes del fluido y podemos escribir simplemente
+ 
+\begin_inset Formula $M^{2}=\rho^{2}fV$
+\end_inset
+
+.
+ Es decir, que el momento angular o cinético aumenta proporcionalmente a
+ la raíz cuadrada del volumen del fluido móvil y no proporcionalmente a
+ dicho volumen.
+ Esto se debe a que el momento angular es la suma de un gran número de component
+es estadísticamente independientes (los momentos angulares de las diversas
+ partes pequeñas del fluido), cuyos valores medios no son nulos.
+\end_layout
+
+\begin_layout Standard
+Así se obtiene la conclusión de que, en caso de turbulencia isótropa, la
+ constante 
+\begin_inset Formula $M$
+\end_inset
+
+ implica la condición de que 
+\begin_inset Formula 
+\begin{equation}
+\int\overline{\mathbf{v}\cdot\mathbf{v'}}r^{2}\, dV'=constante\label{L03 p51 ec:38.3 Ley de Loytsianski}
+\end{equation}
+
+\end_inset
+
+Esta es la 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Ley de Loytsianski 
+\begin_inset Formula $\int\overline{\mathbf{v}\cdot\mathbf{v'}}r^{2}\, dV'=constante$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Ley de Loytsianski
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+El integrando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.3 Ley de Loytsianski"
+
+\end_inset
+
+ es notablemente diferente de cero en una región cuyas dimensiones son del
+ orden de la escala 
+\begin_inset Formula $l$
+\end_inset
+
+ de la turbulencia (el volumen de la región es 
+\begin_inset Formula $\sim l^{3}$
+\end_inset
+
+) y allí es del orden de 
+\begin_inset Formula $v^{2}l^{2}$
+\end_inset
+
+.
+ De aquí que tengamos a partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.3 Ley de Loytsianski"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+v^{2}l^{5}=constante\label{L03 p51 ec:38.4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando esta relación podemos determinar el modo en el que disminuye
+ con el tiempo la turbulencia isótropa.
+ Para ellos estimamos la derivada temporal de la energía cinética de la
+ unidad de volumen del fluido.
+ Por una parte, puede escribirse que es del orden de 
+\begin_inset Formula $\rho v^{2}/t$
+\end_inset
+
+.
+ Además, debe ser igual a la energía disipada en el volumen por unidad de
+ tiempo.
+ De acuerdo con la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p25 ec:31.1 Disipación media de energía por unidad de masa de fluido y unidad de tiempo"
+
+\end_inset
+
+, 
+\begin_inset Formula $\rho\epsilon\sim\rho v^{3}/l$
+\end_inset
+
+ (siendo aquí 
+\begin_inset Formula $v$
+\end_inset
+
+ la velocidad característica).
+ Si son comparables las dos expresiones, tenemos
+\begin_inset Formula 
+\begin{equation}
+l\sim vt\label{L03 p51 ec:38.5}
+\end{equation}
+
+\end_inset
+
+Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.5"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.4"
+
+\end_inset
+
+ vemos que 
+\begin_inset Formula 
+\begin{equation}
+v=\frac{constante}{t^{5/7}}\label{L03 p51 ec:38.6}
+\end{equation}
+
+\end_inset
+
+Así, la velocidad en la turbulencia isótropa disminuye con el tiempo, de
+ modo inversamente proporcional a 
+\begin_inset Formula $t^{5/7}$
+\end_inset
+
+.
+ Para el valor de 
+\begin_inset Formula $l$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+l=constante\times t^{2/7}\label{L03 p51 ec:38.7}
+\end{equation}
+
+\end_inset
+
+es decir, la escala o dimensión interna de la turbulencia aumenta proporcionalme
+nte a 
+\begin_inset Formula $t^{2/7}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De acuerdo con las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.6"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.7"
+
+\end_inset
+
+, el número de Reynolds 
+\begin_inset Formula $R\sim vl/\nu$
+\end_inset
+
+ disminuye proporcionalmente a 
+\begin_inset Formula $t^{-3/7}$
+\end_inset
+
+, y después de un tiempo suficiente resulta tan pequeño que empieza a ser
+ importante la viscosidad.
+ Se determina entonces la disipación de energía, por una parte, mediante
+ la formula usual:
+\begin_inset Formula 
+\[
+\epsilon=\frac{1}{2}\nu\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)^{2}\sim\frac{\nu v^{2}}{l^{2}}
+\]
+
+\end_inset
+
+y por otra parte, mediante 
+\begin_inset Formula $\epsilon\sim v^{2}/t$
+\end_inset
+
+.
+ Comparando, tenemos
+\begin_inset Formula 
+\begin{equation}
+l\sim\sqrt{vt}\label{L03 p52 ec:38.8}
+\end{equation}
+
+\end_inset
+
+y luego, a partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.4"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+v=\frac{constante}{t^{5/4}}\label{L03 p52 ec:38.9}
+\end{equation}
+
+\end_inset
+
+Estas fórmulas dan el modo en que disminuye la turbulencia isótropa en el
+ periodo final, cuando resulta predominante el efecto de la viscosidad.
+\end_layout
+
+\begin_layout Standard
+Se puede conseguir un flujo turbulento haciendo pasar una corriente a través
+ de una rejilla que posee un número grande de aberturas regularmente espaciadas.
+ Designemos mediante 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ la velocidad del flujo original (tomando 
+\begin_inset Formula $x$
+\end_inset
+
+ en la dirección de 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+) y la verdadera velocidad por 
+\begin_inset Formula $\mathbf{U}+\mathbf{v}$
+\end_inset
+
+, de modo que 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es la velocidad del flujo turbulento que nos interesa.
+ Si introducimos un sistema de referencia móvil con velocidad 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+, entonces respecto a este sistema el fluido realiza un flujo turbulento
+ con velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+.
+ Cuando nos alejamos de la rejilla el flujo turbulento promediado (con velocidad
+ 
+\begin_inset Formula $\mathbf{u}=\mathbf{\overline{v}}$
+\end_inset
+
+) disminuye más rápidamente que el flujo fluctuante.
+ Esto se debe a que el flujo promediado tiene una escala del orden de la
+ dimensión 
+\begin_inset Formula $a$
+\end_inset
+
+ de las aberturas de las rejillas y éstas son pequeñas en comparación con
+ la escala del flujo fluctuante.
+ En consecuencia, a distancias 
+\begin_inset Formula $x$
+\end_inset
+
+ suficientemente grandes de la rejilla, la velocidad promediada 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es casi cero y la velocidad turbulenta 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ coincide prácticamente con la velocidad fluctuante.
+ A esta distancia la turbulencia puede considerarse como totalmente isótropa
+ en regiones pequeñas en comparación con 
+\begin_inset Formula $x$
+\end_inset
+
+ (aunque no necesariamente pequeñas en comparación con la escala externa
+ de la turbulencia).
+ El tiempo de amortiguamiento de la turbulencia en el sistema móvil de referenci
+a corresponde a un amortiguamiento al aumentar las distancias de las rejillas
+ en el sistema estacionario original.
+ El modo como se produce esta disminución viene dado por las fórmulas que
+ hemos deducido en esta sección, en las que únicamente necesitamos sustituir
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ por 
+\begin_inset Formula $x/U$
+\end_inset
+
+.
+ Recordando que a distancias de la rejilla del orden de 
+\begin_inset Formula $a$
+\end_inset
+
+ (dimensión de las aberturas), debemos tener 
+\begin_inset Formula $l\sim a$
+\end_inset
+
+, podemos volver a escribir la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.7"
+
+\end_inset
+
+ como 
+\begin_inset Formula $l\sim a\left(\frac{x}{a}\right)^{2/7}$
+\end_inset
+
+.
+ Para la velocidad tenemos, mediante 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p51 ec:38.5"
+
+\end_inset
+
+, 
+\begin_inset Formula $v\sim\frac{lU}{x}$
+\end_inset
+
+ de donde 
+\begin_inset Formula $v\sim U\left(a/x\right)^{5/7}$
+\end_inset
+
 .
 \end_layout
 
