@@ -14924,5 +14924,692 @@ name "L03 sec:35 Chorro turbulento (?)"
 Esta sección no aparece en la Guía de la Asignatura.
 \end_layout
 
+\begin_layout Section
+Estela turbulenta (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:36 Estela turbulenta (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando se tienen números de Reynolds 
+\begin_inset Formula $R\gg R_{cr}$
+\end_inset
+
+ en un flujo que rodea a un cuerpo sólido, se forma detrás del mismo una
+ región muy larga de flujo turbulento.
+ Esta región se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Estela turbulenta
+\end_layout
+
+\end_inset
+
+estela turbulenta
+\emph default
+.
+ A distancias grandes en comparación con la dimensión del cuerpo se puede
+ determinar la forma de la estela y el modo en el que disminuye en ella
+ la velocidad del fluido.
+\end_layout
+
+\begin_layout Standard
+Como en el estudio de la estela laminar (en la sección 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L02 sec:21 Estela-laminar"
+
+\end_inset
+
+), llamamos 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ a la velocidad del chorro incidente y tomamos la dirección de 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ como eje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ La velocidad del fluido en un punto cualquiera, promediada respecto a las
+ fluctuaciones turbulentas se escribe 
+\begin_inset Formula $\mathbf{U}+\mathbf{u}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $a$
+\end_inset
+
+ es la anchura media de la estela, queremos calcular 
+\begin_inset Formula $a\left(x\right)$
+\end_inset
+
+.
+ Si no existe sustentación, a grandes distancias del cuerpo la estela tiene
+ simetría axial y una sección recta circular.
+ En este caso, 
+\begin_inset Formula $a$
+\end_inset
+
+ puede ser el radio de la estela.
+ Si existe sustentación, se selecciona una dirección en el plano 
+\begin_inset Formula $yz$
+\end_inset
+
+ y la estela no tiene simetría axial a ninguna distancia del cuerpo.
+\end_layout
+
+\begin_layout Standard
+La componente de velocidad longitudinal del fluido en una estela es del
+ orden de 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+, mientras que la componente transversal es del orden de cierto valor medio
+ 
+\begin_inset Formula $u$
+\end_inset
+
+ de la velocidad turbulenta.
+ El ángulo formado por las líneas de corriente y el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $u/U$
+\end_inset
+
+.
+ La estela termina en aquellas líneas de corriente del movimiento turbulento
+ de rotación que no puede atravesar.
+ De aquí se deduce que el ángulo entre el límite de la estela y el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ es también del orden de 
+\begin_inset Formula $u/U$
+\end_inset
+
+.
+ Por tanto
+\begin_inset Formula 
+\begin{equation}
+\frac{da}{dx}\sim\frac{u}{U}\label{L03 p44 ec:36.1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación utilizamos las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p32 ec:21.1"
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $F_{x}=-\rho U\iint v_{x}dy\, dz$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p32 ec:21.2 Fuerza de sustentación"
+
+\end_inset
+
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{y} & = & -\rho U\iint v_{y}dy\, dz\\
+F_{z} & = & -\rho U\iint v_{z}dy\, dz
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ que determinan las fuerzas sobre el cuerpo en función de integrales de
+ la velocidad del fluido en la estela (interpretando ahora la velocidad
+ como su valor medio).
+ La región de integración de estas integrales es del orden de 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+, por lo que una estimación de la integral nos da 
+\begin_inset Formula $F\sim\rho Uua^{2}$
+\end_inset
+
+, donde 
+\begin_inset Formula $F$
+\end_inset
+
+ es del orden del arrastre o de la sustentación.
+ Por tanto
+\begin_inset Formula 
+\begin{equation}
+u\sim\frac{F}{\rho Ua^{2}}\label{L03 p44 ec:36.2 Orden de la velocidad media (estela turbulenta)}
+\end{equation}
+
+\end_inset
+
+ Sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p44 ec:36.1"
+
+\end_inset
+
+ se tiene 
+\begin_inset Formula $da/dx\sim F/\rho U^{2}a^{2}$
+\end_inset
+
+, a partir de la cual se obtiene por integración
+\begin_inset Formula 
+\begin{equation}
+a\sim\left(\frac{Fx}{\rho U^{2}}\right)^{1/3}\label{L03 p44 ec:36.3 Amplitud de la estela como f(x)}
+\end{equation}
+
+\end_inset
+
+De manera que vemos que la anchura de la estela aumenta proporcionalmente
+ a la raíz cúbica de la distancia al cuerpo.
+ Para el valor de la velocidad 
+\begin_inset Formula $u$
+\end_inset
+
+, a partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p44 ec:36.2 Orden de la velocidad media (estela turbulenta)"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p44 ec:36.3 Amplitud de la estela como f(x)"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+u\sim\left(\frac{FU}{\rho x^{2}}\right)^{1/3}\label{L03 p44 ec:36.4 Velocidad media en función de x}
+\end{equation}
+
+\end_inset
+
+Es decir, la velocidad media del fluido en la estela es inversamente proporciona
+l a 
+\begin_inset Formula $x^{2/3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El flujo en cualquier sección recta de la estela está caracterizado por
+ el número de Reynolds 
+\begin_inset Formula $R\sim\frac{au}{\nu}$
+\end_inset
+
+.
+ Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p44 ec:36.2 Orden de la velocidad media (estela turbulenta)"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p44 ec:36.3 Amplitud de la estela como f(x)"
+
+\end_inset
+
+ se obtiene
+\begin_inset Formula 
+\[
+R\sim\frac{F}{\nu\rho Ua}\sim\left(\frac{F^{2}}{\rho^{2}Ux\nu^{3}}\right)
+\]
+
+\end_inset
+
+Como vemos 
+\begin_inset Formula $R$
+\end_inset
+
+ no es constante a lo largo de la estela.
+ A distancias suficientemente grandes del cuerpo, 
+\begin_inset Formula $R$
+\end_inset
+
+ resulta ser tan pequeño que el flujo en la estela deja de ser turbulento.
+ Más allá de este punto, tenemos una estela laminar (como en la sección
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 sec:21 Estela-laminar"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Para acabar, se comentan algunas propiedades general de la distribución
+ de velocidades alrededor del cuerpo.
+ Tanto en el interior como en el exterior de la turbulencia la velocidad
+ (que siempre entendemos como 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+) disminuye cuando nos alejamos del cuerpo.
+ Pero la velocidad longitudinal 
+\begin_inset Formula $u_{x}$
+\end_inset
+
+ desciende más rápidamente 
+\begin_inset Formula $\sim1/x^{2}$
+\end_inset
+
+ fuera de la estela que en su interior.
+ Por tanto podemos suponer que lejos del cuerpo 
+\begin_inset Formula $u_{x}$
+\end_inset
+
+ es cero en el exterior de la estela: 
+\begin_inset Formula $u_{x}$
+\end_inset
+
+ disminuye desde cierto valor máximo en el eje de la estela hasta cero en
+ sus límites.
+ Las componentes transversales 
+\begin_inset Formula $u_{y},u_{z}$
+\end_inset
+
+ en los límites son del mismo orden de magnitud que en el interior de la
+ estela, disminuyendo rápidamente cuando nos alejamos de la estela una distancia
+ determinada del cuerpo.
+\end_layout
+
+\begin_layout Section
+Teorema de Joukowski (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:37 Teorema de Joukowski (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La distribución de velocidades desarrollada alrededor de un cuerpo no es
+ válida en casos excepcionales, en donde el espesor de la estela formada
+ detrás del cuerpo es muy pequeña en comparación con su anchura.
+ Se forma una estela de este tipo en el flujo que rodea a cuerpos cuya sección
+ transversal al flujo es muy alargada.
+ Entre estos cuerpos podemos incluir, en particular, las 
+\emph on
+alas
+\emph default
+, es decir, cuerpos cuya anchura o 
+\emph on
+envergadura
+\emph default
+ es grande en comparación con sus otras dimensiones.
+\end_layout
+
+\begin_layout Standard
+En este caso no existe ninguna razón por la cual la componente de la velocidad
+ 
+\begin_inset Formula $u_{y}$
+\end_inset
+
+ perpendicular al plano de la estela turbulenta deba descender apreciablemente
+ a distancias del orden del espesor de la misma.
+ Por el contrario, esta componente será ahora del mismo orden de magnitud
+ dentro de la estela y a distancias considerables de la misma, del orden
+ de la envergadura.
+ En este escenario admitimos que la sustentación no es cero, ya que de hacerlo
+ la velocidad transversal sería prácticamente cero.
+\end_layout
+
+\begin_layout Standard
+Consideramos la fuerza de sustentación vertical 
+\begin_inset Formula $F_{y}$
+\end_inset
+
+ que se obtiene como resultado de dicho flujo.
+ De acuerdo con la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L02 p32 ec:21.2 Fuerza de sustentación"
+
+\end_inset
+
+, viene dada por 
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\iint u_{y}dy\, dz\label{L03 p46 ec:37.1 Sustentación Fy}
+\end{equation}
+
+\end_inset
+
+en donde, por la distribución de 
+\begin_inset Formula $u_{y}$
+\end_inset
+
+, la integral debe realizarse sobre el plano transversal completo.
+ Además, como el espesor de la estela es pequeño (dirección 
+\begin_inset Formula $y$
+\end_inset
+
+) mientras que la velocidad 
+\begin_inset Formula $u_{y}$
+\end_inset
+
+ dentro de la estela no es grande en comparación con su valor fuera, podemos
+ realizar la integración sobre 
+\begin_inset Formula $y$
+\end_inset
+
+ con suficiente aproximación, extendiéndola sobre la región a la estela
+ y escribir:
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}u_{y}dy\approx\int_{-\infty}^{y_{2}}u_{y}dy+\int_{y_{1}}^{\infty}u_{y}dy
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ son las coordenadas de los límites de la estela (figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 sec:37 fig:18 Estela de un ala"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/L03-sec37-fig18.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Estela de una ala
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:37 fig:18 Estela de un ala"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sin embargo, fuera de la estela tenemos un flujo potencial y 
+\begin_inset Formula $u_{y}=\partial\phi/\partial y$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ en el infinito, tenemos
+\begin_inset Formula 
+\[
+\int u_{y}dy=\phi_{2}-\phi_{1}
+\]
+
+\end_inset
+
+ en donde 
+\begin_inset Formula $\phi_{1},\phi_{2}$
+\end_inset
+
+ son los valores del potencial en ambos lados de la estela.
+ Podemos decir que 
+\begin_inset Formula $\phi_{2}-\phi_{1}$
+\end_inset
+
+ es la discontinuidad del potencial en la superficie de discontinuidad que
+ puede sustituirse por una estela delgada.
+ Debe permanecer continua la derivada 
+\begin_inset Formula $u_{y}=\partial\phi/\partial y$
+\end_inset
+
+.
+ Una discontinuidad en la componente normal a la superficie de la estela
+ significaría que fluye cierta cantidad de fluido dentro de la estela; sin
+ embargo en la misma aproximación, la presión también debe ser continua
+ en la estela.
+ Como la variación de la presión viene dada, también en primera aproximación,
+ de acuerdo con la ecuación de Bernoulli por 
+\begin_inset Formula $\rho Uu_{x}=U\partial\phi/\partial x$
+\end_inset
+
+, se dice que la derivada 
+\begin_inset Formula $\partial\phi/\partial x$
+\end_inset
+
+ debe ser también continua.
+ Sin embago, la derivada 
+\begin_inset Formula $\partial\phi/\partial z$
+\end_inset
+
+ (la velocidad a lo largo del ala) es, en general, discontinua.
+\end_layout
+
+\begin_layout Standard
+Como la derivada 
+\begin_inset Formula $\partial\phi/\partial x$
+\end_inset
+
+ es continua, la discontinuidad 
+\begin_inset Formula $\phi_{2}-\phi_{1}$
+\end_inset
+
+, depende sólo de 
+\begin_inset Formula $z$
+\end_inset
+
+ y no de la coordenada 
+\begin_inset Formula $x$
+\end_inset
+
+ a lo largo de la estela.
+ Así pues, tenemos la siguiente fórmula para la sustentación:
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\int\left(\phi_{2}-\phi_{1}\right)dz\label{L03 p47 ec:37.2 Sustentación}
+\end{equation}
+
+\end_inset
+
+La integración respecto a 
+\begin_inset Formula $z$
+\end_inset
+
+ puede tomarse sobre la anchura de la estela (
+\begin_inset Formula $\phi_{2}-\phi_{1}=0$
+\end_inset
+
+ fuera de la misma).
+ Esta fórmula puede escribirse de forma ligeramente distinta.
+ Utilizando las propiedades del gradiente de un escala, podemos escribir
+ la diferencia 
+\begin_inset Formula $\phi_{2}-\phi_{1}$
+\end_inset
+
+ como una integral de contorno
+\begin_inset Formula 
+\[
+\oint\mathbf{grad}\phi\cdot d\mathbf{l}=\oint\left(u_{y}dy+u_{x}dx\right)
+\]
+
+\end_inset
+
+tomada a lo largo de un contorno que parte del punto 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, rodea el cuerpo y termina en el punto 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+, pasando a través de todos los puntos de la región de flujo potencial.
+ Como esta estela es delgada, podemos, sin variar la integral excepto en
+ cantidades de orden superior, cerrar este contorno mediante el segmento
+ que va de 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ a
+\begin_inset Formula $y_{1}$
+\end_inset
+
+.
+ Si llamamos 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ a la circulación de la velocidad alrededor del contorno cerrado 
+\begin_inset Formula $C$
+\end_inset
+
+ que encierra el cuerpo en la figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 sec:37 fig:18 Estela de un ala"
+
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\begin{equation}
+\Gamma=\oint\mathbf{u}\cdot d\mathbf{l}=\phi_{2}-\phi_{1}\label{L03 p47 ec:37.3 Circulación}
+\end{equation}
+
+\end_inset
+
+y para la fuerza de sustentación tenemos
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\int\Gamma dz\label{L03 p47 ec:37.4 Teorema de Joukowski}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La relación entre la sustentación y la circulación de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 p47 ec:37.4 Teorema de Joukowski"
+
+\end_inset
+
+ se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Teorema de Joukowski 
+\begin_inset Formula $F_{y}=-\rho U\int\Gamma dz$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Teorema de Joukowski
+\emph default
+.
+\end_layout
+
 \end_body
 \end_document
