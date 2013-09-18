@@ -206,6 +206,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename imgs/1_1_equema.png
+	width 100col%
 
 \end_inset
 
@@ -3905,6 +3906,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename imgs/fig-02.png
+	scale 80
 
 \end_inset
 
@@ -15388,6 +15390,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename imgs/L03-sec37-fig18.png
+	scale 80
 
 \end_inset
 
@@ -15803,7 +15806,11 @@ Las integrales que contienen los cuadrados
 \end_inset
 
  y 
-\begin_inset Formula $\int v_{k}dV=0$
+\begin_inset Formula 
+\[
+\int v_{k}dV=0
+\]
+
 \end_inset
 
  ya que el impulso total de un fluido incompresible en un recipiente fijo
@@ -16274,6 +16281,987 @@ reference "L03 p51 ec:38.5"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Chapter
+Capas límite 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:4 Capas-límite"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Capa límite laminar (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:39 Capa-límite-laminar (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los números de Reynolds muy grandes son equivalentes a viscosidades muy
+ pequeñas, por lo que si 
+\begin_inset Formula $R$
+\end_inset
+
+ es grande, podemos considerar el fluido como ideal.
+ Esta aproximación 
+\series bold
+no es válida
+\series default
+ cuando el flujo se produce 
+\series bold
+cerca de paredes sólidas
+\series default
+.
+ Para un fluido ideal, las condiciones límite exigen que la velocidad normal
+ a la pared se anule, aunque la componente tangencial siga siendo finita.
+ En el caso de un fluido viscoso, la velocidad junto a la pared sólida debe
+ anularse por completo.
+\end_layout
+
+\begin_layout Standard
+Teniendo en cuenta lo anterior, llegamos a la conclusión de que para números
+ de Reynolds grandes, la disminución de la velocidad hasta cero se produce
+ casi exclusivamente en una capa delgada junto a la pared.
+ Esta capa se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Capa límite
+\end_layout
+
+\end_inset
+
+capa límite
+\emph default
+ y se caracteriza por la presencia de gradientes de velocidad considerables.
+ El flujo en la capa límite puede ser 
+\emph on
+laminar
+\emph default
+ o 
+\emph on
+turbulento
+\emph default
+.
+ En esta sección consideramos las propiedades de la capa límite laminar.
+ El límite de la capa no es nítido, sino que tenemos una transición continua
+ desde el flujo laminar en la capa límite a la corriente principal del fluido.
+\end_layout
+
+\begin_layout Standard
+La disminución rápida de la velocidad en la capa límite se debe a que no
+ podemos despreciar la viscosidad aunque 
+\begin_inset Formula $R$
+\end_inset
+
+ sea grande.
+ Matemáticamente esto se traduce en que los gradientes de velocidad en la
+ capa límite son grandes, es decir, todos los términos que contienen derivadas
+ espaciales de la velocidad, aunque 
+\begin_inset Formula $\nu$
+\end_inset
+
+ sea pequeña.
+\end_layout
+
+\begin_layout Standard
+A continuación vamos a deducir las ecuaciones de movimiento del fluido en
+ una capa límite laminar.
+ Para simplificar, consideramos un flujo bidimensional a lo largo de una
+ porción plana de la superficie (plano 
+\begin_inset Formula $xz$
+\end_inset
+
+, con la dirección del flujo en la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+).
+ La distribución de velocidades es independiente de 
+\begin_inset Formula $z$
+\end_inset
+
+ y la velocidad no tiene componente 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones exactas de Navier-Stokes y la ecuación de continuidad son:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y} & = & -\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^{2}v_{x}}{\partial x^{2}}+\frac{\partial^{2}v_{x}}{\partial y^{2}}\right)\label{L4 p5 ec:39.1 Capa límite laminar (x) Navier-Stokes}\\
+v_{x}\frac{\partial v_{y}}{\partial x}+v_{y}\frac{\partial v_{y}}{\partial y} & = & -\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^{2}v_{y}}{\partial x^{2}}+\frac{\partial^{2}v_{y}}{\partial y^{2}}\right)\label{L4 p5 ec:39.2 Capa límite laminar (y) Navier-Stokes}\\
+\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y} & = & 0\label{L4 p5 ec:39.3 Capa límite laminar Ec. Continuidad}
+\end{eqnarray}
+
+\end_inset
+
+Consideramos el flujo estacionario, por lo que se omiten las derivadas respecto
+ al tiempo.
+\end_layout
+
+\begin_layout Standard
+Como la capa límite es delgada, el flujo tiene lugar principalmente de modo
+ que resulta paralelo a la superficie, es decir la velocidad 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ es pequeña en comparación con 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ (como se ve a partir de la ecuación de continuidad).
+\end_layout
+
+\begin_layout Standard
+La velocidad varía rápidamente a lo largo del eje 
+\begin_inset Formula $y$
+\end_inset
+
+, produciéndose una variación apreciable a distancias 
+\begin_inset Formula $\delta$
+\end_inset
+
+ del orden del espesor de la capa límite.
+ A lo largo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ la velocidad varía lentamente, por lo que sólo se produce una variación
+ apreciable a distancias del orden de 
+\begin_inset Formula $l$
+\end_inset
+
+ la longitud característica del problema (generalmente, las dimensiones
+ del cuerpo).
+ Por tanto, las derivadas respecto al eje 
+\begin_inset Formula $y$
+\end_inset
+
+ son grandes en comparación con las derivadas respecto al eje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ En la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec:39.1 Capa límite laminar (x) Navier-Stokes"
+
+\end_inset
+
+ podemos entonces despreciar la derivada 
+\begin_inset Formula $\partial^{2}v_{x}/\partial x^{2}$
+\end_inset
+
+ en comparación con 
+\begin_inset Formula $\partial^{2}v_{x}/\partial y^{2}$
+\end_inset
+
+; comparando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec:39.1 Capa límite laminar (x) Navier-Stokes"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec:39.2 Capa límite laminar (y) Navier-Stokes"
+
+\end_inset
+
+ vemos que la derivada 
+\begin_inset Formula $\partial p/\partial y$
+\end_inset
+
+ es pequeña en comparación con 
+\begin_inset Formula $\partial p/\partial x$
+\end_inset
+
+ (siendo el cociente del mismo orden que 
+\begin_inset Formula $v_{y}/v_{x}$
+\end_inset
+
+).
+ En la aproximación que consideramos, podemos poner simplemente
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial p}{\partial y}=0\label{L4 p5 ec:39.4 Derivada de la presión (en y) = 0}
+\end{equation}
+
+\end_inset
+
+es decir, que no existe un gradiente de presión transversal en la capa límite.
+ O lo que es lo mismo, que la presión en la capa límite es igual a la presión
+ 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ de la corriente principal (y que suponemos es una función determinada de
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ para poder resolver el problema de la capa límite).
+ Como la presión sólo depende de 
+\begin_inset Formula $x$
+\end_inset
+
+, cambiamos la derivada parcial en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec:39.1 Capa límite laminar (x) Navier-Stokes"
+
+\end_inset
+
+ por 
+\begin_inset Formula $dp\left(x\right)/dx$
+\end_inset
+
+; esta derivada puede expresarse en función de la velocidad 
+\begin_inset Formula $U\left(x\right)$
+\end_inset
+
+ de la corriente principal.
+ Como fuera de la capa límite tenemos un flujo potencieal, es válida la
+ ecuación de Bernoulli 
+\begin_inset Formula $p+\frac{1}{2}\rho U^{2}=constante$
+\end_inset
+
+, de donde 
+\begin_inset Formula 
+\[
+\frac{1}{\rho}\frac{dp}{dx}=-U\frac{dU}{dx}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Así obtenemos las ecuaciones del movimiento en la capa límite laminar:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y}-\nu\frac{\partial^{2}v_{x}}{\partial y^{2}} & = & -\frac{1}{\rho}\frac{dp}{dx}\nonumber \\
+ & = & U\frac{dU}{dx}\label{L4 p6 ec:39.5 Ecs de mov. Capa límite laminar}\\
+\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y} & = & 0
+\end{eqnarray}
+
+\end_inset
+
+ Aunque las ecuaciones se han deducido para el flujo de una pared plana
+ son válidas para cualquier tipo general de flujo bidimensional.
+ Vamos a aplicarlo al flujo transversal que rodea un cilindro de longitud
+ infinita y sección recta arbitraria.
+ En este caso, 
+\begin_inset Formula $x$
+\end_inset
+
+ es la distancia medida a lo largo de la circunferencia de la sección recta
+ desde un punto determinado de la misma e 
+\begin_inset Formula $y$
+\end_inset
+
+ es la distancia a la superficie.
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $U_{0}$
+\end_inset
+
+ a la velocidad característica del problema (por ejemplo, la velocidad de
+ la corriente principal en el infinito).
+ En lugar de las coordnadas 
+\begin_inset Formula $x,y$
+\end_inset
+
+ y las velocidades 
+\begin_inset Formula $v_{x},v_{y}$
+\end_inset
+
+ introducimos las variables adimensionales 
+\begin_inset Formula $x',y',v_{x}',v_{y}'$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\begin{array}{cc}
+x=lx' & v_{x}=U_{0}v_{x}'\\
+y=\frac{ly'}{\sqrt{R}} & v_{y}=\frac{U_{0}v_{y}'}{\sqrt{R}}
+\end{array}\label{L4 p6 eq:39.6 Coordenadas adimensionales}
+\end{equation}
+
+\end_inset
+
+(y en correspondencia, 
+\begin_inset Formula $U=U_{0}U'$
+\end_inset
+
+), en donde 
+\begin_inset Formula $R=\frac{U_{0}l}{\nu}$
+\end_inset
+
+.
+ Entonces las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec:39.5 Ecs de mov. Capa límite laminar"
+
+\end_inset
+
+ toman la forma:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}'\frac{\partial v_{x}'}{\partial x'}+v_{y}'\frac{\partial v_{y}'}{\partial y'}-\frac{\partial^{2}v_{x}'}{\partial y'^{2}} & = & U'\frac{dU'}{dx'}\nonumber \\
+\frac{\partial v'_{x}}{\partial x'}+\frac{\partial v'_{y}}{\partial y'} & = & 0\label{L4 p6 ec:39.7 Ec. de movimiento en coordenadas adimensionales}
+\end{eqnarray}
+
+\end_inset
+
+En estas ecuaciones (y en las condiciones límite que hay que aplicar a las
+ mismas) no interviene la viscosidad.
+ Eso significa que las soluciones son independientes del número de Reynolds.
+ Es decir, cuando se varía el número de Reynolds, el esquema completo del
+ flujo de la capa límite sufre una transformación de semejanza, permaneciendo
+ invariable en las distancias y velocidades longitudinales, mientras que
+ las distancias y velocidades transversales varían como 
+\begin_inset Formula $1/\sqrt{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación podemos decir que las velocidades adimensionales 
+\begin_inset Formula $v_{x}'$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{y}'$
+\end_inset
+
+ obtenidas al resolver las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec:39.7 Ec. de movimiento en coordenadas adimensionales"
+
+\end_inset
+
+ deben ser del orden de la unidad, ya que no dependen de 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Lo mismo es cierto cuando se trata del espesor 
+\begin_inset Formula $\delta$
+\end_inset
+
+ de la capa límite en función de las coordenadas 
+\begin_inset Formula $x',y'$
+\end_inset
+
+.
+ A partir de la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 eq:39.6 Coordenadas adimensionales"
+
+\end_inset
+
+ podemos llegar a la conclusión que
+\begin_inset Formula 
+\begin{equation}
+v_{y}\sim\frac{U_{0}}{\sqrt{R}}\label{L4 p7 ec:39.8}
+\end{equation}
+
+\end_inset
+
+es decir, el cociente entre las velocidades transversales y longitudinales
+ es inversamente proporcional a 
+\begin_inset Formula $\sqrt{R}$
+\end_inset
+
+ y que 
+\begin_inset Formula 
+\begin{equation}
+\delta\sim\frac{l}{\sqrt{R}}\label{L4 p7 ec:39.9}
+\end{equation}
+
+\end_inset
+
+el espesor de la capa límite disminuye al aumentar el número de Reynolds
+ en la proporción 
+\begin_inset Formula $1/\sqrt{R}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Vamos a aplicar las ecuaciones correspondientes a la capa límite al caso
+ del flujo plano paralelo a lo largo de una lámina plana.
+ Suponemos que el plano de la placa coincide con el semiplano 
+\begin_inset Formula $xz$
+\end_inset
+
+, correspondiente a valores 
+\begin_inset Formula $x>0$
+\end_inset
+
+, con 
+\begin_inset Formula $x=0$
+\end_inset
+
+ el borde de ataque de la placa.
+ También suponemos que la placa se extiende indefinidamente en el sentido
+ de los 
+\begin_inset Formula $x>0$
+\end_inset
+
+.
+ La velocidad de la corriente principal en este caso es constante (
+\begin_inset Formula $U=constante$
+\end_inset
+
+).
+ Con estas suposiciones, las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec:39.5 Ecs de mov. Capa límite laminar"
+
+\end_inset
+
+ toman la forma:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{y}}{\partial y} & = & \nu\frac{\partial^{2}v_{x}}{\partial y^{2}}\nonumber \\
+\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y} & = & 0\label{L4 p7 ec:39.10}
+\end{eqnarray}
+
+\end_inset
+
+Las condiciones límites en la superficie de la placa exigen que se anulen
+ ambas componentes de la velocidad 
+\begin_inset Formula $v_{x}=v_{y}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $y=0,x\geq0$
+\end_inset
+
+.
+ Cuando nos alejamos de la placa, la velocidad debe tender asintóticamente
+ a la velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+ del flujo incidentes, es decir: 
+\begin_inset Formula $v_{x}=U\text{ para }y\rightarrow\pm\infty$
+\end_inset
+
+.
+ En la solución de las ecuaciones de la capa límite, como hemos visto, 
+\begin_inset Formula $v_{x}/U$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{y}\sqrt{\frac{l}{U\nu}}$
+\end_inset
+
+ sólo pueden ser funciones de 
+\begin_inset Formula $x'=x/l$
+\end_inset
+
+ e 
+\begin_inset Formula $y'=y\sqrt{\frac{U}{l\nu}}$
+\end_inset
+
+.
+ Sin embargo, en el problema que estamos considerando la placa tiene una
+ extensión infinita y no existe, por tanto, ninguna longitud característica
+ 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ De aquí que 
+\begin_inset Formula $v_{x}/U$
+\end_inset
+
+ sólo pueda depender de una combinación de 
+\begin_inset Formula $x'$
+\end_inset
+
+ e 
+\begin_inset Formula $y'$
+\end_inset
+
+ en la que no intervenga 
+\begin_inset Formula $l$
+\end_inset
+
+, por ejemplo, 
+\begin_inset Formula $y'/\sqrt{x'}=y\sqrt{\frac{U}{\nu x}}$
+\end_inset
+
+.
+ Análogamente, el producto 
+\begin_inset Formula $v_{y}'\sqrt{x'}$
+\end_inset
+
+ debe ser una función de 
+\begin_inset Formula $y'/\sqrt{x'}$
+\end_inset
+
+.
+ Así, podemos buscar una solución de la forma
+\begin_inset Formula 
+\begin{equation}
+v_{x}=U\, f\left(y\sqrt{\frac{U}{\nu x}}\right)\quad v_{y}=\sqrt{\frac{U\nu}{x}}\, f_{1}\left(y\sqrt{\frac{U}{\nu x}}\right)\label{L4 p7 ec:39.11 Distribución de velocidades en funcion de f y f1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ son funciones adimiensionales.
+ Utilizando la segunda ecuación en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec:39.10"
+
+\end_inset
+
+ podemos expresar 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ en función de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ El problema se reduce así a la determinación de una sola función 
+\begin_inset Formula $f$
+\end_inset
+
+ de una única variable 
+\begin_inset Formula $\xi=y\sqrt{\frac{U}{vx}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En lo que sigue sólo nos preocupamos de la distribución de velocidad longitudina
+l 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ (ya que 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ es pequeña).
+ Podemos obtener una conclusión importante de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec:39.11 Distribución de velocidades en funcion de f y f1"
+
+\end_inset
+
+ sin necesidad de encontrar la forma de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ La velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ aumenta desde cero en la superficie de la placa hasta una fracción de 
+\begin_inset Formula $U$
+\end_inset
+
+ para un valor determinado del argumento de 
+\begin_inset Formula $f$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $y\sqrt{\frac{U}{\nu x}}=$
+\end_inset
+
+una constante dada cualquiera.
+ Por tanto, el orden de magnitud del espesor de una capa límite en el flujo
+ a lo largo de una capa es
+\begin_inset Formula 
+\begin{equation}
+\delta\sim\sqrt{\frac{\nu x}{U}}\label{L4 p8 ec:39.12 Orden de magnitud del espesor de la capa límite}
+\end{equation}
+
+\end_inset
+
+Así, cuando nos alejamos del borde de la placa, 
+\begin_inset Formula $\delta$
+\end_inset
+
+ aumenta proporcionalmente a la raíz cuadrada de la distancia al borde.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f$
+\end_inset
+
+ puede determinarse por métodos numéricos (ver figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p8 fig 19"
+
+\end_inset
+
+).
+ Observamos que tiende rápidamente a su valor límite, que es la unidad.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-19.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Función 
+\begin_inset Formula $f$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 p8 fig 19"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La fuerza de rozamiento por unidad de área de la superficie de la placa
+ es
+\begin_inset Formula 
+\[
+\sigma_{xy}=\eta\left(\frac{\partial v_{x}}{\partial y}\right)_{y=0}
+\]
+
+\end_inset
+
+Un cálculo numérico nos da
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=0.332\sqrt{\frac{\eta\rho U^{3}}{x}}\label{L4 p8 ec: 39.13 Fuerza de rozamiento por unidad de área de la placa}
+\end{equation}
+
+\end_inset
+
+Si la placa tiene una longitud 
+\begin_inset Formula $l$
+\end_inset
+
+ (en la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+), entonces la fuerza de rozamiento total sobre ella por unidad de longitud
+ en la dirección 
+\begin_inset Formula $z$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+F=2\int_{0}^{l}\sigma_{xy}\, dx
+\]
+
+\end_inset
+
+El factor 
+\begin_inset Formula $2$
+\end_inset
+
+ se debe a que la placa tiene dos caras expuestas al fluido.
+ Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p8 ec: 39.13 Fuerza de rozamiento por unidad de área de la placa"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+F=1.328\sqrt{\eta\rho lU^{3}}\label{L4 p9 ec:39.14 Fuerza de rozamiento sobre la placa}
+\end{equation}
+
+\end_inset
+
+Es interesante notar que la fuerza de rozamiento es proporcional a 
+\begin_inset Formula $U^{3/2}$
+\end_inset
+
+, donde 
+\begin_inset Formula $U$
+\end_inset
+
+ es la velocidad de la corriente principal.
+ La fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p9 ec:39.14 Fuerza de rozamiento sobre la placa"
+
+\end_inset
+
+ sólo puede aplicarse a placas bastante largas, en las que el número de
+ Reynolds 
+\begin_inset Formula $Ul/\nu$
+\end_inset
+
+ es suficientemente grande.
+ Suele expresarse la fuerza en función del 
+\emph on
+coeficiente de arrastre
+\emph default
+ definido como el cociente adimensional 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $2l=S$
+\end_inset
+
+, superficie de la placa
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+C=\frac{F}{\frac{1}{2}\rho U^{2}(2l)}\label{L4 p9 ec:39.15 Coeficiente de arrastre}
+\end{equation}
+
+\end_inset
+
+Según 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p9 ec:39.14 Fuerza de rozamiento sobre la placa"
+
+\end_inset
+
+ esta magnitud, en el caso de un flujo laminar a lo largo de un placa es
+ inversamente proporcional a la raíz cuadrada del número de Reynolds:
+\begin_inset Formula 
+\begin{equation}
+C=\frac{1.328}{\sqrt{R}}\label{L4 p9 ec:39.15}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los resultados cuantitativos obtenidos anteriormente sólo son válidos para
+ el flujo a lo largo de una placa plana.
+ Sin embargo, los resultados cualitativos, como 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec:39.8"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec:39.9"
+
+\end_inset
+
+ son válidos para el flujo que rodea un cuerpo de una forma cualquiera.
+ En estos casos, 
+\begin_inset Formula $l$
+\end_inset
+
+ es la dimensión del cuerpo en la dirección del flujo.
+\end_layout
+
+\begin_layout Standard
+Para acabar, estudiaremos un par de casos de capa límite.
+\end_layout
+
+\begin_layout Standard
+El primero es el caso de un disco plano de radio grande girando en el fluido
+ alrededor de un eje perpendicular a su plano.
+ En este caso, para estimar el espesor de la capa límite debemos sustituir
+ 
+\begin_inset Formula $U$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p8 ec:39.12 Orden de magnitud del espesor de la capa límite"
+
+\end_inset
+
+ por 
+\begin_inset Formula $\Omega x$
+\end_inset
+
+, donde 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ es la velocidad angular de rotación, con lo que obtenemos:
+\begin_inset Formula 
+\begin{equation}
+\delta\sim\sqrt{\frac{\nu}{\Omega}}\label{L4 p9 ec:39.17 Espesor capa límite disco plano (radio grande) girando}
+\end{equation}
+
+\end_inset
+
+Vemos que el espesor de la capa límite puede considerarse como una constante
+ en toda la superficie del disco.
+\end_layout
+
+\begin_layout Standard
+El otro caso interesante es la capa laminar formada en las paredes de una
+ tubería cerca del punto de entrada del fluido.
+ El fluido normalmente entra en un tubo con una distribución de velocidades
+ que es casi constante en toda su sección recta y la velocidad disminuye
+ hacia cero dentro totalmente dentro de la capa límite.
+ Cuando nos alejamos de la entrada de la tubería, las capas de fluido más
+ próximas al eje van con retraso.
+ Puesto que la masa del fluido que pasa por cada sección recta es la misma,
+ la parte más interna de la corriente en donde la velocidad es todavía uniforme,
+ debe acelerarse cuando su diámetro se reduce.
+ Esto continúa así hasta que se alcanza asintóticamente una distribución
+ de velocidades de Poiseuille; esta distribución se encuentra así sólo a
+ cierta distancia de la entrada de la tubería.
+ Es fácil determinar el orden de magnitud de la longitud 
+\begin_inset Formula $l$
+\end_inset
+
+ de la 
+\emph on
+sección de entrada
+\emph default
+.
+ Viene dada por el hecho de que, a una distancia 
+\begin_inset Formula $l$
+\end_inset
+
+ de la entrada, el espesor de la capa límite rellena por completo la sección
+ recta de la misma.
+ Haciendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p8 ec:39.12 Orden de magnitud del espesor de la capa límite"
+
+\end_inset
+
+ 
+\begin_inset Formula $x\sim l$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta\sim a$
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\begin{equation}
+l\sim\frac{a^{2}U}{\nu}\sim aR\label{L4 p10 ec:39.18}
+\end{equation}
+
+\end_inset
+
+Así pues, la longitud de la sección de entrada es proporcional al número
+ de Reynolds.
+\end_layout
+
+\begin_layout Section
+Flujo cerca de la línea de separación 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec 40 Flujo cerca de la línea de separación"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAG11
 \end_layout
 
 \end_body
