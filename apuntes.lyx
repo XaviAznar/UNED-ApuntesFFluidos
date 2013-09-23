@@ -16376,6 +16376,9 @@ La disminución rápida de la velocidad en la capa límite se debe a que no
 \end_inset
 
  sea pequeña.
+ El responsable de la formulación matemática de la teoría de la capa límite
+ es L.
+ Prandtl.
 \end_layout
 
 \begin_layout Standard
@@ -17261,7 +17264,1120 @@ name "L4 sec 40 Flujo cerca de la línea de separación"
 \end_layout
 
 \begin_layout Standard
-PAG11
+Al describir la línea de separación (en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L03 sec:34 Región de turbulencia y el fenómeno de separación (G)"
+
+\end_inset
+
+) se mencionó que la posición real de la línea en la superficie del cuerpo
+ está determinada por las propiedades del flujo en la capa límite.
+ Desde el punto de vista matemático, la línea de separación es aquella cuyos
+ puntos son singulares de las soluciones de las ecuaciones de movimiento
+ de las capas límite.
+ El problema consiste en determinar las propiedades de estas soluciones
+ cerca de la línea de singularidades.
+\end_layout
+
+\begin_layout Standard
+Sabemos que, desde la línea de separación, empieza una superficie dentro
+ del fluido que marca la región de flujo turbulento.
+ El flujo es rotacional en toda la región turbulenta, mientras que en ausencia
+ de separación sería rotacional únicamente en la capa límite en donde es
+ importante la viscosidad; la vorticidad debe ser cero en la corriente principal.
+ Por tanto, la separación hace que la vorticidad penetre desde la capa límite
+ hacia el fluido.
+ Sin embargo, por la conservación de la circulación, esta penetración sólo
+ puede producirse mediante la mezcla directa del fluido que se mueve cerca
+ de la superficie (en la capa límite) con la corriente principal.
+ En otras palabras, el flujo de la capa límite debe separarse de la superficie
+ del cuerpo, y en consecuencia, las líneas de corriente abandonan la capa
+ superficial y entran en el interior del fluido.
+ Por ello este fenómeno se denomina 
+\emph on
+separación
+\emph default
+ o 
+\emph on
+separación de la capa límite
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones del movimiento en la capa límite conducen al resultado que
+ la velocidad tangencial 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ en la capa límite es grande en comparación con la componente normal 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ a la superficie del cuerpo.
+ Esta relación entre 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ se deduce de las hipótesis básicas que consideran la naturaleza del flujo
+ en la capa límite y deben aparecer siempre que las ecuaciones de Prandtl
+ tengan soluciones con significado físico.
+ Matemáticamente esta relación se verifica en todos los puntos no situados
+ en la proximidad de los puntos singulares.
+ Pero si 
+\begin_inset Formula $v_{y}\ll v_{x}$
+\end_inset
+
+ significa que el fluido se mueve a lo largo de la superficie del cuerpo
+ y se aleja de la superficie sólo muy ligeramente, por lo que no puede existir
+ separación.
+ Así, se llega a la conclusión de que la separación sólo puede producirse
+ en una línea cuyos puntos sean singulares de la solución de las ecuaciones
+ de Prandtl.
+\end_layout
+
+\begin_layout Standard
+También deducimos la naturaleza de estas singularidades.
+ Cuando nos acercamos a la línea de separación, el flujo se desvía de la
+ capa límite hacia el interior del fluido.
+ En otras palabras, la componente de la velocidad normal deja de ser pequeña
+ en comparación con la componente tangencial y es, como mínimo, del mismo
+ orden de magnitud.
+ Hemos visto (en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec:39.8"
+
+\end_inset
+
+) que el cociente 
+\begin_inset Formula $v_{y}/v_{x}$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $1/\sqrt{R}$
+\end_inset
+
+, de modo que un aumento de 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ hasta el punto en donde 
+\begin_inset Formula $v_{x}\sim v_{y}$
+\end_inset
+
+ significa un aumento en un factor de 
+\begin_inset Formula $\sqrt{R}$
+\end_inset
+
+.
+ Por tanto, para números de Reynolds suficientemente grandes (que son los
+ que estamos considerando) podemos suponer que 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ aumenta en un factor infinito.
+ Si utilizamos la ecuación de Prandtl en forma adimensional (
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec:39.7 Ec. de movimiento en coordenadas adimensionales"
+
+\end_inset
+
+) la situación que acabamos de describir es formalmente equivalente a un
+ valor infinito de la velocidad adimensional 
+\begin_inset Formula $v_{y}'$
+\end_inset
+
+ sobre la línea de separación.
+\end_layout
+
+\begin_layout Standard
+Para simplificar, consideraremos el problema bidimensional del flujo transversal
+ que rodea un cuerpo de longitud infinita.
+ 
+\begin_inset Formula $x$
+\end_inset
+
+ es la coordenada a lo largo de la superficie en la dirección del flujo,
+ mientras que 
+\begin_inset Formula $y$
+\end_inset
+
+ es la distancia desde la superficie del cuerpo.
+ En lugar de una línea de separación ahora tenemos un punto de separación,
+ a saber, la intersección de la línea de separación con el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+; en las coordenadas utilizadas, este el punto 
+\begin_inset Formula $x=constante\equiv x_{0},y=0$
+\end_inset
+
+.
+ Suponemos que 
+\begin_inset Formula $x<x_{0}$
+\end_inset
+
+ es la región anterior al punto de separación.
+\end_layout
+
+\begin_layout Standard
+De acuerdo con los resultados anteriores, tenemos que para todo 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Excepto en 
+\begin_inset Formula $y=0$
+\end_inset
+
+, donde debemos tener siempre 
+\begin_inset Formula $v_{y}=0$
+\end_inset
+
+, de acuerdo con las condiciones límite en la superficie del cuerpo.
+\end_layout
+
+\end_inset
+
+ valor de 
+\begin_inset Formula $y$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+v_{y}\left(x_{0},y\right)=\infty\label{L4 p12 ec:40.1}
+\end{equation}
+
+\end_inset
+
+Sin embargo, en las ecuaciones de Prandtl, 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ es un cierto tipo de parámetro que carece normalmente de interés (teniendo
+ en cuenta que es pequeño) al estudiar el flujo en la capa límite.
+ De aquí que sea necesario discernir las propiedades de la función 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ cerca de la línea de separación.
+\end_layout
+
+\begin_layout Standard
+Es evidente, según 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p12 ec:40.1"
+
+\end_inset
+
+ que para 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+ la derivada 
+\begin_inset Formula $\partial v_{y}/\partial y$
+\end_inset
+
+ también sea infinita.
+ A partir de la ecuación de continuidad 
+\begin_inset Formula $\partial v_{x}/\partial x+\partial v_{y}/\partial y=0$
+\end_inset
+
+ se deduce entonces que 
+\begin_inset Formula $\left(\frac{\partial v_{x}}{\partial x}\right)_{x=x_{0}}=\infty$
+\end_inset
+
+, o sea, que 
+\begin_inset Formula $\frac{\partial x}{\partial v_{x}}=0$
+\end_inset
+
+, considerando a 
+\begin_inset Formula $x$
+\end_inset
+
+ como una función de 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Designamos por 
+\begin_inset Formula $v_{0}\left(y\right)$
+\end_inset
+
+ el valor de la función 
+\begin_inset Formula $v_{x}\left(x,y\right)$
+\end_inset
+
+ para 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+: 
+\begin_inset Formula $v_{0}\left(y\right)=v_{x}\left(x_{0},y\right)$
+\end_inset
+
+.
+ Cerca del punto de separación, las diferencias 
+\begin_inset Formula $v_{x}-v_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $x_{0}-x$
+\end_inset
+
+ son pequeñas, por lo que podemos desarrollar 
+\begin_inset Formula $x_{0}-x$
+\end_inset
+
+ en potencias de 
+\begin_inset Formula $v_{x}-v_{0}$
+\end_inset
+
+ (para un valor dado).
+ Como 
+\begin_inset Formula $\left(\frac{\partial x}{\partial v_{x}}\right)_{v=v_{0}}=0$
+\end_inset
+
+, deben anularse los términos de primer orden, por lo que nos limitamos
+ a los términos de segundo orden 
+\begin_inset Formula $x_{0}-x=f\left(y\right)\left(v_{x}-v_{0}\right)^{2}$
+\end_inset
+
+, o sea
+\begin_inset Formula 
+\begin{equation}
+v_{x}=v_{0}\left(y\right)+\alpha\left(y\right)\sqrt{x_{0}-x}\label{L4 p13 ec:40.2}
+\end{equation}
+
+\end_inset
+
+en donde 
+\begin_inset Formula $\alpha=\frac{1}{\sqrt{f}}$
+\end_inset
+
+ es una función determinada sólo de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Poniendo ahora
+\begin_inset Formula 
+\[
+\frac{\partial v_{y}}{\partial y}=-\frac{\partial v_{x}}{\partial x}=\frac{\alpha\left(y\right)}{2\sqrt{x_{0}-x}}
+\]
+
+\end_inset
+
+ e integrando, tenemos para 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+v_{y}=\frac{\beta\left(y\right)}{\sqrt{x_{0}-x}}\label{L4 p13 ec:40.3}
+\end{equation}
+
+\end_inset
+
+ en donde 
+\begin_inset Formula 
+\[
+\beta\left(y\right)=\frac{1}{2}\int\alpha\left(y\right)dy
+\]
+
+\end_inset
+
+ es otra función de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación utilizamos la primera ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec:39.5 Ecs de mov. Capa límite laminar"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y}=\nu\frac{\partial^{2}v_{x}}{\partial y^{2}}-\frac{1}{\rho}\frac{dp}{dx}\label{L4 p13 ec:40.4}
+\end{equation}
+
+\end_inset
+
+La derivada 
+\begin_inset Formula $\partial^{2}v_{x}/\partial y^{2}$
+\end_inset
+
+ no se hace infinito para 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+ como se ve en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.2"
+
+\end_inset
+
+.
+ Lo mismo es cierto para 
+\begin_inset Formula $dp/dx$
+\end_inset
+
+, que queda determinada por el flujo fuera de la capa límite.
+ Sin embargo, los dos términos en el primer miembro de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.4"
+
+\end_inset
+
+ resultan infinitos.
+ Por tanto, podemos escribir en primera aproximación para la región próxima
+ al punto de separación 
+\begin_inset Formula $v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y}=0$
+\end_inset
+
+.
+ Sustituyendo 
+\begin_inset Formula $\partial v_{x}/\partial x=-\partial v_{y}/\partial y$
+\end_inset
+
+ podemos volver a escribir la expresión de la forma
+\begin_inset Formula 
+\[
+v_{x}\frac{\partial v_{y}}{\partial x}-v_{y}\frac{\partial v_{x}}{\partial y}=v_{x}^{2}\frac{\partial}{\partial y}\left(\frac{v_{y}}{v_{x}}\right)=0
+\]
+
+\end_inset
+
+Como, en general, la velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ no se anula para 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, se deduce que 
+\begin_inset Formula $\frac{\partial}{\partial y}\left(\frac{v_{y}}{v_{x}}\right)=0$
+\end_inset
+
+, es decir, el cociente 
+\begin_inset Formula $v_{y}/v_{x}$
+\end_inset
+
+ es independiente de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ A partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.2"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.3"
+
+\end_inset
+
+ tenemos, quedándonos sólo con los primeros términos
+\begin_inset Formula 
+\[
+\frac{v_{y}}{v_{x}}=\frac{\beta\left(y\right)}{v_{0}\left(y\right)\sqrt{x_{0}-x}}
+\]
+
+\end_inset
+
+Si esta expresión es una función exclusiva de 
+\begin_inset Formula $x$
+\end_inset
+
+ debemos tener 
+\begin_inset Formula $\beta\left(y\right)=\frac{A}{2}v_{0}\left(y\right)$
+\end_inset
+
+, siendo 
+\begin_inset Formula $A$
+\end_inset
+
+ una constante numérica, de manera que
+\begin_inset Formula 
+\begin{equation}
+v_{y}=\frac{Av_{0}\left(y\right)}{2\sqrt{x_{0}-x}}\label{L4 p14 ec:40.5}
+\end{equation}
+
+\end_inset
+
+Finalmente, observando que 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ y 
+\begin_inset Formula $\beta$
+\end_inset
+
+ obedecen tanto en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.2"
+
+\end_inset
+
+ como en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.3"
+
+\end_inset
+
+ la relación 
+\begin_inset Formula $\alpha=2\beta'$
+\end_inset
+
+, se obtiene que 
+\begin_inset Formula $\alpha=A\frac{dv_{0}}{dy}$
+\end_inset
+
+, de modo que
+\begin_inset Formula 
+\begin{equation}
+v_{x}=v_{0}\left(y\right)+A\frac{dv_{0}}{dy}\sqrt{x_{0}-x}\label{L4 p14 ec:40.6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.5"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.6"
+
+\end_inset
+
+ determinan 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ como funciones de 
+\begin_inset Formula $x$
+\end_inset
+
+ cerca del punto de separación.
+ Vemos que cada una de ellas puede desarrollarse en esta región en potencias
+ de 
+\begin_inset Formula $\sqrt{x_{0}-x}$
+\end_inset
+
+, empezando el desarrollo de 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ con la potencia 
+\begin_inset Formula $-1$
+\end_inset
+
+, de modo que 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ resulta infinito, del mismo modo que lo es 
+\begin_inset Formula $\left(x_{0}-x\right)^{-1/2}$
+\end_inset
+
+ para 
+\begin_inset Formula $x\rightarrow x_{0}$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $x>x_{0}$
+\end_inset
+
+, es decir, más allá del punto de separación, carecen de significado los
+ desarrollos 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.5"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.6"
+
+\end_inset
+
+, puesto que las raíces cuadradas resultan imaginarias; esto significa que
+ las soluciones de las ecuaciones de Prandtl que dan el flujo hasta el punto
+ de separación no pueden usarse más allá de dicho punto.
+\end_layout
+
+\begin_layout Standard
+A partir de las condiciones límite en la superficie del cuerpo, debemos
+ tener que 
+\begin_inset Formula $v_{x}=v_{y}=0$
+\end_inset
+
+ para 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ Por tanto, de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.5"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.6"
+
+\end_inset
+
+ se obtiene la conclusión
+\begin_inset Formula 
+\begin{equation}
+v_{0}\left(0\right)=0\qquad\left(\frac{dv_{0}}{dy}\right)_{y=0}=0\label{L4 p14 ec:40.7}
+\end{equation}
+
+\end_inset
+
+Así pues, se obtiene el resultado importante (debido a Prandtl) de que,
+ en el propio punto de separación 
+\begin_inset Formula $\left(x=x_{0},y=0\right)$
+\end_inset
+
+ no sólo la velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ sino también su primera derivada respecto a 
+\begin_inset Formula $y$
+\end_inset
+
+ son nulas.
+\end_layout
+
+\begin_layout Standard
+Debe resaltarse que la ecuación 
+\begin_inset Formula $\frac{\partial v_{x}}{\partial y}=0$
+\end_inset
+
+ en la línea de separación es válida sólo cuando 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ se hace infinita para dicho valor de 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Si resulta que es cero la constante 
+\begin_inset Formula $A$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p14 ec:40.5"
+
+\end_inset
+
+, de modo que 
+\begin_inset Formula $v_{y}\left(x_{0},y\right)\neq\infty$
+\end_inset
+
+, entonces el punto 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $y=0$
+\end_inset
+
+ en el cual se anula la derivada 
+\begin_inset Formula $\frac{\partial v_{y}}{\partial y}$
+\end_inset
+
+ no tiene ninguna propiedad particular y no sería un punto de separación.
+ Sin embargo, el que 
+\begin_inset Formula $A$
+\end_inset
+
+ llegue a anularse es una cuestión puramente fortuita y dicho suceso es
+ totalmente improbable.
+ En la práctica, un punto en la superficie del cuerpo en el cual 
+\begin_inset Formula $\frac{\partial v_{x}}{\partial y}=0$
+\end_inset
+
+ es siempre un punto de separación.
+\end_layout
+
+\begin_layout Standard
+Si no existe separación en el punto 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+ (es decir, si 
+\begin_inset Formula $A=0$
+\end_inset
+
+), entonces para 
+\begin_inset Formula $x>x_{0}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $\left(\frac{\partial v_{x}}{\partial y}\right)_{y=0}<0$
+\end_inset
+
+, es decir, 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ resulta negativa (con módulo creciente) cuando nos alejamos de la superficie,
+ siendo todavía pequeño 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Es decir, el fluido más allá del punto 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+ se mueve, en las partes inferiores de la capa límite, en sentido opuesto
+ al de la corriente principal; existe un 
+\emph on
+punto de retorno
+\emph default
+ del fluido en este punto.
+ Debe observarse que a partir de estos razonamientos no podemos obtener
+ la conclusión de que exista necesariamente un punto de separación en donde
+ 
+\begin_inset Formula $\partial v_{x}/\partial y=0$
+\end_inset
+
+; todo el esquema del flujo completo con el 
+\emph on
+flujo de retorno
+\emph default
+ puede estar comprendido (como sucede para 
+\begin_inset Formula $A=0$
+\end_inset
+
+) dentro de la capa límite y no entrar en la corriente principal, mientras
+ que la característica de la separación es que el flujo entra en la corriente
+ principal del fluido.
+\end_layout
+
+\begin_layout Standard
+En la sección anterior 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "sec:38.3 Turbulencia-isótropa (B)"
+
+\end_inset
+
+ se ha visto que el esquema del flujo en la capa límite es semejante para
+ números de Reynolds diferentes, y en particular, permanece sin variar la
+ escala en la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Se deduce de ello que el valor 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ de la coordenada para la cual es cero la derivada 
+\begin_inset Formula $\left(\frac{\partial v_{x}}{\partial y}\right)_{y=0}$
+\end_inset
+
+ es la misma para todo 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Así pues, tenemos el importante resultado de que 
+\series bold
+la posición del punto de separación en la superficie del cuerpo es independiente
+ del número de Reynolds
+\series default
+ (en tanto que la capa límite permanece laminar).
+\end_layout
+
+\begin_layout Standard
+A continuación examinamos las propiedades de la distribución de presiones
+ 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ cerca del punto de separación.
+ Para 
+\begin_inset Formula $y=0$
+\end_inset
+
+ el primer miembro de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.4"
+
+\end_inset
+
+ es nulo junto con 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+, quedando
+\begin_inset Formula 
+\begin{equation}
+\nu\left(\frac{\partial^{2}v_{x}}{\partial y^{2}}\right)_{y=0}=\frac{1}{\rho}\frac{dp}{dx}\label{L4 p15 ec:40.8}
+\end{equation}
+
+\end_inset
+
+Resulta claro a partir de esta expresión que el signo de 
+\begin_inset Formula $dp/dx$
+\end_inset
+
+ es el mismo que el de 
+\begin_inset Formula $\left(\frac{\partial^{2}v_{x}}{\partial y^{2}}\right)_{y=0}$
+\end_inset
+
+.
+ Cuando 
+\begin_inset Formula $\left(\frac{\partial^{2}v_{x}}{\partial y^{2}}\right)_{y=0}>0$
+\end_inset
+
+ no podemos decir nada respecto al signo de la segunda derivada.
+ Sin embargo, puesto que 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ es positiva y aumenta alejándose de la pared (por delante del punto de
+ separación), podemos tener siempre 
+\begin_inset Formula $\left(\frac{\partial^{2}v_{x}}{\partial y^{2}}\right)_{y=0}>0$
+\end_inset
+
+ para el punto 
+\begin_inset Formula $x=x_{0}$
+\end_inset
+
+, en donde 
+\begin_inset Formula $\frac{\partial v_{x}}{\partial y}=0$
+\end_inset
+
+.
+ De aquí se llega a la conclusión de que 
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{dp}{dx}\right)_{x=x_{0}}>0\label{L4 p15 ec:40.9}
+\end{equation}
+
+\end_inset
+
+es decir, el fluido cerca del punto de separación se mueve desde la región
+ de presión menor hacia la región de presión mayor.
+ El gradiente de presiones está relacionado con el gradiente de velocidades
+ 
+\begin_inset Formula $U\left(x\right)$
+\end_inset
+
+ fuera de la capa límite por la expresión 
+\begin_inset Formula $\frac{1}{\rho}\frac{dp}{dx}=-U\frac{dU}{dx}$
+\end_inset
+
+.
+ Como el sentido positivo del eje es el mismo que el de la corriente principal,
+ 
+\begin_inset Formula $U>0$
+\end_inset
+
+, y por tanto
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{dU}{dx}\right)_{x=x_{0}}<0\label{L4 p15 ec:40.10}
+\end{equation}
+
+\end_inset
+
+es decir, la velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+ disminuye en el sentido del flujo cerca del punto de separación.
+\end_layout
+
+\begin_layout Standard
+A partir de los resultados obtenidos anteriormente podemos deducir que debe
+ existir una separación en alguna parte de la superficie del cuerpo.
+ En efecto, existe tanto en la parte delantera como en la trasera del cuerpo
+ un punto (punto de estancamiento) en el cual la velocidad del fluido es
+ cero para el caso de un flujo potencial de fluido ideal.
+ En consecuencia, para un cierto valor de 
+\begin_inset Formula $x$
+\end_inset
+
+, la velocidad 
+\begin_inset Formula $U\left(x\right)$
+\end_inset
+
+ debe empezar a disminuir y, finalmente, resulta ser cero.
+ Sin embargo, es claro que el fluido que se mueve sobre la superficie del
+ cuerpo se retarda más fuertemente cuanto más próximo está de la superficie
+ (es decir, cuanto más pequeño sea 
+\begin_inset Formula $y$
+\end_inset
+
+).
+ De aquí que antes de que la velocidad 
+\begin_inset Formula $U\left(x\right)$
+\end_inset
+
+ sea cero en el límite exterior de la capa límite, la velocidad en la proximidad
+ inmediata de la superficie debe ser nula.
+ Matemáticamente, esto significa que la derivada 
+\begin_inset Formula $\frac{\partial v_{x}}{\partial y}$
+\end_inset
+
+ debe siempre anularse (y por tanto, debe existir la separación) para un
+ valor 
+\begin_inset Formula $x$
+\end_inset
+
+ menor que el valor para el cual 
+\begin_inset Formula $U\left(x\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Puede realizarse el cálculo correspondiente al flujo que rodea un cuerpo
+ de una forma cualquiera de un modo análogo, y así se llega al resultado
+ de que las derivadas 
+\begin_inset Formula $\frac{\partial v_{x}}{\partial y},\frac{\partial v_{z}}{\partial y}$
+\end_inset
+
+ de las dos componentes de la velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{z}$
+\end_inset
+
+ tangenciales a la superficie del cuerpo se anulan en la línea de separación
+ (el eje 
+\begin_inset Formula $y$
+\end_inset
+
+ , como antes, está dirigido a lo largo de la normal a la parte de la superficie
+ considerada).
+\end_layout
+
+\begin_layout Standard
+Podemos dar un razonamiento sencillo que demuestra la necesidad de separación
+ en los casos en que el fluido tendría en otro caso un aumento rápido de
+ presión (y por tanto, una disminución rápida de la velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+) en el sentido de su flujo alrededor del cuerpo.
+ En una distancia pequeña 
+\begin_inset Formula $\Delta x=x_{2}-x_{1}$
+\end_inset
+
+, supongamos que la presión 
+\begin_inset Formula $p$
+\end_inset
+
+ aumenta rápidamente desde 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ hasta 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ (
+\begin_inset Formula $p_{2}\gg p_{1}$
+\end_inset
+
+).
+ En la misma distancia 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+, la velocidad del fluido 
+\begin_inset Formula $U$
+\end_inset
+
+ fuera de la capa límite disminuye desde su valor inicial 
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ hasta un valor considerablemente más pequeño 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+, determinado por la ecuación de Bernoulli:
+\begin_inset Formula 
+\[
+\frac{1}{2}\left(U_{1}^{2}-U_{2}^{2}\right)=\frac{1}{\rho}\left(p_{2}-p_{1}\right)
+\]
+
+\end_inset
+
+ Como 
+\begin_inset Formula $p$
+\end_inset
+
+ es independiente de 
+\begin_inset Formula $y$
+\end_inset
+
+, el incremento de la presión 
+\begin_inset Formula $p_{2}-p_{1}$
+\end_inset
+
+ es el mismo a cualquier distancia de la superficie.
+ Si el gradiente de presión 
+\begin_inset Formula $dp/dx\sim\left(p_{2}-p_{1}\right)/\Delta x$
+\end_inset
+
+ es suficientemente elevado, el término 
+\begin_inset Formula $\nu\frac{\partial^{2}v_{x}}{\partial y^{2}}$
+\end_inset
+
+, en el que interviene la viscosidad, puede omitirse de la ecuación del
+ movimiento 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p13 ec:40.4"
+
+\end_inset
+
+ (si 
+\begin_inset Formula $y$
+\end_inset
+
+ no es pequeño).
+ Entonces, para estimar la variación de velocidad 
+\begin_inset Formula $v$
+\end_inset
+
+ en la capa límite podemos utilizar la ecuación de Bernoulli, poniendo 
+\begin_inset Formula $\frac{1}{2}\left(v_{2}^{2}-v_{1}^{2}\right)=-\frac{1}{\rho}\left(p_{2}-p_{1}\right)$
+\end_inset
+
+, o bien, a partir de la ecuación previamente obtenida, 
+\begin_inset Formula $v_{2}^{2}=v_{1}^{2}-\left(U_{1}^{2}-U_{2}^{2}\right)$
+\end_inset
+
+.
+ La velocidad 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ en la capa límite es menor que la correspondiente a la corriente principal
+ y podemos seleccionar un valor de 
+\begin_inset Formula $y$
+\end_inset
+
+ para el cual 
+\begin_inset Formula $v_{1}^{2}<U_{1}^{2}-U_{2}^{2}$
+\end_inset
+
+.
+ La velocidad 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+ es entonces imaginaria, demostrando que las ecuaciones de Prandtl carecen
+ de soluciones con significado físico.
+ De hecho debe existir separación a la distancia 
+\begin_inset Formula $\Delta x$
+\end_inset
+
+, como resultado de la cual se reduce el gradiente de presiones.
+\end_layout
+
+\begin_layout Section
+Estabilidad del flujo en una capa laminar (L)
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:41 Estabilidad del flujo en una capa laminar (L)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección aparece marcada como sólo lectura en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Perfil logarítmico de velocidades (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L04 sec:42 Perfil logarítmico de velocidades (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAG 21.
 \end_layout
 
 \end_body
