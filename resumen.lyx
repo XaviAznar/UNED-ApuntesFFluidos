@@ -2076,7 +2076,186 @@ name "L1 sec:7 Flujo de impulso (B)"
 \end_layout
 
 \begin_layout Standard
-ss
+Hacemos los mismos razonamientos que en la secció anterior, pero interesándonos
+ en la cantidad de movimiento del fluido.
+ El impulso por unidad de volumen es 
+\begin_inset Formula $\rho\mathbf{v}$
+\end_inset
+
+, de manera que buscamos 
+\begin_inset Formula $\partial\left(\rho\mathbf{v}\right)/\partial t$
+\end_inset
+
+ (usando notación tensorial):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\rho v_{i}\right)=\rho\frac{\partial v_{i}}{\partial t}+v_{i}\frac{\partial\rho}{\partial t}
+\]
+
+\end_inset
+
+Usamos la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+ en la forma 
+\begin_inset Formula 
+\[
+\frac{\partial\rho}{\partial t}+\frac{\partial\left(\rho v_{i}\right)}{\partial x_{i}}=0
+\]
+
+\end_inset
+
+y la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p7 ec:2.3 Ec. de Euler"
+
+\end_inset
+
+ en la forma
+\begin_inset Formula 
+\[
+\frac{\partial v_{i}}{\partial t}=-v_{k}\frac{\partial v_{i}}{\partial x_{k}}-\frac{1}{\rho}\frac{\partial p}{\partial x_{i}}
+\]
+
+\end_inset
+
+ con lo que obtenemos
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial t}\left(\rho v_{i}\right) & = & -\rho v_{k}\frac{\partial v_{i}}{\partial x_{k}}-\frac{\partial p}{\partial x_{i}}-v_{i}\frac{\partial\left(\rho v_{k}\right)}{\partial x_{k}}=\\
+ & = & -\frac{\partial p}{\partial x_{i}}-\frac{\partial}{\partial x_{k}}\left(\rho v_{i}v_{k}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Reescribimos el primer término del segundo miembro como
+\begin_inset Formula 
+\[
+\frac{\partial p}{\partial x_{i}}=\delta_{ik}\frac{\partial p}{\partial x_{k}}
+\]
+
+\end_inset
+
+y finalmente
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\rho v_{i}\right)=-\frac{\partial\Pi_{ik}}{\partial x_{k}}\label{L1 p18 ec:7.1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ es el tensor simétrico: 
+\begin_inset Formula 
+\begin{equation}
+\Pi_{ik}=\delta_{ik}+\rho v_{i}v_{k}\label{L1 p18 ec:7.2 Tensor de densidad de flujo de impulso}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como antes, integrando sobre todo el volumen considerado tenemos:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial}{\partial t}\int\rho v_{i}dV & = & -\int\frac{\partial\Pi_{ik}}{\partial x_{k}}dV=\nonumber \\
+ & = & -\oint\Pi_{ik}df_{k}\label{L1 p18 ec:7.3}
+\end{eqnarray}
+
+\end_inset
+
+El primer miembro es la variación de la componente 
+\begin_inset Formula $i$
+\end_inset
+
+ del impulso en el volumen, y por tanto, el segundo miembro es la cantidad
+ de impulso que atraviesa la superficie por unidad de tiempo.
+ Si escribimos 
+\begin_inset Formula $df_{k}=n_{k}df$
+\end_inset
+
+ donde 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector normal a la superficie (apuntado hacia afuera), 
+\begin_inset Formula $\Pi_{ik}n_{k}=pn_{i}+\rho v_{i}v_{k}n_{k}$
+\end_inset
+
+, o de forma vectorial:
+\begin_inset Formula 
+\begin{equation}
+\Pi=p\mathbf{n}+\rho\mathbf{v}\left(\mathbf{v}\cdot\mathbf{n}\right)\label{L1 p18 ec:7.4}
+\end{equation}
+
+\end_inset
+
+Así, 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ es la componente 
+\begin_inset Formula $i$
+\end_inset
+
+ de impulso que fluye a través del área perpendicular al eje 
+\begin_inset Formula $k$
+\end_inset
+
+ de la superficie por unidad de tiempo.
+ 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Tensor de densidad de flujo de impulso 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+tensor de densidad de flujo de impulso
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Conservación de la circulación (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:8 Conservación de la circulación (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAG19
 \end_layout
 
 \end_body
