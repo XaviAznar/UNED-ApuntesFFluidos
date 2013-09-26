@@ -1746,7 +1746,7 @@ De manera que
 \series bold
 
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1833,7 +1833,250 @@ Ecuación de Bernoulli en un campo gravitatorio
 
 \end_inset
 
+ 
+\end_layout
 
+\begin_layout Section
+Flujo de energía (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:6 Flujo de energía (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seleccionamos un volumen fijo cualquiera y estudiamos cómo varía la energía
+ del fluido con el tiempo.
+ Si la energía del volumen seleccionado es 
+\begin_inset Formula $\frac{1}{2}\rho v^{2}+\rho\epsilon$
+\end_inset
+
+ (energía cinética e interna, donde 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ es la energía interna por unidad de masa), estamos interesados en calcular
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)
+\]
+
+\end_inset
+
+Para ello, nos centraremos en cada término por separado.
+\end_layout
+
+\begin_layout Subsection*
+Término 
+\begin_inset Formula $\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)=\frac{1}{2}v^{2}\frac{\partial\rho}{\partial t}+\rho\mathbf{v}\frac{\partial\mathbf{v}}{\partial t}
+\]
+
+\end_inset
+
+O utilizando la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+ y la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p7 ec:2.3 Ec. de Euler"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)=-\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\mathbf{v}\cdot\mathbf{grad}\, p-\rho\mathbf{v}\cdot\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}
+\]
+
+\end_inset
+
+Y ahora el último término lo modificamos:
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=\frac{1}{2}\mathbf{grad}v^{2}
+\]
+
+\end_inset
+
+Y para 
+\begin_inset Formula $\mathbf{grad}\, p$
+\end_inset
+
+ usamos la relación termodinámica 
+\begin_inset Formula $dw=Tds+\frac{1}{\rho}dp$
+\end_inset
+
+, con lo que
+\begin_inset Formula 
+\[
+\mathbf{grad}\, p=\rho\mathbf{grad}\, w-\rho T\mathbf{grad}\, s
+\]
+
+\end_inset
+
+con lo que 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right) & = & -\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\, w+\rho\mathbf{v}\cdot\mathbf{grad}\, w+\rho T\mathbf{v}\cdot\mathbf{grad}\, s-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}\right)=\\
+ & = & -\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}+w\right)+\rho T\mathbf{v}\cdot\mathbf{grad}\, s
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Término 
+\begin_inset Formula $\frac{\partial}{\partial t}\left(\rho\epsilon\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizamos la relación termodinámica 
+\begin_inset Formula 
+\[
+d\epsilon=Tds-pdV=Tds+\frac{p}{\rho^{2}}d\rho
+\]
+
+\end_inset
+
+ Como 
+\begin_inset Formula $\epsilon+\frac{p}{\rho}$
+\end_inset
+
+ es la entalpía por unidad de masa
+\begin_inset Formula 
+\[
+d\left(\rho\epsilon\right)=\rho d\epsilon+\epsilon d\rho=w\, d\rho+\rho T\, ds
+\]
+
+\end_inset
+
+y por tanto
+\begin_inset Formula 
+\[
+\frac{\partial\left(\rho\epsilon\right)}{\partial t}=w\frac{\partial\rho}{\partial t}+\rho T\frac{\partial s}{\partial t}
+\]
+
+\end_inset
+
+Utilizamos la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+ y la ecuación adiabática general 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:2 2.6"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+La 
+\begin_inset Quotes eld
+\end_inset
+
+ecuación de continuidad de la entropía
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ para obtener
+\begin_inset Formula 
+\[
+\frac{\partial\left(\rho\epsilon\right)}{\partial t}=-w\mathrm{div}\left(\rho\mathbf{v}\right)-\rho T\mathbf{v}\cdot\mathbf{grad}s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combinando los resultados para los dos términos tenemos finalmente para
+ la variación de la energía
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\left(\frac{1}{2}v^{2}+w\right)\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}+w\right)
+\]
+
+\end_inset
+
+o lo que es lo mismo
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\right)\label{L1 p16 ec:6.1}
+\end{equation}
+
+\end_inset
+
+Integrando esta expresión respecto al volumen considerado tenemos:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial}{\partial t}\int\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)dV & = & -\int\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\right)dV=\nonumber \\
+ & = & -\oint\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\cdot d\mathbf{f}\label{L1 p16 ec:6.2}
+\end{eqnarray}
+
+\end_inset
+
+Como vemos, el primer miembro es la variación de energía del fluido por
+ unidad de tiempo mientras que el segundo término es la energía que sale
+ del volumen.
+ Por tanto, 
+\begin_inset Formula 
+\begin{equation}
+\text{Densidad de flujo de energía}\qquad\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\label{L1 p16 ec:6.3 densidad de flujo de energía}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Flujo de impulso (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:7 Flujo de impulso (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ss
 \end_layout
 
 \end_body
