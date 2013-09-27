@@ -2267,21 +2267,17 @@ La integral
 \series bold
 
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 \series medium
-Circulación de la velocidad 
-\begin_inset Formula $\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}$
-\end_inset
-
- 
+Circulacion de la velocidad 
 \end_layout
 
 \end_inset
 
-circulación de la velocidad
+ circulación de la velocidad
 \series default
 .
 \end_layout
@@ -2304,10 +2300,24 @@ Tomamos la derivada total porque debemos tener en cuenta tanto la variación
 \end_inset
 
 , al desplazarse el contorno con las partículas.
- Así:
+ Así
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Utilizamos 
+\begin_inset Formula $\delta$
+\end_inset
+
+ para distinguir el diferencial de la derivada y no liarnos.
+\end_layout
+
+\end_inset
+
+:
 \begin_inset Formula 
 \[
-\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}+\oint\mathbf{v}\cdot\frac{d\delta\mathbf{r}}{dt}
+\frac{d}{dt}\oint\mathbf{v}\cdot\delta\mathbf{l}=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}+\oint\mathbf{v}\cdot\frac{d\delta\mathbf{l}}{dt}
 \]
 
 \end_inset
@@ -2315,7 +2325,7 @@ Tomamos la derivada total porque debemos tener en cuenta tanto la variación
 Nos concentramos en el segundo término:
 \begin_inset Formula 
 \[
-\mathbf{v}\cdot\frac{d\delta\mathbf{r}}{dt}=\mathbf{v}\cdot\delta\frac{d\mathbf{r}}{dt}=\mathbf{v}\cdot\delta\mathbf{v}=\delta\left(\frac{1}{2}v^{2}\right)\Rightarrow\oint\delta\left(\frac{1}{2}v^{2}\right)=0
+\mathbf{v}\cdot\frac{d\delta\mathbf{l}}{dt}=\mathbf{v}\cdot\delta\frac{d\mathbf{l}}{dt}=\mathbf{v}\cdot\delta\mathbf{v}=\delta\left(\frac{1}{2}v^{2}\right)\Rightarrow\oint\delta\left(\frac{1}{2}v^{2}\right)=0
 \]
 
 \end_inset
@@ -2324,7 +2334,7 @@ Pero la integral a lo largo de un camino cerrado de una diferencial total
  es cero, así que 
 \begin_inset Formula 
 \[
-\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}
+\frac{d}{dt}\oint\mathbf{v}\cdot\delta l=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}
 \]
 
 \end_inset
@@ -2336,7 +2346,7 @@ Utilizando el teorema de Stokes
 , de manera que:
 \begin_inset Formula 
 \[
-\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\int_{S}\mathbf{rot}\left(\frac{d\mathbf{v}}{dt}\right)\cdot d\mathbf{f}
+\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}=\int_{S}\mathbf{rot}\left(\frac{d\mathbf{v}}{dt}\right)\cdot d\mathbf{f}
 \]
 
 \end_inset
@@ -2371,7 +2381,15 @@ Si el fluido ideal está sometido a un campo gravitatorio
 
 \end_inset
 
-Es decir, 
+Es decir,
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=0
+\]
+
+\end_inset
+
+ 
 \begin_inset Formula 
 \begin{equation}
 \Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante\label{L1 p20 ec:8.1}
@@ -2427,8 +2445,163 @@ reference "L2 p8 ec:2.9 Ec. Euler (verisón termodinámica)"
 
 \end_inset
 
-, en la que interviene que el flujo es isoentrópico, por lo que el resultado
- no es válido si el fluido no es isoentrópico.
+, en la que interviene que el flujo es isoentrópico, por lo que 
+\series bold
+el resultado no es válido si el fluido no es isoentrópico
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Flujo potencial (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:9 Flujo-potencial-(G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponemos un flujo estacionario.
+ Consideramos una línea de corriente de la que sabemos que, en un determinado
+ punto tiene vorticidad cero 
+\begin_inset Formula $\omega\equiv\mathbf{rot\, v}=0$
+\end_inset
+
+.
+ Si elegimos un camino cerrado alrededor de la línea de corriente, la circulació
+n de la velocidad será
+\begin_inset Formula 
+\[
+\oint\mathbf{v}\cdot d\mathbf{l}\stackrel{\text{Stokes}}{=}\int_{S}\mathbf{rot}\,\mathbf{v}\cdot d\mathbf{f}=\int_{S}\omega\cdot d\mathbf{f}=0
+\]
+
+\end_inset
+
+Es decir, vemos que la circulación es cero.
+ A medida que el contorno se mueve con el fluido siguiendo la línea de corriente
+, la ley de conservación de la circulación nos dice que este valor no se
+ altera, por tanto, la vorticidad 
+\begin_inset Formula $\omega$
+\end_inset
+
+ también también se mantendrá igual a cero a lo largo de toda la línea de
+ corriente.
+\end_layout
+
+\begin_layout Standard
+Por tanto, si 
+\begin_inset Formula $\omega=\mathbf{rot\, v}=0$
+\end_inset
+
+ en un punto de la línea de corriente, es igualmente cero en toda la línea
+ de corriente.
+\begin_inset Formula 
+\[
+\omega\left(x\right)=0\Rightarrow\omega\left(x'\right)=0\quad\forall x'\in\text{línea de corriente}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideramos un flujo estacionario incidiendo sobre un cuerpo.
+ Como el flujo es uniforme en el infinito, su velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es una constante, de manera que 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en todas las líneas de corriente.
+ Con el resultado anterior se concluye entonces que 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ para todas las líneas de corriente del fluido, o lo que es lo mismo, 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en todo el fluido.
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Flujo estacionario } & \Rightarrow & \mathbf{v}=0\Rightarrow\omega\left(\infty\right)=0\quad\forall\text{ líneas de corriente}\Rightarrow\\
+ &  & \Rightarrow\omega=0\quad\text{todo el fluido}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un flujo en el cual 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en todo el espacio se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo potencial
+\end_layout
+
+\end_inset
+
+flujo potencial
+\series default
+ o 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo irrotacional
+\end_layout
+
+\end_inset
+
+flujo irrotacional
+\series default
+.
+ Por el contrario, un flujo en el que 
+\begin_inset Formula $\omega$
+\end_inset
+
+ no es nula en todos los puntos se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo rotacional
+\end_layout
+
+\end_inset
+
+flujo rotacional
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+PAG21
 \end_layout
 
 \end_body
