@@ -2255,7 +2255,180 @@ name "L1 sec:8 Conservación de la circulación (G)"
 \end_layout
 
 \begin_layout Standard
-PAG19
+La integral
+\begin_inset Formula 
+\[
+\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}
+\]
+
+\end_inset
+
+ a lo largo de un contorno cerrado se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Circulación de la velocidad 
+\begin_inset Formula $\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+circulación de la velocidad
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Consideramos la circulación sobre contorno fluido en un instante determinado.
+ Queremos saber qué ocurre a medida que pasa el tiempo.
+ Como el contorno se ha tomado sobre partículas del fluido, el contorno
+ se despalza con éstas, por lo que queremos averiguar:
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}
+\]
+
+\end_inset
+
+Tomamos la derivada total porque debemos tener en cuenta tanto la variación
+ de la velocidad como el de 
+\begin_inset Formula $d\mathbf{l}$
+\end_inset
+
+, al desplazarse el contorno con las partículas.
+ Así:
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}+\oint\mathbf{v}\cdot\frac{d\delta\mathbf{r}}{dt}
+\]
+
+\end_inset
+
+Nos concentramos en el segundo término:
+\begin_inset Formula 
+\[
+\mathbf{v}\cdot\frac{d\delta\mathbf{r}}{dt}=\mathbf{v}\cdot\delta\frac{d\mathbf{r}}{dt}=\mathbf{v}\cdot\delta\mathbf{v}=\delta\left(\frac{1}{2}v^{2}\right)\Rightarrow\oint\delta\left(\frac{1}{2}v^{2}\right)=0
+\]
+
+\end_inset
+
+Pero la integral a lo largo de un camino cerrado de una diferencial total
+ es cero, así que 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}
+\]
+
+\end_inset
+
+Utilizando el teorema de Stokes 
+\begin_inset Formula $\int_{S}\mathbf{rot}\left(\mathbf{A}\right)\cdot d\mathbf{s}=\oint\mathbf{A}\cdot d\mathbf{l}$
+\end_inset
+
+, de manera que:
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\int_{S}\mathbf{rot}\left(\frac{d\mathbf{v}}{dt}\right)\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+Finalmente, teniendo en cuenta 
+\begin_inset Formula $\frac{d\mathbf{v}}{dt}=\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\mathbf{grad}w$
+\end_inset
+
+, y que el rotacional de un gradiente es cero
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Si el fluido ideal está sometido a un campo gravitatorio 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ también se verifica la ley de conservación de la circulación, porque 
+\begin_inset Formula $\mathbf{rot}\,\mathbf{g}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ tenemos: 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\int_{S}\mathbf{rot}\left(\frac{d\mathbf{v}}{dt}\right)\cdot d\mathbf{f}=\int_{S}\mathbf{rot}\left(\mathbf{grad}w\right)\cdot d\mathbf{f}=0
+\]
+
+\end_inset
+
+Es decir, 
+\begin_inset Formula 
+\begin{equation}
+\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante\label{L1 p20 ec:8.1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En un fluido ideal, la circulación de la velocidad a lo largo de un contorno
+ 
+\emph on
+fluido
+\emph default
+ cerrado es constante en el tiempo (Teorema de Kelvin
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Teorema de Kelvin 
+\begin_inset Formula $\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ o 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Ley de conservación de la circulación 
+\begin_inset Formula $\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Ley de conservación de la circulación).
+\end_layout
+
+\begin_layout Standard
+Hemos utilizado la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L2 p8 ec:2.9 Ec. Euler (verisón termodinámica)"
+
+\end_inset
+
+, en la que interviene que el flujo es isoentrópico, por lo que el resultado
+ no es válido si el fluido no es isoentrópico.
 \end_layout
 
 \end_body
