@@ -2601,7 +2601,452 @@ flujo rotacional
 \end_layout
 
 \begin_layout Standard
-PAG21
+Si en un instante determinado tenemos un flujo potencial en todo el volumen
+ del fluido.
+ Entonces, la circulación de la velocidad alrededor de un contorno cerrado
+ cualquiera será cero.
+ Por la ley de conservación de la circulación, también será cero en cualquier
+ instante futuro, por lo que si existe un flujo potencial en un instante
+ cualquiera, tendremos un flujo potencial en cualquier instante futuro.
+\begin_inset Formula 
+\begin{eqnarray*}
+ & \text{Flujo potencial en \ensuremath{t}(en todo el fluido)} & \text{}\\
+ & \Downarrow & \oint\mathbf{v}\cdot d\mathbf{l}=const\quad\forall\text{ contorno cerrado}\\
+ & \text{Flujo potencial \forall\ t'>t}
+\end{eqnarray*}
+
+\end_inset
+
+De hecho, esto coincide con el hecho de que si 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+, entonces la ecuación de Euler (en función sólo de la velocidad) 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L1 p9 ec:2.11 Ec. Euler (sólo velocidad)"
+
+\end_inset
+
+ se satisface automáticamente.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Todas estas conclusiones tienen validez limitada
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+El resultado de que la vorticidad 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ para toda línea de corriente no es válida para líneas de corriente contenidas
+ en la superficie de un sólido junto al cual circula un flujo.
+ La presencia del cuerpo sólido impide construir un contorno cerrado alrededor
+ de la línea de corriente.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-01.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Separación sobre la superficie de un cuerpo sólido junto al que circula
+ un flujo 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 p22 fig:1 Separación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ Las ecuaciones del movimiento admiten soluciones en las que se produce
+ una separación en la superficie del cuerpo: algunas líneas de corriente
+ que han seguido la superficie del cuerpo empiezan a separarse de ella y
+ siguen dentro del fluido.
+ El flujo se caracteriza por una superficie de discontinuidad tangencial
+ que sale del cuerpo.
+ En esta superficie una capa se desliza sobre la otra.
+ Desde el punto de vista matemático la discontinuidad en la componente tangencia
+l corresponde a una superficie en la cual la vorticidad 
+\begin_inset Formula $\omega$
+\end_inset
+
+ es nula.
+\end_layout
+
+\begin_layout Standard
+Si incluimos estos flujos discontinuos, la solución de las ecuaciones de
+ movimiento para un fluido ideal la solución no es única; sin embargo todas
+ las soluciones discontinuas no tienen significado físico ya que las discontinui
+dades tangenciales son inestables y el flujo se haría turbulento.
+\end_layout
+
+\begin_layout Standard
+El problema físico real del flujo alrededor de un cuerpo tiene una solución
+ única.
+ Esta solución única viene determinada por las propiedades de la 
+\series bold
+capa límite
+\series default
+.
+ Esta capa límite es una capa delgada de fluido que circula junto al cuerpo.
+ Como los fluidos ideales no existen, todos tienen una cierta viscosidad,
+ aunque sea pequeña.
+ En esta capa cercana a cuerpo la viscosidad no puede despreciarse.
+ En función de las características de esta capa, se selecciona una de las
+ infinitas soluciones de las ecuaciones de movimiento para un fluido idea.
+ Así, siempre despreciaremos las soluciones que dan lugar a separación ya
+ que si hay separación se producirá turbulencia.
+\end_layout
+
+\begin_layout Standard
+El estudio de las soluciones de las ecuaciones de movimiento para un flujo
+ estacionario continuo que circula junto a cuerpos en movimiento aporta
+ resultados interesantes para cuerpos de forma 
+\emph on
+aerodinámica
+\emph default
+.
+ En estos casos el flujo difiere muy poco de un flujo potencial, excepto
+ en una capa límite y en una 
+\emph on
+estela
+\emph default
+ estrecha detrás del mismo.
+\end_layout
+
+\begin_layout Standard
+Otro caso en el que es importante el estudio del flujo potencial es cuando
+ existen oscilaciones pequeñas de un cuerpo inmerso en un fluido.
+ De hecho, si la amplitud 
+\begin_inset Formula $a$
+\end_inset
+
+ de las oscilaciones es pequeña comparadas con la dimensión 
+\begin_inset Formula $l$
+\end_inset
+
+ del cuerpo 
+\begin_inset Formula $\left(a\ll l\right)$
+\end_inset
+
+, el flujo que circula junto al cuerpo es potencial.
+\begin_inset Formula 
+\[
+\text{Flujo potencial}\iff\begin{cases}
+\text{Formas aerodinámicas} & \text{(excepto en capa límite y estela)}\\
+\text{Cuerpo oscilando} & a_{osc}\ll l_{cuerpo}\text{ (osc. pequeñas)}
+\end{cases}
+\]
+
+\end_inset
+
+ La velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ varía apreciablemente en una cantidad del mismo orden que la velocidad
+ 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ del cuerpo oscilante a lo largo de una longitud del orden de la dimensión
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ del cuerpo 
+\begin_inset Formula $\Rightarrow\frac{\partial\mathbf{v}}{\partial\mathbf{r}}\equiv\mathbf{grad}\,\mathbf{v}\sim\frac{u}{l}$
+\end_inset
+
+.
+ La magnitud de 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $u$
+\end_inset
+
+ (a pequeñas distancias del cuerpo), de manera que 
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\sim\frac{u^{2}}{l}
+\]
+
+\end_inset
+
+La derivada 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}\sim\omega u$
+\end_inset
+
+, donde 
+\begin_inset Formula $\omega$
+\end_inset
+
+ es la frecuencia de las oscilaciones.
+ Y como 
+\begin_inset Formula $\omega\sim u/a$
+\end_inset
+
+, tenemos 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}\sim\frac{u^{2}}{a}$
+\end_inset
+
+.
+ Como nos centramos en oscilaciones pequeñas, 
+\begin_inset Formula $a\ll l$
+\end_inset
+
+, 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ y puede despreciarse, por lo que la ecuación de Euler queda:
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}=-\mathbf{grad}w
+\]
+
+\end_inset
+
+Tomando el rotacional en ambos miembros
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\mathbf{rot\, v}=\mathbf{rot}\left(\mathbf{grad}w\right)=0\Rightarrow\mathbf{rot\, v}=constante
+\]
+
+\end_inset
+
+Pero en un movimiento oscilante el promedio temporal de la velocidad es
+ cero, por lo que 
+\begin_inset Formula $\mathbf{rot}\,\mathbf{v}=\text{Vorticidad }=\omega=constante=0$
+\end_inset
+
+.
+ Por tanto, en primera aproximación
+\begin_inset Formula 
+\[
+\text{Cuerpo oscilante }\iff\text{Flujo potencial}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Propiedades del flujo potencial
+\end_layout
+
+\begin_layout Standard
+La ley de conservación de la circulación se basa en que el flujo es isoentrópico.
+ Sólo el flujo isoentrópico puede ser potencial.
+ Usando el teorema de Stokes
+\begin_inset Formula 
+\[
+\oint\mathbf{v}\cdot d\mathbf{l}=\oint\mathbf{rot\, v}\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+ Para un flujo potencial 
+\begin_inset Formula $\mathbf{rot\, v}=0$
+\end_inset
+
+ (vorticidad), por lo que 
+\begin_inset Formula 
+\begin{equation}
+\oint\mathbf{v}\cdot d\mathbf{l}=0\label{L1 p24 ec:9.1 Circulación =0}
+\end{equation}
+
+\end_inset
+
+Es decir, la circulación alrededor de cualquier contorno cerrado es nula
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ no pueden existir líneas de corriente cerradas en un flujo potencial.
+ Como la dirección de una línea de corriente es en todos los puntos la dirección
+ de la velocidad, la circulación a lo largo de esta línea no puede ser cero
+ (pues significaría que no hay flujo, que el fluido está estático).
+\end_layout
+
+\begin_layout Standard
+Si tenemos un campo vectorial con un rotacional cero, la velocidad en el
+ flujo potencial puede expresarse como gradiente de un escalar; en este
+ caso se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Potencial de velocidad 
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+potencial de velocidad
+\series default
+.
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{grad}\phi\label{L1 p25 ec:9.2 Potencial de velocidad}
+\end{equation}
+
+\end_inset
+
+Escribiendo la ecuación de Euler en la forma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L1 p9 ec:2.10"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}+\frac{1}{2}\mathbf{grad}v^{2}-\mathbf{v}\times\mathbf{rot\, v}=\mathbf{grad}w
+\]
+
+\end_inset
+
+ y sustituyendo 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\[
+\mathbf{grad}\left(\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+w\right)=0
+\]
+
+\end_inset
+
+de donde
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+w=f\left(t\right)\label{L1 p25 ec:9.3}
+\end{equation}
+
+\end_inset
+
+ donde 
+\begin_inset Formula $f\left(t\right)$
+\end_inset
+
+ es una función arbitraria del tiempo.
+ Como la velocidad es la derivada espacial de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ podemos sumar 
+\begin_inset Formula $\phi$
+\end_inset
+
+ a cualquier función del tiempo; cambiando 
+\begin_inset Formula $\phi$
+\end_inset
+
+ por 
+\begin_inset Formula $\phi+\int f\left(t\right)dt$
+\end_inset
+
+ tenemos cero en el segundo miembro de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p25 ec:9.3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el caso de un flujo estacionario (considerando 
+\begin_inset Formula $\phi$
+\end_inset
+
+ independiente del tiempo), 
+\begin_inset Formula $\frac{\partial\phi}{\partial t}=0$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(t\right)=constante$
+\end_inset
+
+ y entonces 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p25 ec:9.3"
+
+\end_inset
+
+ se transforma en la 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Ecuación de Bernoulli
+\end_layout
+
+\end_inset
+
+ecuación de Bernoulli
+\emph on
+.
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}v^{2}+w=constante\label{L1 pag22 ec:0.3}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
