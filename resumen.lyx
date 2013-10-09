@@ -3633,13 +3633,14 @@ En cuanto a la condición para que un fluido pueda considerarse incompresible,
 \begin_inset Formula 
 \begin{eqnarray}
 \frac{\Delta\rho}{\rho} & \ll & 1\iff\text{Fluido incompresible (flujo estacionario)}\nonumber \\
-v & \ll & c\label{L1 p30 ec:10.16}
+ &  & v\ll c\label{L1 p30 ec:10.16}
 \end{eqnarray}
 
 \end_inset
 
-que es equivalente a que la velocidad del fluido sea pequeña en comparación
- con la del sonido en el fluido.
+es decir, que considerar al fluido incompresible es equivalente a que la
+ velocidad del fluido sea pequeña en comparación con la del sonido en el
+ fluido.
  Pero esta condición sólo es suficiente en flujo estacionario.
  Cuando el flujo no es estacionario necesitamos una condición adicional\SpecialChar \@.
 
@@ -3688,8 +3689,37 @@ reference "L1 p30 ec:10.17 Condición fluido incompresible (flujo no estacionari
 \begin_inset Formula $\tau$
 \end_inset
 
- durante el cual varía apreciablemente el flujo.
+ durante el cual el flujo varía apreciablemente.
  De esta manera las interacciones en el fluido pueden considerarse instantáneas.
+\end_layout
+
+\begin_layout Standard
+Si se satisfacen simultáneamente las condiciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p30 ec:10.16"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p30 ec:10.17 Condición fluido incompresible (flujo no estacionario)"
+
+\end_inset
+
+ el fluido puede considerarse incompresible:
+\begin_inset Formula 
+\[
+\text{Fluido incompresible}\iff\left\{ \begin{array}{c}
+v\ll c\\
+\tau\gg\frac{l}{c}
+\end{array}\right.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
