@@ -3722,5 +3722,596 @@ v\ll c\\
 
 \end_layout
 
+\begin_layout Section
+Fuerza de arrastre en un flujo potencial que rodea un cuerpo 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:11 Fuerza de arrastre en un flujo potencial que rodea un cuerpo"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta sección nos preocupamos del problema de un flujo potencial de un
+ fluido incompresible que rodea un cuerpo sólido.
+ Ésto es equivalente a un problema con el cuerpo en movimiento y el fluido
+ en reposo.
+ Lo único que tenemos que hacer es cambiar a un sistema de referencia en
+ el que el fluido esté en reposo en el infinito.
+ 
+\series bold
+A partir de ahora consideramos que es el cuerpo el que se mueve a través
+ del fluido
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/equivalencia.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+a) Flujo alrededor de un cuerpo en reposo
+\begin_inset Newline newline
+\end_inset
+
+b) Cuerpo en movimiento a través de un fluido estático
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El flujo potencial de un fluido incompresible satisface la ecuación de Laplace
+ 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+.
+ Las soluciones que buscamos deben anularse en el infinito, ya que allí
+ el fluido está en reposo.
+ El origen de nuestro sistema de referencia está en algún punto en el interior
+ del cuerpo.
+ La solución de la ecuación de Laplace es de la forma 
+\begin_inset Formula $\frac{1}{r}$
+\end_inset
+
+ y derivadas espaciales de 
+\begin_inset Formula $1/r$
+\end_inset
+
+ de cualquier orden:
+\begin_inset Formula 
+\[
+\phi=-\frac{a}{\mathbf{r}}+\mathbf{A}\cdot\mathbf{grad}\frac{1}{\mathbf{r}}+\cdots
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $a,\mathbf{A}$
+\end_inset
+
+ son independientes de 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+La constante 
+\begin_inset Formula $a$
+\end_inset
+
+ debe ser cero
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\phi=-\frac{a}{r}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathbf{v}=-\mathbf{grad}\frac{a}{\mathbf{r}}=\frac{a}{r^{3}}\mathbf{r}$
+\end_inset
+
+.
+ Pero en este caso, si calculamos el flujo de masa a través de una superficie
+ cerrada, por ejemplo una esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+ vemos que es 
+\begin_inset Formula $\rho\frac{a}{R^{2}}4\pi R^{2}=4\pi\rho a$
+\end_inset
+
+.
+ Pero para un fluido incompresible, la cantidad de fluido que entra en la
+ superficie debe ser igual a la que sale, es decir, que el flujo de masa
+ debe ser cero.
+ Por ello, la única solución es que 
+\begin_inset Formula $a=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Velocidad a grandes distancias del cuerpo
+\end_layout
+
+\begin_layout Standard
+Como estamos buscando la velocidad a distancias grandes del cuerpo, podemos
+ despreciar las derivadas de orden superior y quedarnos sólo con el primer
+ término.
+\begin_inset Formula 
+\begin{equation}
+\phi=\mathbf{A}\cdot\mathbf{grad}\frac{1}{\mathbf{r}}=-\frac{\mathbf{A}}{r^{2}}\cdot\mathbf{n}\label{L1 p35 ec:11.1}
+\end{equation}
+
+\end_inset
+
+y la velocidad resultante
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{grad}\phi=\left(\mathbf{A}\cdot\mathbf{grad}\right)\mathbf{grad}\frac{1}{\mathbf{r}}=\frac{3\left(\mathbf{A}\cdot\mathbf{n}\right)\mathbf{n}-\mathbf{A}}{r^{3}}\label{L1 p35 ec:11.2}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector unidad en la dirección de 
+\series bold
+
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+
+\series default
+.
+ El vector 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ depende de la forma real y la velocidad del cuerpo y sólo puede determinarse
+ resolviendo por completo la ecuación de Laplace a todas las distancias
+ (con las condiciones límite apropiadas en la superficie del cuerpo.
+\end_layout
+
+\begin_layout Subsection*
+Relación de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ con el impulso y la energía del fluido
+\end_layout
+
+\begin_layout Standard
+La energía cinética del fluido (la energía interna de un fluido incompresible
+ siempre es constante) es 
+\begin_inset Formula $E=\int\frac{1}{2}\rho v^{2}dV$
+\end_inset
+
+, integrando para toda la región exterior al cuerpo.
+ Elegimos una esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+ y volumen 
+\begin_inset Formula $V$
+\end_inset
+
+ (después haremos tender 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+).
+\begin_inset Formula 
+\[
+\int v^{2}dV=\int u^{2}dV+\int\left(\mathbf{v}+\mathbf{u}\right)\cdot\left(\mathbf{v}-\mathbf{u}\right)dV
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es la velocidad del cuerpo.
+ Como 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es independiente de las coordenadas, 
+\begin_inset Formula $\int u^{2}dV=u^{2}\int dV=u^{2}\left(V-V_{0}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ es el volumen del cuerpo.
+ En cuanto al segundo término, escribimos 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}=\mathbf{grad}\left(\mathbf{u}\cdot\mathbf{r}\right)$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}=\mathbf{grad}\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int\mathbf{grad}\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)dV
+\]
+
+\end_inset
+
+ Utilizamos la identidad vectorial 
+\begin_inset Formula 
+\[
+\mathrm{div}\left(f\mathbf{A}\right)=\mathbf{grad}f\cdot\mathbf{A}+f\mathrm{div}\mathbf{A}
+\]
+
+\end_inset
+
+ de manera que el integrando se transforma en
+\begin_inset Formula 
+\[
+\mathrm{div\left[\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right]+\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\mathrm{div\left(\mathbf{v}-\mathbf{u}\right)}}
+\]
+
+\end_inset
+
+Pero 
+\begin_inset Formula $\mathrm{div}\mathbf{v}=0$
+\end_inset
+
+ (ecuación de continuidad) y 
+\begin_inset Formula $\mathrm{div}\mathbf{u}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{div}\left(\mathbf{v}-\mathbf{u}\right)=0$
+\end_inset
+
+.
+ Así que 
+\begin_inset Formula 
+\[
+\int v^{2}dV=\int u^{2}dV+\int div\left[\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right]dV
+\]
+
+\end_inset
+
+Y utilizando el teorema de la divergencia, transformamos el segundo término
+ en una integral de superficie.
+\begin_inset Formula 
+\[
+\int div\left[\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right]dV=\oint_{S+S_{0}}\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+ Pero en la superficie del cuerpo, por las condiciones límite, las componentes
+ normales de 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ son iguales, por lo que la integral 
+\begin_inset Formula $\oint_{S_{0}}$
+\end_inset
+
+ se anula.
+ Para la superficie 
+\begin_inset Formula $S$
+\end_inset
+
+, sustituimos las expresiones para 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ que hemos encontrado en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p35 ec:11.1"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p35 ec:11.2"
+
+\end_inset
+
+, con lo que obtenemos:
+\begin_inset Formula 
+\[
+\int v^{2}dV=u^{2}\left(\frac{4}{3}\pi R^{3}-V_{0}\right)+\int\left[3\left(\mathbf{A}\cdot\mathbf{n}\right)\left(\mathbf{u}\cdot\mathbf{n}\right)-\left(\mathbf{u}\cdot\mathbf{n}^{2}R^{3}\right)\right]do
+\]
+
+\end_inset
+
+donde hemos escrito 
+\begin_inset Formula $d\mathbf{f}=\mathbf{n}R^{2}do$
+\end_inset
+
+ y 
+\begin_inset Formula $do$
+\end_inset
+
+ es un elemento de ángulo sólido.
+\end_layout
+
+\begin_layout Standard
+Al final de la integración, obtenemos para la energía total del fluido
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}\rho\left(4\pi\mathbf{A}\cdot\mathbf{u}-V_{0}u^{2}\right)\label{L1 p39 ec:11.3 Energía total para el fluido}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aunque no podemos obtener 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ sin resolver la ecuación 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+, sabemos que la ecuación es lineal en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y que las condiciones límite también son ecuaciones lineales en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Por tanto 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ tiene que ser una función lineal de las componentes 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Y la energía, como hemos visto en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p39 ec:11.3 Energía total para el fluido"
+
+\end_inset
+
+ es cuadrática de las componentes de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+, así que podemos escribir
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}m_{ik}u_{i}u_{k}\label{L1 p40 ec:11.4}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+ es es 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Tensor de masas asociadas 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+tensor de masas asociadas
+\series default
+, simétrico y constante, cuyas componentes se pueden obtener a partir de
+ 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $E$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ (el impulso total del fluido) están relacionados mediante 
+\begin_inset Formula $dE=\mathbf{u}\cdot d\mathbf{P}$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $E=\frac{1}{2}mv^{2}\Rightarrow dE=\frac{1}{2}m2\mathbf{v}\cdot d\mathbf{v}=m\mathbf{v}\cdot d\mathbf{v}=\mathbf{v}\cdot d\left(m\mathbf{v}\right)=\mathbf{v}\cdot d\mathbf{P}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, entonces podemos escribir las componentes de 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ como
+\begin_inset Formula 
+\begin{equation}
+P_{i}=m_{ik}u_{k}\label{L1 p40 ec:11.5 Impulso total del fluido}
+\end{equation}
+
+\end_inset
+
+Y combinando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p39 ec:11.3 Energía total para el fluido"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p40 ec:11.4"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p40 ec:11.5 Impulso total del fluido"
+
+\end_inset
+
+ vemos que 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ tiene que venir dado, en función de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ por 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{P}=4\pi\rho\mathbf{A}-\rho V_{0}\mathbf{u}\label{L1 p40 ec:11.6 Impulso total en función de A}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El impulso transmitido al fluido por el cuerpo por unidad de tiempo es 
+\begin_inset Formula $\frac{d\mathbf{P}}{dt}$
+\end_inset
+
+, es decir, la fuerza que actúa sobre el cuerpo
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=-\frac{d\mathbf{P}}{dt}\label{L1 p40 ec:11.7 Fuerza ejercida sobre el cuerpo por el fluido}
+\end{equation}
+
+\end_inset
+
+La componente de 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ paralela a la velocidad del cuerpo se denomina 
+\series bold
+fuerza de arrastre
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Fuerza de arrastre
+\end_layout
+
+\end_inset
+
+
+\series default
+ y la componente perpendicular 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Fuerza de sustentación
+\end_layout
+
+\end_inset
+
+fuerza de sustentación
+\series default
+.
+\end_layout
+
 \end_body
 \end_document
