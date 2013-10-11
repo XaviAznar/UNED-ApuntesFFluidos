@@ -4732,5 +4732,155 @@ Como vemos, la velocidad de propagación aumenta con la longitud de onda
 .
 \end_layout
 
+\begin_layout Section
+Ondas de gravedad largas 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:12 Ondas de gravedad largas"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+No entiendo cómo se están considerando ondas de gravedad con longitud de
+ onda grande respecto a la profundidad pero se pueden despreciar 
+\begin_inset Quotes eld
+\end_inset
+
+los términos cuadráticos de la velocidad, puesto que se supone de nuevo
+ que es pequeña la longitud de onda
+\begin_inset Quotes erd
+\end_inset
+
+ (pag 47).
+\end_layout
+
+\begin_layout Section
+Ondas en un fluido incompresible 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:14 Ondas en un fluido incompresible"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existe un tipo de onda de gravedad que puede propagarse en el interior de
+ un fluido incompresible.
+ Estas ondas se deben a una inhomogeneidad del fluido producida por el campo
+ gravitatorio.
+ La presión (y la entropía 
+\begin_inset Formula $s$
+\end_inset
+
+ ) varían con la altura, por lo que cualquier desplazamiento de una partícula
+ de fluido en altura destruye el equilibrio mecánico y produce un movimiento
+ oscilante.
+ El efecto, como el movimiento es adiabático, es que la partícula transporta
+ con ella a su nueva posición toda su entropía anterior 
+\begin_inset Formula $s$
+\end_inset
+
+, que no es la misma que la que corresponde al valor de equilibrio en la
+ nueva posición.
+\end_layout
+
+\begin_layout Standard
+Suponemos que la longitud de onda es pequeña en comparación con las distancias
+ sobre las que el campo gravitatorio produce una variación notable de la
+ densidad.
+ También suponemos que el fluido es incompresible (podemos despreciar las
+ variaciones producidas por la presión de la onda en la densidad).
+ Toda la modificación de la densidad proviene de la dilatación térmica (que
+ es la que origina la onda en este caso).
+\end_layout
+
+\begin_layout Standard
+Vamos a escribir las ecuaciones hidrodinámicas para este movimiento.
+ Utilizamos un sufijo 
+\begin_inset Formula $_{0}$
+\end_inset
+
+ para distinguir los valores de las magnitudes correspondientes al equilibrio
+ mecánico y una prima 
+\begin_inset Formula $'$
+\end_inset
+
+ para marcar las desviaciones respecto al equilibrio.
+\end_layout
+
+\begin_layout Standard
+La ecuación de conservación de la entropía 
+\begin_inset Formula $s=s_{0}\left(z\right)+s'$
+\end_inset
+
+ puede escribirse, hasta primer orden
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial s'}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s_{0}=0\label{L1 p53 ec:14.1 Ec. continuidad de la entropía}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la ecuación de Euler despreciamos el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ porque las oscilaciones son pequeñas 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Supongo que se refiere a que la amplitud de la onda 
+\begin_inset Formula $a$
+\end_inset
+
+ es pequeña comparada con la longitud de onda 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p44 ec:12.1"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ La distribución de presión en el equilibrio viene dada por
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v} & = & -\frac{1}{\rho_{0}}\mathbf{grad}p_{0}+\mathbf{g}\\
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\sim0 & \downarrow & \text{Oscilaciones pequeñas}\\
+\frac{\partial\mathbf{v}_{0}}{\partial t}=0 & \downarrow & \text{Equilibrio}\\
+ & \Rightarrow & \mathbf{grad}p_{0}=\rho_{0}\mathbf{g}
+\end{eqnarray*}
+
+\end_inset
+
+Ahora tenemos
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho_{0}}\mathbf{grad}p'+...PAG53
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
