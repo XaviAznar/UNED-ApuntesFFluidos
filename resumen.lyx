@@ -4313,5 +4313,424 @@ fuerza de sustentación
 .
 \end_layout
 
+\begin_layout Section
+Ondas de gravedad 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:12 Ondas-de-gravedad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La superficie de un fluido en equilibrio en un campo gravitatorio es plana.
+ Si una fuerza externa perturba la superficie y hace que se separe de la
+ posición de equilibrio, aparece un movimiento en el fluido.
+ Este movimiento se propaga por toda la superficie mediante lo que se denominan
+ 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Onda de gravedad
+\end_layout
+
+\end_inset
+
+ondas de gravedad
+\series default
+ (ya que se deben a la acción del campo gravitatorio).
+ Las ondas de gravedad afectan tanto a la superficie del fluido como a su
+ interior, aunque su efecto es menor a medida que aumenta la profundidad.
+\end_layout
+
+\begin_layout Standard
+Consideramos ondas de gravedad en las que la velocidad de las partículas
+ del fluido móvil sea pequeña, de manera que
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}\iff a\ll\lambda\label{L1 p44 ec:12.1}
+\end{equation}
+
+\end_inset
+
+es decir, que la amplitud de las oscilaciones de la onda 
+\begin_inset Formula $a$
+\end_inset
+
+ debe ser pequeña comparada con su longitud de onda 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ En la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:9 Flujo-potencial-(G)"
+
+\end_inset
+
+, si despreciar el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ es equivalente a suponer que tenemos un flujo potencial.
+ Si además consideramos que el fluido es incompresible, podemos utilizar
+ la ecuación de Laplace para el potencial 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p26 ec:10.6 Ecuación de Laplace para el potencial"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p27 ec:10.7 Relación de velocidad y presión"
+
+\end_inset
+
+, que relaciona la velocidad y la presión.
+ En esta ecuación podemos desprecial el término 
+\begin_inset Formula $\frac{1}{2}v^{2}$
+\end_inset
+
+ porque contiene el cuadrado de la velocidad.
+ Hacemos 
+\begin_inset Formula $f\left(t\right)=0$
+\end_inset
+
+ e incluimos el término 
+\begin_inset Formula $\rho gz$
+\end_inset
+
+ introducido por el campo gravitatorio:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+\frac{p}{\rho}+gz & = & f\left(t\right)\\
+\frac{1}{2}v^{2} & \rightarrow & 0\\
+f\left(t\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+p=-\rho gz-\rho\frac{\partial\phi}{\partial t}\label{L1 p44 ec:12.2 Ecuación para la presión (onda de gravedad)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomamos el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ vertical, con el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ coincidiendo con la superficie de equilibrio del fluido y designamos 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ la coordenada 
+\begin_inset Formula $z$
+\end_inset
+
+ de un punto de la superficie.
+ Como en equilibrio 
+\begin_inset Formula $\zeta=0$
+\end_inset
+
+, 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ nos da el desplazamiento vertical de la superficie sobre sus oscilaciones.
+ Si sobre la superficie actúa una presión constante 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{0}=-\rho g\zeta-\rho\frac{\partial\phi}{\partial t}
+\]
+
+\end_inset
+
+Consideramos un potencial 
+\begin_inset Formula $\phi'=\phi+\frac{p_{0}}{\rho}t$
+\end_inset
+
+ de manera que 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi=\mathbf{grad}\phi'$
+\end_inset
+
+, pero nos permite eliminar el término 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ (y prescindimos de la prima en 
+\begin_inset Formula $\phi$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{equation}
+g\zeta+\left(\frac{\partial\phi}{\partial t}\right)_{z=\zeta}=0\label{L1 p45 ec:12.3}
+\end{equation}
+
+\end_inset
+
+Como la amplitud de las oscilaciones de las ondas es pequeña, el desplazamiento
+ 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ también es pequeño.
+ En el mismo orden de aproximación suponemos que la componente vertical
+ de la velocidad de los puntos de la superficie en la superficie es 
+\begin_inset Formula $v_{z}=\frac{\partial\zeta}{\partial t}$
+\end_inset
+
+, pero a su vez, 
+\begin_inset Formula $v_{z}=\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}$
+\end_inset
+
+, así que 
+\begin_inset Formula 
+\[
+\frac{\partial\zeta}{\partial t}=\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}
+\]
+
+\end_inset
+
+Si despejamos 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p45 ec:12.3"
+
+\end_inset
+
+ y la introducimos en esta igualdad
+\begin_inset Formula 
+\[
+\frac{\partial\zeta}{\partial t}=\frac{\partial}{\partial t}\left(-\frac{1}{g}\left(\frac{\partial\phi}{\partial t}\right)_{z=\zeta}\right)=-\frac{1}{g}\left(\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=\zeta}=\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\frac{\partial\phi}{\partial z}+\frac{1}{g}\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=\zeta}=0
+\]
+
+\end_inset
+
+Como las oscilaciones 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ son pequeñas, 
+\begin_inset Formula $z=\zeta\sim z=0$
+\end_inset
+
+, de manera que las ecuaciones que debemos resolver para determinar el movimient
+o de una superficie bajo la acción de un campo gravitatorio es:
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta\phi & = & 0\label{L1 p45 ec:12.4 Ec. Laplace}\\
+\left(\frac{\partial\phi}{\partial z}+\frac{1}{g}\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=0} & = & 0\label{L1 p45 ec: 12.5 Ec. de movimiento superficie en campo gravitatorio}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supondremos que la superficie del fluido es ilimitada y que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es pequeña comparada con la profundidad del fluido, así que podemos omitir
+ las condiciones límite en los bordes y en la parte inferior.
+\end_layout
+
+\begin_layout Standard
+Consideramos una onda de gravedad que se propaga a lo largo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y que es uniforme en la dirección 
+\begin_inset Formula $y$
+\end_inset
+
+ (por lo que todas las magnitudes son independientes de 
+\begin_inset Formula $y$
+\end_inset
+
+).
+ Buscaremos una solución que sea una función periódica simple del tiempo
+ y de la coordenada 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi=f\left(z\right)\cos\left(kx-\omega t\right)
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+\tau=\frac{2\pi}{\omega}\quad\lambda=\frac{2\pi}{k}
+\]
+
+\end_inset
+
+Sustituyendo en la ecuación
+\begin_inset Formula 
+\[
+\Delta\phi=\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial z^{2}}=0\Rightarrow\frac{d^{2}f\left(z\right)}{dz^{2}}-k^{2}f\left(z\right)=0
+\]
+
+\end_inset
+
+ Esta ecuación tiene soluciones 
+\begin_inset Formula $e^{kz}$
+\end_inset
+
+ y 
+\begin_inset Formula $e^{-kz}$
+\end_inset
+
+.
+ Debemos eliminar la solución 
+\begin_inset Formula $e^{-kz}$
+\end_inset
+
+ porque haría crecer 
+\begin_inset Formula $\phi$
+\end_inset
+
+ en el interior del fluido 
+\begin_inset Formula $\left(z<0\right)$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Es decir, si consideramos que la solución general es de la forma 
+\begin_inset Formula $f\left(z\right)=Ae^{kz}+Be^{-kz}$
+\end_inset
+
+, tenemos una condición límite que dice que como el fluido es infinitamente
+ profundo, 
+\begin_inset Formula $\phi\left(-\infty\right)=0\Rightarrow B=0$
+\end_inset
+
+.
+ O lo que es lo mismo, la perturbación de la superficie disminuye con la
+ profundidad hasta disiparse completamente.
+ 
+\end_layout
+
+\end_inset
+
+.
+ Así que la solución es
+\begin_inset Formula 
+\begin{equation}
+f\left(z\right)=Ae^{kz}\Rightarrow\phi=Ae^{kz}\cos\left(kx-\omega t\right)\label{L1 p46 ec:12.6 Solución para el movimiento de la superficie de un fluido}
+\end{equation}
+
+\end_inset
+
+Si introducimos esta solución en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p45 ec: 12.5 Ec. de movimiento superficie en campo gravitatorio"
+
+\end_inset
+
+, que también debe satisfacerse, encontramos:
+\begin_inset Formula 
+\begin{equation}
+k-\frac{\omega^{2}}{g}=0\Rightarrow\omega^{2}=kg\label{L1 p46 ec:12.7}
+\end{equation}
+
+\end_inset
+
+La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p46 ec:12.7"
+
+\end_inset
+
+ nos da la relación entre el número de onda y la frecuencia de la onda de
+ gravedad.
+\end_layout
+
+\begin_layout Standard
+Una vez obtenido el potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+, encontramos la distribución de velocidades,
+\begin_inset Formula 
+\begin{equation}
+v_{x}=\frac{\partial\phi}{\partial x}=-Ake^{kz}\sin\left(kx-\omega t\right)\quad v_{z}=\frac{\partial\phi}{\partial z}=Ake^{kz}\cos\left(kx-\omega t\right)\label{L1 p46 ec:12.8 Distribución de velocidades en la superficie del fluido (ondas de gravedad)}
+\end{equation}
+
+\end_inset
+
+Más adelante se demostrará que la velocidad de propagación 
+\begin_inset Formula $U$
+\end_inset
+
+ de la onda viene dada por 
+\begin_inset Formula $\frac{\partial\omega}{\partial k}$
+\end_inset
+
+; en nuestro caso:
+\begin_inset Formula 
+\begin{equation}
+U=\frac{\partial\omega}{\partial k}=\frac{\partial\sqrt{kg}}{\partial k}=\frac{1}{2}\sqrt{\frac{g}{k}}=\frac{1}{2}\sqrt{\frac{g\lambda}{2\pi}}\label{L1 p47 ec:12.10 Velocidad de propagación de la onda de gravedad}
+\end{equation}
+
+\end_inset
+
+Como vemos, la velocidad de propagación aumenta con la longitud de onda
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
