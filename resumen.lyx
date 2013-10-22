@@ -4874,7 +4874,73 @@ reference "L1 p44 ec:12.1"
 Ahora tenemos
 \begin_inset Formula 
 \[
-\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho_{0}}\mathbf{grad}p'+...PAG53
+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho}\mathbf{grad}p+\mathbf{g}=-\frac{1}{\rho_{0}}\mathbf{grad}p'+\frac{\rho'}{\rho^{2}}\mathbf{grad}p_{0}
+\]
+
+\end_inset
+
+ Como la variación de la densidad se debe únicamente al cambio de entropía
+ y no a la variación de presión, podemos escribir:
+\begin_inset Formula 
+\[
+\rho'=\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'
+\]
+
+\end_inset
+
+y así se obtiene entonces la ecuación de Euler en la forma:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}=\frac{\mathbf{g}}{\rho_{0}}\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'-\mathbf{grad}\frac{p'}{\rho_{0}}\label{L1 p53 ec:14.2}
+\end{equation}
+
+\end_inset
+
+Podemos incluir 
+\begin_inset Formula $\rho_{0}$
+\end_inset
+
+ bajo el operador gradiete porque siempre despreciamos la variación de la
+ densidad de equilibrio en distancias del orden de la longitud de onda.
+ Por esta misma razón podemos considerar constante la densidad en la ecuación
+ de continuidad, de manera que 
+\begin_inset Formula 
+\begin{equation}
+\mathrm{div}\mathbf{v}=0\label{L1 p53 ec:14.3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como solución de las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p53 ec:14.1 Ec. continuidad de la entropía"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p53 ec:14.3"
+
+\end_inset
+
+ buscamos ondas planas, tanto para la velocidad como para 
+\begin_inset Formula $s'$
+\end_inset
+
+ 
+\begin_inset Formula $p'$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{v}=const\times e^{i\left(\mathbf{kr}-\omega t\right)}
 \]
 
 \end_inset
