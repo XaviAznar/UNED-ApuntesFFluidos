@@ -1,0 +1,395 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Problem*
+(Problema 7, páginas 32,32 de Landau) Un hueco esférico de radio 
+\begin_inset Formula $a$
+\end_inset
+
+ se forma repentinamente dentro de un fluido incompresible que llena todo
+ el espacio.
+ Determinar cuánto tiempo tarda el fluido en rellenar la cavidad.
+\end_layout
+
+\begin_layout Proof
+La única componente no nula de la velocidad es la componente radial 
+\begin_inset Formula 
+\[
+v=v_{r}<0
+\]
+
+\end_inset
+
+Planteamos la ecuación de Euler y la de continuidad en coordenadas esféricas
+ teniendo en cuenta que el fluido es incompresible 
+\begin_inset Formula $\rho=constante$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial v}{\partial t}+v\frac{\partial v}{\partial r}=-\frac{1}{\rho}\frac{\partial p}{\partial r}\label{eq: de Euler}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\rho}{\partial t}+\mathrm{\mathrm{div}\,\mathbf{v}=0\Rightarrow\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}v\right)=0}\label{eq: de continuidad}
+\end{equation}
+
+\end_inset
+
+A partir de la ecuación de continuidad
+\begin_inset Formula 
+\begin{eqnarray}
+2rv\partial r+r^{2}\partial v & = & 0\nonumber \\
+\frac{\partial v}{v} & = & -2\frac{\partial r}{r}\nonumber \\
+\log v & = & -2\log r+f_{0}\left(t\right)\nonumber \\
+v & = & \frac{f\left(t\right)}{r^{2}}\label{eq:solución de la ecuación de continuidad}
+\end{eqnarray}
+
+\end_inset
+
+Ahora introducimos este resultado en la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: de Euler"
+
+\end_inset
+
+ e integramos para 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Como extremos de integración tenemos el radio de la esfera 
+\begin_inset Formula $R\left(t\right)\leq a$
+\end_inset
+
+ y el infinito.
+ Las condiciones de velocidad y presión en cada uno de estos extremos son:
+\begin_inset Formula 
+\begin{eqnarray}
+R\left(t\right) & : & v=V\left(t\right),\quad p=0\label{condicion límite en el hueco}\\
+\infty & : & v=0,\quad p=p_{0}\label{condicion límite infinito}
+\end{eqnarray}
+
+\end_inset
+
+donde 
+\begin_inset Formula $V\left(t\right)=\frac{dR\left(t\right)}{dt}$
+\end_inset
+
+ es la velocidad de variación de la esfera del 
+\emph on
+hueco en el fluido.
+
+\emph default
+ 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{f'\left(t\right)}{r^{2}}+v\frac{\partial v}{\partial r} & = & -\frac{1}{\rho}\frac{\partial p}{\partial r}\nonumber \\
+f'\left(t\right)\int_{R\left(t\right)}^{\infty}\frac{dr}{r^{2}}+\int_{R\left(t\right)}^{\infty}drv\frac{\partial v}{\partial r} & = & -\frac{1}{\rho}\int_{R\left(t\right)}^{\infty}dr\frac{\partial p}{\partial r}\nonumber \\
+\frac{f'\left(t\right)}{R\left(t\right)}+\int_{V\left(t\right)}^{0}v\partial v & = & -\frac{1}{\rho}\int_{0}^{p_{0}}\partial p\nonumber \\
+\frac{f'\left(t\right)}{R\left(t\right)}-\frac{1}{2}V^{2}\left(t\right) & = & -\frac{1}{\rho}p_{0}\label{eq:solución de la ecuación de Euler}
+\end{eqnarray}
+
+\end_inset
+
+En el interior del 
+\emph on
+hueco
+\emph default
+ de la esfera se verifica
+\begin_inset Formula 
+\begin{equation}
+f\left(t\right)=R^{2}\left(t\right)V\left(t\right)\label{eq:f(t) en el hueco de la esfera}
+\end{equation}
+
+\end_inset
+
+(como hemos visto al solucionar la ecuación de continuidad en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:solución de la ecuación de continuidad"
+
+\end_inset
+
+).
+ Utilizamos 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:f(t) en el hueco de la esfera"
+
+\end_inset
+
+ para calcular 
+\begin_inset Formula $f'\left(t\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f'\left(t\right)=2R\left(t\right)V^{2}\left(t\right)+R^{2}\left(t\right)V'\left(t\right)
+\]
+
+\end_inset
+
+Nos interesa obtener la derivada de 
+\begin_inset Formula $V'\left(t\right)$
+\end_inset
+
+ en función de 
+\begin_inset Formula $R$
+\end_inset
+
+ (para resolver 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:solución de la ecuación de Euler"
+
+\end_inset
+
+), así que el último término
+\begin_inset Formula 
+\begin{equation}
+R^{2}V'\left(t\right)=R^{2}\left(t\right)\frac{dV}{dt}=R^{2}\frac{dV}{dR}\frac{dR}{dt}=R^{2}V\frac{dV}{dR}=\frac{1}{2}R^{2}\frac{dV^{2}}{dR}\label{eq:transformamos V' en dV/dR}
+\end{equation}
+
+\end_inset
+
+ Con lo que ahora, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:solución de la ecuación de Euler"
+
+\end_inset
+
+ se convierte es:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{1}{R}\left(2RV^{2}+\frac{1}{2}R^{2}\frac{dV^{2}}{dR}\right)-\frac{1}{2}V^{2} & = & -\frac{1}{\rho}p_{0}\\
+\frac{3}{2}V^{2}+\frac{1}{2}R\frac{dV^{2}}{dR} & = & -\frac{1}{\rho}p_{0}
+\end{eqnarray*}
+
+\end_inset
+
+Ahora la masajeamos un poco:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{dV^{2}}{dR} & = & -\frac{3V^{2}+2\frac{p_{0}}{\rho}}{R}\\
+\frac{d\left(V^{2}\right)}{\left(V^{2}+\frac{2}{3}\frac{p_{0}}{\rho}\right)} & = & -3\frac{dR}{R}\\
+\frac{dy}{y+c} & = & -3\frac{dR}{R}\qquad\left(y=V^{2}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Podemos realizar la integración teniendo en cuenta que para 
+\begin_inset Formula $R=a$
+\end_inset
+
+, 
+\begin_inset Formula $V=0$
+\end_inset
+
+, de manera que:
+\begin_inset Formula 
+\begin{eqnarray}
+\int_{c}^{V^{2}}\frac{dy}{y+c} & = & -3\int_{a}^{R}\frac{dR'}{R'}\nonumber \\
+\ln\left(V^{2}+c\right)-\ln\left(c\right) & = & -3\left(\ln R-\ln a\right)\nonumber \\
+\ln\left(\frac{V^{2}+c}{c}\right) & = & \ln\left(\frac{R^{-3}}{a^{-3}}\right)=\ln\left(\frac{a^{3}}{R^{3}}\right)\nonumber \\
+\frac{V^{2}+c}{c} & = & \frac{a^{3}}{R^{3}}\nonumber \\
+V^{2} & = & c\frac{a^{3}}{R^{3}}-c=c\left(\frac{a^{3}}{R^{3}}-1\right)\nonumber \\
+V\left(t\right) & =- & \sqrt{\frac{2p_{0}}{3\rho}\left(\frac{a^{3}}{R^{3}\left(t\right)}-1\right)}\label{eq: velocidad para rellenar el hueco}
+\end{eqnarray}
+
+\end_inset
+
+De las dos soluciones para la velocidad, debemos tomar la 
+\begin_inset Formula $V<0$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Proof
+Ya tenemos la velocidad a la que el hueco se llena de fluido.
+ El siguiente paso es integrar 
+\begin_inset Formula $V=\frac{dR}{dt}$
+\end_inset
+
+ para obtener el tiempo que tarda en llenarse el hueco, que es lo que nos
+ pide el enunciado.
+\begin_inset Formula 
+\[
+\tau=\int_{0}^{\tau}dt=\int_{a}^{0}\frac{dR}{V\left(R\left(t\right)\right)}=-\sqrt{\frac{3\rho}{2p_{0}}}\int_{a}^{0}\frac{dR}{\sqrt{\left(\frac{a}{R}\right)^{3}-1}}
+\]
+
+\end_inset
+
+Para resolver la integral 
+\begin_inset Formula $I$
+\end_inset
+
+, realizamos el cambio de variable 
+\begin_inset Formula $t=\left(\frac{R}{a}\right)^{3}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\tau & = & \sqrt{\frac{3\rho}{2p_{0}}}I\\
+I & = & \int_{0}^{a}\frac{dR}{\sqrt{\left(\frac{a}{R}\right)^{3}-1}}
+\end{eqnarray*}
+
+\end_inset
+
+(Hemos absorvido el signo negativo cambiando los extremos de integración)
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+dt & = & \frac{3}{a^{3}}R^{2}dR=\frac{3}{a}\left(\frac{R^{2}}{a^{2}}\right)dR=\frac{3}{a}t^{2/3}dR\\
+\frac{a}{3}t^{-2/3}dt & = & dR
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+I=\frac{a}{3}\int_{0}^{1}t^{-2/3}\frac{dt}{\sqrt{\frac{1}{t}-1}}=\frac{a}{3}\int_{0}^{1}t^{-2/3}\frac{dt}{\frac{\sqrt{1-t}}{t^{-1/2}}}=\frac{a}{3}\int_{0}^{1}t^{-\frac{2}{3}+\frac{1}{2}}\frac{dt}{\sqrt{1-t}}=\frac{a}{3}\int_{0}^{1}\frac{t^{-1/6}}{\sqrt{1-t}}dt
+\]
+
+\end_inset
+
+ Ahora, identificamos esta ecuación como del tipo
+\begin_inset Formula 
+\[
+\int_{0}^{1}\frac{t^{z-1}}{\left(1-t\right)^{w-1}}=\frac{\Gamma\left(z\right)\Gamma\left(w\right)}{\Gamma\left(z+w\right)}\qquad\text{con }\begin{array}{c}
+z=5/6\\
+w=1/2
+\end{array}
+\]
+
+\end_inset
+
+por lo que 
+\begin_inset Formula 
+\[
+I=\frac{a}{3}\frac{\Gamma\left(5/6\right)\Gamma\left(1/2\right)}{\Gamma\left(4/3\right)}
+\]
+
+\end_inset
+
+Y ahora sólo queda utilizar las propiedades de la función Gamma 
+\begin_inset Formula $\Gamma\left(x\right)$
+\end_inset
+
+ para obtener el resultado:
+\begin_inset Formula 
+\begin{eqnarray*}
+\Gamma\left(x+1\right) & = & x\Gamma\left(x\right)\\
+\Gamma\left(\frac{1}{2}\right) & = & \sqrt{\pi}
+\end{eqnarray*}
+
+\end_inset
+
+por lo que 
+\begin_inset Formula 
+\[
+\Gamma\left(\frac{4}{3}\right)=\Gamma\left(\frac{1}{3}+1\right)=\frac{1}{3}\Gamma\left(\frac{1}{3}\right)
+\]
+
+\end_inset
+
+con lo que finalmente,
+\begin_inset Formula 
+\[
+I=a\sqrt{\pi}\frac{\Gamma\left(\frac{5}{6}\right)}{\Gamma\left(\frac{1}{3}\right)}
+\]
+
+\end_inset
+
+Y el tiempo que tarda en llenarse el hueco resulta:
+\begin_inset Formula 
+\[
+\tau=a\sqrt{\frac{3\rho\pi}{2p_{0}}}\frac{\Gamma\left(\frac{5}{6}\right)}{\Gamma\left(\frac{1}{3}\right)}=\left(\sqrt{\frac{3\pi}{2}}\frac{\Gamma\left(\frac{5}{6}\right)}{\Gamma\left(\frac{1}{3}\right)}\right)a\sqrt{\frac{\rho}{p_{0}}}\simeq0.915\times a\sqrt{\frac{\rho}{p_{0}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
