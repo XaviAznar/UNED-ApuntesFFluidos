@@ -10,6 +10,7 @@ figs-within-sections
 \end_removed_modules
 \begin_modules
 theorems-ams
+customHeadersFooters
 \end_modules
 \maintain_unincluded_children false
 \language spanish
@@ -58,7 +59,7 @@ theorems-ams
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle fancy
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -68,8 +69,32 @@ theorems-ams
 
 \begin_body
 
+\begin_layout Left Header
+Problemas de autoevaluación L1-prob7-pag31
+\end_layout
+
+\begin_layout Right Header
+Xavier Aznar
+\end_layout
+
+\begin_layout Title
+Problemas de autoevaluación 
+\begin_inset Newline newline
+\end_inset
+
+L1-Prob7-pag31
+\end_layout
+
+\begin_layout Author
+Xavier Aznar
+\begin_inset Newline newline
+\end_inset
+
+http://FisicaUNED.wordpress.com
+\end_layout
+
 \begin_layout Problem*
-(Problema 7, páginas 32,32 de Landau) Un hueco esférico de radio 
+Un hueco esférico de radio 
 \begin_inset Formula $a$
 \end_inset
 
