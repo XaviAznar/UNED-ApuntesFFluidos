@@ -1,0 +1,349 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_title "L1-problema1-pag27"
+\pdf_author "Xavier Aznar"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+Problemas de autoevaluación L1-Prob5-pag30
+\end_layout
+
+\begin_layout Right Header
+Xavier Aznar
+\end_layout
+
+\begin_layout Title
+Problemas de autoevaluación 
+\begin_inset Newline newline
+\end_inset
+
+L1-Prob5-pag30
+\end_layout
+
+\begin_layout Author
+Xavier Aznar
+\begin_inset Newline newline
+\end_inset
+
+http://FisicaUNED.wordpress.com
+\end_layout
+
+\begin_layout Problem*
+Determinar el flujo cerca de un punto de estancamiento.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-02.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Punto de estancamiento
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Consideramos que el flujo es potencial de un fluido incompresible.
+ En este caso, la ecuación de Euler (sólo en función de la velocidad) se
+ verifica automáticamente, ya que por ser potencial 
+\begin_inset Formula $\mathbf{rot}\mathbf{v}=0$
+\end_inset
+
+.
+ La ecuación de continuidad se transforma en 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+, la ecuación de Laplace.
+\end_layout
+
+\begin_layout Proof
+Por ser 
+\begin_inset Formula $O$
+\end_inset
+
+ un punto de estancamiento, las condiciones límites que debemos aplicacar
+ son:
+\begin_inset Formula 
+\begin{equation}
+v_{z}=\frac{\partial\phi}{\partial z}=0\quad z=0\label{eq:vz=0 en la sup (fluido ideal)}
+\end{equation}
+
+\end_inset
+
+(porque la velocidad normal a una superficie debe anularse para un fluido
+ ideal).
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\phi}{\partial x}=v_{x}=v_{y}=\frac{\partial\phi}{\partial y}=0\quad(x,y,z)=\left(0,0,0\right)\text{ Estancamiento}\label{eq:condiciones limite (punto estancamiento)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Independientemente de la forma del cuerpo, en los alrededores del punto
+ 
+\begin_inset Formula $O$
+\end_inset
+
+ de estancamiento, podemos aproximar 
+\begin_inset Formula $\phi$
+\end_inset
+
+ por un plano, de manera que 
+\begin_inset Formula 
+\begin{equation}
+\phi\simeq\phi\left(0,0,0\right)+ax+by+cz+Ax^{2}+By^{2}+Cz^{2}+Dxy+Eyz+Fzx\label{potencial cerca del punto estancamiento}
+\end{equation}
+
+\end_inset
+
+El término constante no tiene ninguna influencia en la resolución de la
+ ecuación de Laplace, por lo que lo hacemos cero.
+\end_layout
+
+\begin_layout Proof
+Si introducimos 
+\begin_inset Formula $\phi$
+\end_inset
+
+ en 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+A+B+C=0\label{eq:de laplace}
+\end{equation}
+
+\end_inset
+
+De las condiciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:condiciones limite (punto estancamiento)"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\[
+\left.\frac{\partial\phi}{\partial x}\right|_{\left(0,0,0\right)}=0=a\qquad\left.\frac{\partial\phi}{\partial y}\right|_{\left(0,0,0\right)}=0=b
+\]
+
+\end_inset
+
+De la condición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:vz=0 en la sup (fluido ideal)"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\left.\frac{\partial\phi}{\partial z}\right|_{z=0}=0=c+Ey+Fx=0\label{resultado condición para vz en z=0}
+\end{equation}
+
+\end_inset
+
+que como debe verificarse para todo 
+\begin_inset Formula $x,y$
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\begin{eqnarray}
+E=F & = & 0\label{eq:E=F=0}\\
+c & = & 0
+\end{eqnarray}
+
+\end_inset
+
+De manera que, al final del día, tenemos 
+\begin_inset Formula 
+\[
+\phi=Ax^{2}+By^{2}-\left(A+B\right)z^{2}+Dxy
+\]
+
+\end_inset
+
+El término 
+\begin_inset Formula $xy$
+\end_inset
+
+ puede siempre eliminarse mediante una rotación adecuada de los ejes 
+\begin_inset Formula $x$
+\end_inset
+
+ e 
+\begin_inset Formula $y$
+\end_inset
+
+, así que
+\begin_inset Formula 
+\begin{equation}
+\phi=Ax^{2}+By^{2}-\left(A+B\right)z^{2}\label{eq:potencial final}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Si el flujo tiene simetría axial alrededor del eje 
+\begin_inset Formula $z$
+\end_inset
+
+ (flujo simétrico que rodea un cuerpo de revolución), entonces 
+\begin_inset Formula $A=B$
+\end_inset
+
+, con lo que 
+\begin_inset Formula 
+\begin{equation}
+\phi=A\left(x^{2}+y^{2}-2z^{2}\right)\label{potencial flujo simetría axial}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Finalmente, utilizamos 
+\begin_inset Formula 
+\[
+\frac{dx}{v_{x}}=\frac{dy}{v_{y}}=\frac{dz}{v_{z}}
+\]
+
+\end_inset
+
+ para encontrar las líneas de corriente y visualizar el flujo cerca del
+ punto de estancamiento.
+\begin_inset Formula 
+\[
+\mbox{\ensuremath{v_{x}=2Ax\quad v_{y}=2Ay\quad v_{z}=-4Az}}
+\]
+
+\end_inset
+
+que resultan:
+\begin_inset Formula 
+\[
+x^{2}z=c_{1}\quad y^{2}z=c_{2}
+\]
+
+\end_inset
+
+es decir, son hipérbolas cúbicas.
+\end_layout
+
+\end_body
+\end_document
