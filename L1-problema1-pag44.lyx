@@ -258,17 +258,5 @@ U=\frac{\partial\omega}{\partial k} & = & \frac{g\tanh\left(kh\right)+kgh\frac{1
 
 \end_layout
 
-\begin_layout Proof
-(DIBUJAR LA GRAFICA CON WA y CALCULAR LOS CASOS LIMITE 
-\begin_inset Formula $kh\gg1$
-\end_inset
-
- y 
-\begin_inset Formula $kh\ll1$
-\end_inset
-
-)
-\end_layout
-
 \end_body
 \end_document
