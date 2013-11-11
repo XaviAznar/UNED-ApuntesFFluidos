@@ -5225,7 +5225,7 @@ Usando que
  podemos escribir la ecuación de forma vectorial como
 \begin_inset Formula 
 \begin{equation}
-\rho\left(\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\right)=-\mathbf{grad}p+\eta\Delta\mathbf{v}+\left(\zeta+\frac{1}{3}\eta\right)\mathbf{grad}\left(\mathrm{div}\mathbf{v}\right)\label{L2 p6 ec:15.7 Ec. de Euler+viscosidad (coefs constantes)}
+\rho\left(\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\right)=-\mathbf{grad}p+\eta\Delta\mathbf{v}+\left(\zeta+\frac{1}{3}\eta\right)\mathbf{grad}\left(\mathrm{div}\mathbf{v}\right)\label{L2 p6 ec:15.6 Ec. de Euler+viscosidad (coefs constantes)}
 \end{equation}
 
 \end_inset
@@ -5242,7 +5242,7 @@ Esta ecuación se simplifica en el caso de fluidos incompresibles, donde
 , por lo que el último término de 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "L2 p6 ec:15.7 Ec. de Euler+viscosidad (coefs constantes)"
+reference "L2 p6 ec:15.6 Ec. de Euler+viscosidad (coefs constantes)"
 
 \end_inset
 
@@ -5687,6 +5687,257 @@ el coeficiente de viscosidad
 \end_inset
 
  es siempre positivo.
+\end_layout
+
+\begin_layout Section
+Flujo en una tubería (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:17 Flujo en una tubería"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Suponemos que el fluido está encerrado entre dos planos paralelos que se
+ mueven con velocidad relativa constante 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Tomamos uno de ellos como plano 
+\begin_inset Formula $xz$
+\end_inset
+
+ con el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ en la dirección de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Todas las magnitudes dependen solamente de 
+\begin_inset Formula $y$
+\end_inset
+
+ y la dirección del fluido está dirigida en la dirección de 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/l2sec17.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Flujo en una tubería
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este escenario la ecuación de continuidad se satisface automáticamente,
+ por lo que planteamos la ecuación de Navier-Stokes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p6 ec: 15.7 Ec. Navier Stokes (fluido incompresible)"
+
+\end_inset
+
+, obteniendo
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \frac{\partial^{2}v_{x}}{\partial^{2}y}\quad(\text{componente }x)\\
+0 & = & \frac{\partial p}{\partial y}\quad(\text{componente }y)
+\end{eqnarray*}
+
+\end_inset
+
+De la segunda, tenemos que la presión es constante, mientras que de la primera
+ 
+\begin_inset Formula $v_{x}=ay+b$
+\end_inset
+
+.
+ Determinamos las constantes a partir de las condiciones límite:
+\begin_inset Formula 
+\[
+v_{x}\left(y=0\right)=0\qquad v_{x}\left(y=h\right)=u
+\]
+
+\end_inset
+
+así que la distribución de velocidades del fluido es lineal:
+\begin_inset Formula 
+\begin{equation}
+v=\frac{u}{h}y\label{L2 p13 ec:17.1}
+\end{equation}
+
+\end_inset
+
+La velocidad media del fluido
+\begin_inset Formula 
+\begin{equation}
+\overline{v}=\frac{1}{h}\int_{0}^{h}v\, dy=\frac{1}{2}u\label{L2 sec17 ec:17.2 Velocidad media}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Según 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p8 ec:15.12 Fuerza por unidad de área de superficie"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{P}_{i}=-\sigma_{ik}n_{k}=pn_{i}-\sigma'_{ik}n_{k}
+\]
+
+\end_inset
+
+(y 
+\begin_inset Formula $\sigma_{ik}$
+\end_inset
+
+ para un fluido incompresible: 
+\begin_inset Formula $\sigma_{ik}=-p\delta_{ik}+\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)$
+\end_inset
+
+) la componente normal de la fuerza sobre cualquiera de los planos es exactament
+e 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Mientras que la fuerza de rozamiento tangencial sobre el plano 
+\begin_inset Formula $y=0$
+\end_inset
+
+ es 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=\eta\left(\frac{\partial v_{x}}{\partial y}\right)=\eta\frac{u}{h}\label{L2 p13 ec:17.3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Ahora consideramos el flujo estacionario entre dos planos paralelos en presencia
+ de un gradiente de presión, escogiendo las coordenadas igual que el ejemplo
+ anterior.
+\end_layout
+
+\begin_layout Example
+De nuevo, la ecuación de continuidad se satisface automáticamente, por lo
+ que planteamos las ecuaciones de Navier-Stokes, que resultan
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & -\frac{\partial p}{\partial x}+\eta\frac{\partial^{2}v_{x}}{\partial y^{2}}\qquad\left(\text{componente }x\right)\\
+0 & = & -\frac{\partial p}{\partial y}\qquad\left(\text{componente }y\right)
+\end{eqnarray*}
+
+\end_inset
+
+A partir de la segunda ecuación, vemos que 
+\begin_inset Formula $p=p_{0}+f\left(x\right)=p\left(x\right)$
+\end_inset
+
+.
+ De manera que, en la primera ecuación, el primér término sólo depende de
+ 
+\begin_inset Formula $x$
+\end_inset
+
+, mientras que el segundo sólo depende de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Ésto sólo es posible si los dos términos son constantes.
+ Es decir, que si 
+\begin_inset Formula $\partial p/\partial x=constante$
+\end_inset
+
+, 
+\begin_inset Formula $p\left(x\right)=ax+b$
+\end_inset
+
+.
+ En cuanto a la velocidad:
+\begin_inset Formula 
+\[
+v_{x}=\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)y^{2}+ay+b
+\]
+
+\end_inset
+
+Como siempre, determinamos las constantes a partir de las condiciones límite:
+ 
+\begin_inset Formula 
+\[
+v_{x}\left(y=0\right)=0\qquad v_{x}\left(y=h\right)=u
+\]
+
+\end_inset
+
+con lo que obtenemos
+\begin_inset Formula 
+\[
+a=\frac{u}{h}-\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)h
+\]
+
+\end_inset
+
+y la velocidad, al final
+\begin_inset Formula 
+\[
+v_{x}=\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)y^{2}-\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)hy+\frac{u}{h}y
+\]
+
+\end_inset
+
+que como vemos, tiene un perfil parabólico.
 \end_layout
 
 \end_body
