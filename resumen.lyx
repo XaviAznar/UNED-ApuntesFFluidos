@@ -5477,7 +5477,216 @@ reference "L2 p7 ec:15.10 Ecs de Navier-Stokes (sólo v)"
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Section
+Disipación de energía en un fluido incompresible 
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:2.2 Disipación de energía en un fluido incompresible"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La viscosidad (rozamiento interno) produce disipación de energía (que se
+ transforma en calor).
+ Para un fluido incompresible, el cálculo de la disipación es el siguiente.
+ Como la energía interna de un fluido incompresible es nula, la disipación
+ de energía del fuido es igual a la variación de la energía cinética
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}E_{cin}=\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)=\rho v_{i}\frac{\partial v_{i}}{\partial t}
+\]
+
+\end_inset
+
+La derivada de 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ respecto al tiempo la obtenemos de las ecuaciones de Navier-Stokes:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial E_{cin}}{\partial t} & = & -\rho v_{i}v_{k}\frac{\partial v_{i}}{\partial x_{k}}-v_{i}\frac{\partial p}{\partial x_{k}}+v_{i}\frac{\partial\sigma'_{ik}}{\partial x_{k}}=\\
+ & = & -\rho\mathbf{v}\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}-\left(\mathbf{v}\cdot\mathbf{grad}\right)p+v_{i}\frac{\partial\sigma'_{ik}}{\partial x_{k}}
+\end{eqnarray*}
+
+\end_inset
+
+El último término lo obtenemos de 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x_{k}}\left(v_{i}\sigma'_{ik}\right)=\frac{\partial v_{i}}{\partial x_{k}}\sigma'_{ik}+v_{i}\frac{\partial\sigma'_{ik}}{\partial x_{k}}
+\]
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+\frac{\partial E_{cin}}{\partial t}=-\mathbf{v}\left(\mathbf{v}\cdot\mathbf{grad}\right)\left(\rho\mathbf{v}\right)-\left(\mathbf{v}\cdot\mathbf{grad}\right)p+\mathrm{div}\left(\mathbf{v}\cdot\mathbf{\sigma}'\right)-\sigma'_{ik}\frac{\partial v_{i}}{\partial x_{k}}
+\]
+
+\end_inset
+
+Convertimos 
+\begin_inset Formula $\mathbf{v}\left(\mathbf{v}\cdot\mathbf{grad}\right)\rho\mathbf{v}$
+\end_inset
+
+ en 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\left(\frac{1}{2}\rho v^{2}\right)$
+\end_inset
+
+ y aprovechamos que para un fluido incompresible 
+\begin_inset Formula $\mathrm{div}\mathbf{v}=0$
+\end_inset
+
+.
+ Usando la relación:
+\begin_inset Formula 
+\[
+\mathrm{div}\left(\rho\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)\mathbf{v}\right)=\mathbf{v}\cdot\mathbf{grad}\left(\rho\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)\right)+\rho\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)\mathrm{div}\mathbf{v}
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial E_{cin}}{\partial t}=-\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)-\mathbf{v}\cdot\sigma'\right)-\sigma'_{ik}\frac{\partial v_{i}}{\partial x_{k}}\label{L2 p11 ec:16.1 Disipación de energía}
+\end{equation}
+
+\end_inset
+
  
+\begin_inset Formula $\rho\mathbf{v}\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)$
+\end_inset
+
+ es el flujo de energía de un fluido ideal (ver 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p26 ec:10.5 Flujo de energía (fluido incompresible)"
+
+\end_inset
+
+).
+ El segundo término 
+\begin_inset Formula $\mathbf{v}\cdot\sigma'$
+\end_inset
+
+ es el flujo de energía interna debido a procesos internos de rozamiento.
+\end_layout
+
+\begin_layout Standard
+Si integramos 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p11 ec:16.1 Disipación de energía"
+
+\end_inset
+
+ respecto a un volumen 
+\begin_inset Formula $V$
+\end_inset
+
+, obtenemos (usando el teorema la divergencia):
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\int E_{cin}dV=-\oint\left[\rho\mathbf{v}\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)-\mathbf{v}\cdot\sigma\right]\cdot d\mathbf{f}-\int\sigma'_{ik}\frac{\partial v_{i}}{\partial x_{k}}dV\label{L2 p11 ec:16.2 Integración de la variación de energía}
+\end{equation}
+
+\end_inset
+
+ La expresión entre corchetes es igual a la densidad de flujo de energía
+ en el fluido; el primer término nos da la variación de la energía cinética
+ del fluido contenido en 
+\begin_inset Formula $V$
+\end_inset
+
+ debida al flujo de energía a través de la superficie que limita a 
+\begin_inset Formula $V$
+\end_inset
+
+.
+ El segundo término es la disminución de la energía cinética debida a la
+ disipación.
+\end_layout
+
+\begin_layout Standard
+Si extendemos la integración a todo el fluido, el término entre corchetes
+ se anula (porque 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ se anula en el infinito).
+ Así, finalmente la disipación de energía de un fluido viscoso es
+\begin_inset Formula 
+\[
+\frac{dE_{cin}}{dt}=-\int\sigma'_{ik}\frac{\partial v_{i}}{\partial x_{k}}dV
+\]
+
+\end_inset
+
+En fluidos incompresibles el tensor 
+\begin_inset Formula $\sigma'_{ik}$
+\end_inset
+
+ viene dado por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p7 ec:15.8 Tensor de tensiones (fluido incompresible)"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma'_{ik}\frac{\partial v_{i}}{\partial x_{k}}=\eta\frac{\partial v_{i}}{\partial x_{k}}\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)
+\]
+
+\end_inset
+
+y puede escribirse como
+\begin_inset Formula 
+\[
+\frac{1}{2}\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)^{2}
+\]
+
+\end_inset
+
+por lo que finalmente, podmeos escribir la disipación de energía en un fluido
+ incompresible como
+\begin_inset Formula 
+\begin{equation}
+\dot{E_{k}}=\frac{dE_{k}}{dt}=-\frac{1}{2}\eta\int\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)^{2}dV\label{L2 p12 eq:16.3 Disipación energía fluido incompresible}
+\end{equation}
+
+\end_inset
+
+Como la disipación hace que disminuya la energía mecánica (
+\begin_inset Formula $E_{kin}<0$
+\end_inset
+
+ ) pero el integrando en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p12 eq:16.3 Disipación energía fluido incompresible"
+
+\end_inset
+
+ es siempre positivo, llegamos a la conclusión que 
+\series bold
+el coeficiente de viscosidad 
+\series default
+
+\begin_inset Formula $\eta$
+\end_inset
+
+ es siempre positivo.
 \end_layout
 
 \end_body
