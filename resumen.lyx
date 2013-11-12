@@ -5766,7 +5766,7 @@ Flujo en una tubería
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 En este escenario la ecuación de continuidad se satisface automáticamente,
  por lo que planteamos la ecuación de Navier-Stokes 
 \begin_inset CommandInset ref
@@ -5817,7 +5817,7 @@ La velocidad media del fluido
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Example
 Según 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -5862,10 +5862,17 @@ e
 
 \end_layout
 
+\begin_layout --Separator--
+
+\end_layout
+
 \begin_layout Example
-Ahora consideramos el flujo estacionario entre dos planos paralelos en presencia
- de un gradiente de presión, escogiendo las coordenadas igual que el ejemplo
- anterior.
+Ahora consideramos el flujo estacionario entre dos planos paralelos 
+\series bold
+fijos 
+\series default
+en presencia de un gradiente de presión, escogiendo las coordenadas igual
+ que el ejemplo anterior.
 \end_layout
 
 \begin_layout Example
@@ -5916,7 +5923,7 @@ Como siempre, determinamos las constantes a partir de las condiciones límite:
  
 \begin_inset Formula 
 \[
-v_{x}\left(y=0\right)=0\qquad v_{x}\left(y=h\right)=u
+v_{x}\left(y=0\right)=0\qquad v_{x}\left(y=h\right)=0
 \]
 
 \end_inset
@@ -5924,7 +5931,7 @@ v_{x}\left(y=0\right)=0\qquad v_{x}\left(y=h\right)=u
 con lo que obtenemos
 \begin_inset Formula 
 \[
-a=\frac{u}{h}-\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)h
+a=-\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)h
 \]
 
 \end_inset
@@ -5932,12 +5939,190 @@ a=\frac{u}{h}-\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)h
 y la velocidad, al final
 \begin_inset Formula 
 \[
-v_{x}=\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)y^{2}-\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)hy+\frac{u}{h}y
+v_{x}=\frac{1}{2\eta}\left(\frac{\partial p}{\partial x}\right)y\left(y-h\right)
 \]
 
 \end_inset
 
 que como vemos, tiene un perfil parabólico.
+\end_layout
+
+\begin_layout Example
+En este caso, como antes, calculamos la velocidad media del fluido
+\begin_inset Formula 
+\begin{equation}
+\overline{v}=\frac{1}{h}\int_{0}^{h}v\, dy=-\frac{h^{2}}{12\eta}\frac{\partial p}{\partial x}\label{L2 p14 ec: 17.5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Finalmente, calculamos la fuerza de rozamiento que actúa sobre uno de los
+ planos fijos (el de la parte inferior, para 
+\begin_inset Formula $y=0$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+P_{x} & = & -\sigma_{xy}n_{y}\nonumber \\
+\sigma_{xy} & = & -p\delta_{xy}+\eta\left(\frac{\partial v_{x}}{\partial y}+\frac{\partial v_{y}}{\partial x}\right)=-\frac{1}{2}h\frac{\partial p}{\partial x}\label{L2 p14 ec:17.6}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout --Separator--
+
+\end_layout
+
+\begin_layout Example
+Flujo en una tubería de sección recta arbitraria (aunque la sección es la
+ misma en toda la longitud de la tubería).
+ La velocidad del flujo coincide con la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+, por lo que la velocidad será una función de 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ La ecuación de continuidad se verifica de forma automática.
+ En cuanto a las ecuaciones de Navier-Stokes tenemos que 
+\begin_inset Formula 
+\[
+\eta\frac{\partial p}{\partial x}=\frac{\partial^{2}v_{x}}{\partial y^{2}}+\frac{\partial^{2}v_{x}}{\partial z^{2}}\qquad\frac{\partial p}{\partial y}=0=\frac{\partial p}{\partial z}
+\]
+
+\end_inset
+
+Como la presión no depende de 
+\begin_inset Formula $y$
+\end_inset
+
+ ni de 
+\begin_inset Formula $z$
+\end_inset
+
+ (como vemos de las dos últimas ecuaciones), 
+\begin_inset Formula $p=p\left(x\right)$
+\end_inset
+
+.
+ Pero el miembro de la derecha de la primera ecuación no depende de 
+\begin_inset Formula $x$
+\end_inset
+
+, por lo que la única manera de satisfacer esta situación es que los dos
+ miembros sean constantes.
+ Así, por una parte, tenemos que
+\begin_inset Formula 
+\[
+\frac{\partial p}{\partial x}=constante\Rightarrow p=ax+b
+\]
+
+\end_inset
+
+ Si 
+\begin_inset Formula $p_{ini}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{fin}$
+\end_inset
+
+ son las presiones en los extremos de la tubería, y 
+\begin_inset Formula $l$
+\end_inset
+
+ es su longitud, podemos determinar estas constantes mediante las condiciones
+ límite:
+\begin_inset Formula 
+\begin{eqnarray*}
+p\left(x=0\right) & = & p_{ini}\Rightarrow b=p_{ini}\\
+p\left(x=l\right) & = & p_{fin}\Rightarrow a=\frac{p_{fin}-p_{ini}}{l}
+\end{eqnarray*}
+
+\end_inset
+
+de manera que 
+\begin_inset Formula 
+\[
+p=\frac{\Delta p}{l}x+p_{ini}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+En cuanto al perfil de velocidades, viene determinado por 
+\begin_inset Formula 
+\[
+\Delta v(y,z)=constante
+\]
+
+\end_inset
+
+Suponiendo que la sección recta de la tubería es circular, la resolvemos
+ con la condición límite que 
+\begin_inset Formula $v=0$
+\end_inset
+
+ para 
+\begin_inset Formula $r=R$
+\end_inset
+
+.
+ Utilizando coordenadas polares, tenemos
+\begin_inset Formula 
+\[
+\frac{1}{r}\frac{d}{dr}\left(r\frac{dv}{dr}\right)=-\frac{\Delta p}{\eta l}
+\]
+
+\end_inset
+
+Integrando, obtenemos:
+\begin_inset Formula 
+\begin{equation}
+v=-\frac{\Delta p}{4\eta l}r^{2}+a\log r+b\label{L2 p15 ec:17.8}
+\end{equation}
+
+\end_inset
+
+Para que la velocidad del fluido en el centro de la tubería 
+\begin_inset Formula $\left(r=0\right)$
+\end_inset
+
+ sea finita, 
+\begin_inset Formula $a=0$
+\end_inset
+
+.
+ En cuanto a 
+\begin_inset Formula $v\left(r=R\right)=0$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+v\left(r\right)=\frac{\Delta p}{4\eta l}\left(R^{2}-r^{2}\right)\label{L2 p15 ec:17.9}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
