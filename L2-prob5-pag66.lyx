@@ -1,0 +1,263 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_title "L1-problema1-pag27"
+\pdf_author "Xavier Aznar"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+Problemas de autoevaluación L2-Prob5-pag66
+\end_layout
+
+\begin_layout Right Header
+Xavier Aznar
+\end_layout
+
+\begin_layout Title
+Problemas de autoevaluación 
+\begin_inset Newline newline
+\end_inset
+
+L2-Prob5-pag66
+\end_layout
+
+\begin_layout Author
+Xavier Aznar
+\begin_inset Newline newline
+\end_inset
+
+http://FisicaUNED.wordpress.com
+\end_layout
+
+\begin_layout Problem*
+Una capa de fluido de espesor 
+\begin_inset Formula $h$
+\end_inset
+
+ está limitada por encima por una superficie libre y por debajo por un plano
+ fijo inclinado un ángulo 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ respecto a la horizontal (ver figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "figura"
+
+\end_inset
+
+).
+ Determinar el flujo debido a la gravedad 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/l2-prob5-pag66.png
+	scale 25
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "figura"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+La velocidad del fluido será paralela al eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y dependerá únicamente de 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Planteamos las ecuaciones de Navier-Stokes (con campo gravitatorio):
+\begin_inset Formula 
+\begin{eqnarray*}
+0 & = & \eta\frac{\partial^{2}v_{x}}{\partial z^{2}}+\rho g\sin\alpha\\
+0 & = & \frac{\partial p}{\partial z}+\rho g\cos\alpha
+\end{eqnarray*}
+
+\end_inset
+
+La presión en la superficie libre será igual a 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+, la presión atmosférica, de manera que integrando la segunda ecuación
+\begin_inset Formula 
+\[
+p=p_{0}+\rho g\cos\alpha\left(h-z\right)
+\]
+
+\end_inset
+
+En cuanto al perfil de velocidades:
+\begin_inset Formula 
+\[
+v_{x}\left(z\right)=-\frac{\rho g}{\eta}\sin\alpha z^{2}+az+b
+\]
+
+\end_inset
+
+Utilizando que 
+\begin_inset Formula $v_{x}\left(z=0\right)=0$
+\end_inset
+
+ tenemos 
+\begin_inset Formula $b=0$
+\end_inset
+
+.
+ En cuanto a la superficie libre, 
+\begin_inset Formula $z=h$
+\end_inset
+
+ sabemos que la 
+\begin_inset Formula $\sigma_{xz}=\eta\left(\frac{\partial v_{x}}{\partial z}\right)=0$
+\end_inset
+
+ y que 
+\begin_inset Formula $\sigma_{zz}=-p_{0}$
+\end_inset
+
+ (
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ es la presión atmosférica).
+ De manera que 
+\begin_inset Formula 
+\[
+\left(\frac{\partial v_{x}}{\partial z}\right)_{z=h}=0=-\frac{\rho g}{\eta}\sin\alpha2h+a
+\]
+
+\end_inset
+
+por lo que, al final del día:
+\begin_inset Formula 
+\[
+v_{x}\left(z\right)=\frac{\rho g}{\eta}\sin\alpha z\left(2h-z\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+La cantidad de masa por unidad de longitud en la dirección 
+\begin_inset Formula $y$
+\end_inset
+
+ (caudal) es 
+\begin_inset Formula 
+\[
+Q=\rho\int_{0}^{h}v\, dz=\frac{\rho gh^{3}\sin\alpha}{3\nu}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
