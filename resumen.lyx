@@ -6871,6 +6871,435 @@ f=ar+\frac{b}{r}\label{L2 p24 ec:20.6}
 
 \end_inset
 
+Sustityendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p23 ec:20.4"
+
+\end_inset
+
+ se obtiene
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{u}-a\frac{\mathbf{u}+\mathbf{n\left(\mathbf{u}\cdot\mathbf{n}\right)}}{r}+b\frac{3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)-\mathbf{u}}{r^{3}}\label{L2 p24 ec:20.7}
+\end{equation}
+
+\end_inset
+
+Las constantes 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+ se obtienen a partir de las condiciones límite en la superficie de la esfera
+\begin_inset Formula 
+\[
+\mathbf{v}\left(r=R\right)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{v}=\mathbf{u}-a\frac{\mathbf{u}+\mathbf{n\left(\mathbf{u}\cdot\mathbf{n}\right)}}{r}+b\frac{3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)-\mathbf{u}}{r^{3}}=0
+\]
+
+\end_inset
+
+Como esta ecuación debe ser válida para todo 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+, los coeficientes de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)$
+\end_inset
+
+ deben anularse
+\begin_inset Formula 
+\begin{eqnarray*}
+1-\frac{a}{R}-\frac{b}{R^{3}} & = & 0\qquad\text{Coeficientes de }\ensuremath{\mathbf{u}}\\
+-\frac{a}{R}+\frac{3b}{R^{3}} & = & 0\qquad\text{Coeficientes de }\mathbf{n}
+\end{eqnarray*}
+
+\end_inset
+
+De aquí tenemos
+\begin_inset Formula 
+\[
+a=\frac{3R}{4}\qquad b=\frac{R^{3}}{4}
+\]
+
+\end_inset
+
+y finalmente
+\begin_inset Formula 
+\begin{eqnarray}
+f & = & \frac{3}{4}Rr+\frac{1}{4}\frac{R^{3}}{r}\label{L2 p24 ec:20.8}\\
+\mathbf{v} & = & -\frac{3}{4}R\frac{\mathbf{u}+\mathbf{n\left(\mathbf{u}\cdot\mathbf{n}\right)}}{r}-\frac{1}{4}R^{3}\frac{\mathbf{u}-3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)}{r^{3}}+\mathbf{u}\label{L2 p24 ec:20.9 Distrib. de vel. alrededor de esfera móvil}
+\end{eqnarray}
+
+\end_inset
+
+o en componentes esféricas
+\begin_inset Formula 
+\begin{eqnarray}
+v_{r} & = & u\cos\theta\left(1-\frac{3R}{2r}+\frac{R^{3}}{2r^{3}}\right)\nonumber \\
+v_{\theta} & = & -u\sin\theta\left(1-\frac{3R}{4r}-\frac{R^{3}}{4r^{3}}\right)\label{L2 p24 ec:20.10 Distrib. de vel. alrededor de esfera móvil}
+\end{eqnarray}
+
+\end_inset
+
+ Una vez tenemos la distribución de velocidades alrededor de la esfera,
+ calculamos la presión
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{grad}p & = & \eta\Delta\mathbf{v}=\eta\Delta\mathbf{rot}\,\mathbf{rot}\left(f\mathbf{u}\right)=\\
+ & = & \eta\Delta\left(\mathbf{grad}\mathrm{div}\left(f\mathbf{u}\right)-\mathbf{u}\Delta f\right)
+\end{eqnarray*}
+
+\end_inset
+
+ pero 
+\begin_inset Formula $\Delta^{2}f=0$
+\end_inset
+
+, y por tanto
+\begin_inset Formula 
+\[
+\mathbf{grad}p=\mathbf{grad}\left(\eta\Delta\mathrm{div}\left(f\mathbf{u}\right)\right)=\mathbf{grad}\left(\eta\mathbf{u}\cdot\mathbf{grad}\Delta f\right)
+\]
+
+\end_inset
+
+ por lo que, finalmente
+\begin_inset Formula 
+\begin{equation}
+p=\eta\mathbf{u}\cdot\mathbf{grad}\Delta f+p_{0}\label{L2 p24 ec:20.11 Presión}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ es la presión del fluido en el infinito.
+ Introduciendo 
+\begin_inset Formula $f$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+p=p_{0}-\frac{3}{2}\eta\frac{\mathbf{u}\cdot\mathbf{n}}{r^{2}}R\label{L2 p25 ec:20.12 Presión}
+\end{equation}
+
+\end_inset
+
+Utilizando las fórmulas anteriores podemos calcular la fuerza 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ ejercida sobre la esfera por el fluido móvil (o lo que es lo mismo, el
+ arrastre sobre la esfera cuando se mueve a través del fluido).
+ Tomamos coordenadas esféricas con el eje polar paralelo a 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+; por simetría, todas las magnitudes son funciones únicamente de 
+\begin_inset Formula $r$
+\end_inset
+
+ y del ángulo 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ La fuerza 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ es paralela a la velocidad 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Puede determinarse el valor de la fuerza a través de la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p8 ec:15.12 Fuerza por unidad de área de superficie"
+
+\end_inset
+
+.
+ Tomando las componentes normal y tangencial a la superficie de la fuerza
+ ejercida sobre un elemento de superficie de la esfera y proyectando estas
+ componentes en la dirección de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+F=\oint\left(-p\cos\theta+\sigma'_{rr}\cos\theta-\sigma'_{r\theta}\sin\theta\right)df\label{L2 p25 ec:20.13}
+\end{equation}
+
+\end_inset
+
+donde la integración debe realizarse sobre la totalidad de la superficie
+ de la esfera.
+\end_layout
+
+\begin_layout Example*
+Sustituyendo las expresiones para la distribución de velocidades alrededor
+ de la esfera 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p24 ec:20.10 Distrib. de vel. alrededor de esfera móvil"
+
+\end_inset
+
+ en las fórmulas
+\begin_inset Formula 
+\[
+\sigma'_{rr}=2\eta\frac{\partial v_{r}}{\partial r}\quad\sigma'_{r\theta}=\eta\left(\frac{1}{r}\frac{\partial v_{r}}{\partial\theta}+\frac{\partial v_{\theta}}{\partial r}-\frac{v_{\theta}}{r}\right)
+\]
+
+\end_inset
+
+ encontramos que en la superficie de la esfera:
+\begin_inset Formula 
+\[
+\sigma'_{rr}=0\quad\sigma'_{r\theta}=-\left(\frac{3\eta}{2R}\right)u\sin\theta
+\]
+
+\end_inset
+
+ mientras que la presión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p25 ec:20.12 Presión"
+
+\end_inset
+
+ es 
+\begin_inset Formula 
+\[
+p=p_{0}-\left(\frac{3\eta}{2R}\right)u\cos\theta
+\]
+
+\end_inset
+
+Así que al final, la integral 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p25 ec:20.13"
+
+\end_inset
+
+ se reduce a 
+\begin_inset Formula 
+\[
+F=\left(\frac{3\eta u}{2R}\right)df
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+F=6\pi R\eta u\label{L2 p25 ec:20.14 Fórmula de Stokes}
+\end{equation}
+
+\end_inset
+
+ Esta es la 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Fórmula de Stokes (esfera) 
+\begin_inset Formula $F=6\pi R\eta u$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+fórmula de Stokes
+\series default
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Fórmula de Stokes (sin determinar a y b) 
+\begin_inset Formula $F=8\pi a\eta u$
+\end_inset
+
+.
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fórmula de Stokes (sin determinar a y b ) 
+\begin_inset Formula $F=8\pi a\eta u$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Fórmula de Stokes (elipsoide) 
+\begin_inset Formula $F=16\eta Ru$
+\end_inset
+
+.
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fórmula de Stokes (elipsoide) 
+\begin_inset Formula $F=16\eta Ru$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ Fórmula de Stokes (disco circular 
+\begin_inset Formula $\perp$
+\end_inset
+
+ su plano) 
+\begin_inset Formula $F_{\perp}=16\eta Ru$
+\end_inset
+
+.
+ 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Fórmula de Stokes (disco circular 
+\begin_inset Formula $\perp$
+\end_inset
+
+ su plano) 
+\begin_inset Formula $F_{\perp}=16\eta Ru$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Fórmula de Stokes (disco circular 
+\begin_inset Formula $\parallel$
+\end_inset
+
+ su plano) 
+\begin_inset Formula $F=\frac{32}{3}\eta Ru$
+\end_inset
+
+.
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fórmula de Stokes (disco circular 
+\begin_inset Formula $\parallel$
+\end_inset
+
+ su plano) 
+\begin_inset Formula $F=\frac{32}{3}\eta Ru$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ que proporciona la fuerza de arrastre que actúa sobre una esfera que se
+ mueve lentamente en un fluido.
+ El arrastre es proporcional a la velocidad y a la dimensión lineal del
+ cuerpo.
+\end_layout
+
+\begin_layout Example*
+Esta dependencia del arrastre con la velocidad y la dimensión es válida
+ para cuerpos que se mueven lentamente, aunque sean de otras formas.
+ 
+\series bold
+La dirección del arrastre sobre un cuerpo de forma arbitraria no es la misma
+ que la de la velocidad
+\series default
+; la forma general de la relación entre 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ puede escribirse como 
+\begin_inset Formula 
+\begin{equation}
+F_{i}=a_{ik}u_{k}\label{L2 p26 ec:20.15 Relacion entre la dirección de la velocidad del cuerpo y la fuerza de arrastre}
+\end{equation}
+
+\end_inset
+
+en donde 
+\begin_inset Formula $a_{ik}$
+\end_inset
+
+ es un tensor simétrico de rango dos independiente de la velocidad.
+ El hecho de que sea simétrico es válido sólo en la aproximación lineal
+ respecto a la velocidad y es un caso particular de una ley general para
+ el movimiento lento acompañado de procesos disipativos.
+\end_layout
+
+\begin_layout Example*
+La solución obtenida para el flujo que rodea la esfera no es válida a grandes
+ distancias de ella, aunque el número de Reynolds sea pequeño (a distancias
+ mayores los términos que hemos despreciado son importantes y la aproximación
+ deja de ser válida).
+ Si incluimos el siguiente término del desarrollo en serie de potencias
+ del número de Reynolds obtenemos una fórmula más exacta para el arrastre
+ sobre la esfera
+\begin_inset Formula 
+\begin{equation}
+F=6\pi\eta uR\left(1+\frac{3uR}{8\nu}\right)\label{L2 p27 ec:20.17 Arrastre sobre la esfera (más exacto)}
+\end{equation}
+
+\end_inset
+
 
 \end_layout
 
