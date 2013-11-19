@@ -1,0 +1,298 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref true
+\pdf_title "L1-problema1-pag27"
+\pdf_author "Xavier Aznar"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+Problemas de autoevaluación L2-Prob2-pag77
+\end_layout
+
+\begin_layout Right Header
+Xavier Aznar
+\end_layout
+
+\begin_layout Title
+Problemas de autoevaluación 
+\begin_inset Newline newline
+\end_inset
+
+L2-Prob2-pag77
+\end_layout
+
+\begin_layout Author
+Xavier Aznar
+\begin_inset Newline newline
+\end_inset
+
+http://FisicaUNED.wordpress.com
+\end_layout
+
+\begin_layout Problem*
+Determinar la velocidad de una gota esférica de fluido (de viscosidad 
+\begin_inset Formula $\eta'$
+\end_inset
+
+) moviéndose bajo la gravedad en un fluido de viscosidad 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Elegimos un sistema de referencia en el que la gota esférica esté en reposo.
+ En esta situación tenemos que las ecuaciones de movimiento para un flujo
+ estacionario para un fluido incompresible, cuando el número de Reynolds
+ es pequeño nos llevan a la ecuación
+\begin_inset Formula 
+\[
+\Delta\mathbf{rot}\mathbf{v}=0
+\]
+
+\end_inset
+
+En el caso particular de una esfera en movimiento rectilíneo uniforme, debemos
+ solucionar la ecuación 
+\begin_inset Formula 
+\begin{equation}
+\Delta^{2}\mathbf{grad}f=0\label{eq:20.5}
+\end{equation}
+
+\end_inset
+
+Para el fluido externo, como la velocidad debe anularse en el infinito,
+ tenemos que la solución es de la forma 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{u}-a\frac{\mathbf{u}+\mathbf{n\left(\mathbf{u}\cdot\mathbf{n}\right)}}{r}+b\frac{3\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)-\mathbf{u}}{r^{3}}\label{ec:20.7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Para el fluido interior de la gota la solución debe evitar la singularidad
+ en 
+\begin_inset Formula $r=0$
+\end_inset
+
+, además de que las segundas derivadas de 
+\begin_inset Formula $f$
+\end_inset
+
+ -que son las que determinan la velocidad- deben mantenerse finitas.
+ La solución es de la forma
+\begin_inset Formula 
+\[
+f=\frac{1}{4}Ar^{2}+\frac{1}{8}Br^{4}
+\]
+
+\end_inset
+
+que da como resultado una velocidad:
+\begin_inset Formula 
+\[
+\mathbf{v}=-A\mathbf{u}+Br^{2}\left(\mathbf{n}\left(\mathbf{u}\cdot\mathbf{n}\right)-2\mathbf{u}\right)
+\]
+
+\end_inset
+
+En la superficie de la esfera -que es la superficie de contacto entre los
+ dos fluidos- deben satisfacerse las condiciones límite.
+ Todas las componentes de la velocidad normal hacia el exterior 
+\begin_inset Formula $\mathbf{v}_{e}$
+\end_inset
+
+ y hacia el interior 
+\begin_inset Formula $\mathbf{v}_{i}$
+\end_inset
+
+ deben anularse
+\begin_inset Formula 
+\[
+v_{i,r}=0=v_{e,r}
+\]
+
+\end_inset
+
+La componente tangencial de la velocidad debe ser continua:
+\begin_inset Formula 
+\[
+v_{i,\theta}=v_{e,\theta}
+\]
+
+\end_inset
+
+Del mismo modo, las componentes 
+\begin_inset Formula $\sigma_{r\theta}$
+\end_inset
+
+ del tensor de tensiones también deben ser continuas:
+\begin_inset Formula 
+\[
+\sigma_{i,r\theta}=\sigma_{e,r\theta}
+\]
+
+\end_inset
+
+ La condición de que las componentes 
+\begin_inset Formula $\sigma_{rr}$
+\end_inset
+
+ sean iguales no es necesario escribirlas; simplemente servirán para determinar
+ la velocidad requerida 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ A partir de las cuatro condiciones límite anteriores, tenemos cuatro ecuaciones
+ para las constantes 
+\begin_inset Formula $a,b$
+\end_inset
+
+ y 
+\begin_inset Formula $A,B$
+\end_inset
+
+.
+ Solucionándolas obtenemos:
+\begin_inset Formula 
+\[
+a=R\frac{2\eta+3\eta'}{4\left(\eta+\eta'\right)}\qquad b=R^{3}=\frac{\eta'}{4\left(\eta+\eta'\right)}\qquad A=-BR^{2}=\frac{\eta}{2\left(\eta+\eta'\right)}
+\]
+
+\end_inset
+
+Según la ecuación 
+\begin_inset Formula 
+\[
+F=8\pi a\eta u
+\]
+
+\end_inset
+
+tenemos para el arrastre:
+\begin_inset Formula 
+\[
+F=2\pi u\eta R\frac{\left(2\eta+3\eta'\right)}{\left(\eta+\eta'\right)}
+\]
+
+\end_inset
+
+Cuando 
+\begin_inset Formula $\eta'\rightarrow\infty$
+\end_inset
+
+ (que corresponde a una esfera sólida) esta fórmula se convierte en la de
+ Stokes (
+\begin_inset Formula $F=6\pi u\eta R$
+\end_inset
+
+).
+ En el límite opuesto, 
+\begin_inset Formula $\eta'\rightarrow0$
+\end_inset
+
+ (que corresponde a una burbuja gasesosa) tenemos 
+\begin_inset Formula $F=4\pi u\eta R$
+\end_inset
+
+, que corresponde a una fuerza de arrastre de únicamente dos tercios de
+ la correspondiente a una esfera maciza.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\[
+F=2\pi u\eta R\frac{\left(2\eta+3\eta'\right)}{\left(\eta+\eta'\right)}\begin{cases}
+\eta'\rightarrow\infty & F=6\pi u\eta R\quad\left(\text{Stokes}\right)\\
+\eta'\rightarrow0 & F=4\pi u\eta R=\frac{2}{3}F{}_{\text{Stokes}}\left(\eta'=\infty\right)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
