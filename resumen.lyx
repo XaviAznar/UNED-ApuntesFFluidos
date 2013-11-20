@@ -7303,5 +7303,581 @@ F=6\pi\eta uR\left(1+\frac{3uR}{8\nu}\right)\label{L2 p27 ec:20.17 Arrastre sobr
 
 \end_layout
 
+\begin_layout Section
+Estela laminar
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:21 Estela-laminar"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En un flujo estacionario, las propiedades del flujo a distancias elevadas
+ 
+\emph on
+detrás
+\emph default
+ del cuerpo tiene unas características determinadas 
+\series bold
+independientemente
+\series default
+ de la forma del cuerpo.
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ a la velocidad constante de la corriente incidente (con 
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ en la dirección del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y el origen dentro del cuerpo).
+ La velocidad del fluido real en un punto cualquiera puede escribirse como
+ 
+\begin_inset Formula $\mathbf{U}+\mathbf{v}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ se anula en el infinito.
+\end_layout
+
+\begin_layout Standard
+A distancias grandes detrás del cuerpo, la velocidad 
+\begin_inset Formula $\mathbf{v}\neq0$
+\end_inset
+
+ sólo en una región estrecha cercana al eje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Esta región se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Estela laminar
+\end_layout
+
+\end_inset
+
+estela laminar
+\series default
+ y en ella encontramos las líneas de corriente que pasan muy cerca del cuerpo.
+ Por ello, el flujo es esencialmente rotacional.
+\end_layout
+
+\begin_layout Standard
+La viscosidad sólo tiene influencia en las líneas de corriente que pasan
+ cerca del cuerpo.
+ Para el resto, como la vorticidad de la corriente incidente es cero, puede
+ considerarse que permanece nula para el resto de la línea de corriente.
+ Así, el flujo a grandes distancias del cuerpo puede considerarse como flujo
+ potencial excepto en la estela.
+\end_layout
+
+\begin_layout Standard
+A continuación se deducen las fórmulas que relacionan las propiedades del
+ flujo en la estela con las fuerzas que actúan sobre el cuerpo.
+\end_layout
+
+\begin_layout Standard
+El impulso total transportado por el fluido a través de una superficie cerrada
+ cualquiera que rodea el cuerpo es igual a la integral del tensor de densidad
+ de flujo sobre esta superficie, 
+\begin_inset Formula $\oint\Pi_{ik}df_{k}$
+\end_inset
+
+.
+ Las componenetes del tensor 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ son
+\begin_inset Formula 
+\[
+\Pi_{ik}=p\delta_{ik}+\rho\left(U_{i}+v_{i}\right)\left(U_{k}+v_{k}\right)
+\]
+
+\end_inset
+
+Escribimos la presión 
+\begin_inset Formula $p$
+\end_inset
+
+ como 
+\begin_inset Formula $p=p_{0}+p'$
+\end_inset
+
+, donde 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ es la presión en el infinito.
+ La integral del término constante 
+\begin_inset Formula $p_{0}\delta_{ik}+U_{i}U_{k}$
+\end_inset
+
+ es cero, ya que la integral vectorial 
+\begin_inset Formula $\oint d\mathbf{f}$
+\end_inset
+
+ respecto a una superficie cerrada es nula.
+ También se anula 
+\begin_inset Formula $U_{i}\oint\rho v_{k}df_{k}$
+\end_inset
+
+; como la masa total del fluido en el volumen es constante, el flujo de
+ masa total 
+\begin_inset Formula $\oint\rho\mathbf{v}\cdot d\mathbf{f}$
+\end_inset
+
+ a través de la superficie que rodea el volumen es cero
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $U_{i}\oint\rho v_{k}df_{k}$
+\end_inset
+
+ usando el teorema de Gauss se convierte en 
+\begin_inset Formula $\mathbf{U}\int_{V}\nabla\cdot\left(\rho\mathbf{v}\right)dV$
+\end_inset
+
+, y sando la ecuación de continuidad 
+\begin_inset Formula $\mathbf{U}\int_{V}\frac{\partial\rho}{\partial t}dV$
+\end_inset
+
+.
+ Y como la masa total no varía, esta integral se anula.
+ 
+\end_layout
+
+\end_inset
+
+.
+ Finalmente, cuando estamos lejos del cuerpo, 
+\begin_inset Formula $\mathbf{v}\ll\mathbf{U}$
+\end_inset
+
+, por lo que despreciamos el término 
+\begin_inset Formula $\rho v_{i}v_{k}$
+\end_inset
+
+ en 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ en comparación con 
+\begin_inset Formula $\rho U_{k}v_{i}$
+\end_inset
+
+ si la superficie de integración está suficientemente lejos del cuerpo.
+ Al final, el impulso total es
+\begin_inset Formula 
+\[
+\oint\left(p'\delta_{ik}+U_{k}v_{i}\right)df_{k}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora suponemos que el volumen del fluido que estamos estudiando está contenido
+ entre dos planos infinitos 
+\begin_inset Formula $(x=constante$
+\end_inset
+
+), uno delante y otro detrás del cuerpo, aunque lejos de él.
+ El flujo total del impulso sobre la superficie lateral es nula, pues en
+ el infinito 
+\begin_inset Formula $p'=\mathbf{v}=0$
+\end_inset
+
+, por lo que sólo tenemos que integrar sobre estos dos planos.
+ Pero el flujo que obtenemos de esta manera es la diferencia entre el flujo
+ de impulso que entra a tavés del plano delantero y el que sale a través
+ del trasero.
+ Pero esta diferencia es también la cantidad de impulso que pasa por unidad
+ de tiempo desde el fluido hacia el cuerpo, es decir, la fuerza 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ que actúa sobre dicho cuerpo.
+ Las componentes de la fuerza son:
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{x} & = & \left(\iint_{x=x_{2}}-\iint_{x=x_{1}}\right)\left(p'+\rho Uv_{x}\right)dydz\\
+F_{y} & = & \left(\iint_{x=x_{2}}-\iint_{x=x_{1}}\right)\rho Uv_{y}dydz\\
+F_{z} & = & \left(\iint_{x=x_{2}}-\iint_{x=x_{1}}\right)\rho Uv_{z}dydz
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Empezamos por el cálculo de 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+.
+ Fuera de la estela tenemos un flujo potencial, por lo que es válida la
+ ecuación de Bernoulli:
+\begin_inset Formula 
+\[
+p+\frac{1}{2}\rho\left(\mathbf{U}+\mathbf{v}\right)^{2}=constante=p_{0}+\frac{1}{2}\rho U^{2}+\left(p'+\rho\mathbf{U}\cdot\mathbf{v}+\frac{1}{2}\rho v^{2}\right)
+\]
+
+\end_inset
+
+es decir, que el término entre paréntesis debe anularse.
+ Si 
+\begin_inset Formula $v\ll U$
+\end_inset
+
+, despreciamos el término 
+\begin_inset Formula $\frac{1}{2}\rho v^{2}$
+\end_inset
+
+ en comparación con 
+\begin_inset Formula $\rho\mathbf{U}\cdot\mathbf{v}$
+\end_inset
+
+, con lo que tenemos
+\begin_inset Formula 
+\[
+p'=-\rho\mathbf{U}\cdot\mathbf{u}=-\rho Uv_{x}
+\]
+
+\end_inset
+
+Esto significa que el integrando de 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+ se anula siempre (fuera de la estela).
+ La integral será cero en el plano 
+\emph on
+antes
+\emph default
+ del cuerpo 
+\begin_inset Formula $\left(x=x_{2}\right)$
+\end_inset
+
+ y en el plano posterior 
+\begin_inset Formula $\left(x=x_{1}\right)$
+\end_inset
+
+ excepto en la zona de interesección del plano y la estela (por lo que sólo
+ nos preocupa la sección recta de la estela).
+ En la estela, la variación de la presión 
+\begin_inset Formula $p'$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $\rho v^{2}$
+\end_inset
+
+, es decir, pequeña en comparación con 
+\begin_inset Formula $\rho Uv_{x}$
+\end_inset
+
+, con lo que también la despreciamos.
+ Finalmente obtenemos la fuerza fuerza de arrastre sobre el cuerpo como
+\begin_inset Formula 
+\begin{equation}
+F_{x}=-\rho U\iint v_{x}dydz\label{L2 p32 eq:21.1 Fuerza de arrastre Fx}
+\end{equation}
+
+\end_inset
+
+donde la integración se extiende al área de la sección recta de la estela
+ 
+\emph on
+muy detrás
+\emph default
+ del cuerpo.
+ Como es normal, la velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ de la estela es negativa: el fluido se mueve más lentamente que si estuviese
+ ausente el cuerpo.
+ Además, la integral para 
+\begin_inset Formula $F_{x}$
+\end_inset
+
+ nos da el déficit de caudal de fluido a través de la sección recta de la
+ estela respecto al valor que tendría en ausencia del cuerpo.
+\end_layout
+
+\begin_layout Standard
+Ahora vamos con la fuerza que tiende a mover transversalmente el cuerpo
+ (
+\begin_inset Formula $F_{y},F_{z}$
+\end_inset
+
+).
+ A estas fuerzas se las denomina 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fuerza de sustentación
+\end_layout
+
+\end_inset
+
+
+\series bold
+fuerza de sustentación
+\series default
+.
+ En el exterior de la estela, como tenemos un flujo potencial, podemos escribir
+\begin_inset Formula 
+\[
+v_{y}=\frac{\partial\phi}{\partial y}\qquad v_{z}=\frac{\partial\phi}{\partial z}
+\]
+
+\end_inset
+
+ de manera que también se anula la integral en el plano 
+\begin_inset Formula $x=x_{2}$
+\end_inset
+
+ donde no se corta la estela
+\begin_inset Formula 
+\[
+\iint v_{y}dydz=\iint\frac{\partial\phi}{\partial y}dydz=0\qquad\iint\frac{\partial\phi}{\partial z}dydz=0
+\]
+
+\end_inset
+
+ya que 
+\begin_inset Formula $\phi=0$
+\end_inset
+
+ en el infinito.
+\end_layout
+
+\begin_layout Standard
+Así, para la fuerza de sustentación
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\iint v_{y}dydz\qquad F_{z}=-\rho U\iint v_{z}dydz\label{L2 p32 ec:21.2 Fuerza de sustentación}
+\end{equation}
+
+\end_inset
+
+donde las integrales sólo deben realizarse en la sección recta de la estela.
+\end_layout
+
+\begin_layout Standard
+Si el cuerpo tiene un eje de simetría y el flujo es paralelo a este eje
+ , entonces el flujo que rodea al cuerpo también tiene simetría.
+ En este caso, la sustentación es cero.
+\end_layout
+
+\begin_layout Standard
+Volviendo a la estela, estimando el valor de los diferentes términos de
+ las ecuaciaciones de Navier-Stokes muestra que el término 
+\begin_inset Formula $\nu\Delta\mathbf{v}$
+\end_inset
+
+ puede despreciarse a una distancia 
+\begin_inset Formula $r$
+\end_inset
+
+ del cuerpo tal que 
+\begin_inset Formula $\frac{rU}{\nu}\gg1$
+\end_inset
+
+.
+ A estas distancias, el flujo dentro de la estela puede considerarse como
+ flujo potencial.
+ Sin embargo, no podemos despreciar este término dentro de la estela porque,
+ incluso a estas distancias, las derivadas transversales 
+\begin_inset Formula $\partial^{2}\mathbf{v}/\partial y^{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $\partial^{2}\mathbf{v}/\partial z^{2}$
+\end_inset
+
+ son grandes en comparación con 
+\begin_inset Formula $\partial^{2}\mathbf{v}/\partial x^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ en la ecuación de Navier-Stokes es del orden de 
+\begin_inset Formula $\left(U+v\right)\partial v/\partial x\sim\frac{Uv}{x}$
+\end_inset
+
+ en la estela.
+ El término 
+\begin_inset Formula $\nu\Delta\mathbf{v}$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $\nu\partial^{2}/\partial y^{2}\sim\frac{\nu v}{Y^{2}}$
+\end_inset
+
+ donde 
+\begin_inset Formula $Y$
+\end_inset
+
+ es la anchura de la estela, es decir, 
+\begin_inset Formula $\nu\Delta\mathbf{v}$
+\end_inset
+
+ es del orden de magnitud de la distancia respecto al eje 
+\begin_inset Formula $x$
+\end_inset
+
+ en el cual a velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ tiende a cero.
+ Si estas dos magnitudes son comparables
+\begin_inset Formula 
+\begin{equation}
+Y\sim\sqrt{\frac{vx}{U}}\label{L2 p33 ec:21.3}
+\end{equation}
+
+\end_inset
+
+Esta cantidad es pequeña en comparación con 
+\begin_inset Formula $x$
+\end_inset
+
+ ya que inicialmente hemos supuesto que 
+\begin_inset Formula $\frac{Ux}{\nu}\gg1$
+\end_inset
+
+.
+ Así, la anchura de la estela laminar aumenta proporcionalmente a la raíz
+ cuadrada de la distancia con respecto al cuerpo.
+\end_layout
+
+\begin_layout Standard
+Si la región de integración tiene un área del orden de 
+\begin_inset Formula $Y^{2}$
+\end_inset
+
+, podemos estimar la integral 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p32 eq:21.1 Fuerza de arrastre Fx"
+
+\end_inset
+
+ como 
+\begin_inset Formula 
+\[
+F_{X}\sim\rho UvY^{2}
+\]
+
+\end_inset
+
+y usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p33 ec:21.3"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+v\sim\frac{F_{x}}{\rho\nu}x\label{L2 p33 ec:21.4 Velocidad en la estela f(x)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+La viscosidad de las suspensiones (E)
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:22 La viscosidad de las suspensiones (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contiene una sección clasificada como 
+\begin_inset Quotes eld
+\end_inset
+
+ejemplo
+\begin_inset Quotes erd
+\end_inset
+
+ en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Soluciones exactas de las ecuaciones del movimiento en el caso de un fluido
+ viscoso
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:23 Soluciones exactas de las ecuaciones del movimiento en el caso de un fluido viscoso"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección no aparece en la Guía de la Asignatura (la obviamos).
+\end_layout
+
+\begin_layout Section
+Movimiento oscilante en un fluido (G) viscoso
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:24 Movimiento oscilante en un fluido viscoso (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \end_body
 \end_document
