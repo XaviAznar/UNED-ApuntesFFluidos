@@ -9212,6 +9212,673 @@ Lectura
 
 \begin_layout Section
 Turbulencia totalmente desarrollada (B)
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:31 Turbulencia-totalmente-desarrollada (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El flujo turbulento para números de Reynolds suficientemente grandes se
+ caracteriza por:
+\end_layout
+
+\begin_layout Itemize
+Variación 
+\series bold
+extremadamente
+\series default
+ irregular:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+en el espacio (de un punto a otro)
+\end_layout
+
+\begin_layout Itemize
+en el tiempo (en dos instantes de tiempo, en la misma posición)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Esta situación se denomina 
+\series bold
+turbulencia totalmente desarrollada
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Turbulencia totalmente desarrollada
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+La velocidad fluctúa alrededor de un determinado valor medio.
+ La amplitud de esta variación no es, en general, pequeña:
+\begin_inset Formula 
+\[
+\frac{\Delta\mathbf{v}}{\mathbf{v}}\gg1\quad\text{Fluctuaciones grandes (en general)}
+\]
+
+\end_inset
+
+Las trayectorias de las partículas son 
+\series bold
+extremadamente
+\series default
+ complicadas, por lo que se produce una mezcla amplia del fluido.
+\end_layout
+
+\begin_layout Standard
+Pasado un intervalo de tiempo suficientemente grande, las velocidades y
+ las coordenadas pasan por todos los valores posibles, por lo que las condicione
+s iniciales no tienen ninguna repercusión.
+ La teoría que describa la turbulencia debe ser estadística, pero todavía
+ no se ha completado su desarrollo.
+\end_layout
+
+\begin_layout Description
+Velocidad
+\begin_inset space ~
+\end_inset
+
+media
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Velocidad media 
+\begin_inset Formula $\mathbf{u}\equiv\overline{\mathbf{v}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{u}\equiv\overline{\mathbf{v}}$
+\end_inset
+
+: promedio de la velocidad en cada punto durante un intervalo largo de tiempo.
+\begin_inset Formula 
+\begin{eqnarray*}
+ & \mathbf{v} & \text{Variación extremadamente irregular}\\
+ & \downarrow & \text{Promedio (tiempo largo)}\\
+ & \mathbf{u}=\overline{\mathbf{v}} & \text{Variación suave de un punto a otro}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Parte
+\begin_inset space ~
+\end_inset
+
+fluctuante
+\begin_inset space ~
+\end_inset
+
+de
+\begin_inset space ~
+\end_inset
+
+la
+\begin_inset space ~
+\end_inset
+
+velocidad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Parte fluctuante de la velocidad 
+\begin_inset Formula $\mathbf{v}'=\mathbf{v}-\mathbf{u}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathbf{v}'=\mathbf{v}-\mathbf{u}$
+\end_inset
+
+: esta diferencia varía de forma turbulenta.
+\end_layout
+
+\begin_layout Standard
+Consideramos que esta parte fluctuante de la velocidad está compuesta por
+ una superposición de remolinos
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Remolinos
+\end_layout
+
+\end_inset
+
+ o torbellinos turbulentos
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Torbellinos turbulentos
+\end_layout
+
+\end_inset
+
+ de diferentes tamaños o distintas escalas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{v}'=\sum_{\lambda}\circlearrowleft_{\lambda}=\sum_{\lambda\text{ grandes}}\circlearrowleft_{\lambda}+\sum_{\lambda\text{ pequeños}}\circlearrowleft_{\lambda}\quad\text{(Superposición de remolinos)}
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\circlearrowleft_{\lambda}$
+\end_inset
+
+ denota un remolino de dimensión 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ El tamaño o escala de un remolino 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Escala de un remolino 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ es el orden de magnitud en el que la velocidad varía apreciablemente.
+ Cuando el número de Reynolds 
+\begin_inset Formula $R$
+\end_inset
+
+ 
+\begin_inset Formula $\uparrow$
+\end_inset
+
+, primero aparecen los remolinos grandes, y después los remolinos menores.
+ Cuando 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ encontramos remolinos de todos los tamaños en el flujo.
+\begin_inset Formula 
+\[
+R\rightarrow\begin{cases}
+\uparrow & \Rightarrow\circlearrowleft\text{grandes}\\
+\upuparrows & \Rightarrow\circlearrowleft\text{grandes}+\circlearrowleft\text{pequeños}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Remolinos grandes
+\end_layout
+
+\begin_layout Itemize
+Juegan un papel importante en cualquier flujo turbulento.
+\end_layout
+
+\begin_layout Itemize
+Tamaño del orden de la región en la que tiene lugar el flujo 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\lambda\left(\circlearrowleft_{grande}\right)\sim l
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Amplitud grande.
+\end_layout
+
+\begin_layout Itemize
+Velocidad comparable con la variación de la velocidad media a lo largo de
+ la distancia 
+\begin_inset Formula $l$
+\end_inset
+
+, que denotamos por 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+v\left(\circlearrowleft_{grande}\right)\sim\Delta u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Frecuencia del orden de 
+\begin_inset Formula $u/l$
+\end_inset
+
+, donde 
+\begin_inset Formula $u$
+\end_inset
+
+ es la velocidad media del flujo y 
+\begin_inset Formula $l$
+\end_inset
+
+ su dimensión.
+ Esta frecuencia es el periodo con el que se reproduce la imagen del movimiento
+ cuando se observa desde un sistema de referencia fijo.
+ El remolino se mueve con el fluido a una velocidad del orden de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+\omega\left(\circlearrowleft_{grande}\right) & = & \frac{u}{l}\quad\text{Frecuencia de giro (sist. de ref. fijo)}\\
+v\left(\circlearrowleft_{grande}\right)\rightrightarrows & \sim & \mathbf{u}\quad\text{Velocidad con la que el}\circlearrowleft\text{ se desplaza con el flujo}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Remolinos pequeños
+\end_layout
+
+\begin_layout Itemize
+Los remolinos pequeños corresponden a frecuencias grandes.
+\end_layout
+
+\begin_layout Itemize
+Se pueden considerar como una 
+\emph on
+estructura fina
+\emph default
+ sobre los remolinos turbulentos fundamentales grandes.
+\end_layout
+
+\begin_layout Itemize
+Pequeña contribución a la energía cinética total.
+\end_layout
+
+\begin_layout Subsection*
+Conclusiones
+\end_layout
+
+\begin_layout Itemize
+Variación de la velocidad fluctuante de un punto a otro (separados una distancia
+ 
+\begin_inset Formula $d$
+\end_inset
+
+) en un instante cualquiera:
+\begin_inset Formula 
+\begin{eqnarray*}
+d\sim l & \Rightarrow & \Delta v'=\Delta v'\left(\circlearrowleft_{grandes}\right)\sim\Delta u\\
+d\ll l & \Rightarrow & \Delta v'=\Delta v'\left(\circlearrowleft_{pequeños}\right)\ll\Delta u
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Variación de la velocidad fluctuante (en un mismo punto) en diferentes instantes
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+t\ll T\sim\frac{l}{u} & \Rightarrow & \Delta v'\sim0\\
+t\sim T & \Rightarrow & \Delta v'\sim\Delta u
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La longitud 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es un dimensión característica del remolino.
+ Por analogía con el número de Reynolds, que caracteriza el flujo y que
+ también depende de 
+\begin_inset Formula $l$
+\end_inset
+
+, definimos un número de Reynolds 
+\begin_inset Formula $R_{\lambda}$
+\end_inset
+
+ para caracterizar de manera cualitativa los remolinos.
+\begin_inset Formula 
+\[
+R_{\lambda}=v_{\lambda}\frac{\lambda}{\nu}
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es una magnitud del orden del tamaño del remolino, 
+\begin_inset Formula $v_{\lambda}$
+\end_inset
+
+ una magnitud del orden de la velocidad del remolino y 
+\begin_inset Formula $\nu$
+\end_inset
+
+ la viscosidad del fluido.
+ Cuanto más pequeño es 
+\begin_inset Formula $R_{\lambda}$
+\end_inset
+
+, más pequeño es el remolino que caracteriza (y viceversa).
+\end_layout
+
+\begin_layout Standard
+Para 
+\series bold
+remolinos grandes
+\series default
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left.\begin{array}{cc}
+R\text{ grandes} & \Rightarrow R_{\lambda}\text{ grandes}\\
+R\text{ grandes} & \Rightarrow\nu\text{ pequeñas}
+\end{array}\right\} \Rightarrow R_{\lambda}\text{ grandes}\Rightarrow\nu\simeq0
+\]
+
+\end_inset
+
+De aquí deducimos que:
+\begin_inset Formula 
+\[
+\circlearrowleft_{grandes}:\quad R_{\lambda}\text{ grande}\begin{cases}
+\nu\simeq0 & \text{La viscosidad no tiene importancia}\\
+\nu\simeq0\Rightarrow\epsilon\simeq0 & \text{ No hay disipación de energía}
+\end{cases}
+\]
+
+\end_inset
+
+Es decir, que el movimiento de los remolinos grandes viene dado por la ecuación
+ de Euler: 
+\begin_inset Formula 
+\[
+\circlearrowleft_{grandes}\text{ se rigen por la Ecuación de Euler}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En los 
+\series bold
+remolinos pequeños
+\series default
+ tenemos:
+\begin_inset Formula 
+\[
+R\simeq1\Rightarrow\begin{cases}
+\circlearrowleft_{pequeño} & \text{Tamaño }\sim\lambda_{0}\\
+\nu\text{ importante} & \text{Disipación de energía}
+\end{cases}
+\]
+
+\end_inset
+
+Así el proceso de disipación de la energía en un flujo turbulento es de
+ los remolinos grandes a los pequeños, desde donde se disipa en forma de
+ calor:
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left(\circlearrowleft_{gran}\right) & \rightarrow & E\left(\circlearrowleft_{peq}\right)\quad\begin{cases}
+ & \text{Transferencia continua de energía}\\
+\nu\simeq0 & \text{No se produce disipación}\quad\left(\epsilon\simeq0\right)
+\end{cases}\\
+E\left(\circlearrowleft_{peq}\right) & : & E_{cin}\rightsquigarrow\text{calor }\begin{cases}
+\nu\text{ importante} & \Rightarrow\text{Disipación de energía}\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como la viscosidad 
+\begin_inset Formula $\nu$
+\end_inset
+
+ sólo es imporante en los remolinos pequeños,
+\begin_inset Formula 
+\[
+\nu\text{ importante }\iff\circlearrowleft_{peq}\iff\text{Tamaño }\sim\lambda_{0}
+\]
+
+\end_inset
+
+ninguna magnitud de los remolinos 
+\begin_inset Formula $\lambda\gg\lambda_{0}$
+\end_inset
+
+ que describen los remolinos grandes puede depender de la viscosidad 
+\begin_inset Formula $\nu$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\lambda\gg\lambda_{0} & \Rightarrow & \circlearrowleft_{gran}\neq f\left(\nu\right)\\
+ &  & \circlearrowleft_{gran}=f\left(\rho,l,\Delta u\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La energía que se disipa en los remolinos pequeños proviene de los grandes,
+ desde donde se transfiere de forma continua.
+ A partir de las magnitudes que describen un remolino grande sólo podemos
+ formar una combinación con las dimensiones 
+\begin_inset Formula $\left(cm^{2}/s^{3}\right)$
+\end_inset
+
+ de la disipación media de energía por unidad de masa del fluido y unidad
+ de tiempo 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\epsilon\sim\frac{\left(\Delta u\right)^{3}}{l}\quad\text{Disipación de energía en flujo turbulento}\label{L3 p25 ec31.1 Disipación de energía}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En algunos aspectos el movimiento turbulento puede describirse como un fluido
+ con una 
+\series bold
+viscosidad turbulenta
+\series default
+ 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Viscosidad turbulenta 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+.
+ De nuevo, la única combinación posible con las magnitudes 
+\begin_inset Formula $\rho,l$
+\end_inset
+
+ y 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ con la dimensiones de viscosidad es
+\begin_inset Formula 
+\begin{equation}
+\nu_{turb}\sim l\Delta u\quad\text{Viscosidad turbulenta}\label{L3 p25 ec31.2 Viscosidad turbulenta}
+\end{equation}
+
+\end_inset
+
+El cociente entre la 
+\emph on
+viscosidad turbulenta
+\emph default
+ y la viscosidad 
+\begin_inset Quotes eld
+\end_inset
+
+normal
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\nu_{turb}/\nu\sim R$
+\end_inset
+
+ aumenta con el número de Reynolds.
+\end_layout
+
+\begin_layout Standard
+Finalmente, la disipación de energía expresada a través de esta viscosidad
+ turbulenta es
+\begin_inset Formula 
+\begin{equation}
+\epsilon\sim\nu_{turb}\left(\frac{\Delta u}{l}\right)^{2}\label{L3 p25 ec31.3 Disipación de energía en función de viscosidad turbulenta}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\nu$
+\end_inset
+
+ se relaciona con 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ a través de las derivadas espaciales de la verdadera velocidad.
+ 
+\begin_inset Formula $\nu_{turb}$
+\end_inset
+
+ se relaciona con 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ a través del gradiente de la velocidad media 
+\begin_inset Formula $\sim\frac{\Delta u}{l}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A través de razonamientos de semejanza puede obtenerse el orden de magnitud
+ de la variación de la presión en el flujo turbulento
+\begin_inset Formula 
+\begin{equation}
+\Delta p\sim\rho\left(\Delta u\right)^{2}\label{L3 p25 ec31.4 Variación de presión en flujo turbulento}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \end_body
