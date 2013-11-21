@@ -8321,6 +8321,305 @@ Podríamos solucionar el mismo escenario que en el ejemplo anterior pero
 \begin_layout Example*
 Finalmente consideramos el caso general de un cuerpo oscilante de forma
  arbitraria.
+ Anteriormente el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ se anulaba, pero esto no sucede de manera general.
+ Sin embargo, podemos considerar que este término es pequeño en comparación
+ con los demás y que puede despreciarse.
+ Más adelante determinaremos las condiciones en las que podemos hacer esta
+ aproximación.
+\end_layout
+
+\begin_layout Example*
+Como antes, empezamos a partir de la ecuación lineal 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p49 eq:24.2 Ec. de movimiento en este caso"
+
+\end_inset
+
+.
+ Tomamos el rotacional en ambos miembros, con lo que el término 
+\begin_inset Formula $\mathbf{\nabla\times}\mathbf{grad}p=0$
+\end_inset
+
+, con lo que tenemos
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{rot\, v}}{\partial t}=\nu\Delta\mathbf{rot}\,\mathbf{v}\label{L2 p51 24.9}
+\end{equation}
+
+\end_inset
+
+es decir, que el 
+\begin_inset Formula $\mathbf{rot}\mathbf{\, v}$
+\end_inset
+
+ satisface una ecuación térmica 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Una 
+\emph on
+ecuación térmica
+\emph default
+ o 
+\emph on
+ecuación del calor
+\emph default
+ es una ecuación diferencial en derivadas parciales de la forma 
+\begin_inset Formula 
+\[
+\frac{\partial T}{\partial t}+\alpha\left(\frac{\partial^{2}T}{\partial x^{2}}+\frac{\partial^{2}T}{\partial y^{2}}+\frac{\partial^{2}T}{\partial z^{2}}\right)=0
+\]
+
+\end_inset
+
+Se llama 
+\emph on
+ecuación del calor
+\emph default
+ porque describe la distribución del calor (o de variaciones de temperatura)
+ en una región a lo largo del tiempo.
+\end_layout
+
+\end_inset
+
+.
+ Como hemos visto en los ejemplos anteriores, la solución de una ecuación
+ de este tipo da una disminución exponencial en la magnitud que la satisface.
+ Por tanto podemos decir que la vorticidad (
+\begin_inset Formula $\omega=\mathbf{rot\, v})$
+\end_inset
+
+ disminuye hacia el interior del fluido.
+ En otras palabras, el movimiento del fluido es rotacional en una determinada
+ capa alrededor del fluido, mientras que a distancias mayores varía rápidamente
+ para convertirse en un flujo potencial.
+ La profundidad de penetración del flujo rotacional es del orden de 
+\begin_inset Formula $\delta\sim\sqrt{\frac{\nu}{\omega}}$
+\end_inset
+
+.
+ Tenemos dos casos límites en función de si 
+\begin_inset Formula $\delta$
+\end_inset
+
+ es grande o pequeño en comparación con la dimensión 
+\begin_inset Formula $l$
+\end_inset
+
+ del cuerpo oscilante.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $\delta\gg l$
+\end_inset
+
+ Esto implica que 
+\begin_inset Formula $l^{2}\omega\ll\nu$
+\end_inset
+
+.
+ En este caso, además, supondremos que el número de Reynolds es pequeño.
+ Si 
+\begin_inset Formula $a$
+\end_inset
+
+ es la amplitud de las oscilaciones, la velocidad del cuerpo es del orden
+ de 
+\begin_inset Formula $a\omega$
+\end_inset
+
+.
+ El número de Reynolds para el movimiento es 
+\begin_inset Formula $\frac{\omega al}{\nu}$
+\end_inset
+
+.
+ Así, suponemos
+\begin_inset Formula 
+\begin{equation}
+l^{2}\omega\ll\nu\qquad\frac{\omega al}{\nu}\ll1\label{L2 p51 ec:24.10}
+\end{equation}
+
+\end_inset
+
+Es decir, este es el caso de bajas frecuencias de oscilación (cosa que también
+ significa que podemos despreciar la derivada 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ en la ecuación general del movimiento).
+ El término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ puede despreciarse porque hemos supuesto que el número de Reynolds es pequeño.
+\begin_inset Newline newline
+\end_inset
+
+Como no tenemos el término 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+, el flujo se considera estacionario.
+ Es decir, para 
+\begin_inset Formula $\delta\gg l$
+\end_inset
+
+ el flujo puede considerarse estacionario en cualquier instante.
+ Esto significa que el flujo en dicho instante es el que aparecería si el
+ cuerpo se estuviese moviendo uniformemente con su velocidad instantánea.
+ Por ejemplo, si tuviéramos una esfera oscilando en las condiciones de este
+ caso, la fuerza de arrastre sería la calculada por la fórmula de Stokes
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p25 ec:20.14 Fórmula de Stokes"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $\delta\ll l$
+\end_inset
+
+ Para que el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ pueda despreciarse también en este caso, es necesario que la amplitud de
+ las oscilaciones sea pequeña en comparación con las dimensiones del cuerpo:
+\begin_inset Formula 
+\begin{equation}
+l^{2}\omega\gg\nu\qquad a\ll l\label{L2 p52 ec:24.11}
+\end{equation}
+
+\end_inset
+
+En este caso no es necesario que el número de Reynolds sea pequeño.
+\begin_inset Newline newline
+\end_inset
+
+La desigualdad anterior se obtiene estimando el valor del término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+.
+ El operador 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)$
+\end_inset
+
+ designa una derivación en la dirección de la velocidad.
+ Pero cerca del cuerpo la velocidad es casi tangencial, y la velocidad tangencia
+l sólo varía apreciablemente en distancias del orden de la dimensión del
+ cuerpo 
+\begin_inset Formula $l$
+\end_inset
+
+, así que 
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\sim\frac{v^{2}}{l}\sim\frac{a^{2}\omega^{2}}{l}
+\]
+
+\end_inset
+
+ya que la velocidad es del orden de 
+\begin_inset Formula $a\omega$
+\end_inset
+
+.
+ La derivada 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}\sim v\omega\sim a\omega^{2}$
+\end_inset
+
+.
+ Comparando las dos expresiones vemos que 
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}\iff a\ll l
+\]
+
+\end_inset
+
+Los términos 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ y 
+\begin_inset Formula $\nu\Delta\mathbf{v}$
+\end_inset
+
+ son aproximadamente del mismo orden.
+\begin_inset Newline newline
+\end_inset
+
+En las condiciones descritas por las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p52 ec:24.11"
+
+\end_inset
+
+ sólo tenemos una capa delgada cercana a la superficie del cuerpo en la
+ que tenemos flujo rotacional.
+ Fuera de esta capa tenemos un flujo potencial.
+ Por tanto, excepto en esa capa fina, el flujo viene dado por las ecuaciones
+\begin_inset Formula 
+\begin{equation}
+\mathbf{rot\, v}=0\qquad div\,\mathbf{v}=0\label{L2 p53 eq:24.12 Ecs fuera de la capa pegada al cuerpo oscilante}
+\end{equation}
+
+\end_inset
+
+A partir de estas ecuaciones tenemos que 
+\begin_inset Formula $\Delta\mathbf{v}=0$
+\end_inset
+
+ y la ecuación de Navier-Stokes se reduce a la ecuación de Euler.
+ Es decir, tenemos un flujo ideal en todo el fluido excepto en la capa superfici
+al.
+ Como esta capa es delgada, al resolver las ecuaciones de movimiento podríamos
+ aplicar como condiciones límite las condiciones que deben verificarse en
+ la superficie del cuerpo.
+ Pero las soluciones para el fluido ideal no pueden satisfacer estas condiciones
+, así que sólo podemos aplicar la condición para la componente normal a
+ la superficie de la velocidad del fluido.
+\begin_inset Newline newline
+\end_inset
+
+Aunque las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p53 eq:24.12 Ecs fuera de la capa pegada al cuerpo oscilante"
+
+\end_inset
+
+ no pueden aplicarse en la capa superficial del fluido, la distribución
+ de velocidades obtenida al solucionarlas verifica la condición límite para
+ la componente normal de la velocidad, lo que significa que esta capa límite
+ no tiene ninguna propiedad especial que afecte a la variación de esta component
+e de la velocidad.
+ En cuanto a la componente tangencial podríamos encontrarla solucionando
+ las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p53 eq:24.12 Ecs fuera de la capa pegada al cuerpo oscilante"
+
+\end_inset
+
+.
+ Al hacerlo encontraríamos que tiene valores diferentes al de la velocidad
+ tangencial del cuerpo (aunque deberían ser iguales).
+ Esto significa que la velocidad tangencial debe variar rápidamente en la
+ capa superficial.
 \end_layout
 
 \end_body
