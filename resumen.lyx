@@ -8637,5 +8637,546 @@ name "L2 sec:25 Amortiguamiento de las ondas de gravedad (E)"
 Esta sección trata sobre un ejemplo de la teoría, por lo que la saltamos.
 \end_layout
 
+\begin_layout Chapter
+Turbulencia
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:3 Turbulencia"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Estabilidad del flujo estacionario 
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:26 Estabilidad del flujo estacionario"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para estudiar la turbulencia imaginamos que la solución será la superposición
+ de una solución estacionaria 
+\begin_inset Formula $\mathbf{v}_{0}\left(x,y,z\right)$
+\end_inset
+
+ y una perturbación pequeña 
+\begin_inset Formula $\mathbf{v}_{1}\left(x,y,z,t\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{v} & = & \mathbf{v}_{0}+\mathbf{v}_{1}\left(t\right)\\
+p & = & p_{0}+p_{1}
+\end{eqnarray*}
+
+\end_inset
+
+donde la velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y la presión 
+\begin_inset Formula $p$
+\end_inset
+
+ resultante verifican las ecuaciones de movimiento:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v} & = & -\frac{1}{\rho}\mathbf{grad}p+\nu\Delta\mathbf{v}\\
+\mathrm{div}\mathbf{v} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Las soluciones estacionarias 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ satisfacen:
+\begin_inset Formula 
+\begin{eqnarray*}
+\left(\mathbf{v}_{0}\cdot\mathbf{grad}\right)\mathbf{v}_{0} & = & -\frac{1}{\rho}\mathbf{grad}p_{0}+\nu\Delta\mathbf{v}_{0}\\
+div\,\mathbf{v}_{0} & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+Y la perturbación tiene que satisfacer (omitiendo los términos superiores
+ al primer orden en 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial\mathbf{v}_{1}}{\partial t}+\left(\mathbf{v}_{0}\cdot\mathbf{grad}\right)\mathbf{v}_{1}+\left(\mathbf{v}_{1}\cdot\mathbf{grad}\right)\mathbf{v}_{0} & = & -\frac{1}{\rho}\mathbf{grad}p_{1}+\nu\Delta\mathbf{v}_{1}\nonumber \\
+div\,\mathbf{v}_{1} & = & 0\label{L3 p5 ec26.1 Ecuaciones de movimiento para la perturbación}
+\end{eqnarray}
+
+\end_inset
+
+Junto con la condición límite
+\begin_inset Formula 
+\[
+\mathbf{v}_{1}=0\quad\text{en las superficies sólidas}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La solución del sistema de ecuaciones diferenciales lineales para 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ con coeficientes que son funciones únicamente de las coordenadas y no del
+ tiempo.
+ La solución general puede considerarse como una suma de soluciones particulares
+ en la que 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ depende del tiempo a través de funciones del tipo 
+\begin_inset Formula $e^{-i\omega t}$
+\end_inset
+
+, con 
+\begin_inset Formula $\omega\in\mathbb{C}$
+\end_inset
+
+ en general.
+ Las 
+\begin_inset Formula $\omega$
+\end_inset
+
+ no son arbitrarias, sino que quedan determinadas al solucionar 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p5 ec26.1 Ecuaciones de movimiento para la perturbación"
+
+\end_inset
+
+.
+ La parte imaginaria de estas 
+\begin_inset Quotes eld
+\end_inset
+
+frecuencias
+\begin_inset Quotes erd
+\end_inset
+
+ nos permite discriminar:
+\begin_inset Formula 
+\begin{eqnarray}
+\mathrm{im\left(\omega\right)>0} & \Rightarrow & \text{Perturbación }\uparrow\,\Rightarrow\text{ Flujo inestable (turbulencia)}\label{L3 sec27 Estabilidad del flujo en función de la parte imaginaria de w}\\
+\mathrm{im}\left(\omega\right)<0 & \Rightarrow & \text{Perturbación }\downarrow\,\Rightarrow\text{ Flujo estable}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Matemáticamente el tratamiento de la turbulencia es 
+\series bold
+muy complicado
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Teóricamente el problema no se ha resuelto.
+ Los resultados experimentales muestran que el flujo estacionario es estable
+ para números de Reynolds pequeños, pero que más allá de un determinado
+ número de Reynolds crítico el flujo es inestable respecto a perturbaciones
+ infinitesimables.
+\begin_inset Formula 
+\[
+\exists R_{cr}\text{ tal que }\forall R>R_{cr}\Rightarrow\text{flujo turbulento }\left(\nexists\text{ flujo estacionario estable}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Establecimiento de la turbulencia 
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:27 Establecimiento-de-la turbulencia"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hemos visto que cuando 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ el flujo es no estacionario (para todo 
+\begin_inset Formula $R>R_{cr}$
+\end_inset
+
+).
+ Cuando 
+\begin_inset Formula $R\gtrsim R_{cr}$
+\end_inset
+
+ tenemos que la parte imaginaria de la frecuencia 
+\begin_inset Formula $\omega=\omega_{1}+i\gamma_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{1}>0$
+\end_inset
+
+ (pero 
+\begin_inset Formula $\gamma_{1}\ll\omega_{1}$
+\end_inset
+
+).
+ La función 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ correspondiente a esta frecuencia es de la forma: 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}_{1}=A\left(t\right)\mathbf{f}\left(x,y,z\right)\label{L3 p6 ec27.1 Velocidad correspondiente a R>=R_cr}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ es una función compleja de las coordenadas y 
+\begin_inset Formula $A\left(t\right)$
+\end_inset
+
+ es una 
+\begin_inset Quotes eld
+\end_inset
+
+amplitud compleja
+\begin_inset Quotes erd
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+A\left(t\right)=constante\times e^{\gamma_{1}t}e^{-i\omega_{1}t}\label{L3 p6 ec27.2 Amplitud compleja}
+\end{equation}
+
+\end_inset
+
+La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p6 ec27.2 Amplitud compleja"
+
+\end_inset
+
+ sólo es válida durante un intervalo de tiempo corto (
+\begin_inset Formula $e^{\gamma_{1}t}\ \uparrow$
+\end_inset
+
+ rápidamente y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p6 ec27.1 Velocidad correspondiente a R>=R_cr"
+
+\end_inset
+
+ sólo es válida si 
+\begin_inset Formula $\left|\mathbf{v}_{1}\right|$
+\end_inset
+
+ es pequeño, ya que hemos supuesto que la solución será 
+\begin_inset Formula $\mathbf{v}=\mathbf{v}_{0}+\mathbf{v}_{1}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+La amplitud del flujo no estacionario 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+ no aumenta sin límite, sino que tiende a un valor finito.
+ Para 
+\begin_inset Formula $R\geq R_{cr}$
+\end_inset
+
+, 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+ es pequeño y podemos obtenerlo de la siguiente manera.
+ Calculamos la 
+\begin_inset Formula $\frac{d}{dt}\left|A^{2}\right|$
+\end_inset
+
+.
+ Para valores pequeños de 
+\begin_inset Formula $t$
+\end_inset
+
+ la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p6 ec27.2 Amplitud compleja"
+
+\end_inset
+
+ todavía es válida y obtenemos 
+\begin_inset Formula $\frac{d\left|A\right|}{dt}=2\gamma_{1}\left|A\right|$
+\end_inset
+
+.
+ Esto es exactamente el primer término de un desarrollo en serie de potencias
+ de 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $A^{*}$
+\end_inset
+
+.
+ Cuando aumenta 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+ (pero mientras sigue siendo pequeño), debemos tener en cuenta también los
+ siguientes términos del desarrollo (que son de tercer orden).
+ De todas formas, no estamos interesados en el valor exacto del módulo de
+ 
+\begin_inset Formula $A$
+\end_inset
+
+, sino en su promedio temporal.
+ Este promedio lo tomamos en tiempos grandes en comparación con el periodo
+ 
+\begin_inset Formula $\frac{2\pi}{\omega_{1}}$
+\end_inset
+
+ del factor 
+\begin_inset Formula $e^{-i\omega_{1}t}$
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\omega_{1}\gg\gamma_{1}$
+\end_inset
+
+ este periodo es pequeño en comparación con el tiempo 
+\begin_inset Formula $\frac{1}{\gamma_{1}}$
+\end_inset
+
+ que es el intervalo en el que el módulo de la amplitud varía de forma apreciabl
+e.
+ Pese a todo, los términos de tercer orden deben incluir un factor periódico,
+ con lo que se anularán al promediar.
+ Así, incluimos el siguiente término, que resulta proporcional a 
+\begin_inset Formula $A^{2}A^{*2}=\left|A\right|^{4}$
+\end_inset
+
+ (que no se anula al promediar): 
+\begin_inset Formula 
+\begin{equation}
+\frac{d\left|A\right|^{2}}{dt}\simeq2\gamma_{1}\left|A\right|^{2}-\alpha\left|A\right|^{4}\label{L3 p7 ec27.3}
+\end{equation}
+
+\end_inset
+
+ (con 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ que puede ser tanto positivo como negativo).
+ No hemos colocado barras sobre 
+\begin_inset Formula $\left|A\right|^{2}$
+\end_inset
+
+ o 
+\begin_inset Formula $\left|A\right|^{4}$
+\end_inset
+
+ porque el promedio se toma sobre un tiempo corto en comparación con 
+\begin_inset Formula $\frac{1}{\gamma_{1}}$
+\end_inset
+
+ (es decir, 
+\begin_inset Formula $\left|A\right|$
+\end_inset
+
+ no varía apreciablemente).
+\end_layout
+
+\begin_layout Standard
+Solucionando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p7 ec27.3"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\[
+\frac{1}{\left|A\right|^{2}}=\frac{\alpha}{2\gamma_{1}}+constante\times e^{-2\gamma_{1}t}
+\]
+
+\end_inset
+
+que tiende asintóticamente a 
+\begin_inset Formula 
+\begin{equation}
+\left|A\right|_{max}^{2}=\frac{2\gamma_{1}}{\alpha}\label{L3 p7 ec27.4 Limite del módulo de la amplitud de la perturbación}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $\gamma_{1}=\mathrm{im}\left(\omega\right)$
+\end_inset
+
+ es función del número de Reynolds, por lo que desarrollando para 
+\begin_inset Formula $R\simeq R_{cr}$
+\end_inset
+
+ tenemos 
+\begin_inset Formula 
+\begin{equation}
+\gamma_{1}\simeq\gamma_{1}\left(R_{cr}\right)+constante\times\left(R-R_{cr}\right)\label{eq: Desarrollo de la parte imaginaria en función del número de R-Rcr}
+\end{equation}
+
+\end_inset
+
+Pero hemos visto que, por definición de 
+\begin_inset Formula $R_{cr}$
+\end_inset
+
+, 
+\begin_inset Formula $\gamma_{1}=\mathrm{im}\left(\omega\right)=0$
+\end_inset
+
+ si 
+\begin_inset Formula $R=R_{cr}$
+\end_inset
+
+ (ver 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 sec27 Estabilidad del flujo en función de la parte imaginaria de w"
+
+\end_inset
+
+) así que al final del día, sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq: Desarrollo de la parte imaginaria en función del número de R-Rcr"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p7 ec27.4 Limite del módulo de la amplitud de la perturbación"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+\left|A\right|_{max}\propto\sqrt{R-R_{cr}}\label{L3 p7 eq27.4 Amplitud máxima proporcional a la raíz cuadrada de R-Rcr}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Resumiendo: la inestabilidad absoluta del flujo cuando 
+\begin_inset Formula $R>R_{cr}$
+\end_inset
+
+ conduce a un flujo periódico no estacionario.
+ Para 
+\begin_inset Formula $R\geq R_{cr}$
+\end_inset
+
+, este flujo periódico no estacionario puede representarse como la superposición
+ de un flujo estacionario 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ y un flujo periódico 
+\begin_inset Formula $\mathbf{v}_{1}\left(x,y,z,,t\right)$
+\end_inset
+
+, con una amplitud pequeña pero finita que aumenta proporcionalmente con
+ 
+\begin_inset Formula $\sqrt{R-R_{cr}}$
+\end_inset
+
+.
+ Para este flujo la distribución de velocidades es de la forma
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}_{1}=\mathbf{f}\left(x,y,z\right)e^{-i\left(\omega_{1}t+\beta_{1}\right)}\label{L3 p7 ec27.6}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ es una función compleja de las coordenadas y 
+\begin_inset Formula $\beta_{1}$
+\end_inset
+
+ es una fase inicial.
+ Para valores grandes de 
+\begin_inset Formula $R-R_{cr}$
+\end_inset
+
+ la descomposición del flujo en 
+\begin_inset Formula $\mathbf{v}_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{v}_{1}$
+\end_inset
+
+ deja de tener sentido y hablamos de un flujo periódico de frecuencia 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
