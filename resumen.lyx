@@ -9178,5 +9178,41 @@ donde
 .
 \end_layout
 
+\begin_layout Section
+Estabilidad del flujo entre cilindros en rotación
+\end_layout
+
+\begin_layout Standard
+Esta sección no aparece en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Estabilidad del flujo en una tubería (L)
+\end_layout
+
+\begin_layout Standard
+Esta sección aparece marcada en la Guía de la Asignatura como 
+\emph on
+Lectura
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Inestabilidad de las discontinuidades tangenciales (L)
+\end_layout
+
+\begin_layout Standard
+Esta sección aparece marcada en la Guía de la Asignatura como 
+\emph on
+Lectura
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Turbulencia totalmente desarrollada (B)
+\end_layout
+
 \end_body
 \end_document
