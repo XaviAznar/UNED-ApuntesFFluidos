@@ -8622,5 +8622,20 @@ reference "L2 p53 eq:24.12 Ecs fuera de la capa pegada al cuerpo oscilante"
  capa superficial.
 \end_layout
 
+\begin_layout Section
+Amortiguamiento de las ondas de gravedad (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L2 sec:25 Amortiguamiento de las ondas de gravedad (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección trata sobre un ejemplo de la teoría, por lo que la saltamos.
+\end_layout
+
 \end_body
 \end_document
