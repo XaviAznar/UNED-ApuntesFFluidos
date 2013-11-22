@@ -10415,5 +10415,197 @@ Esta expresión se puede obtener también igualando dos expresiones para la
  para los remolinos en los que se produce disipación de energía.
 \end_layout
 
+\begin_layout Section
+Correlación de velocidades (G)
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:33 Correlación-de-velocidades (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ley de Kolmogorov 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p26 ec32.1 Ley de Kolmogorov"
+
+\end_inset
+
+ determina cualitativamente la 
+\emph on
+correlación de velocidades
+\emph default
+ en la turbulencia local, es decir, la relación entre las velocidades que
+ existen entre dos puntos vecinos.
+ En esta sección se definen algunas magnitudes que permiten caracterizar
+ cuantitativamente esta correlación, como por ejemplo el tensor de correlación
+ doble
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tensor de correlación doble
+\end_layout
+
+\end_inset
+
+ (de la velocidad entre dos puntos):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+B_{ik}=\overline{\left(v_{2i}-v_{1i}\right)\left(v_{2k}-v_{1k}\right)}\label{L3 p30 ec33.1 Tensor de correlación de la velocidad en dos puntos}
+\end{equation}
+
+\end_inset
+
+Como la turbulencia local es isótropa el tensor 
+\begin_inset Formula $B_{ik}$
+\end_inset
+
+ no puede depender de la dirección espacial.
+ Es decir, en la expresión del tensor 
+\begin_inset Formula $B_{ik}$
+\end_inset
+
+ sólo puede aparecer el radio vector 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+.
+ La forma más general para un tensor de este tipo es 
+\begin_inset Formula 
+\begin{equation}
+B_{ik}=A\left(r\right)\delta_{ik}+B\left(r\right)n_{i}n_{k}\label{L3 p30 ec33.2 Forma más general del tensor de correlación doble}
+\end{equation}
+
+\end_inset
+
+Tomamos los ejes de manera que uno de ellos apunte en la dirección de 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+, de manera que la componente de la velocidad será 
+\begin_inset Formula $v_{r}$
+\end_inset
+
+.
+ La componente 
+\begin_inset Formula $B_{rr}$
+\end_inset
+
+ es el valor medio del cuadrado de la velocidad relativa de las dos partículas
+ a lo largo de la línea que las une.
+ Del mismo modo 
+\begin_inset Formula $B_{tt}$
+\end_inset
+
+ es el valor medio del cuadrado de la velocidad transversal, mientras que
+ 
+\begin_inset Formula $B_{rt}$
+\end_inset
+
+ es el valor medio del producto de ambas componentes de la velocidad.
+ Como 
+\begin_inset Formula $n_{r}=1$
+\end_inset
+
+, 
+\begin_inset Formula $n_{t}=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+B_{rr}=A+B\qquad B_{tt}=A\qquad B_{rt}=0\label{L3 p30 ec33.3}
+\end{equation}
+
+\end_inset
+
+En función de la distancia a la que se encuentren las partículas tenemos:
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Distancias grandes } & r\gg\lambda_{0}\iff & B_{tt}=\frac{4}{3}B_{rr}\\
+\text{Distancias pequeñas } & r\ll\lambda_{0}\iff & B_{tt}=2B_{rr}
+\end{eqnarray*}
+
+\end_inset
+
+Para distancias pequeñas, además, 
+\begin_inset Formula $B_{tt}$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{rr}$
+\end_inset
+
+ pueden expresarse por separado en función de la disipación de energía media
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\text{Distancias pequeñas }\iff\begin{array}{cc}
+B_{t} & =\frac{2}{15}\frac{\epsilon r^{2}}{\nu}\\
+B_{rr} & =\frac{1}{15}\frac{\epsilon r^{2}}{\nu}
+\end{array}\label{L3 p32 ec33.8 Correlación doble (dist.peq) en función de la disipación de energía}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+También podemos obtener la 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tensor correlación triple 
+\begin_inset Formula $B_{ikl}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+correlación triple:
+\begin_inset Formula 
+\begin{equation}
+B_{ikl}=\overline{\left(v_{2i}-v_{1i}\right)\left(v_{2k}-v_{1k}\right)\left(v_{2l}-v_{21l}\right)}\label{L3 p32 ec33.9 Tensor correlación triple (de velocidades)}
+\end{equation}
+
+\end_inset
+
+así como una relación entre las componentes de los tensores 
+\begin_inset Formula $B_{ik}$
+\end_inset
+
+ y 
+\begin_inset Formula $B_{ikl}$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+No entro en detalles porque no sé hasta qué punto todo esto es útil/relevante
+ durante el curso.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
 \end_body
 \end_document
