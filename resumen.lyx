@@ -9881,5 +9881,539 @@ A través de razonamientos de semejanza puede obtenerse el orden de magnitud
 
 \end_layout
 
+\begin_layout Section
+Turbulencia local
+\end_layout
+
+\begin_layout Standard
+Ahora nos concentramos en obtener las propiedades locales de la turbulencia
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Propiedades locales de la turbulencia
+\end_layout
+
+\end_inset
+
+, en regiones para las que el 
+\begin_inset Formula $\lambda\ll l$
+\end_inset
+
+.
+ En esta región suponemos:
+\end_layout
+
+\begin_layout Itemize
+Flujo lejos 
+\begin_inset Formula $\left(d\gg\lambda\right)$
+\end_inset
+
+ de superficies sólidas.
+\end_layout
+
+\begin_layout Itemize
+Turbulencia isótropa a pequeña escala 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ magnitudes 
+\begin_inset Formula $\neq f\left(\text{dirección}\right)$
+\end_inset
+
+, en particular, no dependen de la dirección de la velocidad media 
+\begin_inset Formula $\mathbf{u}=\overline{\mathbf{v}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nos concentramos en el estudio de las partículas en la región turbulenta,
+ no al movimiento de la región como un todo (que se debe a los remolinos
+ grandes).
+\end_layout
+
+\begin_layout Standard
+Podemos obtener resultados importantes acerca de las propiedades locales
+ de la turbulencia realizando únicamente razonamientos de semejanza.
+\end_layout
+
+\begin_layout Standard
+¿Qué parámetros pueden intervenir en el flujo turbulento de regiones 
+\begin_inset Formula $\lambda_{0}\gg\lambda\gg l$
+\end_inset
+
+?
+\begin_inset Formula 
+\[
+\lambda_{0}\gg\lambda\gg l\quad\text{Parámetros }\begin{cases}
+\checkmark\Rightarrow & \begin{cases}
+\lambda & \text{Dimensión del remolino}\\
+\rho & \text{Densidad del fluido}\\
+\epsilon & \text{Disipación de la energía}
+\end{cases}\\
+\times\Rightarrow & \begin{cases}
+l & \text{Dimensión global del flujo}\\
+\Delta u & \text{Velocidad global del flujo}\\
+\nu & \text{Viscosidad}\quad\left(\lambda\gg\lambda_{0}\Rightarrow\nu\simeq0\right)
+\end{cases}
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $v_{\lambda}$
+\end_inset
+
+ es la variación de la velocidad en la turbulencia en distancias del orden
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ 
+\begin_inset Formula $v_{\lambda}$
+\end_inset
+
+ sólo puede formarse de una forma a partir de 
+\begin_inset Formula $\rho,\epsilon$
+\end_inset
+
+ y 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ley de Kolmogorov-Obukhov 
+\begin_inset Formula $v_{\lambda}\sim\left(\epsilon\lambda\right)^{1/3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+v_{\lambda}\sim\left(\epsilon\lambda\right)^{\frac{1}{3}}\quad\text{Ley de Kolmogorov-Obukhov}\label{L3 p26 ec32.1 Ley de Kolmogorov}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $v_{\lambda}$
+\end_inset
+
+ es también la velocidad de los remolinos turbulentos de tamaño del orden
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v_{\lambda}\sim v\left(\circlearrowleft_{\lambda}\right)
+\]
+
+\end_inset
+
+Ahora 
+\begin_inset Formula $v_{\tau}$
+\end_inset
+
+ es la variación de la velocidad en un punto a lo largo de un intervalo
+ 
+\begin_inset Formula $\tau$
+\end_inset
+
+, con 
+\begin_inset Formula $\tau\ll T\sim\frac{l}{u}$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ característico del flujo global).
+ Como tenemos un flujo neto, cualquier parte del fluido se desplaza en el
+ intervalo 
+\begin_inset Formula $\tau$
+\end_inset
+
+ una distancia del orden de 
+\begin_inset Formula $\tau u$
+\end_inset
+
+, donde 
+\begin_inset Formula $u$
+\end_inset
+
+ es la velocidad media.
+ Si hacemos 
+\begin_inset Formula $\lambda\sim\tau u$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p26 ec32.1 Ley de Kolmogorov"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+v_{\tau}\sim\left(\epsilon\tau u\right)^{1/3}\label{L3 p27 ec32.2 Ley de Kolmogorov (II)}
+\end{equation}
+
+\end_inset
+
+Ahora 
+\begin_inset Formula $v'_{\tau}$
+\end_inset
+
+ es la variación de la velocidad de una parte del fluido que se mueve en
+ el espacio.
+ 
+\begin_inset Formula $v'_{\tau}$
+\end_inset
+
+ sólo puede ser función de las propiedades locales del fluido: 
+\begin_inset Formula $\rho,\epsilon$
+\end_inset
+
+ y 
+\begin_inset Formula $\tau$
+\end_inset
+
+, de manera que
+\begin_inset Formula 
+\begin{equation}
+v'_{\tau}\sim\left(\epsilon\tau\right)^{1/2}\label{L3 p27 ec32.3}
+\end{equation}
+
+\end_inset
+
+Esta velocidad 
+\begin_inset Formula $v'_{\lambda}\propto\tau^{1/2}$
+\end_inset
+
+ es menor que 
+\begin_inset Formula $v_{\lambda}\propto\tau^{1/3}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\tau\ll T\Rightarrow v'_{\lambda}<v_{\lambda}
+\]
+
+\end_inset
+
+Usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p25 ec31.1 Disipación de energía"
+
+\end_inset
+
+ obtenemos 
+\begin_inset Formula 
+\begin{equation}
+v_{\lambda}\sim\Delta u\left(\frac{\lambda}{l}\right)^{1/3}\label{L3 p28 ec32.4}
+\end{equation}
+
+\end_inset
+
+y analogamente
+\begin_inset Formula 
+\begin{equation}
+v_{\tau}\sim\Delta u\left(\frac{\tau}{T}\right)^{1/3}\label{L3 p28 ec32.5}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $T\sim l/u$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+¿Cuándo empieza a ser importante la viscosidad? 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ es el orden del tamaño de los 
+\begin_inset Formula $\circlearrowleft_{peq}$
+\end_inset
+
+ y determina lo que se denomina 
+\emph on
+escala interna
+\emph default
+ de la turbulencia.
+ Para determinar 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ constuimos el número de Reynolds 
+\begin_inset Formula $R_{\lambda}\sim v_{\lambda}\left(\lambda/l\right)$
+\end_inset
+
+.
+ Usando 
+\begin_inset Formula $v_{\lambda}=\Delta u\left(\lambda/l\right)^{1/3}$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\[
+R_{\lambda}\sim\Delta u\frac{\lambda^{4/3}}{\nu l^{1/3}}
+\]
+
+\end_inset
+
+En función del número de Reynolds 
+\begin_inset Formula $R\sim l\Delta u/\nu$
+\end_inset
+
+ del flujo como un todo tenemos
+\begin_inset Formula 
+\[
+R_{\lambda}\sim R\left(\frac{\lambda}{l}\right)^{4/3}
+\]
+
+\end_inset
+
+El orden de magnitud de 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ viene dado cuando 
+\begin_inset Formula $R\sim1$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\lambda_{0}\sim\frac{l}{R^{3/4}}\label{L3 p28 ec32.6 Orden de magnitud de lambda_0}
+\end{equation}
+
+\end_inset
+
+Obtenemos el mismo resultado a partir de la única combinación de 
+\begin_inset Formula $\rho,\epsilon$
+\end_inset
+
+ y 
+\begin_inset Formula $\nu$
+\end_inset
+
+ que tiene unidades de longitud 
+\begin_inset Formula 
+\[
+\lambda_{0}\sim\left(\frac{\nu^{3}}{\epsilon}\right)^{1/4}
+\]
+
+\end_inset
+
+y usando 
+\begin_inset Formula $\epsilon\sim\left(\Delta u\right)^{3}/l$
+\end_inset
+
+.
+ Para la velocidad 
+\begin_inset Formula $v_{\lambda_{0}}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+v_{\lambda_{0}}\sim\frac{\Delta u}{R^{1/4}}\label{L3 p28 ec32.7}
+\end{equation}
+
+\end_inset
+
+Es decir:
+\begin_inset Formula 
+\[
+R\,\uparrow\,\Rightarrow\begin{cases}
+\lambda_{0} & \downarrow\\
+v_{\lambda_{0}} & \downarrow
+\end{cases}
+\]
+
+\end_inset
+
+El orden de magnitud de la frecuencia 
+\begin_inset Formula $\omega_{\lambda}$
+\end_inset
+
+ de los remolinos
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}\sim\frac{u}{\lambda_{0}}\sim\frac{u}{l}R^{3/4}\label{L3 p28 ec32.8 Orden de mag. de la frecuencua de los remolinos}
+\end{equation}
+
+\end_inset
+
+Esta 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ marca el extremo superior del espectro de frecuencias de la turbulencia.
+ El extremo inferior (correspondiente a remolinos grandes) es del orden
+ de 
+\begin_inset Formula $u/l$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\omega_{0}-\omega_{inferior}\propto R^{3/4}\Rightarrow\text{Rango de frecuencias }\uparrow\text{ con }R
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El número de grados de libertad por unidad de volumen 
+\begin_inset Formula $n$
+\end_inset
+
+ tiene dimensiones de 
+\begin_inset Formula $1/cm^{3}$
+\end_inset
+
+.
+ La única combinación posible de 
+\begin_inset Formula $\rho,\epsilon$
+\end_inset
+
+ y 
+\begin_inset Formula $\nu$
+\end_inset
+
+ (que determina el límite inferior del tamaño de los remolinos grandes)
+ es 
+\begin_inset Formula 
+\begin{equation}
+n\sim\left(\frac{\epsilon}{\nu^{3}}\right)^{3/4}=\frac{1}{\lambda_{0}^{3}}\sim\frac{R^{9/4}}{l^{3}}\label{L3 p29 ec32.9 Número de grados de libertad por ud. de volumen}
+\end{equation}
+
+\end_inset
+
+Y el número de grados total, multiplicando por el volumen del flujo turbulento
+ (
+\begin_inset Formula $\sim l^{3}$
+\end_inset
+
+) es
+\begin_inset Formula 
+\begin{equation}
+N=R^{9/4}\label{L3 p29 ec32.10 Número de grados de libertad total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, estudiamos el flujo en regiones de 
+\begin_inset Formula $l\ll\lambda_{0}$
+\end_inset
+
+.
+ Aquí el flujo es regular y varía suavemente, por lo que podemos desarrollar
+ 
+\begin_inset Formula $v_{\lambda}$
+\end_inset
+
+ en serie de potencias de 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Si nos quedamos con el primer término 
+\begin_inset Formula $v_{\lambda}\simeq constante\times\lambda$
+\end_inset
+
+.
+ La constante es del orden de magnitud 
+\begin_inset Formula $v_{\lambda_{0}}/\lambda_{0}$
+\end_inset
+
+ porque para 
+\begin_inset Formula $\lambda\simeq\lambda_{0}$
+\end_inset
+
+ debemos obtener 
+\begin_inset Formula $v_{\lambda}\sim v_{\lambda_{0}}$
+\end_inset
+
+.
+ Usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p28 ec32.6 Orden de magnitud de lambda_0"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p28 ec32.7"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\begin{equation}
+v_{\lambda}\sim\Delta u\, R^{1/2}\frac{\lambda}{l}\label{L3 p29 ec32.11}
+\end{equation}
+
+\end_inset
+
+Esta expresión se puede obtener también igualando dos expresiones para la
+ disipación de energía 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+: la expresión 
+\begin_inset Formula $\frac{\left(\Delta u\right)^{3}}{l}$
+\end_inset
+
+ que determina 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ en función de magnitudes características de los remolinos grandes y la
+ expresión 
+\begin_inset Formula $\nu\left(\frac{v_{\lambda}}{\lambda}\right)^{2}$
+\end_inset
+
+ que determina 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ en función del gradiente de velocidades 
+\begin_inset Formula $\left(\sim v_{\lambda}/\lambda\right)$
+\end_inset
+
+ para los remolinos en los que se produce disipación de energía.
+\end_layout
+
 \end_body
 \end_document
