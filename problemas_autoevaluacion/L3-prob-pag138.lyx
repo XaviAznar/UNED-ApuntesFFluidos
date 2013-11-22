@@ -130,8 +130,7 @@ Como
 \begin_inset Formula $\lambda_{1}\gg\lambda_{0}$
 \end_inset
 
- estamos en la situación de remolinos grandes.
- Aquí es aplicable la ecuación de Kolmogorov
+ estamos en la situación en la que es aplicable la ecuación de Kolmogorov
 \begin_inset Formula 
 \[
 v_{\lambda}\sim\left(\epsilon\lambda\right)^{1/3}
