@@ -10907,5 +10907,20 @@ capa límite
 ), donde la viscosidad juega un papel determinante.
 \end_layout
 
+\begin_layout Section
+Chorro turbulento (?) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:35 Chorro-turbulento-(?)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección no aparece en la Guía de la Asinatura.
+\end_layout
+
 \end_body
 \end_document
