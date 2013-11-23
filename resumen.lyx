@@ -10607,5 +10607,305 @@ No entro en detalles porque no sé hasta qué punto todo esto es útil/relevante
  
 \end_layout
 
+\begin_layout Section
+Región de turbulencia y el fenómeno de separación (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:34 Región de turbulencia y el fenómeno de separación (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El flujo tubulento es, en general, rotacional.
+\end_layout
+
+\begin_layout Standard
+En el flujo turbulento 
+\emph on
+estacionario
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Flujo turbulento estacionario
+\end_layout
+
+\end_inset
+
+ (el que rodea a los cuerpos) podemos encontrar dos regiones separadas;
+ una con flujo rotacional 
+\begin_inset Formula $\left(\omega\neq0\right)$
+\end_inset
+
+ y otra con flujo potencial 
+\begin_inset Formula $\left(\omega=0\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El flujo turbulento se puede considerar como el movimiento de un fluido
+ ideal 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ satisface las ecuaciones de Euler 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ se cumple la Ley de Conservación de la Circulación de la Velocidad.
+ Es decir, si la vorticidad 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en un punto de la línea de corriente, 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ para toda la línea de corriente (y viceversa).
+ Esto demuestra que podemos tener dos regiones separadas, una con flujo
+ rotacional y otra con flujo potencial en el flujo turbulento siempre que
+ las líneas de corriente de una zona no traspasen a la otra.
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Flujo turbulento estacionario} & = & \text{movimiento fluido ideal}\\
+ & \downarrow\\
+\text{Fluido ideal} & \text{\Rightarrow} & \text{satisface Ec. Euler}\\
+ & \downarrow\\
+\text{Ec. Euler} & \Rightarrow & \text{Ley de Conservación de la Circulación}\\
+ &  & \text{Si \ensuremath{\omega=0} en }x_{1}\text{ de la }\rightrightarrows\text{, }\omega=0\,\forall x_{i}\text{ en la }\rightrightarrows\\
+ &  & \text{(\ensuremath{\rightrightarrows}= línea de corriente)}\\
+ & \Downarrow\\
+\text{Flujo turbulento estacionario} & \rightarrow & \text{Dos regiones separadas }\begin{cases}
+\omega=0 & \text{Flujo potencial}\\
+\omega\neq0 & \text{Flujo rotacional}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El intercambio de fluido entre la región de flujo turbulento rotacional
+ y el espacio que la rodea es unidireccional: el fluido puede entrar procedente
+ de la zona de flujo potencial, pero no puede abandonarla.
+\begin_inset Formula 
+\[
+\text{Flujo de fluido: zona potencial}\begin{array}{c}
+\rightarrow\\
+\nleftarrow
+\end{array}\text{zona rotacional}
+\]
+
+\end_inset
+
+Estos razonamientos no demuestran nada, pero los resultados experimentales
+ confirman la existencia de zonas separadas en el flujo turbulento rotacional.
+\end_layout
+
+\begin_layout Standard
+Aunque en las dos regiones el flujo es turbulento, la naturaleza de la turbulenc
+ia es diferente en las dos regiones.
+\end_layout
+
+\begin_layout Subsection*
+Flujo turbulento: región potencial
+\end_layout
+
+\begin_layout Standard
+El flujo potencial satisface la ecuación de Laplace 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example*
+Suponemos flujo periódico en plano 
+\begin_inset Formula $xy\Rightarrow e^{ik_{1}x+ik_{2}y}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial y^{2}} & = & -\left(k_{1}^{2}+k_{2}^{2}\right)\phi=-k^{2}\phi\\
+\Delta\phi=0 & \Rightarrow & \frac{\partial^{2}\phi}{\partial z^{2}}=k^{2}\phi\Rightarrow\phi\left(z\right)\sim e^{-kz}\quad\left(z>0\right)
+\end{eqnarray*}
+
+\end_inset
+
+Es decir, si el flujo periódico es plano, se produce atenuación en la dirección
+ perpendicular al plano.
+ Cuanto mayor es 
+\begin_inset Formula $k$
+\end_inset
+
+ (es decir, cuanto menor sea el periodo del flujo periódico), mayor atenuación
+ se produce en la dirección perpendicular.
+\begin_inset Formula 
+\[
+k\,\uparrow\,\left(\tau\,\downarrow\right)\Rightarrow\text{amortiguación}\,\uparrow\text{ en dirección }\perp
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando el movimiento no es estrictemente periódico, los resultados permanecen
+ cualitativamente válidos.
+\end_layout
+
+\begin_layout Standard
+Como consecuencia del resultado anterior, tenemos que fuera de la región
+ de flujo rotacional los remolinos turbulentos se amortiguan.
+ Los remolinos con periodos bajos 
+\begin_inset Formula $\left(\circlearrowleft_{peq}\right)$
+\end_inset
+
+ se amortiguan rápidamente 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $\circlearrowleft_{peq}$
+\end_inset
+
+ no penetran una gran distancia en la zona potencial.
+ En la región potencial sólo tienen importancia los remolinos grandes, que
+ se amortiguan en distancias del orden de la dimensión (transversal) de
+ la región rotacional, que coincide con la escala de la turbulencia 
+\begin_inset Formula $l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para distancias mayores no existe prácticamente turbulencia 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ flujo laminar.
+\end_layout
+
+\begin_layout Standard
+En cuanto a la disipación de energía en flujo turbulento, hemos visto que
+ se produce en los remolinos pequeños, mientras que en los grandes apenas
+ hay disipación (y por tanto, es aplicable la ecuación de Euler).
+ Por tanto, la disipación de energía se produce de forma principal en la
+ zona de flujo turbulento rotacional y escasamente fuera de ella.
+\begin_inset Formula 
+\begin{eqnarray*}
+\epsilon\left(\text{flujo turbulento}\right) & \rightarrow & \left\{ \begin{array}{c}
+\epsilon_{\text{reg.rotacional}}\sim\epsilon\left(\circlearrowleft_{peq}\right)\\
+\epsilon_{\text{reg.\textbf{no} rotacional}}\sim\epsilon\left(\circlearrowleft_{gran}\right)\simeq0
+\end{array}\right.\\
+ & \Downarrow\\
+\epsilon\left(\text{flujo turbulento}\right) & \simeq & \epsilon_{\text{reg.rotacional}}
+\end{eqnarray*}
+
+\end_inset
+
+Para simplificar, a partir de ahora llamaremos al flujo turbulento rotacional
+ 
+\emph on
+región de flujo turbulento
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Región de flujo turbulento
+\end_layout
+
+\end_inset
+
+
+\emph default
+ o 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Región turbulenta
+\end_layout
+
+\end_inset
+
+región turbulenta
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+La región turbulenta debe estar limitada en alguna dirección por parte de
+ la superficie del cuerpo, alrededor del cual tiene lugar el flujo.
+ La línea que limita esta parte de la superficie se denomina 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Línea de separación
+\end_layout
+
+\end_inset
+
+
+\series bold
+línea de separación
+\series default
+.
+ A partir de esta línea comienza la superificie de separación entre el fluido
+ turbulento y el resto del mismo.
+ La formación de una región turbulenta en el flujo que rodea un cuerpo se
+ denomina 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fenómeno de separación
+\end_layout
+
+\end_inset
+
+
+\series bold
+fenómeno de separación
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+La forma de la región turbulenta queda determinada por las propiedades del
+ flujo en el cuerpo principal del fluido (no en la vecindad inmediata de
+ la superficie).
+ Una teoría completa de la turbulencia (que no existe todavía) permitiría
+ determinar la forma de la región turbulenta utilizando las ecuaciones del
+ movimiento para un fluido ideal, dada la posición de la línea de separación
+ en la superficie del cuerpo.
+ La posición real de la línea de separación está determinada por las propiedades
+ del flujo en la proximidad inmediata de la superficie (conocida como 
+\series bold
+capa límite
+\series default
+), donde la viscosidad juega un papel determinante.
+\end_layout
+
 \end_body
 \end_document
