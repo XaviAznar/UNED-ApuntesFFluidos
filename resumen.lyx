@@ -10922,5 +10922,385 @@ name "L3 sec:35 Chorro-turbulento-(?)"
 Esta sección no aparece en la Guía de la Asinatura.
 \end_layout
 
+\begin_layout Section
+Estela turbulenta (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L03 sec:36 Estela turbulenta (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para 
+\begin_inset Formula $R\gg R_{cr}$
+\end_inset
+
+ tenemos una región larga de flujo turbulento detrás del cuerpo = 
+\emph on
+estela turbulenta
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Estela turbulenta
+\end_layout
+
+\end_inset
+
+
+\emph default
+.
+ Para 
+\begin_inset Formula $d\gg l$
+\end_inset
+
+ (
+\begin_inset Formula $l$
+\end_inset
+
+ es del orden de las dimensiones del cuerpo) podemos determinar las propiedades
+ de la estela:
+\end_layout
+
+\begin_layout Itemize
+forma 
+\begin_inset Formula $a\left(x\right)$
+\end_inset
+
+, 
+\begin_inset Formula $a$
+\end_inset
+
+ es la anchura de la estela.
+\end_layout
+
+\begin_layout Itemize
+velocidad del fluido 
+\begin_inset Formula $u\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mathbf{U}$
+\end_inset
+
+ es la velocidad del chorro incidente, de dirección paralela al eje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ La velocidad del fluido en un punto cualquiera (promediada respecto a las
+ fluctuaciones de las turbulencias) es 
+\begin_inset Formula $\mathbf{U}+\mathbf{u}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ es la anchura media de la estela, que dependerá de 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\nexists$
+\end_inset
+
+ sustentación, para 
+\begin_inset Formula $d\gg l$
+\end_inset
+
+, estela tiene simetría axial 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ sección recta de la estela circular 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $a=$
+\end_inset
+
+radio de la estela.
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $\exists$
+\end_inset
+
+ sustentación 
+\begin_inset Formula $\nexists$
+\end_inset
+
+ simetría de la estela a ninguna distancia.
+\end_layout
+
+\begin_layout Standard
+La velocidad longitudinal es del orden de 
+\begin_inset Formula $U$
+\end_inset
+
+, mientras que la transversal es del orden de 
+\begin_inset Formula $u$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ el ángulo entre las líneas de corriente y el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ es 
+\begin_inset Formula $\sim u/U$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+v_{x}\sim U\\
+v_{\perp}\sim u
+\end{array}\Rightarrow\angle\left(\rightrightarrows,x\right)\sim\frac{u}{U}
+\]
+
+\end_inset
+
+La estela termina en aquellas líneas de corriente del movimiento turbulento
+ de rotación que no puede atravesar, por lo que el ángulo entre el límite
+ de la estela y el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ también es del orden de 
+\begin_inset Formula $u/U$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\frac{da}{dx}\sim\frac{u}{U}\label{L3 p44 ec36.1 Variación de la anchura de la estela turbulenta}
+\end{equation}
+
+\end_inset
+
+ Usamos 
+\begin_inset Formula $F_{x}=-\rho U\iint v_{x}dy\, dz$
+\end_inset
+
+ (ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L2 p32 eq:21.1 Fuerza de arrastre Fx"
+
+\end_inset
+
+) y 
+\begin_inset Formula $F_{y}=-\rho U\iint v_{\perp}dy\, dz$
+\end_inset
+
+ (ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L2 p32 ec:21.2 Fuerza de sustentación"
+
+\end_inset
+
+) para estimar las fuerzas que actúan sobre el cuerpo.
+ La región de integración es del orden de 
+\begin_inset Formula $a^{2}$
+\end_inset
+
+, de manera que:
+\begin_inset Formula 
+\begin{equation}
+F\sim\rho Uua^{2}\Rightarrow u\sim\frac{F}{\rho Ua^{2}}\label{L3 p44 ec36.2 Orden de la velocidad media de la turbulencia}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $F$
+\end_inset
+
+ es del orden de la fuerza de arrastre o sustentación.
+ Sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p44 ec36.1 Variación de la anchura de la estela turbulenta"
+
+\end_inset
+
+ e integrando 
+\begin_inset Formula $\frac{da}{dx}\sim\frac{F}{\rho Ua^{2}}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+a\sim\left(\frac{Fx}{\rho U^{2}}\right)^{1/3}\label{L3 p44 ec36.3 Ancho de la estela}
+\end{equation}
+
+\end_inset
+
+E introduciendo este valor en la estimación de 
+\begin_inset Formula $u$
+\end_inset
+
+ a partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p44 ec36.2 Orden de la velocidad media de la turbulencia"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p44 ec36.3 Ancho de la estela"
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+u\sim\left(\frac{FU}{\rho x^{2}}\right)^{1/3}\label{L3 p44 ec36.4 Velocidad media u del fluido en la estela}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El flujo en cualquier sección recta de la estela está caracterizado por
+ el número de Reynolds 
+\begin_inset Formula $R\sim au/\nu$
+\end_inset
+
+ de manera que sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p44 ec36.2 Orden de la velocidad media de la turbulencia"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p44 ec36.3 Ancho de la estela"
+
+\end_inset
+
+ tenemos
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R\sim\frac{F}{\nu\rho Ua}\sim\left(\frac{F^{2}}{\rho^{2}Ux\nu^{3}}\right)
+\]
+
+\end_inset
+
+que no es constante a lo largo de la estela.
+ De hecho, a grandes distancias 
+\begin_inset Formula $R$
+\end_inset
+
+ se hace tan pequeño que el flujo en la estela deja de ser turbulento y
+ recuperamos la estela laminar.
+\end_layout
+
+\begin_layout Standard
+Es decir:
+\begin_inset Formula 
+\begin{eqnarray*}
+a & \propto & x^{1/3}\\
+u & \propto & \frac{1}{x^{2/3}}\\
+R & \propto & \frac{1}{x}
+\end{eqnarray*}
+
+\end_inset
+
+La velocidad media disminuye cuando nos alejamos del cuerpo.
+\begin_inset Formula 
+\[
+u\rightarrow0\iff d\rightarrow\infty\left(\text{nos alejamos del cuerpo}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula $u_{x}$
+\end_inset
+
+ disminuye más rápidamente fuera de la estela 
+\begin_inset Formula $\left(\sim1/x^{2}\right)$
+\end_inset
+
+ que en su interior, de manera que lejos de la estela 
+\begin_inset Formula $\sim0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ 
+\begin_inset Formula $u_{x}$
+\end_inset
+
+ disminuye desde un valor máximo en el eje de la estela hasta anularse en
+ el exterior de la estela.
+\begin_inset Formula 
+\[
+u_{x}=\left.\begin{cases}
+u_{x}=\max\left(u_{x}\right) & \text{en eje de la estela}\\
+u_{x}\downarrow & \text{dentro de la estela}\\
+u_{x}\downdownarrows & \text{fuera de la estela}
+\end{cases}\right\} \Rightarrow u_{x}\simeq0\text{ fuera de la estela}
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula $u_{y,z}=u_{\perp}$
+\end_inset
+
+ en los límites de la estela son del mismo orden de magnitud que en el interior,
+ disminuyendo rápidamente cuando nos alejamos de la estela una distancia
+ determinada del cuerpo.
+\begin_inset Formula 
+\[
+u_{\perp}=\begin{cases}
+u_{\perp}^{\text{dentro estela}}\simeq u_{\perp}^{\text{fuera estela}} & \text{Límites de la estela}\\
+u_{\perp}^{\text{fuera estela}}\downdownarrows & \text{Cuando nos alejamos de la estela}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
