@@ -11302,5 +11302,265 @@ u_{\perp}^{\text{fuera estela}}\downdownarrows & \text{Cuando nos alejamos de la
 
 \end_layout
 
+\begin_layout Section
+Teorema de Joukowski (E)
+\begin_inset CommandInset label
+LatexCommand label
+name "L3 sec:27 Teorema-de-Joukowski (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Los resultados de la sección anterior no son válidos en algunos casos excepciona
+les de interés, como por ejemplo, al estudiar la estela del ala de un avión.
+ En estos casos el espesor de la estela formada detrás de un cuerpo es muy
+ pequeño en comparación con su anchura.
+ Este tipo de estela se forma en el flujo que rodea a cuerpo con espesor
+ (dirección 
+\begin_inset Formula $y$
+\end_inset
+
+) es pequeño en comparación con su anchura (dirección 
+\begin_inset Formula $z$
+\end_inset
+
+), independientemente del valor que tome la longitud del cuerpo en la dirección
+ de 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En este caso, la componente 
+\begin_inset Formula $u_{y}$
+\end_inset
+
+ de la velocidad perpendicular al plano de la estela turbulenta no desciende
+ apreciablemente a distancias del orden del espesor de la estela, sino que
+ es del orden de la envergadura.
+ Además, consideramos que la fuerza de sustentación no es cero (ya que entonces
+ la velocidad transversal sería prácticamente cero).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Ala}\equiv\text{ envegadura (longitud en \ensuremath{z}) \ensuremath{\gg} otras dimensiones}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+u_{y}\left(\text{general}\right)\quad\downdownarrows & \leftrightarrow & d\sim\text{espesor del cuerpo }l_{y}\\
+u_{y}\left(\text{en la estela}\right)\approx u_{y}\left(\text{fuera de la estela}\right) & \leftrightarrow & d\sim\text{evergadura del ala}\Rightarrow u_{y}\text{ no }\downdownarrows\text{ !}\\
+F_{y}\neq0 &  & F_{y}=-\rho U\iint u_{y}dydz
+\end{eqnarray*}
+
+\end_inset
+
+La fuerza de sustentación vertical 
+\begin_inset Formula $F_{y}$
+\end_inset
+
+ viene dada por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p32 ec:21.2 Fuerza de sustentación"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\iint u_{y}dydz\label{L3 p46 ec37.1 Sustentación vertical Fy}
+\end{equation}
+
+\end_inset
+
+donde integramos en todo el plano transversal al cuerpo.
+ Como el espesor es pequeño (dirección 
+\begin_inset Formula $y$
+\end_inset
+
+) y la velocidad 
+\begin_inset Formula $u_{y}$
+\end_inset
+
+ dentro de la estela no es grande en comparación con su valor fuera, realizamos
+ la integración sobre 
+\begin_inset Formula $y$
+\end_inset
+
+ a toda la región exterior a la estela (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig: estela detrás de un ala"
+
+\end_inset
+
+) 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/L03-sec37-fig18.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: estela detrás de un ala"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{y} & \approx & \int_{-\infty}^{\infty}u_{y}dy\approx\int_{-\infty}^{y_{2}}u_{y}dy+\int_{y_{1}}^{\infty}u_{y}dy\\
+\text{Fuera de la estela } & \mbox{\Rightarrow} & \text{Flujo potencial }\Rightarrow u_{y}=\frac{\partial\phi}{\partial y}\quad,\quad\phi\left(\infty\right)=0\\
+F_{y} & \approx & \phi\left(y_{2}\right)-\phi\left(y_{1}\right)=\phi_{2}-\phi_{1}
+\end{eqnarray*}
+
+\end_inset
+
+Pero una discontinuidad en la componente normal a la superficie de la estela
+ significaría que fluye cierta cantidad de fluido dentro de la estela.
+ Pero en esta aproximación despreciamos el espesor de la estela, de manera
+ que el flujo de entrada debe ser nulo.
+ Por tanto, sustituimos la estela por una superficie de discontinuidad tangencia
+l.
+ La presión también tiene que ser continua en la estela.
+ En primera aproximación, la presión viene dada por la ecuación de Bernoulli,
+ 
+\begin_inset Formula $\rho Uu_{x}=U\frac{\partial\phi}{\partial x}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\partial\phi/\partial x$
+\end_inset
+
+ también tiene que ser continua.
+ Sin embargo, 
+\begin_inset Formula $\partial\phi/\partial z$
+\end_inset
+
+ (la velocidad a lo largo del ala) es en general discontinua.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\phi}{\partial x}\,\text{continua}\Rightarrow\phi_{2}-\phi_{1}\begin{cases}
+\text{sólo depende de }z\\
+\text{\textbf{no} depende de }x
+\end{cases}
+\]
+
+\end_inset
+
+De esta manera, la fuerza de sustentación es
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\int\left(\phi_{2}-\phi_{1}\right)dz\label{L3 p47 ec37.2 Sustentación}
+\end{equation}
+
+\end_inset
+
+Esta integral se realiza sobre la anchura 
+\begin_inset Formula $z$
+\end_inset
+
+ de la estela (ya que 
+\begin_inset Formula $\phi_{2}-\phi_{1}=0$
+\end_inset
+
+ fuera de la estela).
+\end_layout
+
+\begin_layout Standard
+Podemos reescribir la fórmula anterior usando las propiedades de la integral
+ del gradiente de un escalar, de manera que
+\begin_inset Formula 
+\[
+\oint\mathrm{\mathbf{grad}\phi\cdot d\mathbf{l}=\oint\left(u_{y}dy+u_{x}dx\right)}
+\]
+
+\end_inset
+
+tomado a lo largo de un contorno que parte del punto 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, rodea el cuerpo y termina en el punto 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+, pasando a través de todos los puntos de la región de flujo potencial.
+ Como la estela es delgada, podemos cerrar el contorno mediante un segmento
+ corto que va de 
+\begin_inset Formula $y_{2}$
+\end_inset
+
+ a 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+ (sin que varíe el valor de la integral, excepto en valores de orden superior).
+ De esta manera, si 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+ es la circulación de la velocidad alrededor del contorno cerrado 
+\begin_inset Formula $C$
+\end_inset
+
+ que encierra el cuerpo:
+\begin_inset Formula 
+\begin{equation}
+\Gamma=\oint\mathbf{u}\cdot d\mathbf{l}=\phi_{2}-\phi_{1}\label{L3 p47 ec37.3 Circulación de la velocidad sobre el contorno que rodea el ala}
+\end{equation}
+
+\end_inset
+
+ y por tanto la fuerza de sustentación
+\begin_inset Formula 
+\begin{equation}
+F_{y}=-\rho U\int\Gamma dz\quad\text{Teorema de Joukowski}\label{L3 p47 ec37.4 Teorema de Joukowski}
+\end{equation}
+
+\end_inset
+
+ El 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Teorema de Joukowski
+\end_layout
+
+\end_inset
+
+Teorema de Joukowski establece la relación entre la fuerza de sustentación
+ y la circulación de la velocidad.
+\end_layout
+
 \end_body
 \end_document
