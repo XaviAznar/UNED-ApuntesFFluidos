@@ -12,10 +12,10 @@
    {\markright{\MakeUppercase{\thesection\ #1}}}
 
 \newcommand{\helv}{%
-    \fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont}
+    \fontfamily{phv}\fontsize{9}{11}\selectfont}
 \fancyhf{}
-\fancyhead{}
-\fancyhead{\helv  \leftmark\ \rightmark  }
+
+\chead{\helv  \leftmark\ \rightmark  }
 
 
 \renewcommand{\headrulewidth}{0.4pt} 
@@ -137,10 +137,6 @@ thepage
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Center Header
 
 \end_layout
 
