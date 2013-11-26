@@ -1,0 +1,330 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsbook
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Capas límite
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:4 Capas-límite"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Capa límite laminar 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:39 Capa-límite-laminar"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando tenemos números de Reynolds muy grandes podemos considerar que la
+ situación equivale a tener viscosidades pequeñas, lo que permite considerar
+ el fluido como ideal.
+ Sin embargo esta aproximación 
+\series bold
+no puede usarse nunca
+\series default
+ cuando el flujo se produzca cerca de paredes sólidas.
+ En este caso las condiciones límite para un fluido ideal hacen que se anula
+ la componente normal de la velocidad, aunque la componente tangencial no
+ tiene porqué anularse.
+ Pero en el caso de un fluido viscoso la velocidad junto a la pared sólida
+ debe anularse por completo.
+\begin_inset Formula 
+\begin{eqnarray*}
+R\,\upuparrows\equiv\nu\,\downdownarrows\sim0 & \iff & fluido\simeq ideal\\
+\text{Condiciones límite} & = & \begin{cases}
+v_{\perp}=0,v_{\parallel}\neq0 & \text{Fluido ideal}\\
+v_{\perp}=v_{\parallel}=0 & \text{Fluido viscoso}
+\end{cases}\\
+ & \Downarrow\\
+\text{Fluido} & = & \begin{cases}
+\text{Ideal} & \left(\text{lejos de las paredes sólidas}\right)\\
+\text{Viscoso} & \left(\text{capa delgada junto a la pared}\right)
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Así, para números de Reynolds grandes, podemos considerar el fluido como
+ ideal en todo el volumen 
+\emph on
+excepto
+\emph default
+ en una capa delgada junto a la pared, donde la velocidad tiene que desiminuir
+ hasta anularse por completo (debido a las condiciones límite para fluidos
+ viscosos).
+ Esta capa se denomina 
+\series bold
+capa límite
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Capa límite
+\end_layout
+
+\end_inset
+
+
+\series default
+ y se caracteriza por unos gradientes de velocidad considerables.
+\end_layout
+
+\begin_layout Standard
+El flujo en la capa límite puede ser tanto 
+\series bold
+laminar
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Capa límite laminar
+\end_layout
+
+\end_inset
+
+ como 
+\series bold
+turbulento
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Cerca de una pared sólida la velocidad disminuye porque no podemos despreciar
+ la viscosidad, aunque el número de Reynolds 
+\begin_inset Formula $R$
+\end_inset
+
+ sea grande.
+ Como hemos dicho, en esta capa los gradientes de velocidad son grandes,
+ por lo que, matemáticamente, 
+\emph on
+compensan
+\emph default
+ que la viscosidad sea pequeña, haciendo que los términos de la viscosidad
+ en las ecuaciones de movimiento no sean despreciables
+\begin_inset Formula 
+\[
+\left.\begin{array}{c}
+\nu\sim0\\
+\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\gg0
+\end{array}\right\} \Rightarrow\nu\Delta\mathbf{v}\nsim0
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Para calcular las ecuaciones del movimiento del fluido en la capa límite
+ laminar consideramos, por simplicidad un flujo bidimensional (en el plano
+ 
+\begin_inset Formula $xz$
+\end_inset
+
+, con el flujo en la dirección de 
+\begin_inset Formula $x$
+\end_inset
+
+).
+ La distribución de velocidades es independiente de 
+\begin_inset Formula $z$
+\end_inset
+
+ y la velocidad no tiene componente 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Las ecuaciones de movimiento son, suponiendo flujo estacionario:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y} & = & -\frac{1}{\rho}\frac{\partial p}{\partial x}+\nu\left(\frac{\partial^{2}v_{x}}{\partial x^{2}}+\frac{\partial^{2}v_{x}}{\partial y^{2}}\right)\label{L4 p5 ec39.1 NS-capa laminar-x}\\
+v_{x}\frac{\partial v_{y}}{\partial x}+v_{y}\frac{\partial v_{y}}{\partial y} & = & -\frac{1}{\rho}\frac{\partial p}{\partial y}+\nu\left(\frac{\partial^{2}v_{y}}{\partial x^{2}}+\frac{\partial^{2}v_{y}}{\partial y^{2}}\right)\label{L4 p5 ec39.2 NS-capa laminar-y}\\
+\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y} & = & 0\label{L4 p5 ec39.3 Ec. continuidad (capa laminar)}
+\end{eqnarray}
+
+\end_inset
+
+Como la capa límite es delgada, el flujo debe ser principalmente paralelo
+ a la superifice por lo que 
+\begin_inset Formula $v_{y}\ll v_{x}$
+\end_inset
+
+.
+ En el eje 
+\begin_inset Formula $y$
+\end_inset
+
+ la variación de la velocidad es rápida, con variaciones apreciables en
+ distancias del orden del espesor de la capa 
+\begin_inset Formula $\delta$
+\end_inset
+
+, mientras que en el eje 
+\begin_inset Formula $x$
+\end_inset
+
+ la variación es lenta y apreciable en distancias del orden de 
+\begin_inset Formula $l$
+\end_inset
+
+ (dimensión del cuerpo).
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Variación de }\mathbf{v} & = & \begin{cases}
+\frac{\partial v_{y}}{\partial y}\,\text{rápidamente} & d\sim\delta\quad\left(\text{espesor de la capa}\right)\\
+\frac{\partial v_{x}}{\partial x}\,\text{lentamente} & d\sim l\quad\left(\text{dimensión del cuerpo}\right)
+\end{cases}\\
+\text{Capa delgada} & \leftrightarrow & \delta\ll l\Rightarrow\frac{\partial v_{y}}{\partial y}\gg\frac{\partial v_{x}}{\partial x}
+\end{eqnarray*}
+
+\end_inset
+
+Por tanto, podemos despreciar 
+\begin_inset Formula $\frac{\partial^{2}v_{x}}{\partial x^{2}}$
+\end_inset
+
+ en l
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec39.1 NS-capa laminar-x"
+
+\end_inset
+
+.
+ Comparando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec39.1 NS-capa laminar-x"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec39.2 NS-capa laminar-y"
+
+\end_inset
+
+ vemos que la derivada 
+\begin_inset Formula $\frac{\partial p}{\partial y}$
+\end_inset
+
+ es pequeña en comparación con 
+\begin_inset Formula $\frac{\partial p}{\partial x}$
+\end_inset
+
+ (su cociente es del orden de 
+\begin_inset Formula $v_{y}/v_{x}$
+\end_inset
+
+) por lo que, en el nivel de aproximación en el que estamos, 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial p}{\partial y}=0\label{L4 p5 ec39.4 No hay gradiente de presión vertical en el capa límite}
+\end{equation}
+
+\end_inset
+
+Es decir, no hay gradiente de presión vertical en la capa límite.
+ Por tanto, la presión en la capa límite es 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ igual a la de la corriente principal (que suponemos que es una función
+ determinada para poder resolver el flujo en la capa límite).
+\end_layout
+
+\begin_layout Standard
+PAG5
+\end_layout
+
+\end_body
+\end_document

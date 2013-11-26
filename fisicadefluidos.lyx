@@ -1,0 +1,192 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsbook
+\begin_preamble
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]%
+   {\markboth{\MakeUppercase{#1}}{}}
+\renewcommand{\sectionmark}[1]%
+   {\markright{\MakeUppercase{\thesection\ #1}}}
+
+\newcommand{\helv}{%
+    \fontfamily{phv}\fontseries{b}\fontsize{9}{11}\selectfont}
+\fancyhf{}
+\fancyhead{}
+\fancyhead{\helv  \leftmark\ \rightmark  }
+
+
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+\end_preamble
+\use_default_options true
+\begin_removed_modules
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+eqs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children true
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Apuntes sobre la asignatura de 
+\begin_inset Newline newline
+\end_inset
+
+Física de Fluidos en la UNED
+\begin_inset Newline newline
+\end_inset
+
+Resumen
+\end_layout
+
+\begin_layout Author
+Xavi Aznar
+\begin_inset Newline newline
+\end_inset
+
+http://FisicaUNED.wordpress.com
+\end_layout
+
+\begin_layout Left Footer
+
+\size footnotesize
+\begin_inset CommandInset href
+LatexCommand href
+name "FisicaUNED.wordpress.com"
+target "http://FisicaUNED.wordpress.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+Xavier Aznar
+\end_layout
+
+\begin_layout Right Footer
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Header
+
+\end_layout
+
+\begin_layout Right Header
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "L1-fluidos_ideales.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "L2-fluidos_viscosos.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "L3-turbulencia.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "L4-capas_limite.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

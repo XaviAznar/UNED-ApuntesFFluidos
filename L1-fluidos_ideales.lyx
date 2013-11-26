@@ -1,0 +1,4915 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsbook
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Fluidos ideales
+\end_layout
+
+\begin_layout Section*
+Consideraciones previas
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:0 Consideraciones-previas"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El estudio del movimiento de los fluidos (líquidos y gases) se denomina
+ 
+\emph on
+dinámica de fluidos
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+Los fenómenos en dinámica de fluidos son macroscópicos, por lo que se considera
+ al fluido como un medio continuo.
+ Un volumen infinitamente pequeño del fluido es 
+\emph on
+pequeño
+\emph default
+ comparado con el volumen de un cuerpo o del sistema que consideramos pero
+ 
+\emph on
+grande
+\emph default
+ en comparación con la distancia entre las partículas del mismo.
+\end_layout
+
+\begin_layout Standard
+La descripción matemática del estado del fluido se consigue mediante la
+ distribución de velocidades 
+\begin_inset Formula $\mathbf{v}\left(x,y,z,t\right)$
+\end_inset
+
+ y dos magnitudes termodinámicas cualquiera, como la presión 
+\begin_inset Formula $p$
+\end_inset
+
+ y la densidad 
+\begin_inset Formula $\rho$
+\end_inset
+
+ del fluido
+\begin_inset Formula 
+\[
+\text{Estado del fluido}=\begin{cases}
+\mathbf{v}\left(x,y,z,t\right)=\left(v_{x},v_{y},v_{z}\right) & \text{Distribución de velocidades}\\
+p\left(x,y,z,t\right) & \text{Presión}\\
+\rho\left(x,y,z,t\right) & \text{Densidad}
+\end{cases}
+\]
+
+\end_inset
+
+Todas las magnitudes termodinámicas quedan determinadas dados los valores
+ de 
+\series bold
+dos
+\series default
+ de ellas junto con las ecuaciones de estado.
+\end_layout
+
+\begin_layout Section
+Ecuación de continuidad (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:1 Ecuación-de-continuidad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ecuación de continuidad expresa la conservación de la materia.
+\end_layout
+
+\begin_layout Standard
+Empezamos considerando un volumen 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es la densidad del fluido, la masa contenida en este volumen es 
+\begin_inset Formula 
+\[
+\int_{V_{0}}\rho dV
+\]
+
+\end_inset
+
+La masa de fluido que atraviesa una unidad de superficie 
+\begin_inset Formula $d\mathbf{f}$
+\end_inset
+
+ es 
+\begin_inset Formula $\rho\mathbf{v}$
+\end_inset
+
+, donde 
+\begin_inset Formula $d\mathbf{f}$
+\end_inset
+
+ es un vector normal a la superficie (apuntando hacia afuera) y 
+\begin_inset Formula $\left|d\mathbf{f}\right|=\mathbf{n}df$
+\end_inset
+
+, (con 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ un vector unitario) y 
+\begin_inset Formula $df$
+\end_inset
+
+ igual al área de la superficie.
+ De manera que integrando sobre toda la superficie que rodea 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ tenemos la masa total de fluido que la atraviesa
+\begin_inset Formula 
+\[
+\oint\rho\mathbf{v}\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+ La disminución de la masa contenida en 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ debe ser igual a la que atraviesa la superficie, de manera que 
+\begin_inset Formula 
+\begin{equation}
+-\frac{d}{dt}\int_{V_{0}}\rho dV=\oint\rho\mathbf{v}\cdot d\mathbf{f}\label{L1 p5 ec:1.1 Ecuacion de continuidad}
+\end{equation}
+
+\end_inset
+
+Podemos transformar la integral de superficie en una integral de volumen
+\begin_inset Formula 
+\[
+-\frac{d}{dt}\int_{V_{0}}\rho dV=\oint\rho\mathbf{v}\cdot d\mathbf{f}=\int_{V_{0}}\mathrm{div}\left(\rho\mathbf{v}\right)
+\]
+
+\end_inset
+
+La derivada total se convierte en partial al incluirla en la integral de
+ volumen, por lo que 
+\begin_inset Formula 
+\[
+\int_{V_{0}}\left(\frac{\partial\rho}{\partial t}+\mathrm{div}\left(\rho\mathbf{v}\right)\right)dV=0
+\]
+
+\end_inset
+
+Pero como la integral debe ser cero para cualquier 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+, el integrando debe ser cero:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\rho}{\partial t}+\mathrm{div}\left(\rho\mathbf{v}\right)=0\label{L1 p5 ec:1.2 Ecuación de continuidad}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Desarrollando la divergencia, podemos escribir la 
+\series bold
+ecuación de continuidad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Ecuación de continuidad 
+\begin_inset Formula $\frac{\partial\rho}{\partial t}+\mathrm{div}\left(\rho\mathbf{v}\right)=0=\frac{\partial\rho}{\partial t}+\mathrm{\rho div}\left(\mathbf{v}\right)+\mathbf{v}\cdot\mathbf{grad}\rho$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+ como 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\rho}{\partial t}+\mathrm{\rho div}\left(\mathbf{v}\right)+\mathbf{v}\cdot\mathbf{grad}\rho=0\label{L1 p6 ec:1.3 Ecuación de continuidad}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El vector 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{j}=\rho\mathbf{v}\label{L1 p6 ec:1.4 Densidad de flujo másico}
+\end{equation}
+
+\end_inset
+
+se denomina 
+\series bold
+densidad de flujo másico
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Densidad de flujo másico 
+\begin_inset Formula $\mathbf{j}=\rho\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series default
+: su dirección coincide con la del movimiento del fluido y su módulo es
+ la cantidad de masa de fluido que circula por unidad de tiempo a través
+ de una superficie perpendicular a la velocidad.
+\end_layout
+
+\begin_layout Section
+Ecuación de Euler (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:2 Ecuación-de-Euler"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ecuación de Euler es la versión 
+\emph on
+para fluidos
+\emph default
+ de 
+\begin_inset Formula $\mathbf{F}=m\mathbf{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La fuerza total que 
+\series bold
+actúa 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+De aquí el signo menos.
+\end_layout
+
+\end_inset
+
+
+\series default
+ sobre un volumen de fluido es
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $p=\frac{\mathbf{F}}{\mathbf{S}}\Rightarrow\mathbf{F}=p\mathbf{S}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $-\oint p\, d\mathbf{f}$
+\end_inset
+
+ y transformando la integral de superficie en una integral de volumen tenemos
+ 
+\begin_inset Formula $-\int_{V_{0}}\mathbf{grad}p\cdot d\mathbf{f}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, para 
+\begin_inset Formula $m\mathbf{a}$
+\end_inset
+
+ escribimos 
+\begin_inset Formula $\int_{V_{0}}\rho\frac{d\mathbf{v}}{dt}dV$
+\end_inset
+
+.
+ Pero el problema es que esta derivada expresa la variación respecto al
+ tiempo de la velocidad de una partícula de fluido (que se mueve) y nosotros
+ queremos magnitudes que se refieren a puntos fijos en el espacio.
+ Por tanto:
+\begin_inset Formula 
+\[
+\frac{d\mathbf{v}\left(\mathbf{r},t\right)}{dt}=\frac{\partial\mathbf{v}}{\partial\mathbf{r}}\frac{d\mathbf{r}}{dt}+\frac{\partial\mathbf{v}}{\partial t}=\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}+\frac{\partial\mathbf{v}}{\partial t}
+\]
+
+\end_inset
+
+Esta expresión indica la variación de la velocidad entre dos puntos separados
+ 
+\begin_inset Formula $d\mathbf{r}$
+\end_inset
+
+ (que es lo que se ha movido la partícula de fluido en un intervalor de
+ tiempo 
+\begin_inset Formula $dt$
+\end_inset
+
+) y la velocidad en un punto fijo.
+\end_layout
+
+\begin_layout Standard
+Así que solucionar este detalle, ya podemos escribir, para un elemento de
+ volumen:
+\begin_inset Formula 
+\begin{equation}
+-\frac{1}{\rho}\mathbf{grad}p=\frac{d\mathbf{v}}{dt}=\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}+\frac{\partial\mathbf{v}}{\partial t}\label{L1 p7 ec:2.3 Ec. de Euler}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta es la ecuación de movimiento del fluido: 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación de Euler 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho}\mathbf{grad}p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+ecuación de Euler
+\series default
+.
+ Es una de las 
+\series bold
+ecuaciones fundamentales de la dinámica de fluidos
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Si el fluido está en un campo gravitatorio, sobre cualquier elemento de
+ volumen actúa una fuerza adicional 
+\begin_inset Formula $\rho\mathbf{g}$
+\end_inset
+
+, donde 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ es la aceleración debida a la gravedad.
+ Esta fuerza debe sumarse a la fuerza que actúa sobre cada elemento del
+ volumen:
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho}\mathbf{grad}p+\mathbf{g}\label{L1 p7 ec:2.4 Ec. de Euler + campo gravitatorio}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En todos los razonamientos hasta ahora no se ha tenido en cuenta la viscosidad
+ o la conducción térmica del fluido.
+ Un fluido de este tipo se denomina 
+\series bold
+fluido ideal
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fluido ideal
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\text{Fluido ideal}\iff\nexists\quad\begin{cases}
+\text{Viscosidad }\nu\\
+\text{Conducción térmica}
+\end{cases}
+\]
+
+\end_inset
+
+En un fluido ideal no hay conductividad térmica, por lo que el movimiento
+ a través del fluido es 
+\emph on
+adiabático
+\emph default
+.
+\begin_inset Formula 
+\begin{equation}
+\text{Movimiento adiabático}\iff\frac{ds}{dt}=0\label{L1 p8 ec:2.5 Movimiento adiabático}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $s$
+\end_inset
+
+ es la entropía de una partícula de fluido.
+ Como antes, esta derivada se refiere a la partícula de fluido 
+\emph on
+en movimiento
+\emph default
+, mientras que nosotros queremos expresar las ecuaciones respecto a puntos
+ fijos del espacio:
+\begin_inset Formula 
+\begin{equation}
+\frac{ds}{dt}=\mathbf{v}\cdot\mathbf{grad}s+\frac{\partial s}{\partial t}=0\label{L1 sec:2 2.6}
+\end{equation}
+
+\end_inset
+
+Esta forma nos recuerda la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+, por lo que podemos escribir una 
+\emph on
+ecuación de continuidad para la entropía
+\emph default
+:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\left(\rho s\right)}{\partial t}+\mathrm{div}\left(\rho s\mathbf{v}\right)=0\label{L1 sec:2 ec:2.7 Ec. continuidad para la entropía}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\rho s\mathbf{v}$
+\end_inset
+
+ se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Densidad de flujo de entropía 
+\begin_inset Formula $\mathbf{j}=\rho s\mathbf{v}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+densidad de flujo de entropía
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+En general la entropía es constante en todo el fluido, por lo que si tiene
+ un valor específico en un instante inicial, el valor se mantiene en cualquier
+ instante posterior; esto significa que podemos simplificar la ecuación
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:2 ec:2.7 Ec. continuidad para la entropía"
+
+\end_inset
+
+ y dejarla simplemente en 
+\begin_inset Formula 
+\begin{equation}
+s=constante\label{L1 p8 ec:2.8 Entropía constante}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En adelante, suponemos que la entropía es constante en todo el fluido.
+ En este caso el movimiento del fluido se denomina 
+\series bold
+isoentrópico
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Ecuación de Euler (versión termodinámica)
+\end_layout
+
+\begin_layout Standard
+Si suponemos que el movimiento es isoentrópico, por lo que podemos utilizar
+ la relación termodinámica:
+\begin_inset Formula 
+\[
+dw=Tds+Vdp
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $w$
+\end_inset
+
+ es la entalpía por unidad de masa del fluido, 
+\begin_inset Formula $V=1/\rho$
+\end_inset
+
+ el volumen específico y 
+\begin_inset Formula $T$
+\end_inset
+
+ la temperatura.
+ Como 
+\begin_inset Formula $s$
+\end_inset
+
+ es constante, tenemos
+\begin_inset Formula 
+\[
+dw=Vdp=\frac{dp}{\rho}
+\]
+
+\end_inset
+
+y por tanto
+\begin_inset Formula 
+\[
+\frac{1}{\rho}\mathbf{grad}p=\mathbf{grad}w
+\]
+
+\end_inset
+
+Así, la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p7 ec:2.3 Ec. de Euler"
+
+\end_inset
+
+ puede escribirse como
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\mathbf{grad}w\label{L2 p8 ec:2.9 Ec. Euler (verisón termodinámica)}
+\end{equation}
+
+\end_inset
+
+que es la versión termodinámica de la ecuación de Euler
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación de Euler (versión termodinámica) 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\mathbf{grad}w$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Ecuación de Euler (en función sólo de 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Usando la relación proviniente del análisis vectorial:
+\begin_inset Formula 
+\[
+\frac{1}{2}\mathbf{grad}v^{2}=\mathbf{v}\times\mathbf{rot}\,\mathbf{v}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}
+\]
+
+\end_inset
+
+podemos escribir 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p8 ec:2.9 Ec. Euler (verisón termodinámica)"
+
+\end_inset
+
+ en la forma
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}++\frac{1}{2}\mathbf{grad}v^{2}-\mathbf{v}\times\mathbf{rot}\,\mathbf{v}=-\mathbf{grad}w\label{L1 p9 ec:2.10}
+\end{equation}
+
+\end_inset
+
+Tomando rotacionales a los dos miembros de la ecuación y teniendo en cuenta
+ que el rotacional de un gradiente es cero, tenemos una forma de la ecuación
+ de Euler en la que interviene sólo la velocidad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación de Euler (en la que interviene sólo la velocidad) 
+\begin_inset Formula $\frac{\partial}{\partial t}\left(\mathbf{rot\, v}\right)=\mathbf{rot\left(v\times rot\, v\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\mathbf{rot\, v}\right)=\mathbf{rot\left(v\times rot\, v\right)}\label{L1 p9 ec:2.11 Ec. Euler (sólo velocidad)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Condiciones límite para un fluido ideal
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones de movimiento deben complementarse con las condiciones límite
+ que debe satisfacer el fluido en las superficies que lo limitan.
+\end_layout
+
+\begin_layout Standard
+En el caso de un fluido ideal, la condición límite indica que 
+\series bold
+el fluido no puede penetrar una superficie sólida
+\series default
+.
+ De forma matemática, esta condición es
+\begin_inset Formula 
+\begin{equation}
+v_{n}=0\label{L1 p9 ec:2.12 Condición límite fluido ideal (v_n=0)}
+\end{equation}
+
+\end_inset
+
+Es decir, la componente de la velocidad normal a la superficie debe anularse
+ si la superficie está en reposo.
+ Si la superficie está en movimiento
+\begin_inset Formula 
+\[
+v_{n}=v_{sup}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si es una superficie entre dos fluidos inmiscibles:
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{1} & = & p_{2}\\
+v_{n_{1}} & = & v_{n_{2}}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\paragraph_spacing double
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0pt">
+<row topspace="1.4em" bottomspace="1.4em">
+<cell multicolumn="1" alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Sistema completo de ecuaciones de la dinámica de fluidos
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1em" bottomspace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ecuaciónes de Euler (
+\begin_inset Formula $x,y,z$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho}\mathbf{grad}p$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1em" bottomspace="1em">
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ecuación de continuidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{\partial\rho}{\partial t}+\mathrm{\rho div}\left(\mathbf{v}\right)+\mathbf{v}\cdot\mathbf{grad}\rho=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="1em" bottomspace="1em">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ecuación adiabática
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $s=constante$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sistema completo de ecuaciones de la dinámica de fluidos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Hidrostática (G)
+\end_layout
+
+\begin_layout Standard
+Consideramos el caso de un fluido en reposo dentro de un campo gravitatorio
+ uniforme.
+ Como el fluido está en reposo, 
+\begin_inset Formula $\mathbf{v}=0$
+\end_inset
+
+, de manera que la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p7 ec:2.4 Ec. de Euler + campo gravitatorio"
+
+\end_inset
+
+ toma la forma
+\begin_inset Formula 
+\begin{equation}
+\mathbf{grad}p=\rho\mathbf{g}\label{L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)}
+\end{equation}
+
+\end_inset
+
+Esta ecuación describe el equilibrio mecánico del fluido.
+\end_layout
+
+\begin_layout Subsection*
+Densidad constante en todo el fluido
+\end_layout
+
+\begin_layout Standard
+Suponemos que 
+\begin_inset Formula $\rho$
+\end_inset
+
+ es constante en todo el volumen (es decir, no hay compresión significativa
+ del fluido debida a la gravedad).
+ Tomando el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ vertical y hacia arriba, tenemos:
+\begin_inset Formula 
+\[
+\frac{\partial p}{\partial x}=0\quad\frac{\partial p}{\partial y}=0\quad\frac{\partial p}{\partial z}=-\rho g
+\]
+
+\end_inset
+
+ De manera que
+\begin_inset Formula 
+\[
+p=-\rho gz+constante
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si el fluido tiene una superficie libre a una altura 
+\begin_inset Formula $h$
+\end_inset
+
+, donde se le aplica una presión externa 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ (igual en todos los puntos), esta superficie estará en el plano horizontal
+ 
+\begin_inset Formula $z=h$
+\end_inset
+
+.
+ Estas condiciones límite nos permiten encontrar la constante, que resulta
+ 
+\begin_inset Formula $p_{0}+\rho gh$
+\end_inset
+
+, y al final
+\begin_inset Formula 
+\begin{equation}
+p=p_{0}+\rho g\left(h-z\right)\label{L1 p10 ec:3.2 Hidrostática}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Densidad no constante en el fluido (gran volumen)
+\end_layout
+
+\begin_layout Standard
+En el caso de masas grandes de fluido 
+\begin_inset Formula $\rho$
+\end_inset
+
+ no puede suponerse constante.
+\end_layout
+
+\begin_layout Standard
+Ahora suponemos que el fluido está tanto en equilibrio mecánico como térmico,
+ por lo que la temperatura es igual en todos sus puntos.
+ Usaremos la relación termodinámica:
+\begin_inset Formula 
+\[
+dG=-sdT+Vdp
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $G$
+\end_inset
+
+ es el potencial termodinámico por unidad de masa (entalpía libre o potencial
+ de Gibbs).
+ Si 
+\begin_inset Formula $T=constante$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+dG=Vdp=\frac{1}{\rho}dp\Rightarrow\mathbf{grad}G=\frac{1}{\rho}\mathbf{grad}p
+\]
+
+\end_inset
+
+Así que ahora, la ecuación de Euler para una 
+\emph on
+gran
+\emph default
+ masa de fluido en reposo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)"
+
+\end_inset
+
+ puede escribirse como
+\begin_inset Formula 
+\[
+\mathbf{grad}G=\mathbf{g}
+\]
+
+\end_inset
+
+Si la gravedad 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ es un vector constante dirigido hacia el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ negativo,
+\begin_inset Formula 
+\[
+\mathbf{g}=-\mathbf{grad}\left(gz\right)
+\]
+
+\end_inset
+
+por lo que combinando las dos ecuaciones anteriores:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{grad}\left(G-gz\right)=0\Rightarrow G+gz=constante\label{L1 p11 ec:3.3}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $gz$
+\end_inset
+
+ es la energía potencial del elemento de masa del fluido en el campo gravitatori
+o.
+\end_layout
+
+\begin_layout Subsection*
+Dependencia sólo de 
+\begin_inset Formula $z$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como consecuencia de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)"
+
+\end_inset
+
+ deducimos que si un fluido está en equilibrio mecánico dentro de un campo
+ gravitatorio, la presión sólo puede ser función de la altura 
+\begin_inset Formula $z$
+\end_inset
+
+ (si la presión fuera diferente en distintos puntos a la misma altitud no
+ estaría en equilibrio).
+ A partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)"
+
+\end_inset
+
+ vemos que
+\begin_inset Formula 
+\begin{equation}
+\rho=-\frac{1}{g}\frac{dp}{dz}\label{L1 p11 ec:3.4 dependendia sólo de z}
+\end{equation}
+
+\end_inset
+
+ la densidad también es sólo una función de 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=p\left(z\right)\Rightarrow\rho=\rho\left(z\right)\Rightarrow T=T\left(z\right)
+\]
+
+\end_inset
+
+Es decir,
+\begin_inset Formula 
+\[
+\text{Equilibrio mecánico en campo gravitatorio}\Rightarrow p,\rho,T=f\left(z\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Masa muy grande de fluido (unidas por la atracción gravitatoria)
+\end_layout
+
+\begin_layout Standard
+En este caso consideramos una masa muy grande de fluido que se mantiene
+ unido mediante la atracción gravitatoria (como una estrella).
+ Si 
+\begin_inset Formula $\phi$
+\end_inset
+
+ es el potencial gravitatorio newtoniano, satisface la ecuación diferencial
+\begin_inset Formula 
+\begin{equation}
+\Delta\phi=4\pi G\rho\label{L1 p12 ec: 3.5 Potencial gravitatorio}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $G$
+\end_inset
+
+ es la constante de la gravitación de Newton.
+ La aceleración gravitatoria será 
+\begin_inset Formula $\mathbf{g}=-\mathbf{grad}\phi$
+\end_inset
+
+, por lo que la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)"
+
+\end_inset
+
+ en este caso queda:
+\begin_inset Formula 
+\[
+\frac{1}{\rho}\mathbf{grad}p=-\mathbf{grad}\phi
+\]
+
+\end_inset
+
+Tomando la divergencia
+\begin_inset Formula 
+\begin{equation}
+\mathrm{div}\left(\frac{1}{\rho}\mathbf{grad}p\right)=-\Delta\phi=-4\pi G\rho\label{L1 p12 ec:3.6}
+\end{equation}
+
+\end_inset
+
+Obtenemos la ecuación que nos da el equilibrio mecánico de la estrella (aunque
+ no presupone la existencia de equilibrio térmico completo).
+\end_layout
+
+\begin_layout Standard
+Si el cuerpo no está girando, será esférico y tanto las distribuciones de
+ presión y densidad serán esféricas, por lo que la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p12 ec:3.6"
+
+\end_inset
+
+ quedará
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{r^{2}}\frac{d}{dr}\left(\frac{r^{2}}{\rho}\frac{dp}{dr}\right)=-4\pi G\rho\label{L1 p12 ec:3.7}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Caso en que la convección está ausente (G)
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:4 Caso en que la convección está ausente (G)"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Un fluido puede estar en equilibrio mecánico (es decir, no presentar ningún
+ movimiento macroscópico) sin estar en equilibrio térmico.
+\end_layout
+
+\begin_layout Standard
+\align center
+Equilibrio mecánico 
+\begin_inset Formula $\nRightarrow$
+\end_inset
+
+ Equilibrio térmico
+\end_layout
+
+\begin_layout Standard
+Si el fluido verifica la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)"
+
+\end_inset
+
+ pero el fluido no está en equilibrio térmico, el equilibrio mecánico sólo
+ es estable si se dan ciertas condiciones.
+\end_layout
+
+\begin_layout Standard
+En caso contrario, el equilibrio es inestable, de manera que se producen
+ corrientes de fluido que tienden a mezclarlo, igualando la temperatura
+ hasta que se alcanza el equilibrio térmico; este movimiento se denomina
+ 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Convección
+\end_layout
+
+\end_inset
+
+convección
+\series default
+.
+ La condición para que el equilibrio mecánico sea estable es la ausencia
+ de convección.
+\end_layout
+
+\begin_layout Standard
+\align center
+Equilibrio estable 
+\begin_inset Formula $\iff$
+\end_inset
+
+ 
+\begin_inset Formula $\nexists$
+\end_inset
+
+ convección
+\end_layout
+
+\begin_layout Standard
+Para que el equilibrio sea estable es necesario (pero no suficiente) que
+ la fuerza sobre el elemento que se desplaza tienda a devolverlo a su lugar
+ inicial.
+ Es decir, que el fluido desplazado tiene que ser más pesado que el volumen
+ que ha ocupado su lugar.
+ Si 
+\begin_inset Formula $V\left(p,s\right)$
+\end_inset
+
+ es el volumen del elemento a una altura 
+\begin_inset Formula $z$
+\end_inset
+
+ (donde 
+\begin_inset Formula $p$
+\end_inset
+
+ y 
+\begin_inset Formula $s$
+\end_inset
+
+ son la presión y entropía de equilibrio a la altura 
+\begin_inset Formula $z$
+\end_inset
+
+) y el desplazamiento es adiabático, el elemento en su nueva posición tiene
+ 
+\begin_inset Formula $V\left(p',s\right)$
+\end_inset
+
+, con 
+\begin_inset Formula $p'=p\left(z+\xi\right)$
+\end_inset
+
+ (situación (1) en la figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:Condición-de-equilibrio no convección"
+
+\end_inset
+
+).
+ El elemento de volumen en equilibrio en 
+\begin_inset Formula $z+\xi$
+\end_inset
+
+ es 
+\begin_inset Formula $V\left(p',s'\right)$
+\end_inset
+
+ (con 
+\begin_inset Formula $s'=s\left(z+\xi\right)$
+\end_inset
+
+).
+ Así, la condición de equilibrio es
+\begin_inset Formula 
+\[
+V\left(p',s'\right)-V\left(p',s\right)>0
+\]
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-4-1.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Condición de equilibrio: el elemento que ha sido desplazado (gris oscuro)
+ debe ser más pesado que el elemento que lo desplaza (en rojo), de manera
+ que tiende a devolverlo a su posición inicial, manteniendo el equilibrio
+ y evitando las corrientes de convección.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Condición-de-equilibrio no convección"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Desarrollando en serie de potencias 
+\begin_inset Formula $s'-s=\xi\frac{ds}{dz}$
+\end_inset
+
+ de donde obtenemos
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{\partial V}{\partial s}\right)_{p}\frac{ds}{dz}>0\label{L1 p13 ec:4.1}
+\end{equation}
+
+\end_inset
+
+Las fórmulas de la termodinámica dan:
+\begin_inset Formula 
+\[
+\left(\frac{\partial V}{\partial s}\right)_{p}=\frac{T}{c_{p}}\left(\frac{\partial V}{\partial T}\right)_{p}
+\]
+
+\end_inset
+
+en donde 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+ es el calor específico a presión constante.
+ 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+ son positivos, de manera que 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p13 ec:4.1"
+
+\end_inset
+
+ puede escribirse como
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{\partial V}{\partial T}\right)_{p}\frac{ds}{dz}>0\label{L1 p13 ec:4.2}
+\end{equation}
+
+\end_inset
+
+La mayoría de las sustancias se dilatan cuando se calientan, es decir, 
+\begin_inset Formula $\left(\partial V/\partial T\right)_{p}>0$
+\end_inset
+
+ así que la condición de ausencia de convección se reduce a 
+\begin_inset Formula 
+\begin{equation}
+\frac{ds}{dz}>0\label{L1 p13 ec:4.3}
+\end{equation}
+
+\end_inset
+
+que la entropía aumente con la altura.
+\end_layout
+
+\begin_layout Standard
+A partir de aquí encontramos la condición para el gradiente de temperaturas.
+ Desarrollando 
+\begin_inset Formula $ds/dz$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{ds}{dz}=\left(\frac{\partial s}{\partial T}\right)_{p}\frac{dT}{dz}+\left(\frac{\partial s}{\partial p}\right)_{T}\frac{dp}{dz}=\frac{c_{p}}{T}\frac{dT}{dz}-\left(\frac{\partial V}{\partial T}\right)_{p}\frac{dp}{dz}>0
+\]
+
+\end_inset
+
+Usando la expresión dada en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p11 ec:3.4 dependendia sólo de z"
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{dp}{dz}=-\frac{g}{V}$
+\end_inset
+
+ se obiene
+\begin_inset Formula 
+\begin{equation}
+\frac{dT}{dz}>-\frac{gT}{c_{p}V}\left(\frac{\partial V}{\partial T}\right)_{p}\label{L1 p13 ec:4.4 Condición de estabilidad}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En resumen, un fluido en equilibrio mecánico verifica la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p10 ec:3.1 Ec. Euler (fluido en reposo con gravedad)"
+
+\end_inset
+
+.
+ Si no está en equilibrio térmico, el equilibrio será estable en ausencia
+ de convección.
+ La convección se puede dar si
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\begin{cases}
+T\downdownarrows & \text{ cuando }z\upuparrows\\
+\frac{dT}{dz}> & -\frac{gT}{c_{p}V}\left(\frac{\partial V}{\partial T}\right)_{p}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ecuación de Bernoulli (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:5 Ecuación de Bernoulli (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones de la dinámica de fluidos se simplifican en el caso de un
+ flujo estacionario.
+ Un 
+\series bold
+flujo
+\series default
+ es 
+\series bold
+estacionario
+\series default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Flujo estacionario
+\end_layout
+
+\end_inset
+
+ si la velocidad es constante en el tiempo en todo el fluido.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Flujo estacionario }\iff\begin{array}{c}
+\mathbf{v}\neq f\left(t\right)\\
+\mathbf{v}=\mathbf{v}\left(x,y,z\right)
+\end{array}\iff\frac{\partial\mathbf{v}}{\partial t}=0
+\]
+
+\end_inset
+
+En esta situación la ecuación de Euler (en versión termodinámica) 
+\emph on
+tuneada
+\emph default
+ con la relación del análisis vectorial 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p9 ec:2.10"
+
+\end_inset
+
+ queda
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}\mathbf{grad}v^{2}-\mathbf{v}\times\mathbf{rot}\,\mathbf{v}=-\mathbf{grad}\, w\label{L1 p14 ec:5.1 Ec. Euler (flujo estacionario)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Introducimos el concepto de 
+\series bold
+línea de corriente
+\series default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Línea de corriente
+\end_layout
+
+\end_inset
+
+: la tangente en cualquier punto a una línea de corriente indica la dirección
+ de la velocidad en ese punto.
+ Estas líneas quedan determinadas por las ecuaciones diferenciales:
+\begin_inset Formula 
+\begin{equation}
+\frac{dx}{v_{x}}=\frac{dy}{v_{y}}=\frac{dz}{v_{z}}\label{L1 p14 ec:5.2 ecuaciones de las líneas de corriente}
+\end{equation}
+
+\end_inset
+
+En flujo estacionario, las líneas de corriente no varían con el tiempo y
+ coinciden con la trayectoria de las partículas (cosa que no sucede en flujo
+ no estacionario).
+\end_layout
+
+\begin_layout Standard
+Hacemos el producto escalar de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p14 ec:5.1 Ec. Euler (flujo estacionario)"
+
+\end_inset
+
+ con un vector unitario 
+\begin_inset Formula $\mathbf{l}$
+\end_inset
+
+ tangente a la línea de corriente.
+ La proyección del gradiente en una dirección es la derivada en esa dirección,
+ por lo que 
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{l}\cdot\mathbf{grad}\, w & \Rightarrow & \frac{\partial w}{\partial l}\\
+\mathbf{v}\times\mathbf{rot}\,\mathbf{v}\perp\mathbf{v},\quad\mathbf{v}\parallel\mathbf{l} & \Rightarrow & \mathbf{l}\cdot\left(\mathbf{v}\times\mathbf{rot\, v}\right)=0
+\end{eqnarray*}
+
+\end_inset
+
+Así que la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p14 ec:5.1 Ec. Euler (flujo estacionario)"
+
+\end_inset
+
+ queda como
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial l}\left(\frac{1}{2}v^{2}+w\right)=0
+\]
+
+\end_inset
+
+De manera que
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}v^{2}+w=constante\quad\text{a lo largo de una línea de corriente}\label{L1 p14 ec:5.3}
+\end{equation}
+
+\end_inset
+
+(La constante es diferente en cada línea de corriente).
+ La ecuación anterior es la 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Ecuación de Bernoulli 
+\begin_inset Formula $\frac{1}{2}v^{2}+w=const$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ecuación de Bernoulli
+\series default
+.
+\end_layout
+
+\begin_layout Subsection*
+Flujo estacionario en un campo gravitatorio
+\end_layout
+
+\begin_layout Standard
+Si el flujo tiene lugar en un campo gravitatorio, tenemos que sumar la gravedad
+ 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ al segundo miembro de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p14 ec:5.1 Ec. Euler (flujo estacionario)"
+
+\end_inset
+
+.
+ Si la dirección de la gravedad es el eje 
+\begin_inset Formula $z$
+\end_inset
+
+, entonces el ángulo formado por 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{l}$
+\end_inset
+
+ es la derivada -
+\begin_inset Formula $dz/dl$
+\end_inset
+
+, por lo que la proyección de 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ sobre 
+\begin_inset Formula $\mathbf{l}$
+\end_inset
+
+ es 
+\begin_inset Formula $-g\frac{dz}{dl}$
+\end_inset
+
+ y la ecuación de Bernoulli en un campo gravitatorio
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación de Bernoulli en un campo gravitatorio 
+\begin_inset Formula $\frac{1}{2}v^{2}+w+gz=const$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ resulta:
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}v^{2}+w+gz=constante\label{L1 p15 ec:5.4 ec. de Bernoulli en campo gravitatorio}
+\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Flujo de energía (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:6 Flujo de energía (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seleccionamos un volumen fijo cualquiera y estudiamos cómo varía la energía
+ del fluido con el tiempo.
+ Si la energía del volumen seleccionado es 
+\begin_inset Formula $\frac{1}{2}\rho v^{2}+\rho\epsilon$
+\end_inset
+
+ (energía cinética e interna, donde 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ es la energía interna por unidad de masa), estamos interesados en calcular
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)
+\]
+
+\end_inset
+
+Para ello, nos centraremos en cada término por separado.
+\end_layout
+
+\begin_layout Subsection*
+Término 
+\begin_inset Formula $\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)=\frac{1}{2}v^{2}\frac{\partial\rho}{\partial t}+\rho\mathbf{v}\frac{\partial\mathbf{v}}{\partial t}
+\]
+
+\end_inset
+
+O utilizando la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+ y la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p7 ec:2.3 Ec. de Euler"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right)=-\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\mathbf{v}\cdot\mathbf{grad}\, p-\rho\mathbf{v}\cdot\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}
+\]
+
+\end_inset
+
+Y ahora el último término lo modificamos:
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=\frac{1}{2}\mathbf{grad}v^{2}
+\]
+
+\end_inset
+
+Y para 
+\begin_inset Formula $\mathbf{grad}\, p$
+\end_inset
+
+ usamos la relación termodinámica 
+\begin_inset Formula $dw=Tds+\frac{1}{\rho}dp$
+\end_inset
+
+, con lo que
+\begin_inset Formula 
+\[
+\mathbf{grad}\, p=\rho\mathbf{grad}\, w-\rho T\mathbf{grad}\, s
+\]
+
+\end_inset
+
+con lo que 
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}\right) & = & -\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\, w+\rho\mathbf{v}\cdot\mathbf{grad}\, w+\rho T\mathbf{v}\cdot\mathbf{grad}\, s-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}\right)=\\
+ & = & -\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}+w\right)+\rho T\mathbf{v}\cdot\mathbf{grad}\, s
+\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection*
+Término 
+\begin_inset Formula $\frac{\partial}{\partial t}\left(\rho\epsilon\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizamos la relación termodinámica 
+\begin_inset Formula 
+\[
+d\epsilon=Tds-pdV=Tds+\frac{p}{\rho^{2}}d\rho
+\]
+
+\end_inset
+
+ Como 
+\begin_inset Formula $\epsilon+\frac{p}{\rho}$
+\end_inset
+
+ es la entalpía por unidad de masa
+\begin_inset Formula 
+\[
+d\left(\rho\epsilon\right)=\rho d\epsilon+\epsilon d\rho=w\, d\rho+\rho T\, ds
+\]
+
+\end_inset
+
+y por tanto
+\begin_inset Formula 
+\[
+\frac{\partial\left(\rho\epsilon\right)}{\partial t}=w\frac{\partial\rho}{\partial t}+\rho T\frac{\partial s}{\partial t}
+\]
+
+\end_inset
+
+Utilizamos la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+ y la ecuación adiabática general 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:2 2.6"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+La 
+\begin_inset Quotes eld
+\end_inset
+
+ecuación de continuidad de la entropía
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ para obtener
+\begin_inset Formula 
+\[
+\frac{\partial\left(\rho\epsilon\right)}{\partial t}=-w\mathrm{div}\left(\rho\mathbf{v}\right)-\rho T\mathbf{v}\cdot\mathbf{grad}s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Combinando los resultados para los dos términos tenemos finalmente para
+ la variación de la energía
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\left(\frac{1}{2}v^{2}+w\right)\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}+w\right)
+\]
+
+\end_inset
+
+o lo que es lo mismo
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\right)\label{L1 p16 ec:6.1}
+\end{equation}
+
+\end_inset
+
+Integrando esta expresión respecto al volumen considerado tenemos:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial}{\partial t}\int\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)dV & = & -\int\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\right)dV=\nonumber \\
+ & = & -\oint\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\cdot d\mathbf{f}\label{L1 p16 ec:6.2}
+\end{eqnarray}
+
+\end_inset
+
+Como vemos, el primer miembro es la variación de energía del fluido por
+ unidad de tiempo mientras que el segundo término es la energía que sale
+ del volumen.
+ Por tanto, 
+\begin_inset Formula 
+\begin{equation}
+\text{Densidad de flujo de energía}\qquad\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\label{L1 p16 ec:6.3 densidad de flujo de energía}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Flujo de impulso (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:7 Flujo de impulso (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hacemos los mismos razonamientos que en la secció anterior, pero interesándonos
+ en la cantidad de movimiento del fluido.
+ El impulso por unidad de volumen es 
+\begin_inset Formula $\rho\mathbf{v}$
+\end_inset
+
+, de manera que buscamos 
+\begin_inset Formula $\partial\left(\rho\mathbf{v}\right)/\partial t$
+\end_inset
+
+ (usando notación tensorial):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\rho v_{i}\right)=\rho\frac{\partial v_{i}}{\partial t}+v_{i}\frac{\partial\rho}{\partial t}
+\]
+
+\end_inset
+
+Usamos la ecuación de continuidad 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p5 ec:1.2 Ecuación de continuidad"
+
+\end_inset
+
+ en la forma 
+\begin_inset Formula 
+\[
+\frac{\partial\rho}{\partial t}+\frac{\partial\left(\rho v_{i}\right)}{\partial x_{i}}=0
+\]
+
+\end_inset
+
+y la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p7 ec:2.3 Ec. de Euler"
+
+\end_inset
+
+ en la forma
+\begin_inset Formula 
+\[
+\frac{\partial v_{i}}{\partial t}=-v_{k}\frac{\partial v_{i}}{\partial x_{k}}-\frac{1}{\rho}\frac{\partial p}{\partial x_{i}}
+\]
+
+\end_inset
+
+ con lo que obtenemos
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial}{\partial t}\left(\rho v_{i}\right) & = & -\rho v_{k}\frac{\partial v_{i}}{\partial x_{k}}-\frac{\partial p}{\partial x_{i}}-v_{i}\frac{\partial\left(\rho v_{k}\right)}{\partial x_{k}}=\\
+ & = & -\frac{\partial p}{\partial x_{i}}-\frac{\partial}{\partial x_{k}}\left(\rho v_{i}v_{k}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Reescribimos el primer término del segundo miembro como
+\begin_inset Formula 
+\[
+\frac{\partial p}{\partial x_{i}}=\delta_{ik}\frac{\partial p}{\partial x_{k}}
+\]
+
+\end_inset
+
+y finalmente
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\rho v_{i}\right)=-\frac{\partial\Pi_{ik}}{\partial x_{k}}\label{L1 p18 ec:7.1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ es el tensor simétrico: 
+\begin_inset Formula 
+\begin{equation}
+\Pi_{ik}=\delta_{ik}+\rho v_{i}v_{k}\label{L1 p18 ec:7.2 Tensor de densidad de flujo de impulso}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como antes, integrando sobre todo el volumen considerado tenemos:
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial}{\partial t}\int\rho v_{i}dV & = & -\int\frac{\partial\Pi_{ik}}{\partial x_{k}}dV=\nonumber \\
+ & = & -\oint\Pi_{ik}df_{k}\label{L1 p18 ec:7.3}
+\end{eqnarray}
+
+\end_inset
+
+El primer miembro es la variación de la componente 
+\begin_inset Formula $i$
+\end_inset
+
+ del impulso en el volumen, y por tanto, el segundo miembro es la cantidad
+ de impulso que atraviesa la superficie por unidad de tiempo.
+ Si escribimos 
+\begin_inset Formula $df_{k}=n_{k}df$
+\end_inset
+
+ donde 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector normal a la superficie (apuntado hacia afuera), 
+\begin_inset Formula $\Pi_{ik}n_{k}=pn_{i}+\rho v_{i}v_{k}n_{k}$
+\end_inset
+
+, o de forma vectorial:
+\begin_inset Formula 
+\begin{equation}
+\Pi=p\mathbf{n}+\rho\mathbf{v}\left(\mathbf{v}\cdot\mathbf{n}\right)\label{L1 p18 ec:7.4}
+\end{equation}
+
+\end_inset
+
+Así, 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ es la componente 
+\begin_inset Formula $i$
+\end_inset
+
+ de impulso que fluye a través del área perpendicular al eje 
+\begin_inset Formula $k$
+\end_inset
+
+ de la superficie por unidad de tiempo.
+ 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Tensor de densidad de flujo de impulso 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+tensor de densidad de flujo de impulso
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Conservación de la circulación (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:8 Conservación de la circulación (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La integral
+\begin_inset Formula 
+\[
+\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}
+\]
+
+\end_inset
+
+ a lo largo de un contorno cerrado se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Circulacion de la velocidad 
+\end_layout
+
+\end_inset
+
+ circulación de la velocidad
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Consideramos la circulación sobre contorno fluido en un instante determinado.
+ Queremos saber qué ocurre a medida que pasa el tiempo.
+ Como el contorno se ha tomado sobre partículas del fluido, el contorno
+ se despalza con éstas, por lo que queremos averiguar:
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}
+\]
+
+\end_inset
+
+Tomamos la derivada total porque debemos tener en cuenta tanto la variación
+ de la velocidad como el de 
+\begin_inset Formula $d\mathbf{l}$
+\end_inset
+
+, al desplazarse el contorno con las partículas.
+ Así
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Utilizamos 
+\begin_inset Formula $\delta$
+\end_inset
+
+ para distinguir el diferencial de la derivada y no liarnos.
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot\delta\mathbf{l}=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}+\oint\mathbf{v}\cdot\frac{d\delta\mathbf{l}}{dt}
+\]
+
+\end_inset
+
+Nos concentramos en el segundo término:
+\begin_inset Formula 
+\[
+\mathbf{v}\cdot\frac{d\delta\mathbf{l}}{dt}=\mathbf{v}\cdot\delta\frac{d\mathbf{l}}{dt}=\mathbf{v}\cdot\delta\mathbf{v}=\delta\left(\frac{1}{2}v^{2}\right)\Rightarrow\oint\delta\left(\frac{1}{2}v^{2}\right)=0
+\]
+
+\end_inset
+
+Pero la integral a lo largo de un camino cerrado de una diferencial total
+ es cero, así que 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot\delta l=\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}
+\]
+
+\end_inset
+
+Utilizando el teorema de Stokes 
+\begin_inset Formula $\int_{S}\mathbf{rot}\left(\mathbf{A}\right)\cdot d\mathbf{s}=\oint\mathbf{A}\cdot d\mathbf{l}$
+\end_inset
+
+, de manera que:
+\begin_inset Formula 
+\[
+\oint\frac{d\mathbf{v}}{dt}\cdot\delta\mathbf{l}=\int_{S}\mathbf{rot}\left(\frac{d\mathbf{v}}{dt}\right)\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+Finalmente, teniendo en cuenta 
+\begin_inset Formula $\frac{d\mathbf{v}}{dt}=\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}=-\mathbf{grad}w$
+\end_inset
+
+, y que el rotacional de un gradiente es cero
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Si el fluido ideal está sometido a un campo gravitatorio 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ también se verifica la ley de conservación de la circulación, porque 
+\begin_inset Formula $\mathbf{rot}\,\mathbf{g}=0$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ tenemos: 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=\int_{S}\mathbf{rot}\left(\frac{d\mathbf{v}}{dt}\right)\cdot d\mathbf{f}=\int_{S}\mathbf{rot}\left(\mathbf{grad}w\right)\cdot d\mathbf{f}=0
+\]
+
+\end_inset
+
+Es decir,
+\begin_inset Formula 
+\[
+\frac{d}{dt}\oint\mathbf{v}\cdot d\mathbf{l}=0
+\]
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante\label{L1 p20 ec:8.1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En un fluido ideal, la circulación de la velocidad a lo largo de un contorno
+ 
+\emph on
+fluido
+\emph default
+ cerrado es constante en el tiempo (Teorema de Kelvin
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Teorema de Kelvin 
+\begin_inset Formula $\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ o 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Ley de conservación de la circulación 
+\begin_inset Formula $\Gamma=\oint\mathbf{v}\cdot d\mathbf{l}=constante$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Ley de conservación de la circulación).
+\end_layout
+
+\begin_layout Standard
+Hemos utilizado la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L2 p8 ec:2.9 Ec. Euler (verisón termodinámica)"
+
+\end_inset
+
+, en la que interviene que el flujo es isoentrópico, por lo que 
+\series bold
+el resultado no es válido si el fluido no es isoentrópico
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Flujo potencial (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:9 Flujo-potencial-(G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suponemos un flujo estacionario.
+ Consideramos una línea de corriente de la que sabemos que, en un determinado
+ punto tiene vorticidad cero 
+\begin_inset Formula $\omega\equiv\mathbf{rot\, v}=0$
+\end_inset
+
+.
+ Si elegimos un camino cerrado alrededor de la línea de corriente, la circulació
+n de la velocidad será
+\begin_inset Formula 
+\[
+\oint\mathbf{v}\cdot d\mathbf{l}\stackrel{\text{Stokes}}{=}\int_{S}\mathbf{rot}\,\mathbf{v}\cdot d\mathbf{f}=\int_{S}\omega\cdot d\mathbf{f}=0
+\]
+
+\end_inset
+
+Es decir, vemos que la circulación es cero.
+ A medida que el contorno se mueve con el fluido siguiendo la línea de corriente
+, la ley de conservación de la circulación nos dice que este valor no se
+ altera, por tanto, la vorticidad 
+\begin_inset Formula $\omega$
+\end_inset
+
+ también también se mantendrá igual a cero a lo largo de toda la línea de
+ corriente.
+\end_layout
+
+\begin_layout Standard
+Por tanto, si 
+\begin_inset Formula $\omega=\mathbf{rot\, v}=0$
+\end_inset
+
+ en un punto de la línea de corriente, es igualmente cero en toda la línea
+ de corriente.
+\begin_inset Formula 
+\[
+\omega\left(x\right)=0\Rightarrow\omega\left(x'\right)=0\quad\forall x'\in\text{línea de corriente}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideramos un flujo estacionario incidiendo sobre un cuerpo.
+ Como el flujo es uniforme en el infinito, su velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es una constante, de manera que 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en todas las líneas de corriente.
+ Con el resultado anterior se concluye entonces que 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ para todas las líneas de corriente del fluido, o lo que es lo mismo, 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en todo el fluido.
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Flujo estacionario } & \Rightarrow & \mathbf{v}=0\Rightarrow\omega\left(\infty\right)=0\quad\forall\text{ líneas de corriente}\Rightarrow\\
+ &  & \Rightarrow\omega=0\quad\text{todo el fluido}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un flujo en el cual 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ en todo el espacio se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo potencial
+\end_layout
+
+\end_inset
+
+flujo potencial
+\series default
+ o 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo irrotacional
+\end_layout
+
+\end_inset
+
+flujo irrotacional
+\series default
+.
+ Por el contrario, un flujo en el que 
+\begin_inset Formula $\omega$
+\end_inset
+
+ no es nula en todos los puntos se denomina 
+\series bold
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo rotacional
+\end_layout
+
+\end_inset
+
+flujo rotacional
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Si en un instante determinado tenemos un flujo potencial en todo el volumen
+ del fluido.
+ Entonces, la circulación de la velocidad alrededor de un contorno cerrado
+ cualquiera será cero.
+ Por la ley de conservación de la circulación, también será cero en cualquier
+ instante futuro, por lo que si existe un flujo potencial en un instante
+ cualquiera, tendremos un flujo potencial en cualquier instante futuro.
+\begin_inset Formula 
+\begin{eqnarray*}
+ & \text{Flujo potencial en \ensuremath{t}(en todo el fluido)} & \text{}\\
+ & \Downarrow & \oint\mathbf{v}\cdot d\mathbf{l}=const\quad\forall\text{ contorno cerrado}\\
+ & \text{Flujo potencial \forall\ t'>t}
+\end{eqnarray*}
+
+\end_inset
+
+De hecho, esto coincide con el hecho de que si 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+, entonces la ecuación de Euler (en función sólo de la velocidad) 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L1 p9 ec:2.11 Ec. Euler (sólo velocidad)"
+
+\end_inset
+
+ se satisface automáticamente.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Todas estas conclusiones tienen validez limitada
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+El resultado de que la vorticidad 
+\begin_inset Formula $\omega=0$
+\end_inset
+
+ para toda línea de corriente no es válida para líneas de corriente contenidas
+ en la superficie de un sólido junto al cual circula un flujo.
+ La presencia del cuerpo sólido impide construir un contorno cerrado alrededor
+ de la línea de corriente.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-01.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Separación sobre la superficie de un cuerpo sólido junto al que circula
+ un flujo 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 p22 fig:1 Separación"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Las ecuaciones del movimiento admiten soluciones en las que se produce
+ una separación en la superficie del cuerpo: algunas líneas de corriente
+ que han seguido la superficie del cuerpo empiezan a separarse de ella y
+ siguen dentro del fluido.
+ El flujo se caracteriza por una superficie de discontinuidad tangencial
+ que sale del cuerpo.
+ En esta superficie una capa se desliza sobre la otra.
+ Desde el punto de vista matemático la discontinuidad en la componente tangencia
+l corresponde a una superficie en la cual la vorticidad 
+\begin_inset Formula $\omega$
+\end_inset
+
+ es nula.
+\end_layout
+
+\begin_layout Standard
+Si incluimos estos flujos discontinuos, la solución de las ecuaciones de
+ movimiento para un fluido ideal la solución no es única; sin embargo todas
+ las soluciones discontinuas no tienen significado físico ya que las discontinui
+dades tangenciales son inestables y el flujo se haría turbulento.
+\end_layout
+
+\begin_layout Standard
+El problema físico real del flujo alrededor de un cuerpo tiene una solución
+ única.
+ Esta solución única viene determinada por las propiedades de la 
+\series bold
+capa límite
+\series default
+.
+ Esta capa límite es una capa delgada de fluido que circula junto al cuerpo.
+ Como los fluidos ideales no existen, todos tienen una cierta viscosidad,
+ aunque sea pequeña.
+ En esta capa cercana a cuerpo la viscosidad no puede despreciarse.
+ En función de las características de esta capa, se selecciona una de las
+ infinitas soluciones de las ecuaciones de movimiento para un fluido idea.
+ Así, siempre despreciaremos las soluciones que dan lugar a separación ya
+ que si hay separación se producirá turbulencia.
+\end_layout
+
+\begin_layout Standard
+El estudio de las soluciones de las ecuaciones de movimiento para un flujo
+ estacionario continuo que circula junto a cuerpos en movimiento aporta
+ resultados interesantes para cuerpos de forma 
+\emph on
+aerodinámica
+\emph default
+.
+ En estos casos el flujo difiere muy poco de un flujo potencial, excepto
+ en una capa límite y en una 
+\emph on
+estela
+\emph default
+ estrecha detrás del mismo.
+\end_layout
+
+\begin_layout Standard
+Otro caso en el que es importante el estudio del flujo potencial es cuando
+ existen oscilaciones pequeñas de un cuerpo inmerso en un fluido.
+ De hecho, si la amplitud 
+\begin_inset Formula $a$
+\end_inset
+
+ de las oscilaciones es pequeña comparadas con la dimensión 
+\begin_inset Formula $l$
+\end_inset
+
+ del cuerpo 
+\begin_inset Formula $\left(a\ll l\right)$
+\end_inset
+
+, el flujo que circula junto al cuerpo es potencial.
+\begin_inset Formula 
+\[
+\text{Flujo potencial}\iff\begin{cases}
+\text{Formas aerodinámicas} & \text{(excepto en capa límite y estela)}\\
+\text{Cuerpo oscilando} & a_{osc}\ll l_{cuerpo}\text{ (osc. pequeñas)}
+\end{cases}
+\]
+
+\end_inset
+
+ La velocidad 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ varía apreciablemente en una cantidad del mismo orden que la velocidad
+ 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ del cuerpo oscilante a lo largo de una longitud del orden de la dimensión
+ 
+\begin_inset Formula $l$
+\end_inset
+
+ del cuerpo 
+\begin_inset Formula $\Rightarrow\frac{\partial\mathbf{v}}{\partial\mathbf{r}}\equiv\mathbf{grad}\,\mathbf{v}\sim\frac{u}{l}$
+\end_inset
+
+.
+ La magnitud de 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es del orden de 
+\begin_inset Formula $u$
+\end_inset
+
+ (a pequeñas distancias del cuerpo), de manera que 
+\begin_inset Formula 
+\[
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\sim\frac{u^{2}}{l}
+\]
+
+\end_inset
+
+La derivada 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}\sim\omega u$
+\end_inset
+
+, donde 
+\begin_inset Formula $\omega$
+\end_inset
+
+ es la frecuencia de las oscilaciones.
+ Y como 
+\begin_inset Formula $\omega\sim u/a$
+\end_inset
+
+, tenemos 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}\sim\frac{u^{2}}{a}$
+\end_inset
+
+.
+ Como nos centramos en oscilaciones pequeñas, 
+\begin_inset Formula $a\ll l$
+\end_inset
+
+, 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ y puede despreciarse, por lo que la ecuación de Euler queda:
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}=-\mathbf{grad}w
+\]
+
+\end_inset
+
+Tomando el rotacional en ambos miembros
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\mathbf{rot\, v}=\mathbf{rot}\left(\mathbf{grad}w\right)=0\Rightarrow\mathbf{rot\, v}=constante
+\]
+
+\end_inset
+
+Pero en un movimiento oscilante el promedio temporal de la velocidad es
+ cero, por lo que 
+\begin_inset Formula $\mathbf{rot}\,\mathbf{v}=\text{Vorticidad }=\omega=constante=0$
+\end_inset
+
+.
+ Por tanto, en primera aproximación
+\begin_inset Formula 
+\[
+\text{Cuerpo oscilante }\iff\text{Flujo potencial}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Propiedades del flujo potencial
+\end_layout
+
+\begin_layout Standard
+La ley de conservación de la circulación se basa en que el flujo es isoentrópico.
+ Sólo el flujo isoentrópico puede ser potencial.
+ Usando el teorema de Stokes
+\begin_inset Formula 
+\[
+\oint\mathbf{v}\cdot d\mathbf{l}=\oint\mathbf{rot\, v}\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+ Para un flujo potencial 
+\begin_inset Formula $\mathbf{rot\, v}=0$
+\end_inset
+
+ (vorticidad), por lo que 
+\begin_inset Formula 
+\begin{equation}
+\oint\mathbf{v}\cdot d\mathbf{l}=0\label{L1 p24 ec:9.1 Circulación =0}
+\end{equation}
+
+\end_inset
+
+Es decir, la circulación alrededor de cualquier contorno cerrado es nula
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ no pueden existir líneas de corriente cerradas en un flujo potencial.
+ Como la dirección de una línea de corriente es en todos los puntos la dirección
+ de la velocidad, la circulación a lo largo de esta línea no puede ser cero
+ (pues significaría que no hay flujo, que el fluido está estático).
+\end_layout
+
+\begin_layout Standard
+Si tenemos un campo vectorial con un rotacional cero, la velocidad en el
+ flujo potencial puede expresarse como gradiente de un escalar; en este
+ caso se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Potencial de velocidad 
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+potencial de velocidad
+\series default
+.
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{grad}\phi\label{L1 p25 ec:9.2 Potencial de velocidad}
+\end{equation}
+
+\end_inset
+
+Escribiendo la ecuación de Euler en la forma 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L1 p9 ec:2.10"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}+\frac{1}{2}\mathbf{grad}v^{2}-\mathbf{v}\times\mathbf{rot\, v}=\mathbf{grad}w
+\]
+
+\end_inset
+
+ y sustituyendo 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\[
+\mathbf{grad}\left(\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+w\right)=0
+\]
+
+\end_inset
+
+de donde
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+w=f\left(t\right)\label{L1 p25 ec:9.3}
+\end{equation}
+
+\end_inset
+
+ donde 
+\begin_inset Formula $f\left(t\right)$
+\end_inset
+
+ es una función arbitraria del tiempo.
+ Como la velocidad es la derivada espacial de 
+\begin_inset Formula $\phi$
+\end_inset
+
+ podemos sumar 
+\begin_inset Formula $\phi$
+\end_inset
+
+ a cualquier función del tiempo; cambiando 
+\begin_inset Formula $\phi$
+\end_inset
+
+ por 
+\begin_inset Formula $\phi+\int f\left(t\right)dt$
+\end_inset
+
+ tenemos cero en el segundo miembro de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p25 ec:9.3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el caso de un flujo estacionario (considerando 
+\begin_inset Formula $\phi$
+\end_inset
+
+ independiente del tiempo), 
+\begin_inset Formula $\frac{\partial\phi}{\partial t}=0$
+\end_inset
+
+, 
+\begin_inset Formula $f\left(t\right)=constante$
+\end_inset
+
+ y entonces 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p25 ec:9.3"
+
+\end_inset
+
+ se transforma en la 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Ecuación de Bernoulli 
+\begin_inset Formula $\frac{1}{2}v^{2}+w=const$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ecuación de Bernoulli
+\emph on
+.
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}v^{2}+w=constante\label{L1 pag22 ec:0.3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Fluidos incompresibles (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:10 Fluidos incompresibles (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En muchos fluidos la densidad se puede considerar constante 
+\begin_inset Formula $\rho=const$
+\end_inset
+
+, es decir, no se observa ninguna compresión/diletación apreciable en todo
+ el fluido.
+ En este caso denominamos al 
+\series bold
+fluido
+\series default
+ 
+\series bold
+incompresible
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fluido incompresible 
+\begin_inset Formula $\rho=const$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ En este caso las ecuaciones de la dinámica se simplifican mucho.
+\begin_inset Formula 
+\[
+\text{Flujo incompresible }\iff\left\{ \begin{array}{c}
+\nexists\text{ compresión}\\
+\nexists\text{ dilatación}
+\end{array}\iff\rho=constante\right.
+\]
+
+\end_inset
+
+En esta situación las ecuaciones de la dinámica se simplifican mucho.
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v\cdot}\mathbf{grad}\right)\mathbf{v} & = & -\mathbf{grad}\left(\frac{p}{\rho}\right)+\mathbf{g}\label{L1 p26 ec:10.1 Ec. Euler (fluido incompresible)}\\
+\mathrm{div}\mathbf{v} & = & 0\label{L1 p26 ec:10.2 Ec. de continuidad (fluido incompresible)}
+\end{eqnarray}
+
+\end_inset
+
+ En el caso de la ecuación de Euler podemos incluir 
+\begin_inset Formula $\rho$
+\end_inset
+
+ denro del operador gradiente, mientras que en el caso de la ecuación de
+ continuidad queda muy simplificada.
+\end_layout
+
+\begin_layout Standard
+Como la densidad deja de ser una variable desconocida, las ecuaciones de
+ la dinámica pueden considerarse como un conjunto de ecuaciones en el que
+ sólo es necesario especificar la velocidad: 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathrm{div}\mathbf{v} & = & 0\label{L1 p26 ec:10.2 Ec. continuidad}\\
+\frac{\partial}{\partial t}\left(\mathbf{rot\, v}\right) & = & \mathbf{rot}\left(\mathbf{v}\times\mathbf{rot\, v}\right)\label{L1 p26 ec:10.3 Ec. Euler (sólo velocidad)}
+\end{eqnarray}
+
+\end_inset
+
+En este caso la ecuación de Bernoulli también puede escribirse de manera
+ más sencilla.
+ La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p26 ec:10.1 Ec. Euler (fluido incompresible)"
+
+\end_inset
+
+ difiere de la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p8 ec:2.9 Ec. Euler (verisón termodinámica)"
+
+\end_inset
+
+, en general, en que hay que escribir 
+\begin_inset Formula $\mathbf{grad}\left(p/\rho\right)$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $\mathbf{grad}w$
+\end_inset
+
+.
+ Por tanto, podemos escribir la ecuación de Bernoulli cambiando la entalpía
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p15 ec:5.4 ec. de Bernoulli en campo gravitatorio"
+
+\end_inset
+
+ por 
+\begin_inset Formula $p/\rho$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2}v^{2}+\frac{p}{\rho}+gz=constante\label{L1 p26 ec:10.4 Ec. Bernoulli (fluido incompresible)}
+\end{equation}
+
+\end_inset
+
+En el caso de un fluido incompresible también podemos escribir 
+\begin_inset Formula $p/\rho$
+\end_inset
+
+ en lugar de 
+\begin_inset Formula $w$
+\end_inset
+
+ en la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p16 ec:6.3 densidad de flujo de energía"
+
+\end_inset
+
+ que da el flujo de energía
+\begin_inset Formula 
+\begin{equation}
+\rho\mathbf{v}\left(\frac{1}{2}v^{2}+\frac{p}{\rho}\right)\label{L1 p26 ec:10.5 Flujo de energía (fluido incompresible)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabemos de la termodinámica que la variación de la energía interna es: 
+\begin_inset Formula 
+\[
+d\epsilon=Tds-pdV
+\]
+
+\end_inset
+
+que en el caso de 
+\begin_inset Formula $s=const$
+\end_inset
+
+ y 
+\begin_inset Formula $V=1/\rho=const$
+\end_inset
+
+ resulta en 
+\begin_inset Formula $d\epsilon=0\Rightarrow\epsilon=const.$
+\end_inset
+
+ Como los términos constantes en la energía no tienen importancia, podmeos
+ omitir 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ en 
+\begin_inset Formula $w=\epsilon+p/\rho$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones todavía se simplifican más en el caso de un flujo potencial
+ de fluido incompresible.
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Flujo potencial} & \iff & \omega=0=\mathbf{rot\, v}\Rightarrow\mathbf{v}=\mathbf{grad}\phi\\
+\text{Fluido incompresible} & \iff & \rho=const\\
+ & \Downarrow\\
+\text{Ecuación de Euler} & \rightarrow & \frac{\partial}{\partial t}\left(\mathbf{rot\, v}\right)=\mathbf{rot}\left(\mathbf{v}\times\mathbf{rot\, v}\right)\Rightarrow0=0\\
+\text{Ecuación de continuidad} & \rightarrow & \mathrm{div}\mathbf{v}=0\rightarrow\mathbf{v=grad}\phi\Rightarrow\Delta\phi=0
+\end{eqnarray*}
+
+\end_inset
+
+Es decir, sólo tenemos que resolver la ecuación de Laplace para el potencial
+ 
+\begin_inset Formula $\phi$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\Delta\phi=0\label{L1 p26 ec:10.6 Ecuación de Laplace para el potencial}
+\end{equation}
+
+\end_inset
+
+ Debemos completar las ecuaciones anteriores con condiciones límite en las
+ superficies en las que el fluido se encuentra con cuerpos sólidos:
+\begin_inset Formula 
+\begin{eqnarray*}
+v_{n}^{fluido} & = & v_{n}^{superficie}=\begin{cases}
+v_{n}^{fluido}=0 & \text{Superficie fija}\\
+v_{n}^{fluido}=v_{n}^{sup}=f\left(t\right) & \text{Superficie móvil}
+\end{cases}\\
+v_{n} & = & \frac{\partial\phi}{\partial n}
+\end{eqnarray*}
+
+\end_inset
+
+En general la velocidad normal es la derivada en la dirección normal a la
+ superficie del potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+, por lo que en general las condiciones límite son una determinada función
+ de las coordenadas y del tiempo en los límites.
+\end_layout
+
+\begin_layout Standard
+En el caso del flujo potencial la velocidad está relacionada con la presión
+ mediante la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p25 ec:9.3"
+
+\end_inset
+
+.
+ En un fluido incompresible, podemos sustituir 
+\begin_inset Formula $w$
+\end_inset
+
+ por 
+\begin_inset Formula $p/\rho$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+\frac{p}{\rho}=f\left(t\right)\label{L1 p27 ec:10.7 Relación de velocidad y presión}
+\end{equation}
+
+\end_inset
+
+ Observamos la siguiente propiedad de un flujo potencial de un fluido incompresi
+ble; si el cuerpo sólido está en movimiento a través del fluido y resulta
+ en un flujo potencial, en un instante cualquiera sólo depende de la velocidad
+ del cuerpo móvil (y no, por ejemplo, de su aceleración).
+ La ecuación de Laplace para el potencial 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p26 ec:10.6 Ecuación de Laplace para el potencial"
+
+\end_inset
+
+ no depende explícitamente del tiempo, que sólo entra en la solución a través
+ de las condiciones límite (y éstas sólo contiene la velocidad del cuerpo).
+ A partir de la ecuación de Bernoulli observamos que en el flujo estacionario
+ de un fluido incompresible la presión máxima se presenta en puntos donde
+ la velocidad se anula 
+\begin_inset Formula $v=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p=\rho\times const-\frac{1}{2}\rho v^{2}\Rightarrow p^{max}=\rho\times const
+\]
+
+\end_inset
+
+Este punto normalmente está en la superficie del cuerpo a lo largo del cual
+ se está moviendo el fluido (el punto O de la figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p27 fig:2 Punto-de-estancamiento"
+
+\end_inset
+
+) y se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Punto de estancamiento
+\end_layout
+
+\end_inset
+
+punto de estancamiento
+\series default
+.
+ Si 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es la velocidad de la corriente incidente (es decir, la velocidad 
+\begin_inset Formula $\mathbf{u}\left(\infty\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $p_{0}=p\left(\infty\right))$
+\end_inset
+
+, la presión en el punto de estancamiento es
+\begin_inset Formula 
+\begin{equation}
+p_{max}=p_{0}+\frac{1}{2}\rho u^{2}\label{L1 p27 ec:10.8 Presión en punto de estancamiento}
+\end{equation}
+
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/fig-02.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Punto de estancamiento
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 p27 fig:2 Punto-de-estancamiento"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Flujo bidimensional
+\end_layout
+
+\begin_layout Standard
+Si la distribución de velocidades en un fluido móvil sólo depende de dos
+ coordenadas y la velocidad en todas partes es paralela al plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ entonces el flujo se denomina 
+\series bold
+bidimensional
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo plano o bidimensional
+\end_layout
+
+\end_inset
+
+
+\series default
+ o 
+\series bold
+flujo plano
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Flujo plano o bidimensional
+\end_layout
+
+\end_inset
+
+
+\series default
+.
+ En este caso es conveniente expresar la velocidad en función de lo que
+ se denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Función de corriente 
+\begin_inset Formula $\psi\left(x,y\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+función de corriente
+\series default
+ 
+\begin_inset Formula $\psi\left(x,y\right)$
+\end_inset
+
+.
+ Apartir de la ecuación de continuidad 
+\begin_inset Formula $\mathrm{div\,\mathbf{v}=\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y}},$
+\end_inset
+
+ de manera que las componentes de la velocidad se pueden escribir como 
+\begin_inset Formula 
+\begin{equation}
+v_{x}=\frac{\partial\psi}{\partial y}\quad v_{y}=\frac{\partial\psi}{\partial x}\label{L1 p28 ec:10.9 Velocidad en función de la función de corriente}
+\end{equation}
+
+\end_inset
+
+De esta manera la ecuación de continuidad se satisface automáticamente.
+ Por lo que entonces sólo nos queda obtener la ecuación de Euler 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p26 ec:10.3 Ec. Euler (sólo velocidad)"
+
+\end_inset
+
+ en función de la función de corriente:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\Delta\psi-\frac{\partial\psi}{\partial x}\frac{\partial}{\partial y}\Delta\psi+\frac{\partial\psi}{\partial y}\frac{\partial}{\partial x}\Delta\psi=0\label{L1 p28 ec:10.10 Ec. Euler en función de la función de corriente}
+\end{equation}
+
+\end_inset
+
+Es decir, que si conocemos la función de corriente 
+\begin_inset Formula $\psi$
+\end_inset
+
+ podemos determinar inmediatamente la forma de las líneas de corriente en
+ un flujo estacionario.
+ La ecuación diferencial de la línea de corriente (en flujo bidimensional)
+ es 
+\begin_inset Formula $\frac{dx}{v_{x}}=\frac{dy}{v_{y}}\Rightarrow v_{y}dx-v_{x}dy=0$
+\end_inset
+
+, expresa el hecho de la dirección de la tangente a una línea de corriente
+ es la dirección de la velocidad.
+ Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p28 ec:10.9 Velocidad en función de la función de corriente"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\[
+\frac{\partial\psi}{\partial x}dx+\frac{\partial\psi}{dy}dy=d\psi=0
+\]
+
+\end_inset
+
+de donde 
+\begin_inset Formula $\psi=constante$
+\end_inset
+
+.
+ Es decir, las líneas de corriente son la familia de curvas obtenidas haciendo
+ la función de corriente 
+\begin_inset Formula $\psi\left(x,y\right)$
+\end_inset
+
+ igual a una constante arbitraria.
+\end_layout
+
+\begin_layout Standard
+El flujo de masa 
+\begin_inset Formula $Q$
+\end_inset
+
+ entre dos puntos fijos en el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ viene dado por la diferencia de la función de corriente entre estos dos
+ puntos, independientemente de cuál sea la curva que una los puntos.
+ Si 
+\begin_inset Formula $v_{n}$
+\end_inset
+
+ es la componente de la velocidad normal a la curva en un punto cualquiera,
+ entonces:
+\begin_inset Formula 
+\begin{equation}
+Q=\rho\oint_{A}^{B}v_{n}dl=\rho\oint_{A}^{B}\left(-v_{y}dx+v_{x}dy\right)=\rho\int_{A}^{B}d\psi\Rightarrow Q=\rho\left(\psi_{B}-\psi_{A}\right)\label{L1 p28 ec:10.11}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existen potentes métodos para resolver problemas de flujo potencial bidimensiona
+l en el caso de un fluido incompresible que rodea a cuerpos de diversos
+ perfiles en los que interviene la teoría de funciones de variable compleja.
+\end_layout
+
+\begin_layout Standard
+En cuanto a la condición para que un fluido pueda considerarse incompresible,
+ está relacioanda con la velocidad del sonido 
+\begin_inset Formula $c$
+\end_inset
+
+ en el fluido.
+ Cuando la presión varía en 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+, la densidad lo hace en 
+\begin_inset Formula $\Delta\rho=\left(\frac{\partial\rho}{\partial p}\right)_{s}\Delta p$
+\end_inset
+
+.
+ Pero según la ecuación de Bernoulli, en flujo estacionario, 
+\begin_inset Formula $\Delta p\sim\rho v^{2}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\Delta\rho\sim\left(\frac{\partial\rho}{\partial p}\right)_{s}\rho v^{2}$
+\end_inset
+
+.
+ Más adelante veremos que 
+\begin_inset Formula $\left(\frac{\partial\rho}{\partial p}\right)_{s}=c^{2}$
+\end_inset
+
+, de manera que al final
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\Delta\rho}{\rho} & \ll & 1\iff\text{Fluido incompresible (flujo estacionario)}\nonumber \\
+ &  & v\ll c\label{L1 p30 ec:10.16}
+\end{eqnarray}
+
+\end_inset
+
+es decir, que considerar al fluido incompresible es equivalente a que la
+ velocidad del fluido sea pequeña en comparación con la del sonido en el
+ fluido.
+ Pero esta condición sólo es suficiente en flujo estacionario.
+ Cuando el flujo no es estacionario necesitamos una condición adicional\SpecialChar \@.
+
+ Si 
+\begin_inset Formula $\tau$
+\end_inset
+
+ y 
+\begin_inset Formula $l$
+\end_inset
+
+ es un tiempo y una longitud del orden de los tiempos y distancias en lo
+ que la velocidad del fluido sufre una variación significativa.
+ Entonces, el fluido (en flujo no estacionario) puede considerarse incompresible
+ si además de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p30 ec:10.16"
+
+\end_inset
+
+ se cumple 
+\begin_inset Formula 
+\begin{equation}
+\tau\gg\frac{l}{c}\label{L1 p30 ec:10.17 Condición fluido incompresible (flujo no estacionario)}
+\end{equation}
+
+\end_inset
+
+La condición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p30 ec:10.17 Condición fluido incompresible (flujo no estacionario)"
+
+\end_inset
+
+ indica que el tiempo 
+\begin_inset Formula $\frac{l}{c}$
+\end_inset
+
+ que tarda una señal sonora en recorrer la distancia 
+\begin_inset Formula $l$
+\end_inset
+
+ debe ser pequeño en comparación con el tiempo 
+\begin_inset Formula $\tau$
+\end_inset
+
+ durante el cual el flujo varía apreciablemente.
+ De esta manera las interacciones en el fluido pueden considerarse instantáneas.
+\end_layout
+
+\begin_layout Standard
+Si se satisfacen simultáneamente las condiciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p30 ec:10.16"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p30 ec:10.17 Condición fluido incompresible (flujo no estacionario)"
+
+\end_inset
+
+ el fluido puede considerarse incompresible:
+\begin_inset Formula 
+\[
+\text{Fluido incompresible}\iff\left\{ \begin{array}{c}
+v\ll c\\
+\tau\gg\frac{l}{c}
+\end{array}\right.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Fuerza de arrastre en un flujo potencial que rodea un cuerpo 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:11 Fuerza de arrastre en un flujo potencial que rodea un cuerpo"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta sección nos preocupamos del problema de un flujo potencial de un
+ fluido incompresible que rodea un cuerpo sólido.
+ Ésto es equivalente a un problema con el cuerpo en movimiento y el fluido
+ en reposo.
+ Lo único que tenemos que hacer es cambiar a un sistema de referencia en
+ el que el fluido esté en reposo en el infinito.
+ 
+\series bold
+A partir de ahora consideramos que es el cuerpo el que se mueve a través
+ del fluido
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/equivalencia.png
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+a) Flujo alrededor de un cuerpo en reposo
+\begin_inset Newline newline
+\end_inset
+
+b) Cuerpo en movimiento a través de un fluido estático
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El flujo potencial de un fluido incompresible satisface la ecuación de Laplace
+ 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+.
+ Las soluciones que buscamos deben anularse en el infinito, ya que allí
+ el fluido está en reposo.
+ El origen de nuestro sistema de referencia está en algún punto en el interior
+ del cuerpo.
+ La solución de la ecuación de Laplace es de la forma 
+\begin_inset Formula $\frac{1}{r}$
+\end_inset
+
+ y derivadas espaciales de 
+\begin_inset Formula $1/r$
+\end_inset
+
+ de cualquier orden:
+\begin_inset Formula 
+\[
+\phi=-\frac{a}{\mathbf{r}}+\mathbf{A}\cdot\mathbf{grad}\frac{1}{\mathbf{r}}+\cdots
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula $a,\mathbf{A}$
+\end_inset
+
+ son independientes de 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+La constante 
+\begin_inset Formula $a$
+\end_inset
+
+ debe ser cero
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\phi=-\frac{a}{r}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $\mathbf{v}=-\mathbf{grad}\frac{a}{\mathbf{r}}=\frac{a}{r^{3}}\mathbf{r}$
+\end_inset
+
+.
+ Pero en este caso, si calculamos el flujo de masa a través de una superficie
+ cerrada, por ejemplo una esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+ vemos que es 
+\begin_inset Formula $\rho\frac{a}{R^{2}}4\pi R^{2}=4\pi\rho a$
+\end_inset
+
+.
+ Pero para un fluido incompresible, la cantidad de fluido que entra en la
+ superficie debe ser igual a la que sale, es decir, que el flujo de masa
+ debe ser cero.
+ Por ello, la única solución es que 
+\begin_inset Formula $a=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection*
+Velocidad a grandes distancias del cuerpo
+\end_layout
+
+\begin_layout Standard
+Como estamos buscando la velocidad a distancias grandes del cuerpo, podemos
+ despreciar las derivadas de orden superior y quedarnos sólo con el primer
+ término.
+\begin_inset Formula 
+\begin{equation}
+\phi=\mathbf{A}\cdot\mathbf{grad}\frac{1}{\mathbf{r}}=-\frac{\mathbf{A}}{r^{2}}\cdot\mathbf{n}\label{L1 p35 ec:11.1}
+\end{equation}
+
+\end_inset
+
+y la velocidad resultante
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=\mathbf{grad}\phi=\left(\mathbf{A}\cdot\mathbf{grad}\right)\mathbf{grad}\frac{1}{\mathbf{r}}=\frac{3\left(\mathbf{A}\cdot\mathbf{n}\right)\mathbf{n}-\mathbf{A}}{r^{3}}\label{L1 p35 ec:11.2}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ es un vector unidad en la dirección de 
+\series bold
+
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+
+\series default
+.
+ El vector 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ depende de la forma real y la velocidad del cuerpo y sólo puede determinarse
+ resolviendo por completo la ecuación de Laplace a todas las distancias
+ (con las condiciones límite apropiadas en la superficie del cuerpo.
+\end_layout
+
+\begin_layout Subsection*
+Relación de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ con el impulso y la energía del fluido
+\end_layout
+
+\begin_layout Standard
+La energía cinética del fluido (la energía interna de un fluido incompresible
+ siempre es constante) es 
+\begin_inset Formula $E=\int\frac{1}{2}\rho v^{2}dV$
+\end_inset
+
+, integrando para toda la región exterior al cuerpo.
+ Elegimos una esfera de radio 
+\begin_inset Formula $R$
+\end_inset
+
+ y volumen 
+\begin_inset Formula $V$
+\end_inset
+
+ (después haremos tender 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+).
+\begin_inset Formula 
+\[
+\int v^{2}dV=\int u^{2}dV+\int\left(\mathbf{v}+\mathbf{u}\right)\cdot\left(\mathbf{v}-\mathbf{u}\right)dV
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es la velocidad del cuerpo.
+ Como 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ es independiente de las coordenadas, 
+\begin_inset Formula $\int u^{2}dV=u^{2}\int dV=u^{2}\left(V-V_{0}\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $V_{0}$
+\end_inset
+
+ es el volumen del cuerpo.
+ En cuanto al segundo término, escribimos 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}=\mathbf{grad}\left(\mathbf{u}\cdot\mathbf{r}\right)$
+\end_inset
+
+, de manera que 
+\begin_inset Formula $\mathbf{v}+\mathbf{u}=\mathbf{grad}\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int\mathbf{grad}\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)dV
+\]
+
+\end_inset
+
+ Utilizamos la identidad vectorial 
+\begin_inset Formula 
+\[
+\mathrm{div}\left(f\mathbf{A}\right)=\mathbf{grad}f\cdot\mathbf{A}+f\mathrm{div}\mathbf{A}
+\]
+
+\end_inset
+
+ de manera que el integrando se transforma en
+\begin_inset Formula 
+\[
+\mathrm{div\left[\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right]+\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\mathrm{div\left(\mathbf{v}-\mathbf{u}\right)}}
+\]
+
+\end_inset
+
+Pero 
+\begin_inset Formula $\mathrm{div}\mathbf{v}=0$
+\end_inset
+
+ (ecuación de continuidad) y 
+\begin_inset Formula $\mathrm{div}\mathbf{u}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\mathrm{div}\left(\mathbf{v}-\mathbf{u}\right)=0$
+\end_inset
+
+.
+ Así que 
+\begin_inset Formula 
+\[
+\int v^{2}dV=\int u^{2}dV+\int div\left[\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right]dV
+\]
+
+\end_inset
+
+Y utilizando el teorema de la divergencia, transformamos el segundo término
+ en una integral de superficie.
+\begin_inset Formula 
+\[
+\int div\left[\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\right]dV=\oint_{S+S_{0}}\left(\phi+\mathbf{u}\cdot\mathbf{r}\right)\left(\mathbf{v}-\mathbf{u}\right)\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+ Pero en la superficie del cuerpo, por las condiciones límite, las componentes
+ normales de 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+ son iguales, por lo que la integral 
+\begin_inset Formula $\oint_{S_{0}}$
+\end_inset
+
+ se anula.
+ Para la superficie 
+\begin_inset Formula $S$
+\end_inset
+
+, sustituimos las expresiones para 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ que hemos encontrado en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p35 ec:11.1"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p35 ec:11.2"
+
+\end_inset
+
+, con lo que obtenemos:
+\begin_inset Formula 
+\[
+\int v^{2}dV=u^{2}\left(\frac{4}{3}\pi R^{3}-V_{0}\right)+\int\left[3\left(\mathbf{A}\cdot\mathbf{n}\right)\left(\mathbf{u}\cdot\mathbf{n}\right)-\left(\mathbf{u}\cdot\mathbf{n}^{2}R^{3}\right)\right]do
+\]
+
+\end_inset
+
+donde hemos escrito 
+\begin_inset Formula $d\mathbf{f}=\mathbf{n}R^{2}do$
+\end_inset
+
+ y 
+\begin_inset Formula $do$
+\end_inset
+
+ es un elemento de ángulo sólido.
+\end_layout
+
+\begin_layout Standard
+Al final de la integración, obtenemos para la energía total del fluido
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}\rho\left(4\pi\mathbf{A}\cdot\mathbf{u}-V_{0}u^{2}\right)\label{L1 p39 ec:11.3 Energía total para el fluido}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aunque no podemos obtener 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ sin resolver la ecuación 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+, sabemos que la ecuación es lineal en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y que las condiciones límite también son ecuaciones lineales en 
+\begin_inset Formula $\phi$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Por tanto 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ tiene que ser una función lineal de las componentes 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+.
+ Y la energía, como hemos visto en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p39 ec:11.3 Energía total para el fluido"
+
+\end_inset
+
+ es cuadrática de las componentes de 
+\begin_inset Formula $\mathbf{u}$
+\end_inset
+
+, así que podemos escribir
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}m_{ik}u_{i}u_{k}\label{L1 p40 ec:11.4}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+ es es 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Tensor de masas asociadas 
+\begin_inset Formula $m_{ik}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+tensor de masas asociadas
+\series default
+, simétrico y constante, cuyas componentes se pueden obtener a partir de
+ 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Como 
+\begin_inset Formula $E$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ (el impulso total del fluido) están relacionados mediante 
+\begin_inset Formula $dE=\mathbf{u}\cdot d\mathbf{P}$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula $E=\frac{1}{2}mv^{2}\Rightarrow dE=\frac{1}{2}m2\mathbf{v}\cdot d\mathbf{v}=m\mathbf{v}\cdot d\mathbf{v}=\mathbf{v}\cdot d\left(m\mathbf{v}\right)=\mathbf{v}\cdot d\mathbf{P}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, entonces podemos escribir las componentes de 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ como
+\begin_inset Formula 
+\begin{equation}
+P_{i}=m_{ik}u_{k}\label{L1 p40 ec:11.5 Impulso total del fluido}
+\end{equation}
+
+\end_inset
+
+Y combinando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p39 ec:11.3 Energía total para el fluido"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p40 ec:11.4"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p40 ec:11.5 Impulso total del fluido"
+
+\end_inset
+
+ vemos que 
+\begin_inset Formula $\mathbf{P}$
+\end_inset
+
+ tiene que venir dado, en función de 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ por 
+\begin_inset Formula 
+\begin{equation}
+\mathbf{P}=4\pi\rho\mathbf{A}-\rho V_{0}\mathbf{u}\label{L1 p40 ec:11.6 Impulso total en función de A}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El impulso transmitido al fluido por el cuerpo por unidad de tiempo es 
+\begin_inset Formula $\frac{d\mathbf{P}}{dt}$
+\end_inset
+
+, es decir, la fuerza que actúa sobre el cuerpo
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=-\frac{d\mathbf{P}}{dt}\label{L1 p40 ec:11.7 Fuerza ejercida sobre el cuerpo por el fluido}
+\end{equation}
+
+\end_inset
+
+La componente de 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ paralela a la velocidad del cuerpo se denomina 
+\series bold
+fuerza de arrastre
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Fuerza de arrastre
+\end_layout
+
+\end_inset
+
+
+\series default
+ y la componente perpendicular 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Fuerza de sustentación
+\end_layout
+
+\end_inset
+
+fuerza de sustentación
+\series default
+.
+\end_layout
+
+\begin_layout Section
+Ondas de gravedad 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:12 Ondas-de-gravedad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La superficie de un fluido en equilibrio en un campo gravitatorio es plana.
+ Si una fuerza externa perturba la superficie y hace que se separe de la
+ posición de equilibrio, aparece un movimiento en el fluido.
+ Este movimiento se propaga por toda la superficie mediante lo que se denominan
+ 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Onda de gravedad
+\end_layout
+
+\end_inset
+
+ondas de gravedad
+\series default
+ (ya que se deben a la acción del campo gravitatorio).
+ Las ondas de gravedad afectan tanto a la superficie del fluido como a su
+ interior, aunque su efecto es menor a medida que aumenta la profundidad.
+\end_layout
+
+\begin_layout Standard
+Consideramos ondas de gravedad en las que la velocidad de las partículas
+ del fluido móvil sea pequeña, de manera que
+\begin_inset Formula 
+\begin{equation}
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\ll\frac{\partial\mathbf{v}}{\partial t}\iff a\ll\lambda\label{L1 p44 ec:12.1}
+\end{equation}
+
+\end_inset
+
+es decir, que la amplitud de las oscilaciones de la onda 
+\begin_inset Formula $a$
+\end_inset
+
+ debe ser pequeña comparada con su longitud de onda 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ En la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:9 Flujo-potencial-(G)"
+
+\end_inset
+
+, si despreciar el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ es equivalente a suponer que tenemos un flujo potencial.
+ Si además consideramos que el fluido es incompresible, podemos utilizar
+ la ecuación de Laplace para el potencial 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p26 ec:10.6 Ecuación de Laplace para el potencial"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p27 ec:10.7 Relación de velocidad y presión"
+
+\end_inset
+
+, que relaciona la velocidad y la presión.
+ En esta ecuación podemos desprecial el término 
+\begin_inset Formula $\frac{1}{2}v^{2}$
+\end_inset
+
+ porque contiene el cuadrado de la velocidad.
+ Hacemos 
+\begin_inset Formula $f\left(t\right)=0$
+\end_inset
+
+ e incluimos el término 
+\begin_inset Formula $\rho gz$
+\end_inset
+
+ introducido por el campo gravitatorio:
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\phi}{\partial t}+\frac{1}{2}v^{2}+\frac{p}{\rho}+gz & = & f\left(t\right)\\
+\frac{1}{2}v^{2} & \rightarrow & 0\\
+f\left(t\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+p=-\rho gz-\rho\frac{\partial\phi}{\partial t}\label{L1 p44 ec:12.2 Ecuación para la presión (onda de gravedad)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tomamos el eje 
+\begin_inset Formula $z$
+\end_inset
+
+ vertical, con el plano 
+\begin_inset Formula $xy$
+\end_inset
+
+ coincidiendo con la superficie de equilibrio del fluido y designamos 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ la coordenada 
+\begin_inset Formula $z$
+\end_inset
+
+ de un punto de la superficie.
+ Como en equilibrio 
+\begin_inset Formula $\zeta=0$
+\end_inset
+
+, 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ nos da el desplazamiento vertical de la superficie sobre sus oscilaciones.
+ Si sobre la superficie actúa una presión constante 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+p_{0}=-\rho g\zeta-\rho\frac{\partial\phi}{\partial t}
+\]
+
+\end_inset
+
+Consideramos un potencial 
+\begin_inset Formula $\phi'=\phi+\frac{p_{0}}{\rho}t$
+\end_inset
+
+ de manera que 
+\begin_inset Formula $\mathbf{v}=\mathbf{grad}\phi=\mathbf{grad}\phi'$
+\end_inset
+
+, pero nos permite eliminar el término 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ (y prescindimos de la prima en 
+\begin_inset Formula $\phi$
+\end_inset
+
+):
+\begin_inset Formula 
+\begin{equation}
+g\zeta+\left(\frac{\partial\phi}{\partial t}\right)_{z=\zeta}=0\label{L1 p45 ec:12.3}
+\end{equation}
+
+\end_inset
+
+Como la amplitud de las oscilaciones de las ondas es pequeña, el desplazamiento
+ 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ también es pequeño.
+ En el mismo orden de aproximación suponemos que la componente vertical
+ de la velocidad de los puntos de la superficie en la superficie es 
+\begin_inset Formula $v_{z}=\frac{\partial\zeta}{\partial t}$
+\end_inset
+
+, pero a su vez, 
+\begin_inset Formula $v_{z}=\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}$
+\end_inset
+
+, así que 
+\begin_inset Formula 
+\[
+\frac{\partial\zeta}{\partial t}=\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}
+\]
+
+\end_inset
+
+Si despejamos 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p45 ec:12.3"
+
+\end_inset
+
+ y la introducimos en esta igualdad
+\begin_inset Formula 
+\[
+\frac{\partial\zeta}{\partial t}=\frac{\partial}{\partial t}\left(-\frac{1}{g}\left(\frac{\partial\phi}{\partial t}\right)_{z=\zeta}\right)=-\frac{1}{g}\left(\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=\zeta}=\left(\frac{\partial\phi}{\partial z}\right)_{z=\zeta}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left(\frac{\partial\phi}{\partial z}+\frac{1}{g}\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=\zeta}=0
+\]
+
+\end_inset
+
+Como las oscilaciones 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ son pequeñas, 
+\begin_inset Formula $z=\zeta\sim z=0$
+\end_inset
+
+, de manera que las ecuaciones que debemos resolver para determinar el movimient
+o de una superficie bajo la acción de un campo gravitatorio es:
+\begin_inset Formula 
+\begin{eqnarray}
+\Delta\phi & = & 0\label{L1 p45 ec:12.4 Ec. Laplace}\\
+\left(\frac{\partial\phi}{\partial z}+\frac{1}{g}\frac{\partial^{2}\phi}{\partial t^{2}}\right)_{z=0} & = & 0\label{L1 p45 ec: 12.5 Ec. de movimiento superficie en campo gravitatorio}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Supondremos que la superficie del fluido es ilimitada y que 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ es pequeña comparada con la profundidad del fluido, así que podemos omitir
+ las condiciones límite en los bordes y en la parte inferior.
+\end_layout
+
+\begin_layout Standard
+Consideramos una onda de gravedad que se propaga a lo largo del eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y que es uniforme en la dirección 
+\begin_inset Formula $y$
+\end_inset
+
+ (por lo que todas las magnitudes son independientes de 
+\begin_inset Formula $y$
+\end_inset
+
+).
+ Buscaremos una solución que sea una función periódica simple del tiempo
+ y de la coordenada 
+\begin_inset Formula $x$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi=f\left(z\right)\cos\left(kx-\omega t\right)
+\]
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\[
+\tau=\frac{2\pi}{\omega}\quad\lambda=\frac{2\pi}{k}
+\]
+
+\end_inset
+
+Sustituyendo en la ecuación
+\begin_inset Formula 
+\[
+\Delta\phi=\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial z^{2}}=0\Rightarrow\frac{d^{2}f\left(z\right)}{dz^{2}}-k^{2}f\left(z\right)=0
+\]
+
+\end_inset
+
+ Esta ecuación tiene soluciones 
+\begin_inset Formula $e^{kz}$
+\end_inset
+
+ y 
+\begin_inset Formula $e^{-kz}$
+\end_inset
+
+.
+ Debemos eliminar la solución 
+\begin_inset Formula $e^{-kz}$
+\end_inset
+
+ porque haría crecer 
+\begin_inset Formula $\phi$
+\end_inset
+
+ en el interior del fluido 
+\begin_inset Formula $\left(z<0\right)$
+\end_inset
+
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Es decir, si consideramos que la solución general es de la forma 
+\begin_inset Formula $f\left(z\right)=Ae^{kz}+Be^{-kz}$
+\end_inset
+
+, tenemos una condición límite que dice que como el fluido es infinitamente
+ profundo, 
+\begin_inset Formula $\phi\left(-\infty\right)=0\Rightarrow B=0$
+\end_inset
+
+.
+ O lo que es lo mismo, la perturbación de la superficie disminuye con la
+ profundidad hasta disiparse completamente.
+ 
+\end_layout
+
+\end_inset
+
+.
+ Así que la solución es
+\begin_inset Formula 
+\begin{equation}
+f\left(z\right)=Ae^{kz}\Rightarrow\phi=Ae^{kz}\cos\left(kx-\omega t\right)\label{L1 p46 ec:12.6 Solución para el movimiento de la superficie de un fluido}
+\end{equation}
+
+\end_inset
+
+Si introducimos esta solución en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p45 ec: 12.5 Ec. de movimiento superficie en campo gravitatorio"
+
+\end_inset
+
+, que también debe satisfacerse, encontramos:
+\begin_inset Formula 
+\begin{equation}
+k-\frac{\omega^{2}}{g}=0\Rightarrow\omega^{2}=kg\label{L1 p46 ec:12.7}
+\end{equation}
+
+\end_inset
+
+La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p46 ec:12.7"
+
+\end_inset
+
+ nos da la relación entre el número de onda y la frecuencia de la onda de
+ gravedad.
+\end_layout
+
+\begin_layout Standard
+Una vez obtenido el potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+, encontramos la distribución de velocidades,
+\begin_inset Formula 
+\begin{equation}
+v_{x}=\frac{\partial\phi}{\partial x}=-Ake^{kz}\sin\left(kx-\omega t\right)\quad v_{z}=\frac{\partial\phi}{\partial z}=Ake^{kz}\cos\left(kx-\omega t\right)\label{L1 p46 ec:12.8 Distribución de velocidades en la superficie del fluido (ondas de gravedad)}
+\end{equation}
+
+\end_inset
+
+Más adelante se demostrará que la velocidad de propagación 
+\begin_inset Formula $U$
+\end_inset
+
+ de la onda viene dada por 
+\begin_inset Formula $\frac{\partial\omega}{\partial k}$
+\end_inset
+
+; en nuestro caso:
+\begin_inset Formula 
+\begin{equation}
+U=\frac{\partial\omega}{\partial k}=\frac{\partial\sqrt{kg}}{\partial k}=\frac{1}{2}\sqrt{\frac{g}{k}}=\frac{1}{2}\sqrt{\frac{g\lambda}{2\pi}}\label{L1 p47 ec:12.10 Velocidad de propagación de la onda de gravedad}
+\end{equation}
+
+\end_inset
+
+Como vemos, la velocidad de propagación aumenta con la longitud de onda
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Ondas de gravedad largas 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:12 Ondas de gravedad largas"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Quotation
+No entiendo cómo se están considerando ondas de gravedad con longitud de
+ onda grande respecto a la profundidad pero se pueden despreciar 
+\begin_inset Quotes eld
+\end_inset
+
+los términos cuadráticos de la velocidad, puesto que se supone de nuevo
+ que es pequeña la longitud de onda
+\begin_inset Quotes erd
+\end_inset
+
+ (pag 47).
+\end_layout
+
+\begin_layout Section
+Ondas en un fluido incompresible 
+\begin_inset CommandInset label
+LatexCommand label
+name "L1 sec:14 Ondas en un fluido incompresible"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existe un tipo de onda de gravedad que puede propagarse en el interior de
+ un fluido incompresible.
+ Estas ondas se deben a una inhomogeneidad del fluido producida por el campo
+ gravitatorio.
+ La presión (y la entropía 
+\begin_inset Formula $s$
+\end_inset
+
+ ) varían con la altura, por lo que cualquier desplazamiento de una partícula
+ de fluido en altura destruye el equilibrio mecánico y produce un movimiento
+ oscilante.
+ El efecto, como el movimiento es adiabático, es que la partícula transporta
+ con ella a su nueva posición toda su entropía anterior 
+\begin_inset Formula $s$
+\end_inset
+
+, que no es la misma que la que corresponde al valor de equilibrio en la
+ nueva posición.
+\end_layout
+
+\begin_layout Standard
+Suponemos que la longitud de onda es pequeña en comparación con las distancias
+ sobre las que el campo gravitatorio produce una variación notable de la
+ densidad.
+ También suponemos que el fluido es incompresible (podemos despreciar las
+ variaciones producidas por la presión de la onda en la densidad).
+ Toda la modificación de la densidad proviene de la dilatación térmica (que
+ es la que origina la onda en este caso).
+\end_layout
+
+\begin_layout Standard
+Vamos a escribir las ecuaciones hidrodinámicas para este movimiento.
+ Utilizamos un sufijo 
+\begin_inset Formula $_{0}$
+\end_inset
+
+ para distinguir los valores de las magnitudes correspondientes al equilibrio
+ mecánico y una prima 
+\begin_inset Formula $'$
+\end_inset
+
+ para marcar las desviaciones respecto al equilibrio.
+\end_layout
+
+\begin_layout Standard
+La ecuación de conservación de la entropía 
+\begin_inset Formula $s=s_{0}\left(z\right)+s'$
+\end_inset
+
+ puede escribirse, hasta primer orden
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial s'}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s_{0}=0\label{L1 p53 ec:14.1 Ec. continuidad de la entropía}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la ecuación de Euler despreciamos el término 
+\begin_inset Formula $\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}$
+\end_inset
+
+ porque las oscilaciones son pequeñas 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Supongo que se refiere a que la amplitud de la onda 
+\begin_inset Formula $a$
+\end_inset
+
+ es pequeña comparada con la longitud de onda 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p44 ec:12.1"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ La distribución de presión en el equilibrio viene dada por
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\mathbf{v}}{\partial t}+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v} & = & -\frac{1}{\rho_{0}}\mathbf{grad}p_{0}+\mathbf{g}\\
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v}\sim0 & \downarrow & \text{Oscilaciones pequeñas}\\
+\frac{\partial\mathbf{v}_{0}}{\partial t}=0 & \downarrow & \text{Equilibrio}\\
+ & \Rightarrow & \mathbf{grad}p_{0}=\rho_{0}\mathbf{g}
+\end{eqnarray*}
+
+\end_inset
+
+Ahora tenemos
+\begin_inset Formula 
+\[
+\frac{\partial\mathbf{v}}{\partial t}=-\frac{1}{\rho}\mathbf{grad}p+\mathbf{g}=-\frac{1}{\rho_{0}}\mathbf{grad}p'+\frac{\rho'}{\rho^{2}}\mathbf{grad}p_{0}
+\]
+
+\end_inset
+
+ Como la variación de la densidad se debe únicamente al cambio de entropía
+ y no a la variación de presión, podemos escribir:
+\begin_inset Formula 
+\[
+\rho'=\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'
+\]
+
+\end_inset
+
+y así se obtiene entonces la ecuación de Euler en la forma:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\mathbf{v}}{\partial t}=\frac{\mathbf{g}}{\rho_{0}}\left(\frac{\partial\rho_{0}}{\partial s_{0}}\right)_{p}s'-\mathbf{grad}\frac{p'}{\rho_{0}}\label{L1 p53 ec:14.2}
+\end{equation}
+
+\end_inset
+
+Podemos incluir 
+\begin_inset Formula $\rho_{0}$
+\end_inset
+
+ bajo el operador gradiete porque siempre despreciamos la variación de la
+ densidad de equilibrio en distancias del orden de la longitud de onda.
+ Por esta misma razón podemos considerar constante la densidad en la ecuación
+ de continuidad, de manera que 
+\begin_inset Formula 
+\begin{equation}
+\mathrm{div}\mathbf{v}=0\label{L1 p53 ec:14.3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como solución de las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p53 ec:14.1 Ec. continuidad de la entropía"
+
+\end_inset
+
+-
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p53 ec:14.3"
+
+\end_inset
+
+ buscamos ondas planas, tanto para la velocidad como para 
+\begin_inset Formula $s'$
+\end_inset
+
+ 
+\begin_inset Formula $p'$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{v}=const\times e^{i\left(\mathbf{kr}-\omega t\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
