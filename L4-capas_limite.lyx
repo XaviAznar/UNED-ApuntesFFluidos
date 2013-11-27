@@ -81,7 +81,7 @@ name "chap:4 Capas-límite"
 \end_layout
 
 \begin_layout Section
-Capa límite laminar 
+Capa límite laminar (B) 
 \begin_inset CommandInset label
 LatexCommand label
 name "L4 sec:39 Capa-límite-laminar"
@@ -320,10 +320,197 @@ Es decir, no hay gradiente de presión vertical en la capa límite.
 
  igual a la de la corriente principal (que suponemos que es una función
  determinada para poder resolver el flujo en la capa límite).
+ Como suponemos que conocemos la distribución de presión en el fluido, podemos
+ escribir en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p5 ec39.1 NS-capa laminar-x"
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{\partial p\left(x\right)}{\partial x}$
+\end_inset
+
+ en vez de 
+\begin_inset Formula $\frac{\partial p}{\partial x}$
+\end_inset
+
+.
+ Pero fuera de la capa límite el fluido todavía puede considerarse como
+ flujo potencial, de manera que podemos utilizar la ecuación de Bernoulli
+ 
+\begin_inset Formula $p+\frac{1}{2}\rho U^{2}=constante$
+\end_inset
+
+ para expresar la derivada 
+\begin_inset Formula $\partial p/\partial x$
+\end_inset
+
+ en función de la velocidad 
+\begin_inset Formula $U\left(x\right)$
+\end_inset
+
+ de la corriente principal.
+\begin_inset Formula 
+\begin{eqnarray*}
+\text{Fuera de la capa límite} & \leftrightarrow & \text{Fluido ideal}\Rightarrow\text{Ec. de Bernoulli}\Rightarrow\\
+\Rightarrow p+\frac{1}{2}\rho U^{2}=constante & \Rightarrow & \frac{1}{\rho}\frac{\partial p}{\partial x}=-U\frac{\partial U}{\partial x}
+\end{eqnarray*}
+
+\end_inset
+
+Así, tenemos que las ecuaciones de movimiento queda:
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y}-\nu\frac{\partial^{2}v_{x}}{\partial y^{2}} & = & -\frac{1}{\rho}\frac{dp}{dx}=U\frac{dU}{dx}\nonumber \\
+\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y} & = & 0\label{L4 p6 ec39.5 Ecs de movimiento}
+\end{eqnarray}
+
+\end_inset
+
+Aunque estas ecuaciones ha sido deducidas en el caso particular de una pared
+ plana, son válidas en cualquier caso general siempre que tengamos un flujo
+ bidimensional.
 \end_layout
 
 \begin_layout Standard
-PAG5
+Vamos a comprobarlo para el caso de un flujo transversal que rodea un cilindro
+ de longitud infinita y sección recta arbitraria.
+ Ahora 
+\begin_inset Formula $x$
+\end_inset
+
+ es la distancia medida a lo largo de la circunferencia de la sección recta
+ desde un punto de la misma e 
+\begin_inset Formula $y$
+\end_inset
+
+ es la distancia a la superifice.
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $U_{0}$
+\end_inset
+
+ a una velocidad característica del problema, como la velocidad de la corriente
+ principal en el infinito.
+ En lugar de las coordenadas 
+\begin_inset Formula $x,y$
+\end_inset
+
+ y de las velocidades 
+\begin_inset Formula $v_{x},v_{y}$
+\end_inset
+
+ introducimos unas variables adimensionales
+\begin_inset Formula 
+\begin{equation}
+x=lx^{\prime}\quad y=\frac{ly^{\prime}}{\sqrt{R}}\quad v_{x}=U_{0}v_{x}^{\prime}\quad v_{y}=\frac{U_{0}v_{y}^{\prime}}{\sqrt{R}}\label{L4 p6 ec39.6 Variables adimensionales}
+\end{equation}
+
+\end_inset
+
+(y por tanto 
+\begin_inset Formula $U=U_{0}U^{\prime}$
+\end_inset
+
+), donde 
+\begin_inset Formula $R=\frac{U_{0}l}{\nu}$
+\end_inset
+
+.
+ Con estas nuevas variables, las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec39.5 Ecs de movimiento"
+
+\end_inset
+
+ toman la forma
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}^{\prime}\frac{\partial v_{x}^{\prime}}{\partial x}+v_{y}^{\prime}\frac{\partial v_{x}^{\prime}}{\partial y}-\frac{\partial^{2}v_{x}^{\prime}}{\partial y^{2}} & = & U^{\prime}\frac{dU^{\prime}}{dx^{\prime}}\nonumber \\
+\frac{\partial v_{x}^{\prime}}{\partial x^{\prime}}+\frac{\partial v_{x}^{\prime}}{\partial y^{\prime}} & = & 0\label{L4 p6 ec39.7 Ecs de movimiento (var. adimensionales)}
+\end{eqnarray}
+
+\end_inset
+
+En estas ecuaciones (y en las condiciones límite que hay que aplicar) no
+ interviene la viscosidad 
+\begin_inset Formula $\nu$
+\end_inset
+
+, por lo que las soluciones son independientes del número de Reynolds.
+ Así, si se modifica el número de Reynolds, el flujo de la capa límite sólo
+ sufre una transformación de semejanza, mientras que las velocidades y las
+ distancias varían como 
+\begin_inset Formula $1/\sqrt{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Las velocidades adimensionales obtenidas al solucionar 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec39.7 Ecs de movimiento (var. adimensionales)"
+
+\end_inset
+
+ tienen que ser del orden de la unidad, ya que no pueden depender de 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Lo mismo se puede decir del espesor 
+\begin_inset Formula $\delta$
+\end_inset
+
+ de la capa límite en función de las coordenadas 
+\begin_inset Formula $x^{\prime},y^{\prime}$
+\end_inset
+
+.
+ A partir de la forma de las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec39.6 Variables adimensionales"
+
+\end_inset
+
+ llegamos a la conclusión de que 
+\begin_inset Formula 
+\begin{equation}
+v_{y}\sim\frac{U_{0}}{\sqrt{R}}\label{L4 p7 ec39.8}
+\end{equation}
+
+\end_inset
+
+es decir, el cociente entre las velocidades transversales y longitudinales
+ es inversamente proporcional a 
+\begin_inset Formula $\sqrt{R}$
+\end_inset
+
+, mientras que el espesor de la capa límite 
+\begin_inset Formula $\delta$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\delta\sim\frac{l}{\sqrt{R}}\label{L4 p7 ec39.9 Espesor de la capa límite}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PAG7
 \end_layout
 
 \end_body
