@@ -510,7 +510,342 @@ es decir, el cociente entre las velocidades transversales y longitudinales
 \end_layout
 
 \begin_layout Standard
-PAG7
+Ahora aplicamos las ecuaciones correspondientes a la capa límite en el caso
+ del flujo plano paralelo a lo largo de una lámina plana.
+ Esta placa corresponde a los valores 
+\begin_inset Formula $x>0$
+\end_inset
+
+ (infinitamente larga).
+ La velocidad de la corriente principal en este caso es 
+\begin_inset Formula $U=constante$
+\end_inset
+
+.
+ Las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p6 ec39.5 Ecs de movimiento"
+
+\end_inset
+
+ ahora tienen la forma
+\begin_inset Formula 
+\begin{eqnarray}
+v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y} & = & \nu\frac{\partial^{2}v_{x}}{\partial y^{2}}\nonumber \\
+\frac{\partial v_{x}}{\partial x}+\frac{\partial v_{y}}{\partial y} & = & 0\label{L4 p7 ec39.10 Ecs de movimiento (placa plana x>0)}
+\end{eqnarray}
+
+\end_inset
+
+Las condiciones límite en la superficie de la placa exigen que todas las
+ componentes de la velocidad se anulen en la superficie de la placa
+\begin_inset Formula 
+\[
+v_{x}=0=v_{y}\iff y=0,x\geq0
+\]
+
+\end_inset
+
+A medida que nos alejamos de la superficie de la placa, la velocidad debe
+ tender a la velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+ del flujo incidente, es decir
+\begin_inset Formula 
+\[
+v_{x}=U\iff y\rightarrow\pm\infty
+\]
+
+\end_inset
+
+En la solución de las ecuaciones de la capa límite hemos visto que 
+\begin_inset Formula $v_{x}/U$
+\end_inset
+
+ y 
+\begin_inset Formula $v_{y}\sqrt{\frac{l}{U\nu}}$
+\end_inset
+
+ sólo pueden ser función de 
+\begin_inset Formula $x^{\prime}=x/l$
+\end_inset
+
+ y 
+\begin_inset Formula $y^{\prime}=y\sqrt{\frac{U}{l\nu}}$
+\end_inset
+
+.
+ Sin embargo, en el problema considerado la placa tiene una extensión infinita
+ y no existe ninguna longitud característica 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Por tanto, 
+\begin_inset Formula $v_{x}/U$
+\end_inset
+
+ sólo puede depender de una combinación de 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ e 
+\begin_inset Formula $y^{\prime}$
+\end_inset
+
+ en la que no intervenga 
+\begin_inset Formula $l$
+\end_inset
+
+, por ejemplo 
+\begin_inset Formula $y^{\prime}/\sqrt{x^{\prime}}=y\sqrt{\frac{U}{\nu x}}$
+\end_inset
+
+.
+ Del mismo modo, el producto 
+\begin_inset Formula $v_{y}^{\prime}\sqrt{x^{\prime}}$
+\end_inset
+
+ debe ser una función de 
+\begin_inset Formula $y^{\prime}/\sqrt{x^{\prime}}$
+\end_inset
+
+.
+ Por tanto podemos buscar una solución de la forma
+\begin_inset Formula 
+\begin{equation}
+v_{x}=Uf\left(y\sqrt{\frac{U}{\nu x}}\right)\qquad v_{y}=\sqrt{\frac{U\nu}{x}}f_{1}\left(y\sqrt{\frac{U}{\nu x}}\right)\label{L4 p7 ec39.11}
+\end{equation}
+
+\end_inset
+
+ donde 
+\begin_inset Formula $f$
+\end_inset
+
+ y 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ son funciones adimensionales.
+ Utilizando la segunda ecuación de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec39.10 Ecs de movimiento (placa plana x>0)"
+
+\end_inset
+
+ podemos expresar 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ en función de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Así, el problema se reduce a determinar una sola función 
+\begin_inset Formula $f$
+\end_inset
+
+ que depende de una sola variable 
+\begin_inset Formula $\xi=y\sqrt{\frac{U}{vx}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A partir de ahora sólo nos preocupamos de la distribución longitudinal de
+ velocidades 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ (ya que 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ es pequeña).
+ A partir de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec39.11"
+
+\end_inset
+
+ podemos obtener un resultado importante, incluso sin determinar la forma
+ exacta de 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ La velocidad 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ aumenta desde cero (en la superficie de la placa) hasta una fracción dada
+ de la velocidad de la corriente 
+\begin_inset Formula $U$
+\end_inset
+
+ para un valor concreto de 
+\begin_inset Formula $f$
+\end_inset
+
+, es decir 
+\begin_inset Formula $y\sqrt{\frac{U}{\nu x}}=constante$
+\end_inset
+
+.
+ Así, el orden de magnitud del espesor de la capa límite en el flujo a lo
+ largo de la placa viene dado por 
+\begin_inset Formula 
+\begin{equation}
+\delta\sim\sqrt{\frac{\nu x}{U}}\label{L4 p8 ec39.12 Orden de magnitud del espesor de la capa límite}
+\end{equation}
+
+\end_inset
+
+Por tanto, cuando nos alejamos del borde de la placa, el espesor de la capa
+ 
+\begin_inset Formula $\delta$
+\end_inset
+
+ aumenta proporcionalmente al cuadrado de la distancia al borde.
+\end_layout
+
+\begin_layout Standard
+Si obtenemos 
+\begin_inset Formula $f$
+\end_inset
+
+ por integración numérica, 
+\begin_inset Formula $f$
+\end_inset
+
+ tiende rápidamente al valor límite (que es la unidad).
+\end_layout
+
+\begin_layout Standard
+La fuerza de rozamiento por unidad de área de superficie de la placa es
+\begin_inset Formula 
+\begin{equation}
+\sigma_{xy}=\eta\left(\frac{\partial v_{x}}{\partial y}\right)_{y=0}=0.332\sqrt{\frac{\eta\rho U^{3}}{x}}\label{L4 p8 ec39.13 Fuerza de rozamiento}
+\end{equation}
+
+\end_inset
+
+ Si la placa tiene una longitud 
+\begin_inset Formula $l$
+\end_inset
+
+ entonces la fuerza de rozamiento total (por unidad de longitud en 
+\begin_inset Formula $z$
+\end_inset
+
+) sobre ella (teniendo en cuenta que la placa tiene dos caras) es
+\begin_inset Formula 
+\[
+F=2\int_{0}^{l}\sigma_{xy}dx
+\]
+
+\end_inset
+
+Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p8 ec39.13 Fuerza de rozamiento"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+F=1.328\sqrt{\eta\rho lU^{3}}\label{L4 p9 ec39.14 Fuerza de rozamiento total sobre la placa}
+\end{equation}
+
+\end_inset
+
+Este resultado sólo es apliccable a placas bastante largas en las que el
+ número de Reynolds 
+\begin_inset Formula $Ul/\nu$
+\end_inset
+
+ es bastante grande.
+ Suele expresarse en función del 
+\emph on
+coeficiente de arrastre
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de arrastre
+\end_layout
+
+\end_inset
+
+
+\emph default
+:
+\begin_inset Formula 
+\begin{equation}
+C=\frac{F}{\frac{1}{2}\rho U^{2}2l}\label{L4 p9 ec39.15 Coeficiente de arrastre}
+\end{equation}
+
+\end_inset
+
+Según 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p9 ec39.14 Fuerza de rozamiento total sobre la placa"
+
+\end_inset
+
+ esta magnitud puede expresarse en función del número de Reynolds como
+\begin_inset Formula 
+\begin{equation}
+C=\frac{1.328}{\sqrt{R}}\label{L4 p9 ec39.16}
+\end{equation}
+
+\end_inset
+
+Las fórmulas cuantitativas obtenidas sólo son válidas para el flujo a lo
+ largo de una placa plana.
+ Pero los cualitativos, como 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec39.8"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p7 ec39.9 Espesor de la capa límite"
+
+\end_inset
+
+ son válidos para el flujo que rodea a un cuerpo de forma cualquiera.
+ En estos casos 
+\begin_inset Formula $l$
+\end_inset
+
+ es la dimensión del cuerpo en la dirección del flujo.
+\end_layout
+
+\begin_layout Section
+Flujo cerca de la línea de separación (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:40 Flujo cerca de la línea de separación (E)"
+
+\end_inset
+
+
 \end_layout
 
 \end_body
