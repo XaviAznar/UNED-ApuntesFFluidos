@@ -848,5 +848,778 @@ name "L4 sec:40 Flujo cerca de la línea de separación (E)"
 
 \end_layout
 
+\begin_layout Standard
+(Pendiente)
+\end_layout
+
+\begin_layout Section
+Estabilidad del flujo en una capa laminar (L)
+\end_layout
+
+\begin_layout Standard
+Esta sección está indicada como 
+\emph on
+sólo de lectura
+\emph default
+ en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Perfil logarítmico de velocidades (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:42 Perfil-logarítmico-de velocidades (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideramos un flujo turbulento plano paralelo a lo largo de una superficie
+ plana ilimitada.
+ El término de 
+\begin_inset Quotes eld
+\end_inset
+
+turbulento plano paralelo
+\begin_inset Quotes erd
+\end_inset
+
+ lo aplicamos al promedio temporal del flujo.
+ Tomamos el sentido del flujo como eje 
+\begin_inset Formula $x$
+\end_inset
+
+ y el plano de la superficie como plano 
+\begin_inset Formula $xz$
+\end_inset
+
+, de manera que la distancia a la superficie viene dado por la distancia
+ en 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Las componentes 
+\begin_inset Formula $y,z$
+\end_inset
+
+ de la velocidad media son cero, 
+\begin_inset Formula 
+\[
+u_{x}=u\quad u_{y}=u_{z}=0
+\]
+
+\end_inset
+
+Tampoco existe ningún gradiente de presiones y todas las magnitudes dependen
+ únicamente de 
+\begin_inset Formula $y$
+\end_inset
+
+ (ver figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig: L4 sec42 Escenario"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/L4-sec42.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig: L4 sec42 Escenario"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ a la fuerza de rozamiento por unidad de área de la superficie (que coincide
+ con la dirección 
+\begin_inset Formula $x$
+\end_inset
+
+).
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ coincide con el impulso transmitido por el fluido a la superficie por unidad
+ de tiempo.
+ La componente 
+\begin_inset Formula $x$
+\end_inset
+
+ del impulso tiene el sentido negativo del eje de las 
+\begin_inset Formula $y$
+\end_inset
+
+ y da la cantidad de impulso transmitido desde las capas de fluido más alejadas
+ de la superficie a aquellas que están más próximas.
+\end_layout
+
+\begin_layout Standard
+El hecho de que tengamos este flujo de impulso es el que provoca que tengamos
+ un gradiente en la dirección 
+\begin_inset Formula $y$
+\end_inset
+
+ de la velocidad media 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ En el caso de números de Reynolds grandes la viscosidad 
+\begin_inset Formula $\nu$
+\end_inset
+
+ no tiene importancia excepto para distancias en 
+\begin_inset Formula $y$
+\end_inset
+
+ pequeñas.
+ Por tanto, el gradiente de velocidades 
+\begin_inset Formula $\frac{du}{dy}$
+\end_inset
+
+ depende sólo de los parámetros constantes 
+\begin_inset Formula $\rho,\sigma$
+\end_inset
+
+ y de la distancia 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Para obtener las dimensiones de la derivada 
+\begin_inset Formula $du/dy$
+\end_inset
+
+, 
+\begin_inset Formula $1/s$
+\end_inset
+
+ sólo tenemos una combinación posible de los parámetros anteriores 
+\begin_inset Formula $\sqrt{\sigma/\rho y^{2}}$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\begin{equation}
+\frac{du}{dy}=\frac{\sqrt{\frac{\sigma}{\rho}}}{by}\label{L4 p21 ec42.1 Gradiente de velocidad en y}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $b$
+\end_inset
+
+ es una constante numérica que no puede calcularse teóricamente y que experiment
+almente resulta valer:
+\begin_inset Formula 
+\begin{equation}
+b=0.417\label{L4 p22 ec42.2 Constante b}
+\end{equation}
+
+\end_inset
+
+Introducimos la magnitud 
+\begin_inset Formula $v_{*}=\sqrt{\frac{\sigma}{\rho}}$
+\end_inset
+
+ que tiene dimensiones de 
+\begin_inset Formula $cm/s$
+\end_inset
+
+, de manera que 
+\begin_inset Formula 
+\begin{equation}
+\sigma=\rho v_{*}^{2}\label{L4 p22 ec42.3}
+\end{equation}
+
+\end_inset
+
+ y 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ actúa como una velocidad característica del flujo turbulento.
+ Entones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p21 ec42.1 Gradiente de velocidad en y"
+
+\end_inset
+
+ se transforma en 
+\begin_inset Formula 
+\begin{equation}
+\frac{du}{dy}=\frac{v_{*}}{by}\Rightarrow u=\frac{v_{*}}{b}\left(\log y+c\right)\label{L4 p22 ec42.4}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula $c$
+\end_inset
+
+ es una constante de integración, pero no podemos utilizar las condiciones
+ límites 
+\emph on
+normales
+\emph default
+ en la superficie 
+\begin_inset Formula $\left(y=0\right)$
+\end_inset
+
+, ya que el primer término de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p22 ec42.4"
+
+\end_inset
+
+se haría infinito.
+ El problema está en que la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p22 ec42.4"
+
+\end_inset
+
+ no puede aplicarse a distancias muy pequeñas de la superficie, ya que a
+ estas distancias la viscosidad no puede despreciarse.
+ Tmapoco existen condiciones en el infinito, ya que para 
+\begin_inset Formula $y=\infty$
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p22 ec42.4"
+
+\end_inset
+
+ también se hace 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+ Esto se debe a que la superficie plana es infinita y por tanto, su influencia
+ se extiende hasta distancias infinitamente grandes.
+ A diferencia de lo que sucede en otros casos, para este flujo no existe
+ ningún parámetro constante característico de longitud que nos proporcione
+ una escala externa de la turbulencia.
+ Así, esta escala vendrá dada por la propia distancia 
+\begin_inset Formula $y$
+\end_inset
+
+: la escala del flujo turbulento a una distancia 
+\begin_inset Formula $y$
+\end_inset
+
+ de la superficie es del orden de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ La velocidad fluctuante de la turbulencia es del orden de 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+.
+ Podríamos deducirlo también a partir de razonamientos dimensionales, ya
+ que 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ es la única magnitud con dimensiones de velocidad que puede formarse a
+ partir de 
+\begin_inset Formula $\sigma,\rho$
+\end_inset
+
+ y 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Aunque la velocidad media disminuye con 
+\begin_inset Formula $y$
+\end_inset
+
+, la velocidad fluctuante permenece con el mismo orden de magnitud a toda
+ distancia de la superficie.
+ Este resultado está de acuerdo con la regla general de que el orden de
+ magnitud de la velocidad fluctuante está determinado por la variación 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ de la velocidad media (obtenido en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 sec:31 Turbulencia-totalmente-desarrollada (B)"
+
+\end_inset
+
+.
+ En este caso no tenemos ninguna longitud característica respecto a la que
+ se pueda calcular la variación de la velocidad media; 
+\begin_inset Formula $\Delta u$
+\end_inset
+
+ se define entonces como la variación de 
+\begin_inset Formula $u$
+\end_inset
+
+ cuando se modifica apreciablemente la distancia 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Según la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p22 ec42.4"
+
+\end_inset
+
+ la variación de 
+\begin_inset Formula $y$
+\end_inset
+
+ produce un cambio en la velocidad 
+\begin_inset Formula $u$
+\end_inset
+
+ que es del orden de 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A distancias suficientemente pequeñas la viscosidad empieza a ser importante.
+ Llamamos 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ al orden de magnitud de esta distancia.
+ La escala de la turbulencia a esta distancia es del orden de 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ y la velocidad del orden de 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+.
+ Por tanto, el número de Reynolds que caracteriza al flujo a distancias
+ del orden de 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ es 
+\begin_inset Formula $R\sim v_{*}y_{0}/\nu$
+\end_inset
+
+ .
+ La viscosidad empieza a ser importante cuando 
+\begin_inset Formula $R\sim1$
+\end_inset
+
+, por lo que
+\begin_inset Formula 
+\begin{equation}
+y_{0}\sim\frac{\nu}{v_{*}}\label{L4 p23 ec42.4 Orden de magnitud de la distancia y0 donde la viscosidad es importante}
+\end{equation}
+
+\end_inset
+
+A una distancia 
+\begin_inset Formula $y\ll y_{0}$
+\end_inset
+
+ el flujo está determinado por el rozamiento viscoso ordinario.
+ Por tanto, podemos obtener la distribución de velocidades a partir de la
+ forma correspondiente al rozamiento viscoso:
+\begin_inset Formula 
+\begin{equation}
+\sigma=\rho\nu\frac{du}{dy}\Rightarrow u=\frac{\sigma y}{\rho\nu}=\frac{v_{*}^{2}}{\nu}y\label{L4 p23 ec42.6 Distrib. de velocidad a distancias y<<y0}
+\end{equation}
+
+\end_inset
+
+ Por tanto, vemos que junto a la pared sólida existe una capa delgada de
+ fluido donde la velocidad varía linealmente con 
+\begin_inset Formula $y$
+\end_inset
+
+; la velocidad es pequeña en esta capa, variando desde 0 (en la superficie)
+ hasta valores del orden de 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ para 
+\begin_inset Formula $y\sim y_{0}$
+\end_inset
+
+.
+ A esta capa la denominamos 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Subcapa viscosa
+\end_layout
+
+\end_inset
+
+
+\series bold
+subcapa viscosa
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+El flujo considerado es turbulento y por tanto el nombre de 
+\emph on
+subcapa laminar
+\emph default
+ es inadecuado.
+ 
+\end_layout
+
+\begin_layout Standard
+La componente longitudinal 
+\begin_inset Formula $v_{x}^{\prime}$
+\end_inset
+
+ de la velocidad fluctuante en la subcapa es del mismo orden de mangitud
+ que la velocidad media, proporcional a 
+\begin_inset Formula $y\left(\sim v_{*}^{2}\frac{y}{y_{0}}\right)$
+\end_inset
+
+.
+ Por tanto, 
+\begin_inset Formula $\frac{\partial v_{y}^{\prime}}{\partial y}=-\frac{\partial v_{x}^{\prime}}{\partial x}$
+\end_inset
+
+ es proporcional a 
+\begin_inset Formula $y$
+\end_inset
+
+, y por la misma razón, la componente transversal 
+\begin_inset Formula $v_{y}^{\prime}$
+\end_inset
+
+ de la velocidad fluctuante varía como 
+\begin_inset Formula $y^{2}\left(\sim v_{*}^{2}\frac{y^{2}}{y_{0}^{2}}\right)$
+\end_inset
+
+.
+ De la linealidad de las ecuaciones de movimiento en la subcapa viscosa
+ (siendo pequeños los términos no lineales en comparación con los términos
+ de viscosidad) se deduce que los periodos de los remolinos turbulentos
+ son los mismo a través de todo el espesor de la subcapa.
+ Multiplicando estos periodos por la velocidad fluctuante, tenemos que las
+ distancias longitudinales recorridas por las partículas del fluido en su
+ movimiento fluctuante son proporcionales a 
+\begin_inset Formula $y$
+\end_inset
+
+ en orden de magnitud y que las distancias transversales son proporcionales
+ a 
+\begin_inset Formula $y^{2}\left(\sim y^{2}/y_{0}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En lo que sigue se prescinde de la 
+\emph on
+subcapa viscosa
+\emph default
+; su presencia sólo es importante a la hora de seleccionar un valor para
+ la constante de integración de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p22 ec42.4"
+
+\end_inset
+
+, de manera que la velocidad resulte del orden de 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ a distancias del orden de 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+.
+ Para lograrlo, 
+\begin_inset Formula $c=-\log y_{0}$
+\end_inset
+
+, de manera que
+\begin_inset Formula 
+\begin{equation}
+u=\frac{v_{*}}{b}\log\frac{y}{y_{0}}=\frac{v_{*}}{b}\log\left(\frac{v_{*}}{\nu}y\right)\label{L4 p24 ec42.7 Perfil logarítmico de velocidades}
+\end{equation}
+
+\end_inset
+
+Esta fórmula determina (donde es aplicable) la distribución de velocidades
+ de la corriente turbulenta que fluye a lo largo de la superificie.
+ Esta distribución se conoce como 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Perfil logarítmico de velocidades
+\end_layout
+
+\end_inset
+
+
+\series bold
+perfil logarítmico de velocidades
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+El argumento de la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p24 ec42.7 Perfil logarítmico de velocidades"
+
+\end_inset
+
+ debería incluir un coeficiente numérico.
+ Sin embargo, en las fórmulas que deduciremos sólo se necesita 
+\emph on
+exactitud logarítmica
+\emph default
+, por lo que el argumento del logaritmo se supone grande y despreciamos
+ todos los términos proporcionales a las potencias inferiores del argumento,
+ además de aquellos en los que aparece el logaritmo elevado a potencias
+ inferiores en el término principal.
+ Introducir un coeficiente numérico en el argumento de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p24 ec42.7 Perfil logarítmico de velocidades"
+
+\end_inset
+
+ es equivalente a sumar un término de la forma 
+\begin_inset Formula $constante\times v_{*}$
+\end_inset
+
+, donde 
+\emph on
+constante
+\emph default
+ es del orden de la unidad.
+ Este término no contiene el logaritmo y podemos despreciarlo.
+ Sin embargo, el argumento del logaritmo en las fórmulas deducidas no es
+ tan grande como para que su logaritmo sea también grande, por lo que la
+ exactitud de las fórmulas no es muy alta.
+\end_layout
+
+\begin_layout Standard
+Podemos mejorar la exactitud de las fórmulas añadiendo el coeficiente numérico
+ en el argumento del logartimo, pero su valor no puede calcularse teóricamente
+ y debe determinarse experimentalmente.
+ Por ejemplo:
+\begin_inset Formula 
+\begin{equation}
+u=v_{*}\left(2.40\log\left(\frac{v_{*}}{\nu}y\right)+5.84\right)\label{L4 p24 ec42.8 Distrib. de velocidad más exacta (con constantes empíricas)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente vamos a calcular la disipación de energía 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ por unidad de masa del fluido.
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ es el valor medio de la componente 
+\begin_inset Formula $\Pi_{ik}$
+\end_inset
+
+ del tensor densidad de impulso 
+\begin_inset Formula $\Pi_{ik}=\rho v_{i}v_{k}-\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)$
+\end_inset
+
+.
+ Fuera de la subcapa viscosa el término de viscosidad puede omitirse, de
+ manera que 
+\begin_inset Formula $\sigma=\rho\overline{v_{x}v_{y}}$
+\end_inset
+
+.
+ Si introducimos la velocidad fluctuante 
+\begin_inset Formula $\mathbf{v}^{\prime}$
+\end_inset
+
+ podemos escribir 
+\begin_inset Formula $v_{x}=u+v_{x}^{\prime}$
+\end_inset
+
+; la velocidad 
+\begin_inset Formula $v_{y}$
+\end_inset
+
+ es la velocidad fluctuante 
+\begin_inset Formula $v_{y}^{\prime}$
+\end_inset
+
+ (ya que su valor medio es cero).
+ Así obtenemos
+\begin_inset Formula 
+\[
+\sigma=\rho\overline{v_{x}v_{y}}=\rho\overline{v_{x}^{\prime}v_{y}^{\prime}}+\rho u\overline{v_{y}^{\prime}}=\rho\overline{v_{x}^{\prime}v_{y}^{\prime}}
+\]
+
+\end_inset
+
+La densidad de flujo de energía en la dirección 
+\begin_inset Formula $y$
+\end_inset
+
+ podemos escribirla como 
+\begin_inset Formula $\left(p+\frac{1}{2}\rho v^{2}\right)v_{y}$
+\end_inset
+
+, donde de nuevo hemos omitido el término de la viscosidad.
+ Reescribimos el segundo término como
+\begin_inset Formula 
+\[
+v^{2}=\left(u+v_{x}^{\prime}\right)^{2}+v_{y}^{\prime2}+v_{z}^{\prime2}
+\]
+
+\end_inset
+
+y promediando se obtiene
+\begin_inset Formula 
+\[
+\overline{pv_{y}^{\prime}}+\frac{1}{2}\left(\overline{v_{x}^{\prime2}v_{y}^{\prime}}+\overline{v_{y}^{\prime3}}+\overline{v_{z}^{\prime2}v_{y}^{\prime}}\right)+\rho u\overline{v_{x}^{\prime}v_{y}^{\prime}}
+\]
+
+\end_inset
+
+De esta expresión sólo tenemos que quedarnos con el último término.
+ La razón es que la velocidad fluctuante es del orden de 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ y por tanto, dentro de la exactitud logarítmica, es pequeña en comparación
+ con 
+\begin_inset Formula $u$
+\end_inset
+
+.
+ Las fluctuaciones turbulentas de la presión 
+\begin_inset Formula $p$
+\end_inset
+
+ son del orden de 
+\begin_inset Formula $\rho v_{*}^{2}$
+\end_inset
+
+ (ver 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p25 ec31.4 Variación de presión en flujo turbulento"
+
+\end_inset
+
+), por lo que, con la misma exactitud, podemos despreciar el término correspondi
+ente en el flujo de la energía.
+ Así, para la densidad de flujo de energía media tenemos
+\begin_inset Formula 
+\[
+\rho\overline{uv_{x}^{\prime}v_{y}^{\prime}}=u\sigma
+\]
+
+\end_inset
+
+ Cuando nos acercamos a la superficie este flujo disminuye debido a que
+ la energía se disipa.
+ La disminución de flujo de energía al aproximarse a la superficie en una
+ distancia 
+\begin_inset Formula $dy$
+\end_inset
+
+ es 
+\begin_inset Formula $\frac{\sigma\left(du/dy\right)}{dy}$
+\end_inset
+
+.
+ Esta es la cantidad de energía convertida en calo en una capa de fluido
+ de espesor 
+\begin_inset Formula $dy$
+\end_inset
+
+ y de área unidad.
+ Por tanto, se llega a la conclusión de que la disipación de energía por
+ unidad de masa es 
+\begin_inset Formula $(\sigma/\rho)\frac{du}{dy}$
+\end_inset
+
+, o sea, 
+\begin_inset Formula 
+\begin{equation}
+\epsilon=\frac{v_{*}^{3}}{by}=\frac{\left(\frac{\sigma}{\rho}\right)^{3/2}}{by}\label{L4 p25 ec42.9 Disipación de energía por unidad de masa}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
