@@ -1644,6 +1644,48 @@ lectura
  en la Guía de la Asignatura.
 \end_layout
 
+\begin_layout Standard
+El flujo a lo largo de una superficie rugosa, la velocidad se hace pequeña
+ 
+\begin_inset Formula $\left(\sim v_{*}\right)$
+\end_inset
+
+ a distancias 
+\begin_inset Formula $y\sim d$
+\end_inset
+
+, en lugar de 
+\begin_inset Formula $y\sim y_{0}$
+\end_inset
+
+, como sucedía en el caso del flujo a lo largo de una superficie lisa.
+ La distribución de velocidades viene dada por una fórmula que se obtiene
+ a partir del perfil logarítmico de las velocidades 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p24 ec42.7 Perfil logarítmico de velocidades"
+
+\end_inset
+
+, sustituyendo 
+\begin_inset Formula $d$
+\end_inset
+
+ por 
+\begin_inset Formula $\nu/v_{*}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+u=\frac{v_{*}}{b}\log\left(\frac{y}{d}\right)\label{L4 p27 ec43.7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Capa límite turbulenta (E) 
 \begin_inset CommandInset label
@@ -1656,7 +1698,191 @@ name "L4sec:44 Capa-límite-turbulenta (E)"
 \end_layout
 
 \begin_layout Standard
-(Pendiente)
+La distribución de velocidades logarítmica obtenida es válida en todo el
+ espacio en el caso del flujo turbulento plano parelelo.
+ Esto se debe a que hemos considerado un flujo a lo largo de una superficie
+ de área infinita.
+ Si el cuerpo es finito, sólo tendríamos un perfil logarítmico para las
+ velocidades a distancias cortas de la superficie (en la capa límite).
+ Hay que tener en cuenta que una capa límite turbulenta puede existir tanto
+ en el caso de un fluido que se mueve turbulentamente dentro de la corriente
+ principal como en el caso de un flujo laminar.
+\end_layout
+
+\begin_layout Standard
+La disminución de la velocidad media, tanto en la capa límite turbulenta
+ como en la laminar se debe, en último término, a la viscosidad del fluido.
+ Sin embargo, el efecto de la viscosidad aparece en la capa límite turbulenta
+ de un modo poco usual.
+ La manera en que se produce la variación de la velocidad media en la capa
+ no depende por sí misma directamente de la viscosidad; la viscosidad aparece
+ en la expresión correspondiente al gradiente de velocidades sólo en la
+ capa viscosa.
+ Sin embargo, el espesor total de la capa límite está determinado por la
+ viscosidad y se anula cuando ésta es cero.
+ Si la viscosidad fuera exactamente nula, no existiría capa límite.
+\end_layout
+
+\begin_layout Standard
+Aplicamos el resultado de la sección 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L4 sec:43 Flujo-turbulento-en tuberías (L)"
+
+\end_inset
+
+ a una capa límite turbulenta formada en el flujo a lo largo de una placa
+ plana delgada.
+ En el límite de la capa turbulenta, la velocidad del fluido es casi igual
+ a la velocidad de la corriente principal 
+\begin_inset Formula $U$
+\end_inset
+
+.
+ Para determinar esta velocidad en el límite podemos utilizar la fórmula
+ del perfil logarítmico de las velocidades 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p24 ec42.7 Perfil logarítmico de velocidades"
+
+\end_inset
+
+ con exactitud logarítmica, poniendo el espesor 
+\begin_inset Formula $\delta$
+\end_inset
+
+ de la capa límite en lugar de 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Igualando ambas expresiones:
+\begin_inset Formula 
+\begin{equation}
+U=\frac{v_{*}}{b}\log\frac{v_{*}\delta}{\nu}\label{L4 p29 ec44.1}
+\end{equation}
+
+\end_inset
+
+En este caso 
+\begin_inset Formula $U$
+\end_inset
+
+ es un parámetro constante para el flujo.
+ Sin embargo, el espesor 
+\begin_inset Formula $\delta$
+\end_inset
+
+ varía a lo largo de la placa, y por tanto, 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ es también una función con variación lenta de 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ La fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.1"
+
+\end_inset
+
+ no es adecuada para determinar estas funciones; necesitamos otra ecuación
+ que relacione 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta$
+\end_inset
+
+ con 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+PAG29
+\end_layout
+
+\begin_layout Section
+Crisis de arrastre o resitencia (L) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:45 Crisis de arrastre o resitencia (L)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección está marcada como de 
+\begin_inset Quotes eld
+\end_inset
+
+lectura
+\begin_inset Quotes erd
+\end_inset
+
+ en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Flujo que rodea a cuerpos con forma aerodinámica (L) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:46 Flujo que rodea a cuerpos con forma aerodinámica (L)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección está marcada como de 
+\begin_inset Quotes eld
+\end_inset
+
+lectura
+\begin_inset Quotes erd
+\end_inset
+
+ en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Arrastre inducido (?) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:47 Arrastre-inducido-(?)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección no aparece en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+La sustentación de un ala delgada (?) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:48 La sustentación de un ala delgada (?)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección no aparece en la Guía de la Asignatura.
 \end_layout
 
 \end_body
