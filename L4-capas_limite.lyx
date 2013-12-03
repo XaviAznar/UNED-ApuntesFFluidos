@@ -1572,7 +1572,7 @@ De esta expresión sólo tenemos que quedarnos con el último término.
 
  (ver 
 \begin_inset CommandInset ref
-LatexCommand eqref
+LatexCommand ref
 reference "L3 p25 ec31.4 Variación de presión en flujo turbulento"
 
 \end_inset
@@ -1619,6 +1619,44 @@ ente en el flujo de la energía.
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Flujo turbulento en tuberías (L) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4 sec:43 Flujo-turbulento-en tuberías (L)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección está marcada como de 
+\begin_inset Quotes eld
+\end_inset
+
+lectura
+\begin_inset Quotes erd
+\end_inset
+
+ en la Guía de la Asignatura.
+\end_layout
+
+\begin_layout Section
+Capa límite turbulenta (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L4sec:44 Capa-límite-turbulenta (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Pendiente)
 \end_layout
 
 \end_body
