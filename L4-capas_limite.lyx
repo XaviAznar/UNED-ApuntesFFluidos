@@ -99,8 +99,8 @@ Cuando tenemos números de Reynolds muy grandes podemos considerar que la
 \series bold
 no puede usarse nunca
 \series default
- cuando el flujo se produzca cerca de paredes sólidas.
- En este caso las condiciones límite para un fluido ideal hacen que se anula
+ cuando el flujo se produce cerca de paredes sólidas.
+ En este caso las condiciones límite para un fluido ideal hacen que se anule
  la componente normal de la velocidad, aunque la componente tangencial no
  tiene porqué anularse.
  Pero en el caso de un fluido viscoso la velocidad junto a la pared sólida
@@ -233,7 +233,7 @@ v_{x}\frac{\partial v_{y}}{\partial x}+v_{y}\frac{\partial v_{y}}{\partial y} & 
 \end_inset
 
 Como la capa límite es delgada, el flujo debe ser principalmente paralelo
- a la superifice por lo que 
+ a la superficie por lo que 
 \begin_inset Formula $v_{y}\ll v_{x}$
 \end_inset
 
@@ -271,7 +271,7 @@ Por tanto, podemos despreciar
 \begin_inset Formula $\frac{\partial^{2}v_{x}}{\partial x^{2}}$
 \end_inset
 
- en l
+ en la ecuación 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "L4 p5 ec39.1 NS-capa laminar-x"
@@ -360,7 +360,7 @@ reference "L4 p5 ec39.1 NS-capa laminar-x"
 
 \end_inset
 
-Así, tenemos que las ecuaciones de movimiento queda:
+Así, tenemos que la ecuación de movimiento queda:
 \begin_inset Formula 
 \begin{eqnarray}
 v_{x}\frac{\partial v_{x}}{\partial x}+v_{y}\frac{\partial v_{x}}{\partial y}-\nu\frac{\partial^{2}v_{x}}{\partial y^{2}} & = & -\frac{1}{\rho}\frac{dp}{dx}=U\frac{dU}{dx}\nonumber \\
@@ -386,7 +386,7 @@ Vamos a comprobarlo para el caso de un flujo transversal que rodea un cilindro
 \begin_inset Formula $y$
 \end_inset
 
- es la distancia a la superifice.
+ es la distancia a la superficie.
 \end_layout
 
 \begin_layout Standard
@@ -1111,7 +1111,7 @@ reference "L4 p22 ec42.4"
 
 \end_inset
 
-se haría infinito.
+ se haría infinito.
  El problema está en que la ecuación 
 \begin_inset CommandInset ref
 LatexCommand eqref
@@ -1121,11 +1121,11 @@ reference "L4 p22 ec42.4"
 
  no puede aplicarse a distancias muy pequeñas de la superficie, ya que a
  estas distancias la viscosidad no puede despreciarse.
- Tmapoco existen condiciones en el infinito, ya que para 
+ Tampoco existen condiciones en el infinito, ya que para 
 \begin_inset Formula $y=\infty$
 \end_inset
 
- 
+ la ecuación 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "L4 p22 ec42.4"
@@ -1328,7 +1328,7 @@ La componente longitudinal
 \begin_inset Formula $v_{x}^{\prime}$
 \end_inset
 
- de la velocidad fluctuante en la subcapa es del mismo orden de mangitud
+ de la velocidad fluctuante en la subcapa es del mismo orden de magnitud
  que la velocidad media, proporcional a 
 \begin_inset Formula $y\left(\sim v_{*}^{2}\frac{y}{y_{0}}\right)$
 \end_inset
@@ -1354,7 +1354,7 @@ La componente longitudinal
  De la linealidad de las ecuaciones de movimiento en la subcapa viscosa
  (siendo pequeños los términos no lineales en comparación con los términos
  de viscosidad) se deduce que los periodos de los remolinos turbulentos
- son los mismo a través de todo el espesor de la subcapa.
+ son los mismos a través de todo el espesor de la subcapa.
  Multiplicando estos periodos por la velocidad fluctuante, tenemos que las
  distancias longitudinales recorridas por las partículas del fluido en su
  movimiento fluctuante son proporcionales a 
@@ -1599,7 +1599,7 @@ ente en el flujo de la energía.
 \end_inset
 
 .
- Esta es la cantidad de energía convertida en calo en una capa de fluido
+ Esta es la cantidad de energía convertida en calor en una capa de fluido
  de espesor 
 \begin_inset Formula $dy$
 \end_inset

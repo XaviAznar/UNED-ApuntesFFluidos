@@ -162,19 +162,6 @@ filename "L2-fluidos_viscosos.lyx"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "L3-turbulencia.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "L4-capas_limite.lyx"
