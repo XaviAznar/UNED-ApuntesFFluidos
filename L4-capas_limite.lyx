@@ -1806,7 +1806,225 @@ reference "L4 p29 ec44.1"
 \end_layout
 
 \begin_layout Standard
-PAG29
+Vamos a utilizar los mismos argumentos que para deducir la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L3 p44 ec36.3 Ancho de la estela"
+
+\end_inset
+
+ para la anchura de la estela turbulenta.
+ Como en aquel caso, tenemos
+\begin_inset Formula 
+\[
+\frac{\partial\delta}{\partial x}\sim\begin{cases}
+\text{eje }\mbox{y} & \sim v_{*}\sim\left(\text{velocidad fluctuante}\right)\\
+\text{eje }x & \sim U\sim\left(\text{velocidad en el límite de la capa}\right)
+\end{cases}
+\]
+
+\end_inset
+
+De manera que 
+\begin_inset Formula 
+\begin{equation}
+\delta\sim\frac{v_{*}x}{U}\label{L4 p29 ec44.2 Espesor de la capa}
+\end{equation}
+
+\end_inset
+
+Las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.1"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.2 Espesor de la capa"
+
+\end_inset
+
+ determinan, en conjunto, 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta$
+\end_inset
+
+ como funciones de la distancia.
+ Sin embargo, estas funciones no pueden escribirse explícitamente.
+ Por tanto, expresamos 
+\begin_inset Formula $\delta$
+\end_inset
+
+ en función de una magnitud auxiliar.
+ Como 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ es una magnitud que varía lentamente con 
+\begin_inset Formula $x$
+\end_inset
+
+, a partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.2 Espesor de la capa"
+
+\end_inset
+
+ vemos que el espesor de la capa 
+\begin_inset Formula $\delta$
+\end_inset
+
+ varía de la misma forma que 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Recordamos que el espesor de la capa límite laminar aumenta con 
+\begin_inset Formula $\sqrt{x}$
+\end_inset
+
+, es decir, más lentamente que en la capa límite turbulenta.
+\end_layout
+
+\begin_layout Standard
+El siguiente paso es determinar la dependencia de la fuerza de rozamiento
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ por unidad de superficie respecto a 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Esta relación viene dada por 
+\begin_inset Formula 
+\[
+\sigma=\rho v_{*}^{3}\qquad U=\frac{v_{*}}{b}\log\left(\frac{v_{*}^{2}x}{U\nu}\right)
+\]
+
+\end_inset
+
+La última se obtiene sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.2 Espesor de la capa"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.1"
+
+\end_inset
+
+ y es válida dentro de la exactitud logarítmica.
+ Introducimos el coeficiente de arrastre 
+\begin_inset Formula $c$
+\end_inset
+
+ por unidad de área de la placa) definido como
+\begin_inset Formula 
+\begin{equation}
+c=\frac{2\sigma}{\rho U^{2}}=2\left(\frac{v_{*}}{U}\right)^{2}\label{L4 p29 ec44.3 Cociente de rozamiento por unidad de área c}
+\end{equation}
+
+\end_inset
+
+Eliminando 
+\begin_inset Formula $v_{*}$
+\end_inset
+
+ de entre las dos ecuaciones, obtenemos -hasta la exactitud logarítmica-
+ 
+\begin_inset Formula $c$
+\end_inset
+
+ en forma de función implícita de 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\sqrt{\frac{2b^{2}}{c}}=\log\left(cR_{x}\right)\text{ donde }R_{x}=\frac{Ux}{\nu}\label{L4 p29 ec44.4 Coef. de rozamiento (forma implícita)}
+\end{equation}
+
+\end_inset
+
+Para aumentar la exactitud de la esta fórmula podemos añadir una constante
+ numética al logartimo.
+ La fórmula queda entonces como 
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{\sqrt{c}}=1.7\log\left(cR_{x}\right)+3.0\label{L4 p30 ec44.5 coef. de rozamiento (con constante numérica)}
+\end{equation}
+
+\end_inset
+
+El coeficiente de arrastre dado por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p30 ec44.5 coef. de rozamiento (con constante numérica)"
+
+\end_inset
+
+ es una función lentamente decreciente con la distancia 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finalmente podemos expresar el espesor de la capa límite en función de 
+\begin_inset Formula $c\left(x\right).$
+\end_inset
+
+ Tenemos que 
+\begin_inset Formula $v_{*}=\sqrt{\frac{\sigma}{\rho}}=U\sqrt{\frac{c}{2}}$
+\end_inset
+
+.
+ Sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p29 ec44.2 Espesor de la capa"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\begin{equation}
+\delta=constante\times x\sqrt{c}\label{L4 p30 ec44.6 Espesor de la capa en función de c}
+\end{equation}
+
+\end_inset
+
+Esta fórmula puede escribirse con el signo de igualdad solamente en los
+ casos de una capa límite turbulenta bajo un flujo laminar, que es cuando
+ 
+\begin_inset Formula $\delta$
+\end_inset
+
+ tiene un significado exacto (como siempre, la región turbulenta se distingue
+ nítidamente de la región laminar).
+ El factor constante en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L4 p30 ec44.6 Espesor de la capa en función de c"
+
+\end_inset
+
+ debe determinarse a partir de los resultados experimentales.
 \end_layout
 
 \begin_layout Section
