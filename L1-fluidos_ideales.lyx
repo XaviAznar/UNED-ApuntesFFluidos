@@ -536,7 +536,7 @@ en movimiento
  fijos del espacio:
 \begin_inset Formula 
 \begin{equation}
-\frac{ds}{dt}=\mathbf{v}\cdot\mathbf{grad}s+\frac{\partial s}{\partial t}=0\label{L1 sec:2 2.6}
+\frac{ds}{dt}=\mathbf{v}\cdot\mathbf{grad}s+\frac{\partial s}{\partial t}=0\label{L1 sec:2 2.6 Ecuación de conservación de la entropía}
 \end{equation}
 
 \end_inset
@@ -1965,7 +1965,7 @@ reference "L1 p5 ec:1.2 Ecuación de continuidad"
  y la ecuación adiabática general 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "L1 sec:2 2.6"
+reference "L1 sec:2 2.6 Ecuación de conservación de la entropía"
 
 \end_inset
 
