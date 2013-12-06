@@ -784,5 +784,153 @@ reference "L5 p8 ec49.6"
 n considerada.
 \end_layout
 
+\begin_layout Section
+Conducción térmica en un fluido incompresible (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L5 sec50 Conducción térmica en un fluido incompresible (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ecuación general de la conducción térmica (en la forma 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+ o 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p7 ec49.5"
+
+\end_inset
+
+) puede simplificarse en algunos casos.
+\end_layout
+
+\begin_layout Standard
+Si la velocidad del fluido es pequeña comparada con la velocidad 
+\begin_inset Formula $c$
+\end_inset
+
+ del sonido, las variaciones de presión que se producen en el fluido son
+ tan pequeñas (así como el resto de variaciones de las magnitudes termodinámicas
+ producidas por la variación de la presión) que pueden despreciarse.
+\begin_inset Formula 
+\[
+v\ll c\Rightarrow\frac{p}{\Delta p}\simeq0\Rightarrow\text{Pueden despreciarse}
+\]
+
+\end_inset
+
+Sin embargo, si el fluido se calienta no uniformemente ya no puede considerarse
+ como incompresible.
+\begin_inset Formula 
+\[
+\text{Fluido calentado \textbf{no-uniformemente}}\iff\text{No es \textbf{incompresible}}
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $\rho=\rho\left(T\right)$
+\end_inset
+
+ y al calentarse no uniformemente, 
+\begin_inset Formula $T=T\left(x,y,z\right)$
+\end_inset
+
+, 
+\series bold
+las variaciones en la densidad no pueden despreciarse
+\series default
+ (incluso cuando la velocidad del fluido es pequeña).
+ En esta situación no podemos considerar la densidad del fluido como constante
+ 
+\begin_inset Formula $\rho\neq constante$
+\end_inset
+
+; ahora debemos considerar la presión 
+\begin_inset Formula $p=constante$
+\end_inset
+
+ (y no la densidad).
+\end_layout
+
+\begin_layout Standard
+Así tenemos
+\begin_inset Formula 
+\[
+\frac{\partial s}{\partial t}=\left(\frac{\partial s}{\partial T}\right)_{p}\frac{\partial T}{\partial t}\qquad\mathbf{grad}s=\left(\frac{\partial s}{\partial T}\right)_{p}\mathbf{grad}T
+\]
+
+\end_inset
+
+Como 
+\begin_inset Formula $T\left(\frac{\partial s}{\partial T}\right)_{p}=c_{p}$
+\end_inset
+
+ (calor específico a presión constante) obtenemos
+\begin_inset Formula 
+\[
+T\frac{\partial s}{\partial t}=c_{p}\frac{\partial T}{\partial t}\qquad T\mathbf{grad}s=c_{p}\mathbf{grad}T
+\]
+
+\end_inset
+
+La ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+ se transforma en
+\begin_inset Formula 
+\begin{equation}
+\rho c_{p}\left(\frac{\partial T}{\partial t}+\mathbf{v}\cdot\mathbf{grad}T\right)=\mathrm{div}\left(\kappa\mathbf{grad}T\right)+\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}\label{L5 p10 ec50.1 Ec. cond. térmica (fluido calentado no uniformemente)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora para poder considerar la densidad constante en las ecuaciones de movimient
+o en el caso de un fluido caliente de modo no uniforme es necesario:
+\end_layout
+
+\begin_layout Itemize
+que la velocidad del fluido sea pequeña en comparación con la del sonido
+\end_layout
+
+\begin_layout Itemize
+que las diferencias de temperatura en el interior del fluido sean pequeñas
+\end_layout
+
+\begin_layout Standard
+Esta segunda condición significa que los valores reales de la diferencia
+ de temperatura son pequeños, no el gradiente de temperaturas.
+ En este caso puede considerarse 
+\emph on
+incompresible
+\emph default
+ en el sentido normal (y la ecuación de continuidad sigue siendo 
+\begin_inset Formula $\mathrm{div}\mathbf{v}=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+PDF-11
+\end_layout
+
 \end_body
 \end_document
