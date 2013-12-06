@@ -84,5 +84,705 @@ name "L5 sec49 Ecuación general de la transferencia de calor (B)"
 
 \end_layout
 
+\begin_layout Standard
+Un sistema completo de ecuaciones para la dinámica de fluidos debe contener
+ debe cinco ecuaciones.
+ Si en el fluido se producen fenómenos de conducción térmica estas cinco
+ ecuaciones son:
+\end_layout
+
+\begin_layout Itemize
+ecuación de continuidad
+\end_layout
+
+\begin_layout Itemize
+ecuación de Navier-Stokes
+\end_layout
+
+\begin_layout Itemize
+✖ la ecuación de conservación de la entropía deja de ser válida, ya que
+ ahora se producen en el interior del fluido 
+\emph on
+procesos irreversibles de disipación de energía
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+✔ ley de conservación de la energía
+\end_layout
+
+\begin_layout Standard
+Sin embargo, aunque no podemos utilizar la ecuación de conservación de la
+ entropía, sí que podemos utilizar la ley de conservación de la energía,
+ que sigue siendo válida.
+ Para un fluido ideal la ley de conservación de la energía es
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\mathrm{div}\left[\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)\right]\label{L5 p4 conservación de la energía para un fluido ideal}
+\end{equation}
+
+\end_inset
+
+Como vemos, el primer término expresa la variación respecto al tiempo de
+ la energía contenida en la unidad de volumen, mientras que el segundo miembro
+ es la divergencia de la densidad de flujo de energía.
+\end_layout
+
+\begin_layout Standard
+Aunque la ley de conservación de la energía sigue siendo válida, la densidad
+ de flujo de energía tiene ahora una forma diferente.
+ Además del flujo 
+\begin_inset Formula $\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)$
+\end_inset
+
+ debido a la transferencia simple de masa por el movimiento del fluido,
+ tenemos otro flujo debido a los procesos de rozamiento interno dado por
+ el vector 
+\begin_inset Formula $\mathbf{v}\cdot\sigma^{\prime}$
+\end_inset
+
+ (o en coordenadas 
+\begin_inset Formula $v_{i}\sigma_{ik}^{\prime}$
+\end_inset
+
+).
+ Además, si la temperatura no es constante en todo el volumen del fluido,
+ debemos añadir la transferencia de calor por 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Conducción térmica
+\end_layout
+
+\end_inset
+
+conducción térmica
+\series default
+.
+ En esta transferencia de calor no interviene movimiento macroscópico y
+ se produce incluso si el fluido está en reposo.
+\begin_inset Formula 
+\[
+\text{Densidad de flujo de energía}\Rightarrow\begin{cases}
+\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right) & \text{Transf. de masa}\\
+\mathbf{v}\cdot\sigma^{\prime} & \text{Rozamiento interno}\\
+\left(T\neq cte\,\forall\, V\right) & \textbf{conducción térmica}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ a la 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Densidad de flujo térmico debido a la conducción térmica 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+densidad de flujo térmico debido a la conducción térmica.
+ El flujo está relacionado con la variación de la temperatura a través del
+ fluido.
+ Cuando el gradiente de temperatura en el fluido no es muy grande (que es
+ lo habitual), esta relación puede escribirse de manera simple.
+ En este caso podemos desarrollar 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ como una serie de potencias del gradiente de la temperatura y quedarnos
+ sólo con el primer término del desarrollo.
+ El término constante es cero, ya que 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ debe anularse cuando 
+\begin_inset Formula $\mathbf{grad}T$
+\end_inset
+
+ se anule (si no hay gradiente de temperatura, no puede haber conducción
+ térmica).
+ Así que:
+\begin_inset Formula 
+\begin{equation}
+\mathbf{q}=-\kappa\mathbf{grad}T\label{L5 p5 ec49.1 Flujo de calor por conducción térmica}
+\end{equation}
+
+\end_inset
+
+La constante 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ es la 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Conductividad térmica 
+\begin_inset Formula $\kappa$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+conductividad térmica
+\emph default
+ y siempre es positiva, por lo que el flujo de calor por conducción térmica
+ y el gradiente de temperatura siempre tienen sentidos opuestos.
+ En general la conducción térmica depende tanto de la tempratura como de
+ la presión
+\begin_inset Formula 
+\[
+\kappa=\kappa\left(T,p\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Así que el flujo de energía total en un fluido cuando existe viscosidad
+ y conducción térmica es
+\begin_inset Formula 
+\[
+\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)-\mathbf{v}\cdot\sigma^{\prime}-\kappa\mathbf{grad}T
+\]
+
+\end_inset
+
+con lo que la ley general de la conservación de la energía resulta:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)-\mathbf{v}\cdot\sigma^{\prime}-\kappa\mathbf{grad}T\right)\label{L5 p5 ec49.2 Ley general de la conservación de la energía}
+\end{equation}
+
+\end_inset
+
+Aunque podemos usar esta ecuación para completar el conjunto de ecuaciones
+ que necesitamos para un fluido viscoso, usaremos una forma alternativa
+ transformada gracias a las ecuaciones de movimiento.
+ Para ello, calculamos la derivada temporal de la energía contenida por
+ unidad de volumen del fluido a partir de las ecuaciones de movimiento:
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=\frac{1}{2}v^{2}\frac{\partial\rho}{\partial t}+\rho\mathbf{v}\cdot\frac{\partial\mathbf{v}}{\partial t}+\rho\frac{\partial\epsilon}{\partial t}+\epsilon\frac{\partial\rho}{\partial t}
+\]
+
+\end_inset
+
+ La derivada 
+\begin_inset Formula $\frac{\partial\rho}{\partial t}$
+\end_inset
+
+ la obtenemos a partir de la ecuación de continuidad y 
+\begin_inset Formula $\frac{\partial\mathbf{v}}{\partial t}$
+\end_inset
+
+ de la ecuación de Navier-Stokes:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)= & -\frac{1}{2}v^{2}\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}\right)-\mathbf{v}\cdot\mathbf{grad}p+\\
+ & +v_{i}\frac{\partial\sigma_{ik}^{\prime}}{\partial x_{k}}+\rho\frac{\partial\epsilon}{\partial t}-\epsilon\mathrm{div}\left(\rho\mathbf{v}\right)
+\end{align*}
+
+\end_inset
+
+Utilizando la relación termodinámica
+\begin_inset Formula 
+\[
+d\epsilon=Tds-pdV=Tds+\frac{p}{\rho^{2}}d\rho
+\]
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\[
+\frac{\partial\epsilon}{\partial t}=T\frac{\partial s}{\partial t}+\frac{p}{\rho^{2}}\frac{\partial\rho}{\partial t}=T\frac{\partial s}{\partial t}-\frac{p}{\rho^{2}}\mathrm{div}\left(\rho\mathbf{v}\right)
+\]
+
+\end_inset
+
+Sustituyendo esta expresión e introduciendo la función entalpía 
+\begin_inset Formula $w=\epsilon+\frac{p}{\rho}$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)= & -\left(\frac{1}{2}v^{2}+w\right)\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}\left(\frac{1}{2}v^{2}\right)-\mathbf{v}\cdot\mathbf{grad}p+\\
+ & +\rho T\frac{\partial s}{\partial t}+v_{i}\frac{\partial\sigma_{ik}^{\prime}}{\partial x_{k}}
+\end{align*}
+
+\end_inset
+
+Ahora, gracias a la relación termodinámica 
+\begin_inset Formula $dw=Tds+\frac{dp}{\rho}$
+\end_inset
+
+ transformamos el 
+\begin_inset Formula $\mathbf{grad}p$
+\end_inset
+
+ en 
+\begin_inset Formula 
+\[
+\mathbf{grad}p=\rho\mathbf{grad}w-\rho T\mathbf{grad}s
+\]
+
+\end_inset
+
+así que el último término del segundo miembro de la ecuación anterior puede
+ escribirse como
+\begin_inset Formula 
+\[
+v_{i}\frac{\partial\sigma_{ik}^{\prime}}{\partial x_{k}}=\frac{\partial}{\partial x_{k}}\left(v_{i}\sigma_{ik}^{\prime}\right)-\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}\equiv\mathrm{div}\left(\mathbf{v}\cdot\sigma^{\prime}\right)-\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}
+\]
+
+\end_inset
+
+Sustituyendo estas expresiones y sumando y restando 
+\begin_inset Formula $\mathrm{div}\left(\kappa\mathbf{grad}T\right)$
+\end_inset
+
+, 
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right) & = & -\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+2\right)-\mathbf{v}\cdot\sigma^{\prime}-\kappa\mathbf{grad}T\right)+\nonumber \\
+ &  & +\rho T\left(\frac{\partial s}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s\right)-\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}-\mathrm{div}\left(\kappa\mathbf{grad}T\right)\label{L5 p6 ec49.3}
+\end{eqnarray}
+
+\end_inset
+
+ Comparando esta expresión para la derivada temporal de la energía contenida
+ en el volumen unidad con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p5 ec49.2 Ley general de la conservación de la energía"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+\rho T\left(\frac{\partial s}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s\right)=\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}+\mathrm{div}\left(\kappa\mathbf{grad}T\right)\label{L5 p6 ec49.4 Ec.gral de transf. térmica}
+\end{equation}
+
+\end_inset
+
+que se denomina 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación general de transferencia térmica
+\end_layout
+
+\end_inset
+
+
+\emph on
+ecuación general de transferencia térmica
+\emph default
+.
+ Si no existe viscosidad ni conducción térmica, el segundo miembro es cero
+ y obtenemos de nuevo la ecuación de conservación de la entropía 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:2 2.6 Ecuación de conservación de la entropía"
+
+\end_inset
+
+ correspondiente a un fluido ideal.
+\end_layout
+
+\begin_layout Standard
+El primer miembro de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+ es exactamente la derivada temporal total de la entropía 
+\begin_inset Formula $\frac{ds}{dt}$
+\end_inset
+
+, multiplicada por 
+\begin_inset Formula $\rho T$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\frac{ds}{dt}$
+\end_inset
+
+ da la variación respecto al tiempo de la entropía de una masa unitaria
+ de fluido cuando se mueve a lo largo del espacio, y por tanto, 
+\begin_inset Formula $T\frac{ds}{dt}$
+\end_inset
+
+ es la cantidad de calor que gana dicha unidad de masa por unidad de tiempo.
+ Por tanto, 
+\begin_inset Formula $\rho T\frac{ds}{dt}$
+\end_inset
+
+ es la cantidad de calor que gana por unidad de volumen.
+ Por tanto, la cantidad de calor adquirido por unidad de volumen de fluido
+ es
+\begin_inset Formula 
+\[
+\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}+\mathrm{div}\left(\kappa\mathbf{grad}T\right)
+\]
+
+\end_inset
+
+El primer término es la energía disipada en calor debido a la viscosidad,
+ mientras que el segundo es el calor conducido hacia el interior del volumen.
+\end_layout
+
+\begin_layout Standard
+Si desarrollamos el término 
+\begin_inset Formula $\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+ usando la definición del tensor de tensiones 
+\begin_inset Formula $\sigma_{ik}^{\prime}$
+\end_inset
+
+ dado en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p5 ec:15.3 Tensor de tensiones de viscosidad"
+
+\end_inset
+
+.
+ Tenemos
+\begin_inset Formula 
+\[
+\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}=\eta\frac{\partial v_{i}}{\partial x_{k}}\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}\right)+\zeta\frac{\partial v_{i}}{\partial x_{k}}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}
+\]
+
+\end_inset
+
+Podemos escribir el primer término en la forma equivalente:
+\begin_inset Formula 
+\[
+\frac{1}{2}\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x}\right)^{2}
+\]
+
+\end_inset
+
+ y el segundo como 
+\begin_inset Formula 
+\[
+\zeta\frac{\partial v_{i}}{\partial x_{k}}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}=\zeta\frac{\partial v_{i}}{\partial x_{i}}\frac{\partial v_{l}}{\partial x_{l}}\equiv\zeta\left(\mathrm{div}\mathbf{v}\right)^{2}
+\]
+
+\end_inset
+
+Con lo que la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+ se convierte en 
+\begin_inset Formula 
+\begin{eqnarray}
+\rho T\left(\frac{\partial s}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s\right) & = & \mathrm{div}\left(\kappa\mathbf{grad}T\right)+\nonumber \\
+ &  & +\frac{1}{2}\eta\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x}\right)^{2}+\zeta\left(\mathrm{div}\mathbf{v}\right)^{2}\label{L5 p7 ec49.5}
+\end{eqnarray}
+
+\end_inset
+
+Es decir, la entropía del fluido aumenta como resultado de los procesos
+ irreversibles de conducción térmica y de rozamiento interno.
+ 
+\end_layout
+
+\begin_layout Standard
+Las fórmulas que hemos obtenido hasta ahora se refieren a la entropía de
+ cada elemento de volumen del fluido.
+ Sin embargo, estudiamos la entropía del volumen completo, que es igual
+ a la integral
+\begin_inset Formula 
+\[
+\int\rho s\, dV
+\]
+
+\end_inset
+
+La variación temporal de la entropía total por unidad de tiempo es 
+\begin_inset Formula 
+\[
+\frac{d}{dt}\int\rho s\, dV=\int\frac{\partial\left(\rho s\right)}{\partial t}dV
+\]
+
+\end_inset
+
+Utilizando la ecuación de continuidad y la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p7 ec49.5"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{\partial\left(\rho s\right)}{\partial t} & = & \rho\frac{\partial s}{\partial t}+s\frac{\partial\rho}{\partial t}=-s\mathrm{div}\left(\rho\mathbf{v}\right)-\rho\mathbf{v}\cdot\mathbf{grad}s+\frac{1}{T}\mathrm{div}\left(\kappa\mathbf{grad}T\right)+\\
+ &  & +\frac{\eta}{2T}\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}\right)^{2}+\frac{\zeta}{T}\left(\mathrm{div}\mathbf{v}\right)^{2}
+\end{eqnarray*}
+
+\end_inset
+
+Los dos primeros términos del segundo miembro dan 
+\begin_inset Formula $-\mathrm{div}\left(\rho s\mathbf{v}\right)$
+\end_inset
+
+.
+ La integral de volumen de 
+\begin_inset Formula $\rho s\mathbf{v}$
+\end_inset
+
+ se transforma en la integral de flujo de la entropía 
+\begin_inset Formula $\rho s\mathbf{v}$
+\end_inset
+
+ sobre la superficie.
+ Si consideramos un volumen no limitado del fluido en reposo y en el infinito,
+ la superficie puede hacerse tender a infinito.
+ El integrando de la integral de superficie es entonces 
+\begin_inset Formula $0$
+\end_inset
+
+ y por tanto la integral se anula.
+ La integral del tercer término del segundo miembro se transforma de la
+ siguiente manera:
+\begin_inset Formula 
+\[
+\int\frac{1}{T}\mathrm{div}\left(\kappa\mathbf{grad}T\right)dV=\int\mathrm{div}\left(\frac{\kappa\mathbf{grad}T}{T}\right)dV+\int\frac{\kappa\left(\mathbf{grad}T\right)^{2}}{T^{2}}dV
+\]
+
+\end_inset
+
+Suponiendo que la temperatura del fluido tiende con suficiente rapidez a
+ un valor constante en el infinito, podemos transformar la primera integral
+ en otra extendida a una superficie infinitamente remota sobre la cual 
+\begin_inset Formula $\mathbf{grad}T=0$
+\end_inset
+
+, por lo que se anula toda la integral.
+\end_layout
+
+\begin_layout Standard
+El resultado es
+\begin_inset Formula 
+\begin{eqnarray}
+\frac{d}{dt}\int\rho sdV & = & \int\frac{\kappa\left(\mathbf{grad}T\right)^{2}}{T^{2}}dV+\int\frac{\eta}{2T}\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}-\frac{2}{3}\delta_{ik}\frac{\partial v_{l}}{\partial x_{l}}\right)^{2}dV+\nonumber \\
+ &  & +\int\frac{\zeta}{T}\left(\mathrm{div}\mathbf{v}\right)^{2}dV\label{L5 p8 ec49.6}
+\end{eqnarray}
+
+\end_inset
+
+ El primer término del segundo miembro es la variación respecto al tiempo
+ del aumento de entropía debido a la conducción térmica, y los otros dos
+ términos dan la variación respecto al tiempo del aumento debido al rozamiento
+ interno.
+ Como la entropía sólo puede aumentar, la suma del segundo miembro de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p8 ec49.6"
+
+\end_inset
+
+.
+ El integrando de cada una de las integrales puede ser no nulo aunque se
+ anulen las otras dos integrales, lo que implica que el segundo coeficiente
+ de viscosidad 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ es positivo, igual que 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ y 
+\begin_inset Formula $\eta$
+\end_inset
+
+ (que ya sabíamos que eran positivos).
+\end_layout
+
+\begin_layout Standard
+Al deducir la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p5 ec49.1 Flujo de calor por conducción térmica"
+
+\end_inset
+
+ se ha supuesto tácitamente que el flujo térmico depende únicamente del
+ gradiente de temperaturas y no del gradiente de presiones.
+ Si 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ tuviera un término proporcional a 
+\begin_inset Formula $\mathbf{grad}p$
+\end_inset
+
+, la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p8 ec49.6"
+
+\end_inset
+
+ para la variación respecto al tiempo de la entropía debería incluir otro
+ término que tuviera el producto de 
+\begin_inset Formula $\mathbf{grad}p$
+\end_inset
+
+ por 
+\begin_inset Formula $\mathbf{grad}T$
+\end_inset
+
+ en el integrando.
+ Como este término puede ser positivo o negativo, la derivada respecto al
+ tiempo de la entropía no sería necesariamente positiva, así que no puede
+ darse esta situación.
+\end_layout
+
+\begin_layout Standard
+Un detalle final a tener en cuenta es que, cuando un sistema no está en
+ equilibrio térmico -como un fluido con gradientes de velocidad y de temperatura
+s- las definiciones normales de las magnitudes termodinámicas dejan de tener
+ significado y debemos definirlas de nuevo.
+ En general, elegimos 
+\begin_inset Formula $\rho$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ como antes, donde 
+\begin_inset Formula $\rho$
+\end_inset
+
+ y 
+\begin_inset Formula $\rho\epsilon$
+\end_inset
+
+ son la masa y la energía interna por unidad de volumen, mientras que 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ es el impulso de la unidad de masa de fluido.
+ El resto de magnitudes se definen como si fueran las mismas funciones de
+ 
+\begin_inset Formula $\rho$
+\end_inset
+
+ y 
+\begin_inset Formula $\rho\epsilon$
+\end_inset
+
+ en equilibrio térmico.
+ Sin embargo, la entropía 
+\begin_inset Formula $s=s\left(\rho,\epsilon\right)$
+\end_inset
+
+ deja de ser la 
+\emph on
+verdadera entropía
+\emph default
+, por lo que la integral 
+\begin_inset Formula 
+\[
+\int\rho sdV
+\]
+
+\end_inset
+
+ deja de ser una magnitud que debe aumentar estrictamente con el tiempo.
+ Sin embargo, en el caso de gradientes de velocidades pequeños, 
+\begin_inset Formula $s$
+\end_inset
+
+ es la misma entropía 
+\emph on
+verdadera
+\emph default
+ en la aproximación que hemos utilizado.
+\end_layout
+
+\begin_layout Standard
+Como vemos entonces de obtener la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p8 ec49.6"
+
+\end_inset
+
+, los tres coeficientes 
+\begin_inset Formula $\eta$
+\end_inset
+
+, 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ y 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ que aparecen en las ecuaciones del movimiento de un fluido conductor viscoso
+ determinan completamente las propiedades mecánicas del fluido en la aproximació
+n considerada.
+\end_layout
+
 \end_body
 \end_document
