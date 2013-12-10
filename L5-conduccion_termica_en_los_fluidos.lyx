@@ -748,7 +748,8 @@ verdadera entropía
 \end_inset
 
  deja de ser una magnitud que debe aumentar estrictamente con el tiempo.
- Sin embargo, en el caso de gradientes de velocidades pequeños, 
+ Sin embargo, en el caso de gradientes de velocidades y de temperatura pequeños,
+ 
 \begin_inset Formula $s$
 \end_inset
 
@@ -926,10 +927,372 @@ incompresible
 \end_inset
 
 ).
+ Suponiendo que las diferencias de temperaturas son pequeñas, también podemos
+ despreciar la variación con la temperatura de 
+\begin_inset Formula $\eta,\kappa$
+\end_inset
+
+ y 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+, suponiéndolas constantes.
+ Si escribimos 
+\begin_inset Formula $\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}$
+\end_inset
+
+ como en la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p7 ec49.5"
+
+\end_inset
+
+, obtenemos la ecuación de la transferencia térmica en un fluido incompresible
+ de la forma:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial T}{\partial t}+\mathbf{v}\cdot\mathbf{grad}T=\chi\Delta T+\frac{\nu}{2c_{p}}\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)^{2}\label{L5 p11 ec50.2 Ec. de conducción térmica en fluido incompresible}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\nu=\eta/\rho$
+\end_inset
+
+ es la viscosidad cinemática y donde hemos escrito 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ en función de la 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Conductividad termométrica 
+\begin_inset Formula $\chi=\frac{\kappa}{\rho c_{p}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+conductividad termométrica
+\emph default
+:
+\begin_inset Formula 
+\begin{equation}
+\chi=\frac{\kappa}{\rho c_{p}}\label{L5 p11 Conductividad termométrica}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-PDF-11
+Si el fluido incompresible está en reposo, toda la transferencia de energía
+ se debe a conducción térmica, por lo que podemos eliminar de la ecuación
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.2 Ec. de conducción térmica en fluido incompresible"
+
+\end_inset
+
+ todos los términos en los que interviene la velocidad:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial T}{\partial t}=\chi\Delta T\label{L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)}
+\end{equation}
+
+\end_inset
+
+Esta ecuación se denomina 
+\emph on
+ecuación de la conducción térmica
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Ecuación de la conducción térmica 
+\begin_inset Formula $\frac{\partial T}{\partial t}=\chi\Delta T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ o 
+\emph on
+ecuación de Fourier
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ecuación de Fourier
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Podríamos haber obtenido la misma ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)"
+
+\end_inset
+
+ a partir de la ley de conservación de la energía.
+ La cantidad de calor absorvido en un volumen de fluido por unidad de tiempo
+ es igual al flujo térmico total que entra en el volumen por unidad de tiempo
+ a través de la superficie que lo limita.
+ Esto define una especie de 
+\emph on
+ecuación de continuidad
+\emph default
+ para la cantidad de calor: la cantidad de calor absorvida por unidad de
+ tiempo y unidad de volumen es igual a la divergencia de la densidad de
+ flujo térmico cambiada de signo.
+ Expresando esta igualdad de forma matemática obtenemos
+\begin_inset Formula 
+\[
+\rho c_{p}\frac{\partial T}{\partial t}=-\mathrm{div}\mathbf{q}=\kappa\Delta T
+\]
+
+\end_inset
+
+que como vemos, es la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La aplicabilidad de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)"
+
+\end_inset
+
+ queda fuertemente limitada, ya que para los fluidos sumergidos en un campo
+ gravitatorio, incluso un gradiente de temperatura muy pequeño, resulta
+ en un movimiento considerable del fluido (
+\emph on
+convección
+\emph default
+).
+ Así que sólo podemos tener un fluido en reposo con una distribución de
+ temperaturas no uniforme únicamente si el sentido del gradiente de temperaturas
+ es opuesto al de las fuerzas gravitatorias o si el fluido es muy viscoso.
+\begin_inset Formula 
+\[
+\frac{\partial T}{\partial t}=\chi\Delta T\Rightarrow\begin{cases}
+\text{No aplicable en campos gravitatorios}\Rightarrow(convección)\\
+\text{(incluso }gradT\simeq0\Rightarrow\text{movimiento considerable)}\\
+\text{Excepto si:}\\
+\text{▸ }gradT\text{ sentido opuesto a las fuerzas gravitatorias} & \text{ó}\\
+\text{▸ }\text{fluido muy viscoso}
+\end{cases}
+\]
+
+\end_inset
+
+ El estudio de la ecuación de econducción térmica 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)"
+
+\end_inset
+
+ es interesante ya que también describe la conducción térmica en sólidos.
+\end_layout
+
+\begin_layout Standard
+Si la distribución de temperaturas no-uniforme se mantiene constante en
+ el tiempo (mediante una fuente externa de calor) la ecuación de conductividad
+ térmica se transforma en 
+\begin_inset Formula 
+\begin{equation}
+\Delta T=0\label{L5 p12 ec50.5 Distribución de calor no uniforme constante en el tiempo}
+\end{equation}
+
+\end_inset
+
+Es decir, que la distribución de temperturas estacionarias en un medio en
+ reposo satisface la ecuación de Laplace.
+\end_layout
+
+\begin_layout Standard
+En el caso más general, cuando no podemos considerar 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ constante, en lugar de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p12 ec50.5 Distribución de calor no uniforme constante en el tiempo"
+
+\end_inset
+
+ tenemos:
+\begin_inset Formula 
+\begin{equation}
+\mathrm{div}\left(\kappa\mathbf{grad}T\right)=0\label{L5 p12 ec50.6 Ec.gral (k no constante), distrib. de calor no uniforme constante en el tiempo}
+\end{equation}
+
+\end_inset
+
+Si el fluido tiene fuentes o focos externos de calor, la ecuación térmica
+ debe contener otro término.
+ Llamamos 
+\begin_inset Formula $Q$
+\end_inset
+
+ a la cantidad de calor generada por estas fuentes por unidad de volumen
+ y unidad de tiempo.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ es, en general, una función del tiempo y de las coordenadas.
+ En este caso, la ecuación de conducción térmica (también llamada 
+\emph on
+ecuación de balance térmico
+\emph default
+) es
+\begin_inset Formula 
+\begin{equation}
+\rho c_{p}\frac{\partial T}{\partial t}=\kappa\Delta T+Q\label{L5 p12 ec50.7 Ec. térmica (fluido con focos de calor)}
+\end{equation}
+
+\end_inset
+
+ A continuación nos preocupamos de las condiciones límite de la ecuación
+ de conducción térmica que son válidas entre dos medios.
+ En primer lugar, las temperaturas de ambos medios deben ser iguales en
+ su frontera:
+\begin_inset Formula 
+\begin{equation}
+T_{1}=T_{2}\label{L5 p12 ec50.8 Cond.límite dos medios}
+\end{equation}
+
+\end_inset
+
+Además, el flujo térmico que sale de un medio debe ser igual al que entra
+ en el otro.
+ Tomando un sistema de coordenadas en el que la frontera esté en reposo,
+ podemos escribir esta condición como
+\begin_inset Formula 
+\[
+\kappa_{1}\mathbf{grad}T_{1}\cdot d\mathbf{f}=\kappa_{2}\mathbf{grad}T_{2}\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+ para cada elemento de superficie 
+\begin_inset Formula $d\mathbf{f}$
+\end_inset
+
+.
+ Si escribimos 
+\begin_inset Formula $\mathbf{grad}T\cdot d\mathbf{f}=\frac{\partial T}{\partial n}df$
+\end_inset
+
+, donde 
+\begin_inset Formula $\frac{\partial T}{\partial n}$
+\end_inset
+
+ es la derivada de 
+\begin_inset Formula $T$
+\end_inset
+
+ a lo largo de la normal a la superficie, tenemos la condición límite de
+ la forma
+\begin_inset Formula 
+\begin{equation}
+\kappa_{1}\frac{\partial T_{1}}{\partial n}=\kappa_{2}\frac{\partial T_{2}}{\partial n}\label{L5 p12 ec50.9 Cond.límite en la frontera de dos medios:igualdad del flujo térmico}
+\end{equation}
+
+\end_inset
+
+Si en la superficie de separación existen focos externos de calor que generan
+ una cantidad de calor 
+\begin_inset Formula $Q^{(s)}$
+\end_inset
+
+ por unidad de área y unidad de tiempo, entonces la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p12 ec50.9 Cond.límite en la frontera de dos medios:igualdad del flujo térmico"
+
+\end_inset
+
+ debe sustituirse por
+\begin_inset Formula 
+\begin{equation}
+\kappa_{1}\frac{\partial T_{1}}{\partial n}-\kappa_{2}\frac{\partial T_{2}}{\partial n}=Q^{\left(s\right)}\label{L5 p12 ec50.10 Cond.límite de la ec.térmica (focos en la sup. de separación)}
+\end{equation}
+
+\end_inset
+
+En los problemas en los que interviene una distribución de temperaturas
+ en presencia de focos térmicos, la intensidad de estos focos se expresa
+ como función de la temperatura 
+\begin_inset Formula $Q=Q\left(T\right)$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $Q\left(T\right)$
+\end_inset
+
+ aumenta lo suficientemente rápido puede que no sea posible establecer una
+ distribución de temperaturas estacionaria en un cuerpo cuyas fronteras
+ se mantienen en condiciones fijas (por ejemplo, una temperatura dada).
+ La pérdida de calor a través de una superficie externa del cuerpo es proporcion
+al a cierto valor medio de la diferencia de temperaturas 
+\begin_inset Formula $T-T_{0}$
+\end_inset
+
+ entre el cuerpo y el medio externo, independientemente de la ley de generación
+ térmica dentro del cuerpo.
+ Así, si 
+\begin_inset Formula $Q\left(T\right)$
+\end_inset
+
+ aumenta suficientemente rápido, la pérdida de calor puede que no sea suficiente
+ para obtener un estado de equilibrio.
+\end_layout
+
+\begin_layout Standard
+Esta imposibilidad para establecer un estado de equilibrio es la base de
+ la 
+\emph on
+teoría térmica de las explosiones
+\emph default
+.
 \end_layout
 
 \end_body
