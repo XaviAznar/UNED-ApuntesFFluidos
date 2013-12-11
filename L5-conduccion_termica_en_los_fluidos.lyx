@@ -1295,5 +1295,367 @@ teoría térmica de las explosiones
 .
 \end_layout
 
+\begin_layout Section
+Conducción térmica en un medio infinito (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L5 sec:51 Conducción térmica en un medio infinito (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideramos la conducción térmica de un medio infinito en reposo.
+ Suponemos que inicialmente la distribución de temperaturas 
+\begin_inset Formula $\left(t=0\right)$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+T=T_{0}\left(x,y,z\right)
+\]
+
+\end_inset
+
+ donde 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ es una función determinada de las coordenadas.
+ Nuestro problema es averiguar la distribución de temperaturas en todos
+ los instantes siguientes.
+\end_layout
+
+\begin_layout Standard
+Empezamos desarrollando la función 
+\begin_inset Formula $T$
+\end_inset
+
+ como una integral de Fourier respecto a las coordenadas
+\begin_inset Formula 
+\begin{equation}
+T=\int T_{k}\left(t\right)\exp\left(i\mathbf{k}\cdot\mathbf{r}\right)d^{3}\mathbf{k}\qquad d^{3}\mathbf{k}=dk_{x}dk_{y}dk_{z}\label{L5 p15 ec51.1 T como integral de Fourier}
+\end{equation}
+
+\end_inset
+
+donde los coeficientes del desarrollo vienen dados por 
+\begin_inset Formula 
+\[
+T_{k}\left(t\right)=\frac{1}{\left(2\pi\right)^{3}}\int T\left(x^{\prime},y^{\prime},z^{\prime},t^{\prime}\right)\exp\left(-i\mathbf{k\cdot r}^{\prime}\right)dV^{\prime}\qquad dV^{\prime}=dx^{\prime}dy^{\prime}dz^{\prime}
+\]
+
+\end_inset
+
+Sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p15 ec51.1 T como integral de Fourier"
+
+\end_inset
+
+ en la ecuación de la conducción térmica para el fluido en reposo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)"
+
+\end_inset
+
+, tenemos
+\begin_inset Formula 
+\[
+\int\left(\frac{dT_{k}}{dt}+k^{2}\chi T_{k}\right)\exp\left(i\mathbf{k\cdot r}\right)d^{3}\mathbf{k}=0
+\]
+
+\end_inset
+
+de donde obtenemos 
+\begin_inset Formula $T_{k}$
+\end_inset
+
+ en función del tiempo:
+\begin_inset Formula 
+\[
+\frac{dT_{k}}{dt}+k^{2}\chi T_{k}=0\rightarrow T_{k}=T_{0k}\exp\left(-k^{2}\chi t\right)
+\]
+
+\end_inset
+
+Reintroduciendo este resultado en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p15 ec51.1 T como integral de Fourier"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+T=\int T_{0k}\exp\left(-k^{2}\chi t\right)\exp\left(i\mathbf{k\cdot r}\right)d^{3}\mathbf{k}\label{L5 p15 ec51.2}
+\end{equation}
+
+\end_inset
+
+Como tenemos que obtener 
+\begin_inset Formula $T\left(t=0\right)=T_{0}\left(x,y,z\right)$
+\end_inset
+
+, resulta evidente que los coeficientes 
+\begin_inset Formula $T_{0k}$
+\end_inset
+
+ son los coeficientes del desarrollo de la función 
+\begin_inset Formula $T_{0}\left(x,y,z\right)$
+\end_inset
+
+ como una integral de Fourier:
+\begin_inset Formula 
+\[
+T_{0k}=\frac{1}{\left(2\pi\right)^{3}}\int T_{0}\left(x^{\prime},y^{\prime},z^{\prime}\right)\exp\left(-i\mathbf{k\cdot r}^{\prime}\right)dV^{\prime}
+\]
+
+\end_inset
+
+Finalmente, sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p15 ec51.2"
+
+\end_inset
+
+, obtenemos
+\begin_inset Formula 
+\[
+T=\frac{1}{\left(2\pi\right)^{3}}\iint T_{0}\left(x^{\prime},y^{\prime},z^{\prime}\right)\exp\left(-k^{2}\chi t\right)\exp\left(i\mathbf{k}\cdot\left(\mathbf{r}-\mathbf{r}^{\prime}\right)\right)dV^{\prime}d^{3}\mathbf{k}
+\]
+
+\end_inset
+
+ La integral extendida a 
+\begin_inset Formula $\mathbf{k}$
+\end_inset
+
+ es el producto de tres integrales simples, cada una de ellas de la forma
+ 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\exp\left(-k_{x}^{2}\chi t\right)\exp\left(ik_{x}\left(x-x^{\prime}\right)\right)dk_{x}=\int_{-\infty}^{\infty}\exp\left(-k_{x}^{2}\chi t\right)\cos\left(k_{x}\left(x-x^{\prime}\right)\right)
+\]
+
+\end_inset
+
+ la integral análoga sustituyendo el coseno por el seno es cero, pues la
+ función seno es impar.
+ Utilizando la fórmula:
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\exp\left(-\alpha x^{2}\right)\cos\left(\beta x\right)dx=\sqrt{\frac{\pi}{\alpha}}\exp\left(-\frac{\beta^{2}}{4\alpha}\right)\qquad\left(\alpha>0\right)
+\]
+
+\end_inset
+
+ tenemos, al final
+\begin_inset Formula 
+\begin{multline}
+T\left(x,y,z,t\right)=\frac{1}{8\left(\pi\chi t\right)^{3/2}}\int T_{0}\left(x^{\prime},y^{\prime},z^{\prime}\right)\times\\
+\times\exp\left(-\frac{1}{4\chi t}\left[\left(x-x^{\prime}\right)^{2}+\left(y-y^{\prime}\right)^{2}+\left(z-z^{\prime}\right)^{2}\right]\right)dV^{\prime}\label{L5 p15 ec51.3 Dist. de T a lo largo del tiempo}
+\end{multline}
+
+\end_inset
+
+Esta fórmula nos da la solución completa al problema.
+\end_layout
+
+\begin_layout Standard
+Si la distribución de temperaturas inicial es función de una sola coordeanda,
+ 
+\begin_inset Formula $x$
+\end_inset
+
+, entonces podemos integrar respecto a 
+\begin_inset Formula $y^{\prime},z^{\prime}$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p15 ec51.3 Dist. de T a lo largo del tiempo"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+T\left(x,t\right)=\frac{1}{2\sqrt{\pi\chi t}}\int_{-\infty}^{\infty}T_{0}\left(x^{\prime}\right)\exp\left(-\frac{\left(x-x^{\prime}\right)^{2}}{4\chi t}\right)dx^{\prime}\label{L5 p16 ec51.4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si suponemos que en el instante 
+\begin_inset Formula $t=0$
+\end_inset
+
+ la temperatura es cero en todo el espacio excepto en una capa delgada situada
+ en 
+\begin_inset Formula $x=0$
+\end_inset
+
+, en donde es infinita, de modo que la cantidad de calor total (proporcional
+ a 
+\begin_inset Formula $\int T_{0}\left(x\right)dx$
+\end_inset
+
+) es finita.
+ Dicha distribución puede representarse mediante la función delta: 
+\begin_inset Formula $T_{0}=const\times\delta\left(x\right)$
+\end_inset
+
+.
+ La integración de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p16 ec51.4"
+
+\end_inset
+
+ equivale a sustituir 
+\begin_inset Formula $x^{\prime}$
+\end_inset
+
+ por cero:
+\begin_inset Formula 
+\begin{equation}
+T\left(x,t\right)=const\times\frac{1}{2\sqrt{\pi\chi t}}\exp\left(-\frac{x^{2}}{4\chi t}\right)\label{L5 p16 ec51.5}
+\end{equation}
+
+\end_inset
+
+Del mismo modo, si en el instante inicial se concentra una cantidad finita
+ de calor en un punto (el origen), la distribución de temperaturas con el
+ tiempo viene dada por 
+\begin_inset Formula 
+\begin{equation}
+T\left(r,t\right)=const\times\frac{1}{8\left(\pi\chi t\right)^{3/2}}\exp\left(-\frac{r^{2}}{4\chi t}\right)\label{L5 p16 ec51.6 Foco de calor en el origen}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $r$
+\end_inset
+
+ es la distancia desde el origen.
+ Al pasar el tiempo, la temperatura decrece de forma proporcional a 
+\begin_inset Formula $t^{-3/2}$
+\end_inset
+
+ en 
+\begin_inset Formula $r=0$
+\end_inset
+
+, mientras que la temperatura en el espacio contiguo aumenta del mismo modo.
+ La región donde la temperatura es apreciablemente distinta de cero se extiende.
+ El modo de esta expansión viene determinado, principalmente, por el factor
+ exponencial en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p16 ec51.6 Foco de calor en el origen"
+
+\end_inset
+
+.
+ El orden de magnitud de esta región viene dado por 
+\begin_inset Formula 
+\begin{equation}
+\frac{l^{2}}{\chi t}\sim1\Rightarrow l\sim\sqrt{\chi t}\label{L5 p15 ec51.7 Zona de influencia del foco de calor}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otra forma de interpretar la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p15 ec51.7 Zona de influencia del foco de calor"
+
+\end_inset
+
+ es suponiendo que 
+\begin_inset Formula $l$
+\end_inset
+
+ es el orden de magnitud de las dimensiones del cuerpo.
+ Entonces podemos decir que, si el cuerpo se calienta de un modo no uniforme,
+ el orden de magnitud 
+\begin_inset Formula $\tau$
+\end_inset
+
+ del tiempo requerido para que la temperatura sea más o menos la misma en
+ todo el cuerpo es
+\begin_inset Formula 
+\begin{equation}
+\tau\sim\frac{l^{2}}{\chi}\label{L5 p16 ec51.8}
+\end{equation}
+
+\end_inset
+
+El tiempo 
+\begin_inset Formula $\tau$
+\end_inset
+
+ puede denominarse 
+\series bold
+tiempo de relajación para la conducción térmica
+\series default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Tiempo de relajación para la conducción térmica 
+\begin_inset Formula $\tau$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, y es proporcional al cuadrado de la dimensión del cuerpo e inversamente
+ proporcional a la conductividad termométrica.
+\end_layout
+
+\begin_layout Standard
+El proceso de conducción térmica descrito por las fórmulas que hemos obtenido
+ tiene la propiedad de que el efecto que produce una perturbación cualquiera
+ se propaga instantáneamente a través de todo el espacio.
+ En la fórmual 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p16 ec51.5"
+
+\end_inset
+
+ vemos que el calor procedente de una fuenta puntual se propaga de tal manera
+ que incluso un instante después del momento inicial, la temperatura sólo
+ se anula en el infinito.
+ Esta propiedad es válida también para un emdio en el que la conductividad
+ termométrica varíe con la temperatura 
+\begin_inset Formula $\chi\left(T\right)$
+\end_inset
+
+, siempre y cuando no se anule en algún punto.
+\end_layout
+
 \end_body
 \end_document
