@@ -2247,7 +2247,7 @@ reference "L3 p25 ec31.2 Viscosidad turbulenta"
 
 \end_inset
 
-:
+: 
 \begin_inset Formula $\chi_{turb}\sim l\Delta u$
 \end_inset
 
@@ -2604,7 +2604,7 @@ reference "L5 p31 ec54.3"
 \begin_inset Formula $y_{0}$
 \end_inset
 
-, entonces la consatnte (multiplicada por el coeficiente) debe ser la variación
+, entonces la constante (multiplicada por el coeficiente) debe ser la variación
  de temperatura a través de la subcapa viscosa.
  Esta variación depende de 
 \begin_inset Formula $\nu$
@@ -2648,7 +2648,7 @@ T=\frac{\beta q}{b\rho c_{p}v_{*}}\left(\log\left(\frac{yv_{*}}{\nu}\right)+f\le
 
 \end_inset
 
-Podemos utilziar esta fórmula para calcular la transferencia térmica en
+Podemos utilizar esta fórmula para calcular la transferencia térmica en
  el caso de un flujo turbulento en una tubería, a lo largo de una placa
  plana, etc...
 \end_layout
