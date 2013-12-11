@@ -2676,5 +2676,28 @@ Guía de la Asignatura
 .
 \end_layout
 
+\begin_layout Section
+Convección libre (L) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L5 sec:56 Convección-libre-(L)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta sección está marcada como de 
+\emph on
+sólo lectura
+\emph default
+ en la 
+\emph on
+Guía de la Asignatura
+\emph default
+.
+\end_layout
+
 \end_body
 \end_document
