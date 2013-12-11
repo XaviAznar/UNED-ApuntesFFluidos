@@ -1657,5 +1657,422 @@ reference "L5 p16 ec51.5"
 , siempre y cuando no se anule en algún punto.
 \end_layout
 
+\begin_layout Section
+Conducción térmica en un medio finito (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L5 sec52 Conducción térmica en un medio finito (E)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La idea general de esta sección es que la conducción térmica en un medio
+ finito es igual a la conducción térmica en un medio infinito con la elección
+ adecuada de condiciones límite.
+ Estas condiciones límite se eligen de manera que el problema sea equivalente
+ a calcular la conducción térmica como si el medio fuera infinito.
+\end_layout
+
+\begin_layout Standard
+La sección plantea diferentes problemas con distribuciones de temperaturas
+ iniciales diferentes, dedicándose a solucionarlos.
+\end_layout
+
+\begin_layout Section
+Ley de semejanza para la transferencia térmica (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L5 sec53 Ley de semejanza para la transferencia térmica (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La transferencia térmica en un fluido es más compleja que en un sólido,
+ ya que el fluido puede estar en movimiento.
+ Un cuerpo caliente sumergido en un fluido móvil se enfría más rápidamente
+ que si estuviera el fluido en reposo (ya que aquí la transferencia térmica
+ se realizaría únicamente por conducción).
+ El movimiento de un fluido que se calienta de forma no uniforme se denomina
+ 
+\series bold
+convección
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+Suponemos que las diferencias de temperaturas en el fluido son pequeñas
+ para que puedan suponerse independientes de la temperatura, pero grandes
+ para que podamos despreciar con ellas las variaciones de temperatura producidas
+ por el calor procedente de la disipación de energía debida al rozamiento
+ interno.
+ En esta situación, podemos despreciar el término de viscosidad en la ecuación
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.2 Ec. de conducción térmica en fluido incompresible"
+
+\end_inset
+
+, dejando
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial T}{\partial t}+\mathbf{v}\cdot\mathbf{grad}T=\chi\Delta T\label{L5 p26 ec53.1}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\chi=\frac{\kappa}{\rho c_{p}}$
+\end_inset
+
+ es la conductividad termométrica.
+ Esta ecuación, junto con la ecuación de Navier-Stokes y la ecuación de
+ continuidad determina completamente la convección en las condiciones considerad
+as.
+\end_layout
+
+\begin_layout Standard
+A partir de ahora sólo estamos interesados en el 
+\series bold
+flujo convectivo estacionario
+\series default
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Para que la convección sea estacionaria, es necesario que los cuerpos sólidos
+ en el fluido contengan fuentes de calor que mantengan su temperatura constante.
+\end_layout
+
+\end_inset
+
+.
+ En este caso, 
+\series bold
+todas las derivadas temporales son nulas
+\series default
+ y tenemos las siguientes ecuaciones fundamentales:
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{v}\cdot\mathbf{grad}T & = & \chi\Delta t\label{L5 p26 ec53.2 Ec. Cond. térmica}\\
+\left(\mathbf{v}\cdot\mathbf{grad}\right)\mathbf{v} & = & -\mathbf{grad}\left(\frac{p}{\rho}\right)+\nu\Delta\mathbf{v}\label{L5 p26 ec53.3 Ec. Navier-Stokes}\\
+\mathrm{div}\left(\mathbf{v}\right) & = & 0\label{L5 p26 ec53.3 Ec. de continuidad}
+\end{eqnarray}
+
+\end_inset
+
+Este sistema de ecuaciones tiene como incógnitas 
+\begin_inset Formula $\mathbf{v},T$
+\end_inset
+
+ y 
+\begin_inset Formula $p/\rho$
+\end_inset
+
+, con dos constantes 
+\begin_inset Formula $\nu$
+\end_inset
+
+ y 
+\begin_inset Formula $\chi$
+\end_inset
+
+.
+ La solución de estas ecuaciones depende, a través de las condiciones límite,
+ de una cierta longitud característica 
+\begin_inset Formula $l$
+\end_inset
+
+ del cuerpo, de la velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+ del fluido y de la diferencia 
+\begin_inset Formula $T_{1}-T_{0}$
+\end_inset
+
+ entre la temperatura del fluido y del cuerpo.
+\end_layout
+
+\begin_layout Standard
+La temperatura viene determinada por la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p26 ec53.2 Ec. Cond. térmica"
+
+\end_inset
+
+, que es lineal y homogénea en 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Eso significa que puede multiplicarse por una constante y seguirá satisfaciendo
+ las ecuaciones.
+ Es decir, que 
+\emph on
+la unidad de medida de la temperatura puede escogerse arbitrariamente
+\emph default
+.
+ Así que la mediremos en 
+\emph on
+grados
+\emph default
+, que es la unidad normal de temperatura.
+\end_layout
+
+\begin_layout Standard
+Tenemos cinco parámetros disponibles en este problema de convección:
+\begin_inset Formula 
+\[
+\nu=\chi=\frac{cm^{2}}{s}\quad U=\frac{cm}{s}\quad l=cm\quad T_{1}-T_{0}=grados
+\]
+
+\end_inset
+
+A partir de estas cantidades podemos formar dos combinaciones adimensionales
+ independientes: el número de Reynolds 
+\begin_inset Formula $R=Ul/\nu$
+\end_inset
+
+ y el número de Prandtl
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Número de Prandtl 
+\begin_inset Formula $P=\frac{\nu}{\chi}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+P=\frac{\nu}{\chi}\label{L5 p27 ec53.4 Número de Prandtl}
+\end{equation}
+
+\end_inset
+
+Cualquier otra combinación adimensional puede expresarse en función de 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $P$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El 
+\series bold
+número de Prandtl
+\series default
+ es una constante del material y no depende de las propiedades del flujo.
+ Para los gases 
+\begin_inset Formula $P\sim1$
+\end_inset
+
+, mientras que para los fluido su valor varía mucho más.
+ Si el fluido es muy viscoso, 
+\begin_inset Formula $P$
+\end_inset
+
+ puede ser muy grande.
+\end_layout
+
+\begin_layout Standard
+Llegamos a la conclusión de que en la convección estacionaria, las distribucione
+s de temperatura y de velocidad son de la forma
+\begin_inset Formula 
+\begin{equation}
+\frac{T-T_{0}}{T_{1}-T_{0}}=f\left(\frac{\mathbf{r}}{l},R,P\right)\quad\frac{\mathbf{v}}{U}=f\left(\frac{\mathbf{r}}{l},R\right)\label{L5 p27 ec53.5}
+\end{equation}
+
+\end_inset
+
+La función adimensional que da la distribución de temperaturas depende de
+ los parámetros 
+\begin_inset Formula $R$
+\end_inset
+
+ y 
+\begin_inset Formula $P$
+\end_inset
+
+, mientras que la distribución de velocidades sólo depende de 
+\begin_inset Formula $R$
+\end_inset
+
+, ya que está determinada por 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p26 ec53.3 Ec. Navier-Stokes"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p26 ec53.3 Ec. de continuidad"
+
+\end_inset
+
+ en las que no interviene la conductividad.
+ 
+\series bold
+Dos flujos convectivos son semejantes si sus números de Reynolds y de Prandtl
+ son iguales
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+La transferencia térmica entre cuerpos sólidos y el fluido está caracterizada
+ normalmente por el 
+\emph on
+coeficiente de transferencia térmica
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de transferencia térmica 
+\begin_inset Formula $\alpha=\frac{q}{T_{1}-T_{0}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\emph default
+, definido por
+\begin_inset Formula 
+\begin{equation}
+\alpha=\frac{q}{T_{1}-T_{0}}\label{L5 p27 ec53.6 Coef. de transf. térmica}
+\end{equation}
+
+\end_inset
+
+en donde 
+\begin_inset Formula $q$
+\end_inset
+
+ es la 
+\emph on
+densidad de flujo térmico
+\emph default
+ a través de la superficie y 
+\begin_inset Formula $T_{1}-T_{0}$
+\end_inset
+
+ es la diferencia de temperaturas característica entre el cuerpo sólido
+ y el fluido.
+ Si se conoce la distribución de temperaturas en el fluido, el coeficiente
+ de transferencia térmica se ecuentra calculando la densidad de flujo térmico
+ 
+\begin_inset Formula $q=-\kappa\frac{\partial T}{\partial n}$
+\end_inset
+
+ en el límite del fluido (tomándose la derivada a lo largo de la normal
+ a la superficie).
+ El coeficiente de trasnferencia térmica 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ 
+\series bold
+no es una magnitud adimensional
+\series default
+.
+ Una magnitud adimensional que caracteriza la transferencia térmica se denomina
+ 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Número de Nusselt 
+\begin_inset Formula $N=\frac{\alpha l}{\kappa}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+número de Nusselt
+\emph default
+:
+\begin_inset Formula 
+\begin{equation}
+N=\frac{\alpha l}{\kappa}\label{L5 p28 ec53.7 Número de Nusselt}
+\end{equation}
+
+\end_inset
+
+A partir de razonamientos de semejanza, en el caso de un tipo determinado
+ de flujo convectivo, el número de Nusselt es una función definida únicamente
+ a partir de los números de Reynolds y de Prandtl
+\begin_inset Formula 
+\begin{equation}
+N=f\left(R,P\right)\label{L5 p28 ec53.8}
+\end{equation}
+
+\end_inset
+
+Esta función es muy simple en el caso de la convección para números de Reynolds
+ suficientemente pequeños.
+ Estos corresponden a velocidades también pequeñas.
+ Por tanto, en primera aproximación, podemos despreciar el término de velocidad
+ de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p26 ec53.2 Ec. Cond. térmica"
+
+\end_inset
+
+, de modo que la distribución de temperaturas está determinada por la ecuación
+ 
+\begin_inset Formula $\Delta T=0$
+\end_inset
+
+, es decir, la ecuación ordinaria de conducción térmica estacionaria en
+ un medio en reposo.
+ El coeficiente de transferencia térmica no puede depender entonces de la
+ velocidad ni de la viscosidad, por lo que en este caso 
+\begin_inset Formula 
+\begin{equation}
+N=constante\label{L5 p28 ec53.9}
+\end{equation}
+
+\end_inset
+
+y al calcular la constante del fluido puede suponerse que está en reposo.
+\end_layout
+
 \end_body
 \end_document
