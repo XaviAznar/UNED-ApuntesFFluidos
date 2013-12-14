@@ -73,5 +73,678 @@ customHeadersFooters
 Difusión
 \end_layout
 
+\begin_layout Section
+Ecuaciones de la dinámica de fluidos para una mezcla (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L6 sec57 Ecuaciones de la dinámica de fluidos para una mezcla (B)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hasta ahora hemos supuesto que el fluido es completamente homogéneo.
+ Si se trata de una mezcla de fluidos, entonces las ecuaciones de la dinámica
+ de fluidos deben modificarse considerablemente.
+\end_layout
+
+\begin_layout Standard
+Empezamos analizando mezclas de sólo dos componentes.
+ La composición de la mezcla se describe mediante la concentración
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Concentración 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $c$
+\end_inset
+
+, definida como el cociente de masa de un componente respecto a la masa
+ total del fluido en un volumen determinado.
+\end_layout
+
+\begin_layout Standard
+A medida que transcurre el tiempo, la distribución de la concentración a
+ través del fluido, en general, variará.
+ Esta variación puede producirse de dos maneras.
+ La primera se da cuando existe movimiento macroscópico del fluido.
+ En este caso, cualquier porción pequeña del fluido se mueve como un todo,
+ sin que varíe su composición, lo que da lugar a una mezcla puramente mecánica
+ del fluido; aunque la composición del mismo no se modifica, la concentración
+ del fluido en un punto cualquiera del espacio varía con el tiempo.
+ Si ignoramos cualquier proceso de conducción térmica y de rozamiento interno,
+ esta variación de concentración es un proceso termodinámico reversible
+ y no da como resultado ninguna disipación de energía (ver figura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 sec57 fig:variación de la concentración por mezcla mecánica del fluido"
+
+\end_inset
+
+).
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/L6-sec57-1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Variación de la concentración: mezcla mecánica del fluido (no se produce
+ disipación de energía si despreciamos el rozamiento interno y la conducción
+ térmica) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L6 sec57 fig:variación de la concentración por mezcla mecánica del fluido"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El segundo proceso por el que puede variar la concentración es mediante
+ la transferencia molecular de los componentes de una parte del fluido a
+ otra.
+ En este caso se iguala la concentración por intercambio directo de cada
+ parte pequeña de fluido.
+ Este proceso de denomina 
+\series bold
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\series medium
+Difusión
+\end_layout
+
+\end_inset
+
+difusión
+\series default
+.
+ La difusión es un proceso irreversible y, como la conducción térmica y
+ la viscosidad es una de las fuentes de disipación de energía en una mezcla
+ de fluidos.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename imgs/L6-sec57-2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Variación de la concentración: difusión (se produce intercambio directo
+ de partículas entre cada una de las pequeñas partes en las que hemos dividido
+ el fluido).
+ La difusión es un proceso irreversible y es uno de los métodos -junto a
+ la conducción y a la viscosidad- por el que se produce disipación de energía
+ en una mezcla.
+\begin_inset CommandInset label
+LatexCommand label
+name "L6 sec57 fig: variación de la concentración por difusión"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\rho$
+\end_inset
+
+ a la densidad total del fluido.
+ La ecuación de continuidad para la masa total del fluido es, como siempre
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\rho}{\partial t}+\mathrm{div}\left(\rho\mathbf{v}\right)=0\label{L6 p5 ec57.1 Ec. de continuidad}
+\end{equation}
+
+\end_inset
+
+Esto significa que la masa total del fluido en un volumen cualquiera puede
+ variar únicamente por el movimiento del fluido que entra o sale de dicho
+ volumen.
+ Estrictamente hablando, incluso el concepto de velocidad debe 
+\emph on
+redefinirse
+\emph default
+ cuando estamos hablando de mezclas de fluidos.
+ Escribiendo la ecuación de continuidad como en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "L6 p5 ec57.1 Ec. de continuidad"
+
+\end_inset
+
+ hemos definido la velocidad del mismo modo que antes, como el impulso total
+ de la unidad de masa del fluido.
+\end_layout
+
+\begin_layout Standard
+En el caso de una mezcla, tampoco es necesario modificiar la ecuación de
+ Navier-Stokes, así que nos encargaremos de deducir el resto de ecuaciones
+ necesarias para describir la dinámica del fluido.
+\end_layout
+
+\begin_layout Standard
+Si no hay difusión, la composición de un fluido permanece sin variación
+ durante su movimiento.
+ Esto significa que la derivada total de 
+\begin_inset Formula $c$
+\end_inset
+
+ debe ser cero, es decir:
+\begin_inset Formula 
+\[
+\frac{dc}{dt}=0=\frac{\partial c}{\partial t}+\mathbf{v}\cdot\mathbf{grad}c=0
+\]
+
+\end_inset
+
+Esta ecuación la podemos reescribir, usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p5 ec57.1 Ec. de continuidad"
+
+\end_inset
+
+ como:
+\begin_inset Formula 
+\[
+\frac{\partial\left(\rho c\right)}{\partial t}+\mathrm{div}\left(\rho c\mathbf{v}\right)=0
+\]
+
+\end_inset
+
+es decir, como una ecuación de continuidad para uno de los componentes de
+ la mezcla (donde 
+\begin_inset Formula $\rho c$
+\end_inset
+
+ es la masa del componente de la mezcla por unidad de volumen).
+ La ecuación anterior, de forma integral
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\int\rho cdV=-\oint\rho c\mathbf{v}\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+De esta forma se ve claramente que la variación respecto al tiempo de un
+ componente cualquiera de la mezcla en el volumen es igual a la cantidad
+ del componente que se transporta a través de la superficie que rodea al
+ volumen (debido al movimiento del fluido).
+\end_layout
+
+\begin_layout Standard
+Cuando se produce difusión, además del flujo 
+\begin_inset Formula $\rho c\mathbf{v}$
+\end_inset
+
+ del componente en cuestión, existe otro flujo que es el resultado de la
+ transferencia de los componentes, aunque el fluido como un todo esté en
+ reposo.
+ Sea 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ la densidad de este flujo de difusión
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Densidad de flujo de difusión 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, es decir, la cantidad de componente transortado por difusión a través
+ del área unidad por unidad de tiempo.
+ Entonces tenemos, para la variación de la cantidad de componente respecto
+ al tiempo
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\int\rho cdV=-\oint\rho c\mathbf{v}\cdot d\mathbf{f}-\oint\mathbf{i}\cdot d\mathbf{f}
+\]
+
+\end_inset
+
+o en forma diferencial
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\left(\rho c\right)}{\partial t}=-\mathrm{div}\left(\rho c\mathbf{v}\right)-\mathrm{div}\left(\mathbf{i}\right)\label{L6 p6 ec57.2}
+\end{equation}
+
+\end_inset
+
+Como antes, usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p5 ec57.1 Ec. de continuidad"
+
+\end_inset
+
+ podemos reescribir la ecuación anterior como una ecuación de continuidad
+\begin_inset Formula 
+\begin{equation}
+\rho\left(\frac{\partial c}{\partial t}+\mathbf{v}\cdot\mathbf{grad}c\right)=-\mathrm{div}\left(\mathbf{i}\right)\label{L6 p6 ec57.3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para deducir la siguiente ecuación repetimos los argumentos utilizados en
+ la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 sec49 Ecuación general de la transferencia de calor (B)"
+
+\end_inset
+
+, aunque ahora las magnitudes termodinámicas correspondientes al fluido
+ también son funciones de la concentración.
+ Al calcular la derivada 
+\begin_inset Formula $\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)$
+\end_inset
+
+ ahora debemos tener en cuenta que las identidades termodinámicas correspondient
+es a la energía y a la entalpía tienen ahora un término adicional en el
+ que interviene la diferencia de concentración.
+\begin_inset Formula 
+\begin{eqnarray*}
+d\epsilon & = & Tds+\frac{p}{\rho^{2}}d\rho+\mu dc\\
+dw & = & Tds+\frac{1}{\rho}dp+\mu dc
+\end{eqnarray*}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\mu$
+\end_inset
+
+ es un potencial químico.
+ De acuedo con estas ecuaciones aparece un término adicional 
+\begin_inset Formula $\rho\mu\frac{\partial c}{\partial t}$
+\end_inset
+
+ en la derivada 
+\begin_inset Formula $\rho\frac{\partial\epsilon}{\partial t}$
+\end_inset
+
+.
+ Escribiendo la segunda relación termodinámica de la forma
+\begin_inset Formula 
+\[
+dp=\rho dw-\rho Tds-\rho\mu dc
+\]
+
+\end_inset
+
+vemos que el término 
+\begin_inset Formula $-\mathbf{v}\cdot\mathbf{grad}p$
+\end_inset
+
+ tendrá un término adicional 
+\begin_inset Formula $\rho\mu\mathbf{v}\cdot\mathbf{grad}c$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Así que tenemos que suma 
+\begin_inset Formula $\rho\mu\left(\frac{\partial c}{\partial t}+\mathbf{v}\cdot\mathbf{grad}c\right)$
+\end_inset
+
+ a la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.3"
+
+\end_inset
+
+.
+ Mediante la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.3"
+
+\end_inset
+
+, ésta puede escribirse como 
+\begin_inset Formula $-\mu\mathrm{div}\left(\mathbf{i}\right)$
+\end_inset
+
+.
+ El resultado es
+\begin_inset Formula 
+\begin{multline}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)-\mathbf{v}\cdot\sigma^{\prime}+\mathbf{q}\right)+\\
+\rho T\left(\frac{\partial s}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s\right)-\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}+\mathrm{div}\left(\mathbf{q}\right)-\mu\mathrm{div}\left(\mathbf{i}\right)\label{L6 p6 ec57.4}
+\end{multline}
+
+\end_inset
+
+Hemos sustituido 
+\begin_inset Formula $-\kappa\mathbf{grad}T$
+\end_inset
+
+ por un flujo térmico 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ que puede depender no sólo del gradiente de temperaturas, sino también
+ del gradiente de concentraciones.
+ La suma de los dos últimos términos del segundo miembro puede escribirse
+\begin_inset Formula 
+\[
+\mathrm{div}\mathbf{q}-\mu\mathrm{div}\mathbf{i}=\mathrm{div}\left(\mathbf{q}-\mu\mathbf{i}\right)+\mathbf{i}\cdot\mathbf{grad}\mu
+\]
+
+\end_inset
+
+ La expresión 
+\begin_inset Formula $\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)-\mathbf{v}\cdot\sigma^{\prime}+\mathbf{q}$
+\end_inset
+
+ que es el operando del operador divergencia en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.4"
+
+\end_inset
+
+ es, por definición de 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+, el flujo de energía total del fluido.
+ El primer término es el flujo de energía reversible debido simplemente
+ al movimiento del fluido como un todo, mientras que la suma 
+\begin_inset Formula $-\mathbf{v}\cdot\sigma^{\prime}+\mathbf{q}$
+\end_inset
+
+ es el flujo irreversible.
+ Cuando no existe ningún movimiento macroscópico, el flujo de viscosidad
+ 
+\begin_inset Formula $\mathbf{v}\cdot\sigma^{\prime}$
+\end_inset
+
+ es cero, y el flujo térmico es simplemente 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La ecuación de conservación de la energía es
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\left(\frac{1}{2}\rho v^{2}+\rho\epsilon\right)=-\mathrm{div}\left(\rho\mathbf{v}\left(\frac{1}{2}v^{2}+w\right)-\mathbf{v}\cdot\sigma^{\prime}+\mathbf{q}\right)\label{L6 p7 ec57.5 Ec. de conservación de la energía (no movimiento macroscópico)}
+\end{equation}
+
+\end_inset
+
+Restando de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.4"
+
+\end_inset
+
+, obtenemos la ecuación 
+\begin_inset Formula 
+\begin{equation}
+\rho T\left(\frac{\partial s}{\partial t}+\mathbf{v}\cdot\mathbf{grad}s\right)=\sigma_{ik}^{\prime}\frac{\partial v_{i}}{\partial x_{k}}-\mathrm{div}\left(\mathbf{q}-\mu\mathbf{i}\right)-\mathbf{i}\cdot\mathbf{grad}\mu\label{L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)}
+\end{equation}
+
+\end_inset
+
+que es una generalización de la ecuación general de transferencia térmica
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Así hemos obtneido un sistema completo de ecuaciones de la mecánica de fluidos
+ para una mezcla.
+ El número de ecuaciones en este caso es una más que en el caso de un fluido
+ simple, puesto que tenemos una incógnita adicional: la concentración 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Las ecuaciones son:
+\end_layout
+
+\begin_layout Itemize
+ecuación de 
+\begin_inset Quotes eld
+\end_inset
+
+continuidad
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p5 ec57.1 Ec. de continuidad"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+ecuación de Navier-Stokes
+\end_layout
+
+\begin_layout Itemize
+ecuación de 
+\begin_inset Quotes eld
+\end_inset
+
+continuidad
+\begin_inset Quotes erd
+\end_inset
+
+ para un componente de la mezcla, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+variación de la entropía 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.2"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
+
+\end_inset
+
+, tal y como están expresadas, determinan únicamente la forma de las ecuaciones
+ correspondientes a la dinámica del fluido, puesto que en ellas intervienen
+ los flujos indeterminados 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+.
+ Estas ecuaciones se hacen determinadas únicamente cuando se sustituyen
+ 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ por expresiones en función de los gradientes de concentración y de la temperatu
+ra.
+ Las expresiones correspondientes se obtendrán en la siguiente sección (sección
+ 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "L6 sec:58 Coeficientes de transferencia de masa y de difusión térmica (B)"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+En el caso de la variación respecto al tiempo de la entropía total del fluido,
+ un cálculo semejante al de la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 sec49 Ecuación general de la transferencia de calor (B)"
+
+\end_inset
+
+, pero sustituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
+
+\end_inset
+
+ en lugar de la ecuación general de transferencia térmica 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p6 ec49.4 Ec.gral de transf. térmica"
+
+\end_inset
+
+, da el resultado:
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\int\rho sdV=-\int\frac{\left(\mathbf{q}-\mu\mathbf{i}\right)\cdot\mathbf{grad}T}{T^{2}}dV-\int\frac{\mathbf{i}\cdot\mathbf{grad}\mu}{T}dV+\cdots\label{L6 p8 ec57.7}
+\end{equation}
+
+\end_inset
+
+en donde se han omitido, por brevedad, los términos de viscosidad.
+\end_layout
+
+\begin_layout Section
+Coeficientes de transferencia de masa y de difusión térmica (B) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L6 sec:58 Coeficientes de transferencia de masa y de difusión térmica (B)"
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
