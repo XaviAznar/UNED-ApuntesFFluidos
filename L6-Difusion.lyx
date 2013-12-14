@@ -746,5 +746,768 @@ name "L6 sec:58 Coeficientes de transferencia de masa y de difusión térmica (B
 
 \end_layout
 
+\begin_layout Standard
+El flujo de difusión 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y el flujo térmico 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ se deben a la presencia de gradientes de concentración y de temperatura
+ en el fluido.
+ Pero eso no significa que 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ dependa sólo del gradiente de concentraciones o que 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ sólo dependa del gradiente de temperaturas.
+ Al contrario, cada uno de estos flujos depende de los 
+\series bold
+dos
+\series default
+ gradientes.
+\end_layout
+
+\begin_layout Standard
+Si los gradientes de concentración y de temperaturas son pequeños, podemos
+ suponer que 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ son funciones lineales de 
+\begin_inset Formula $\mathbf{grad}\mu$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{grad}T$
+\end_inset
+
+.
+ Por tanto, escribimos 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ como
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{i} & = & -\alpha\mathbf{grad}\mu-\beta\mathbf{grad}T\\
+\mathbf{q} & = & -\delta\mathbf{grad}\mu-\gamma\mathbf{grad}T+\mu\mathbf{i}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Existe una relación simple entre los coeficientes 
+\begin_inset Formula $\beta$
+\end_inset
+
+ y 
+\begin_inset Formula $\delta$
+\end_inset
+
+ que una consecuencia de un 
+\emph on
+principio de simetría para los coeficientes cinéticos
+\emph default
+.
+ Este principio de simetría tiene la forma siguiente.
+\end_layout
+
+\begin_layout Standard
+Consideramos un sistema cerrado cualquiera y sean 
+\begin_inset Formula $x_{1},x_{2},\ldots$
+\end_inset
+
+ algunas de las magnitudes que caracterizan el estado del mismo.
+ Sus valores de equilibrio se determinan por el hecho de que, en el equilibrio
+ estadístico, la entropía 
+\begin_inset Formula $S$
+\end_inset
+
+ del sistema completo debe ser un máximo, es decir, debemos tener que 
+\begin_inset Formula $X_{a}=0$
+\end_inset
+
+ para todo 
+\begin_inset Formula $a$
+\end_inset
+
+ , en donde 
+\begin_inset Formula $X_{a}$
+\end_inset
+
+ designa la derivada
+\begin_inset Formula 
+\begin{equation}
+X_{a}=-\frac{\partial S}{\partial x_{a}}\label{L6 p8 ec58.1}
+\end{equation}
+
+\end_inset
+
+Supongamos que el sistema está en un estado próximo al equilibrio.
+ Esto significa que todos los valores 
+\begin_inset Formula $x_{a}$
+\end_inset
+
+ difieren muy poco de sus valores de equilibrio y que las derivadas 
+\begin_inset Formula $X_{a}$
+\end_inset
+
+ son pequeñas.
+ Se producirán progresos en el sistema que tenderán a llevarlos hacia el
+ equilibrio.
+ Las magnitudes 
+\begin_inset Formula $x_{a}$
+\end_inset
+
+ son funciones del tiempo y su variación respecto al mismo viene dada por
+ las derivadas temporales 
+\begin_inset Formula $\dot{x_{a}}$
+\end_inset
+
+; expresaremos estas últimas como funciones de 
+\begin_inset Formula $X_{a}$
+\end_inset
+
+, y desarrollaremos estas funciones en serie.
+ Deteniéndonos en los términos de primer orden tenemos
+\begin_inset Formula 
+\begin{equation}
+\dot{x}_{a}=-\sum_{b}\gamma_{ab}X_{b}\label{L6 p8 ec58.2}
+\end{equation}
+
+\end_inset
+
+El principio de simetría para los coeficientes cinéticos establece que los
+ 
+\begin_inset Formula $\gamma_{ab}$
+\end_inset
+
+ (denominados 
+\emph on
+coeficientes cinéticos
+\emph default
+) sin simétricos respecto al sufijo 
+\begin_inset Formula $a$
+\end_inset
+
+ y 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\gamma_{ab}=\gamma_{ba}\label{L6 p8 ec58.3 Simetría de los coefs. cinéticos}
+\end{equation}
+
+\end_inset
+
+La variación respecto al tiempo de la entropía 
+\begin_inset Formula $S$
+\end_inset
+
+ es
+\begin_inset Formula 
+\begin{equation}
+\dot{S}=-\sum X_{a}\dot{x}_{a}\label{L6 p8 ec58.4 Variación de la entropía con el tiempo}
+\end{equation}
+
+\end_inset
+
+Ahora suponemos que los valores propios 
+\begin_inset Formula $x_{a}$
+\end_inset
+
+ son diferentes en distintos puntos del sistema, es decir, que cada elemento
+ de volumen tiene sus propios valores 
+\begin_inset Formula $x_{a}$
+\end_inset
+
+.
+ Esto es, supongamos que las magnitures 
+\begin_inset Formula $x_{a}$
+\end_inset
+
+ son funciones de las coordenadas.
+ Entonces, en la expresión dada para 
+\begin_inset Formula $\dot{S}$
+\end_inset
+
+, además de sumar respecto de 
+\begin_inset Formula $a$
+\end_inset
+
+ , debemos integrar respecto al volumen del sistema
+\begin_inset Formula 
+\begin{equation}
+\dot{S}=-\int\sum_{a}X_{a}\dot{x}_{a}dV\label{L6 p9 ec58.4a}
+\end{equation}
+
+\end_inset
+
+Normalmente es cierto que los valores 
+\begin_inset Formula $\dot{x_{a}}$
+\end_inset
+
+ en un punto determinado cualquiera dependen únicamente de los valores de
+ 
+\begin_inset Formula $X_{a}$
+\end_inset
+
+ en dicho punto.
+ En este caso podemos escribir la relación existente entre 
+\begin_inset Formula $\dot{x}_{a}$
+\end_inset
+
+ y 
+\begin_inset Formula $X_{a}$
+\end_inset
+
+ para cada punto del sistema y obtendremos las mismas fórmulas que antes.
+\end_layout
+
+\begin_layout Standard
+En el problema que estamos considerando, tomaremos como valores de las 
+\begin_inset Formula $\dot{x}_{a}$
+\end_inset
+
+ las componentes de los vectores 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}-\mu\mathbf{i}$
+\end_inset
+
+.
+ Entonces, los valores de 
+\begin_inset Formula $X_{a}$
+\end_inset
+
+, en comparación con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p8 ec57.7"
+
+\end_inset
+
+ y con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p9 ec58.4a"
+
+\end_inset
+
+ , son las componentes de los vectores 
+\begin_inset Formula $\frac{1}{T}\mathbf{grad}\mu$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{1}{T^{2}}\mathbf{grad}T$
+\end_inset
+
+.
+ Los coeficientes cinéticos 
+\begin_inset Formula $\gamma_{ab}$
+\end_inset
+
+ son los coeficientes de estos vectores en las ecuaciones
+\begin_inset Formula 
+\begin{eqnarray*}
+\mathbf{i} & = & -\alpha T\left(\frac{\mathbf{grad}\mu}{T}\right)-\beta T^{2}\left(\frac{\mathbf{grad}T}{T^{2}}\right)\\
+\mathbf{q}-\mu\mathbf{i} & = & -\delta T\left(\frac{\mathbf{grad}\mu}{T}\right)-\gamma T^{2}\left(\frac{\mathbf{grad}T}{T^{2}}\right)
+\end{eqnarray*}
+
+\end_inset
+
+Mediante la simetría de los coeficientes cinéticos debemos tener 
+\begin_inset Formula $\beta T^{2}=\delta T$
+\end_inset
+
+, o sea que 
+\begin_inset Formula $\delta=\beta T$
+\end_inset
+
+ .
+ Esta es la relación requerida.
+\end_layout
+
+\begin_layout Standard
+Por lo tanto podemos escribir los flujos 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ como 
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{i} & = & -\alpha\mathbf{grad}\mu-\beta\mathbf{grad}T\nonumber \\
+\mathbf{q} & = & -\beta T\mathbf{grad\mu}-\gamma\mathbf{grad}T+\mu\mathbf{i}\label{L6 p9 ec58.5 Flujos de concentración y térmicos con los coeficientes cinéticos}
+\end{eqnarray}
+
+\end_inset
+
+con sólo tres coeficientes independientes, 
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\begin_inset Formula $\beta$
+\end_inset
+
+ y 
+\begin_inset Formula $\gamma$
+\end_inset
+
+.
+ Es conveniente eliminar 
+\begin_inset Formula $\mathbf{grad}\mu$
+\end_inset
+
+ de la expresión del flujo térmico, sustituyéndolo por 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{grad}T$
+\end_inset
+
+.
+ Entonces tenemos
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{i} & = & -\alpha\mathbf{grad}\mu-\beta\mathbf{grad}T\label{L6 p9 ec58.6}\\
+\mathbf{q} & = & \left(\mu+\frac{\beta T}{\alpha}\right)\mathbf{i}-\kappa\mathbf{grad}T\label{L6 p9 ec58.7}
+\end{eqnarray}
+
+\end_inset
+
+donde 
+\begin_inset Formula 
+\begin{equation}
+\kappa=\gamma-\frac{\beta^{2}T}{\alpha}\label{L6 p9 ec58.8}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si el flujo de difusión 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ es cero, tenemos una 
+\emph on
+conducción térmica pura
+\emph default
+.
+ Para que esto sea así, 
+\begin_inset Formula $T$
+\end_inset
+
+ y 
+\begin_inset Formula $\mu$
+\end_inset
+
+ deben satisfacer la ecuación 
+\begin_inset Formula $\alpha\mathbf{grad}\mu+\beta\mathbf{grad}T=0$
+\end_inset
+
+, o sea, 
+\begin_inset Formula $\alpha d\mu+\beta dT=0$
+\end_inset
+
+.
+ La integración de esta ecuación da una relación de la forma 
+\begin_inset Formula $f\left(c,T\right)=0$
+\end_inset
+
+ que no contiene las coordenadas explícitamente.
+ (El potencial químico es unf función de la presión, lo mismo que de 
+\begin_inset Formula $c$
+\end_inset
+
+ y de 
+\begin_inset Formula $T$
+\end_inset
+
+ , pero en equilibrio la presión es constante).
+ Esta relación determina la dependencia de la concentración con la temperatura,
+ que debe ser válida si no existe flujo de difusión.
+ Además, para 
+\begin_inset Formula $\mathbf{i}=0$
+\end_inset
+
+ tenemos a partir de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p9 ec58.7"
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathbf{q}=-\kappa\mathbf{gradT}
+\]
+
+\end_inset
+
+de modo que 
+\begin_inset Formula $\kappa$
+\end_inset
+
+ es precisamente la conductividad térmica.
+\end_layout
+
+\begin_layout Standard
+Pasamos ahora a las variables normales, 
+\begin_inset Formula $p$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+.
+ Tenemos
+\begin_inset Formula 
+\[
+\mathbf{grad}\mu=\left(\frac{\partial\mu}{\partial c}\right)_{p,T}\mathbf{grad}c+\left(\frac{\partial\mu}{\partial T}\right)_{c,p}\mathbf{grad}T+\left(\frac{\partial\mu}{\partial p}\right)_{c,T}\mathbf{grad}p
+\]
+
+\end_inset
+
+En el último término podemos sustituir la derivada 
+\begin_inset Formula $\left(\frac{\partial\mu}{\partial p}\right)_{c,T}$
+\end_inset
+
+ por 
+\begin_inset Formula $\left(\frac{\partial V}{\partial c}\right)_{p,T}$
+\end_inset
+
+ siendo 
+\begin_inset Formula $V$
+\end_inset
+
+ el volumen específico.
+ Sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p9 ec58.6"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p9 ec58.7"
+
+\end_inset
+
+ y poniendo
+\begin_inset Formula 
+\begin{eqnarray}
+D & = & \frac{\alpha}{\rho}\left(\frac{\partial\mu}{\partial c}\right)_{T,p}\nonumber \\
+\rho k_{T}\frac{D}{T} & = & \alpha\left(\frac{\partial\mu}{\partial T}\right)_{c,p}+\beta\label{L6 p10 ec58.9}\\
+k_{p} & = & p\frac{\left(\frac{\partial V}{\partial c}\right)_{p,T}}{\left(\frac{\partial\mu}{\partial c}\right)_{p,T}}\label{L6 p10 ec58.10}
+\end{eqnarray}
+
+\end_inset
+
+obtenemos
+\begin_inset Formula 
+\begin{eqnarray}
+\mathbf{i} & = & -\rho D\left(\mathbf{grad}c+\frac{k_{T}}{T}\mathbf{grad}T+\frac{k_{p}}{p}\mathbf{grad}p\right)\label{L6 p10 ec58.11}\\
+\mathbf{q} & = & \left(k_{T}\left(\frac{\partial\mu}{\partial c}\right)_{p,T}-T\left(\frac{\partial\mu}{\partial T}\right)_{p,c}+\mu\right)\mathbf{i}-\kappa\mathbf{grad}T\label{L6 p10 ec58.12}
+\end{eqnarray}
+
+\end_inset
+
+El coeficiente 
+\begin_inset Formula $D$
+\end_inset
+
+ se denomina 
+\emph on
+coeficiente de difusión
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de difusión 
+\begin_inset Formula $D=\frac{\alpha}{\rho}\left(\frac{\partial\mu}{\partial c}\right)_{T,p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\emph default
+o 
+\emph on
+coeficiente de transferencia de masas
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Coeficiente de transferencia de masas 
+\begin_inset Formula $D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset Formula $D$
+\end_inset
+
+ da el flujo de difusión cuando está presente un solo gradiente de concentración.
+ El flujo de difusión debido al gradiente de temperatura viende dado por
+ el 
+\emph on
+coeficiente de difusión térmica
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de difusión térmica 
+\begin_inset Formula $k_{T}D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset Formula $k_{T}D$
+\end_inset
+
+.
+ La magnitud adimensional 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+ es el 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de difusión térmica 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+coeficiente de difusión térmica
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+El último término en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p10 ec58.11"
+
+\end_inset
+
+ únicamente es necesario tenerlo en cuenta cuando existe un gradiente de
+ presiones considerable en el fluido (producido por un campo externo, por
+ ejemplo).
+ El coeficiente 
+\begin_inset Formula $k_{T}D$
+\end_inset
+
+ puede denominarse 
+\emph on
+coeficiente de barodifusión
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de barodifusión 
+\begin_inset Formula $k_{T}D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ o 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de difusión barométrica 
+\begin_inset Formula $k_{T}D$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+coeficiente de difusión barométrica
+\emph default
+.
+ Debe señalarse que, según la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p10 ec58.10"
+
+\end_inset
+
+ la magnitud adimensional 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ queda totalmente determinada únicamente por las propiedades termodinámicas.
+\end_layout
+
+\begin_layout Standard
+En un fluido simple no existe difusión (como es normal).
+ De aquí que resulte claro que 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+ y 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ deben anularse en cada uno de los casos límite 
+\begin_inset Formula $c=0$
+\end_inset
+
+ y 
+\begin_inset Formula $c=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+La condición de crecimiento de la entropía determina ciertas restricciones
+ en los coeficientes de las fórmulas 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p9 ec58.6"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p9 ec58.7"
+
+\end_inset
+
+.
+ Sustituyendo estas fórmulas en la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p8 ec57.7"
+
+\end_inset
+
+ para la variación respecto al tiempo de la entropía tenemos
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\partial t}\int\rho sdV=\int\frac{\kappa\left(\mathbf{grad}T\right)^{2}}{T^{2}}dV+\int\frac{\mathbf{i}^{2}}{\alpha T}dV+\cdots\label{L6 p11 ec58.13}
+\end{equation}
+
+\end_inset
+
+ Es evidente a partir de esta expresión que además de la condición 
+\begin_inset Formula $\kappa>0$
+\end_inset
+
+ que ya conocemos, debemos tener también 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ Recordando que la derivada 
+\begin_inset Formula $\left(\frac{\partial\mu}{\partial c}\right)_{p,T}$
+\end_inset
+
+ es siempre positiva, encontramos que el coeficiente de difusión debe ser
+ positivo: 
+\begin_inset Formula $D>0$
+\end_inset
+
+.
+ Sin embargo las magnitudes 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+ y 
+\begin_inset Formula $k_{p}$
+\end_inset
+
+ pueden ser tanto positivas como negativas.
+\end_layout
+
+\begin_layout Standard
+PAG11
+\end_layout
+
 \end_body
 \end_document
