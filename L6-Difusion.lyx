@@ -280,7 +280,7 @@ redefinirse
  cuando estamos hablando de mezclas de fluidos.
  Escribiendo la ecuación de continuidad como en 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand eqref
 reference "L6 p5 ec57.1 Ec. de continuidad"
 
 \end_inset
@@ -290,7 +290,7 @@ reference "L6 p5 ec57.1 Ec. de continuidad"
 \end_layout
 
 \begin_layout Standard
-En el caso de una mezcla, tampoco es necesario modificiar la ecuación de
+En el caso de una mezcla, tampoco es necesario modificar la ecuación de
  Navier-Stokes, así que nos encargaremos de deducir el resto de ecuaciones
  necesarias para describir la dinámica del fluido.
 \end_layout
@@ -371,7 +371,7 @@ Densidad de flujo de difusión
 
 \end_inset
 
-, es decir, la cantidad de componente transortado por difusión a través
+, es decir, la cantidad de componente transportado por difusión a través
  del área unidad por unidad de tiempo.
  Entonces tenemos, para la variación de la cantidad de componente respecto
  al tiempo
@@ -424,8 +424,8 @@ reference "L5 sec49 Ecuación general de la transferencia de calor (B)"
 \end_inset
 
  ahora debemos tener en cuenta que las identidades termodinámicas correspondient
-es a la energía y a la entalpía tienen ahora un término adicional en el
- que interviene la diferencia de concentración.
+es a la energía y a la entalpía tienen un término adicional en el que interviene
+ la diferencia de concentración.
 \begin_inset Formula 
 \begin{eqnarray*}
 d\epsilon & = & Tds+\frac{p}{\rho^{2}}d\rho+\mu dc\\
@@ -439,7 +439,7 @@ donde
 \end_inset
 
  es un potencial químico.
- De acuedo con estas ecuaciones aparece un término adicional 
+ De acuerdo con estas ecuaciones aparece un término adicional 
 \begin_inset Formula $\rho\mu\frac{\partial c}{\partial t}$
 \end_inset
 
@@ -468,7 +468,7 @@ vemos que el término
 \end_layout
 
 \begin_layout Standard
-Así que tenemos que suma 
+Así que tenemos que sumar 
 \begin_inset Formula $\rho\mu\left(\frac{\partial c}{\partial t}+\mathbf{v}\cdot\mathbf{grad}c\right)$
 \end_inset
 
@@ -779,7 +779,7 @@ Si los gradientes de concentración y de temperaturas son pequeños, podemos
 \begin_inset Formula $\mathbf{i}$
 \end_inset
 
-y 
+ y 
 \begin_inset Formula $\mathbf{q}$
 \end_inset
 
@@ -941,7 +941,7 @@ Ahora suponemos que los valores propios
 \end_inset
 
 .
- Esto es, supongamos que las magnitures 
+ Esto es, supongamos que las magnitudes 
 \begin_inset Formula $x_{a}$
 \end_inset
 
@@ -1145,7 +1145,7 @@ conducción térmica pura
 \end_inset
 
  que no contiene las coordenadas explícitamente.
- (El potencial químico es unf función de la presión, lo mismo que de 
+ (El potencial químico es una función de la presión, lo mismo que de 
 \begin_inset Formula $c$
 \end_inset
 
@@ -1531,7 +1531,7 @@ reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
 
 , nos centramos en el caso en el caso en el que no existe un gradiente de
  presiones significativo, mientras que la concentración y la temperatura
- del vluido varía tann poco que los coeficientes en las ecuaciones 
+ del vluido varía tampoco que los coeficientes en las ecuaciones 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "L6 p10 ec58.11"
@@ -1678,7 +1678,7 @@ Caso importante: concentración pequeña
 \end_layout
 
 \begin_layout Standard
-Cuando la concentración tiene hasta cero, el coeficiente de difusión tiende
+Cuando la concentración tiende hasta cero, el coeficiente de difusión tiende
  hacia una consatnte finita, pero el coeficiente de difusión térmica tiende
  a cero.
  Por tanto, en este caso 
@@ -1696,7 +1696,7 @@ reference "L6 p11 ec58.14"
 
 \end_inset
 
-, que se transforma entonces en la ecuacón de difusión
+, que se transforma entonces en la ecuación de difusión
 \begin_inset Formula 
 \begin{equation}
 \frac{\partial c}{\partial t}=D\Delta c\label{L6 p12 ec58.16 Ec. de difusión}
@@ -2142,7 +2142,7 @@ reference "L6 p14 ec59.7 Flujo de difusión"
 \begin_inset Formula $\mathbf{i}$
 \end_inset
 
- a cero tenemo
+ a cero tenemos
 \begin_inset Formula 
 \begin{equation}
 D=kTb\label{L6 p15 ec59.8 Relación de Einstein entre el coef. de difusión y la movilidad}
@@ -2200,10 +2200,6 @@ Además del movimiento de traslación browniano y la difusión de partículas
  de la fuerza de arrastre de rozamiento, el coeficiente de difusión por
  rotación puede expresarse en función de las fuerzas que actúan sobre una
  partícula que realiza un movimiento de rotación en el fluido.
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \end_body
