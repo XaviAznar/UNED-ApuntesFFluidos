@@ -1506,7 +1506,704 @@ reference "L6 p8 ec57.7"
 \end_layout
 
 \begin_layout Standard
-PAG11
+En vez de perder el tiempo obteniendo las largas expresiones obtenidas mediante
+ la sustitución de las expresiones para 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.3"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
+
+\end_inset
+
+, nos centramos en el caso en el caso en el que no existe un gradiente de
+ presiones significativo, mientras que la concentración y la temperatura
+ del vluido varía tann poco que los coeficientes en las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p10 ec58.11"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p10 ec58.12"
+
+\end_inset
+
+ pueden considerarse constantes, aunque sean en general funciones de 
+\begin_inset Formula $c$
+\end_inset
+
+ y 
+\begin_inset Formula $T$
+\end_inset
+
+.
+ Además, suponemos que no existe movimiento macroscópico en el fluido, excepto
+ el que pueda generarse por los gradientes de temperatura y concentración.
+ La velocidad de estos movimientos es proporcional a los gradientes; así
+ los términos 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p6 ec57.3"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
+
+\end_inset
+
+ en los que interviene la velocidad son magnitudes de segundo orden y pueden
+ despreciarse.
+ El término 
+\begin_inset Formula $-\mathbf{i}\cdot\mathbf{grad}\mu$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p7 ec57.6 Ec.gral de transferencia térmica (mezclas)"
+
+\end_inset
+
+ es también de segundo orden.
+ Por tanto, tenemos
+\begin_inset Formula 
+\begin{eqnarray*}
+\rho\frac{\partial c}{\partial t}+\mathrm{div}\mathbf{i} & = & 0\\
+\rho T\frac{\partial s}{\partial t}+\mathrm{div}\left(\mathbf{q}-\mu\mathbf{i}\right) & = & 0
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sustituyendo los valores de 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{q}$
+\end_inset
+
+ obtenidos en las expresiones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p10 ec58.11"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p10 ec58.12"
+
+\end_inset
+
+ (sin el término 
+\begin_inset Formula $\mathbf{grad}p$
+\end_inset
+
+) y transformando la derivada 
+\begin_inset Formula $\partial s/\partial t$
+\end_inset
+
+ del modo siguiente 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left(\frac{\partial s}{\partial c}\right)_{p,T}=-\frac{\partial^{2}\phi}{\partial c\partial T}=-\left(\frac{\partial\mu}{\partial T}\right)_{p,c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\partial s}{\partial t}=\left(\frac{\partial s}{\partial T}\right)_{c,p}\frac{\partial T}{\partial t}+\left(\frac{\partial s}{\partial c}\right)_{T,p}\frac{\partial c}{\partial t}=\frac{c_{p}}{T}\frac{\partial T}{\partial t}-\left(\frac{\partial\mu}{\partial T}\right)_{p,c}\frac{\partial c}{\partial t}
+\]
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial c}{\partial t}=D\left(\Delta c+\frac{k_{T}}{T}\Delta T\right)\label{L6 p11 ec58.14}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial T}{\partial t}-\frac{k_{T}}{c_{p}}\left(\frac{\partial\mu}{\partial c}\right)_{p,T}\frac{\partial c}{\partial t}=\chi\Delta T\label{L6 p11 ec58.15}
+\end{equation}
+
+\end_inset
+
+Este sistema de ecuaciones lineales determina las distribuciones de temperatura
+ y concentración dentro del fluido.
+\end_layout
+
+\begin_layout Subsection*
+Caso importante: concentración pequeña
+\end_layout
+
+\begin_layout Standard
+Cuando la concentración tiene hasta cero, el coeficiente de difusión tiende
+ hacia una consatnte finita, pero el coeficiente de difusión térmica tiende
+ a cero.
+ Por tanto, en este caso 
+\begin_inset Formula $k_{T}$
+\end_inset
+
+ es pequeño y podemos despreciar el término 
+\begin_inset Formula $k_{T}\Delta T$
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p11 ec58.14"
+
+\end_inset
+
+, que se transforma entonces en la ecuacón de difusión
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial c}{\partial t}=D\Delta c\label{L6 p12 ec58.16 Ec. de difusión}
+\end{equation}
+
+\end_inset
+
+Las condiciones límites correspondientes a la solución de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p12 ec58.16 Ec. de difusión"
+
+\end_inset
+
+ son diferentes en los diferentes casos.
+ En la superficie de un cuerpo insoluble en el fluido la componente normal
+ del fluido de difusión 
+\begin_inset Formula $\mathbf{i}=-\rho D\mathbf{grad}c$
+\end_inset
+
+ debe anularse, es decir, podemos tener 
+\begin_inset Formula $\partial c/\partial n=0$
+\end_inset
+
+.
+ Pero si existe difusión desde un cuerpo que se disuelve en el fuido, se
+ establece rápidamente un equilibrio cerca de su superficie y la concentración
+ en el fluido junto al cuerpo es la concentración de saturación 
+\begin_inset Formula $c_{0}$
+\end_inset
+
+; la difusión hacia fuera de esta capa tiene lugar más lentamente que el
+ proceso de disolución.
+ La condición límite en dicha superficie es, por tanto 
+\begin_inset Formula $c=c_{0}$
+\end_inset
+
+.
+ Finalmente, si una superficie sólida absorve la sustancia que se difunde
+ y que incide sobre ella, la condición límite es 
+\begin_inset Formula $c=0$
+\end_inset
+
+; un ejemplo de esta situación es el estudio de las reacciones químicas
+ que se producen en la superficie de un sólido.
+ Como la ecuación de la difusión pura 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p12 ec58.16 Ec. de difusión"
+
+\end_inset
+
+ y la conducción térmica 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p11 ec50.4 Ec.cond.térmica (fluido incompresible en reposo)"
+
+\end_inset
+
+ tienen exactamente la misma forma, podemos aplicar inmediatamente todas
+ las fórmulas deducidas en las secciones 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 sec:51 Conducción térmica en un medio infinito (E)"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 sec52 Conducción térmica en un medio finito (E)"
+
+\end_inset
+
+, sustituyendo simplemente 
+\begin_inset Formula $T$
+\end_inset
+
+ por 
+\begin_inset Formula $c$
+\end_inset
+
+ y 
+\begin_inset Formula $\chi$
+\end_inset
+
+ por 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ La condición límite para una superficie térmicamente aislada corresponde
+ a la de una superficie insoluble, mientras que una superficie mantenida
+ a una temperatura constante corresponde a una superficie soluble a partir
+ de la cual tiene lugar la difusión.
+\end_layout
+
+\begin_layout Standard
+En particular podemos escribir, por analogía con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L5 p16 ec51.6 Foco de calor en el origen"
+
+\end_inset
+
+ la solución siguiente de la ecuación de difusión:
+\begin_inset Formula 
+\begin{equation}
+c\left(r\right)=\frac{M}{8\rho\left(\pi Dt\right)^{3/2}}\exp\left(-\frac{r^{2}}{4Dt}\right)\label{L6 p12 ec58.17 Dist. del soluto (a partir del origen en t=0)}
+\end{equation}
+
+\end_inset
+
+Esta expresión nos da la distribución del soluto en un instante cualquiera
+ si en el instante 
+\begin_inset Formula $t=0$
+\end_inset
+
+ está todo concentrado en el origen (y siendo 
+\begin_inset Formula $M$
+\end_inset
+
+ la cantidad total de soluto).
+\end_layout
+
+\begin_layout Section
+Difusión de partículas suspendidas en un fluido (G) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L6 sec:59 Difusión de partículas suspendidas en un fluido (G)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las partículas suspendidas en un fluido, debido al movimiento molecular
+ del fluido se mueven de un modo irregular que se conoce como 
+\emph on
+movimiento browniano
+\emph default
+.
+ Suponemos una de las partículas está en el origen en el instante inicial.
+ El movimiento siguiente puede considerarse como una difusión en la que
+ la concentración se representa por la probabilidad de hallar la partícula
+ en un elemento de volumen particular determinado.
+ Por tanto, para determinar esta probabilidad podemos utilizar la solución
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p12 ec58.17 Dist. del soluto (a partir del origen en t=0)"
+
+\end_inset
+
+ de la ecuación de difusión.
+ La posibilidad de emplear este procedimiento se debe a que en el caso de
+ difusión en disoluciones débiles (es decir, cuando 
+\begin_inset Formula $c\ll1$
+\end_inset
+
+, que es cuando se puede utilizar la ecuación de difusión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p12 ec58.16 Ec. de difusión"
+
+\end_inset
+
+), las partículas del soluto difícilmente se influyen entre sí y por tanto
+ el movimiento de cada partícula puede considerarse independiente.
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $w\left(r,t\right)dr$
+\end_inset
+
+ a la probabilidad de hallar la partícula a una distancia comprendida entre
+ 
+\begin_inset Formula $r$
+\end_inset
+
+ y 
+\begin_inset Formula $r+dr$
+\end_inset
+
+ a partir del origen en el instante 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Poniendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p12 ec58.17 Dist. del soluto (a partir del origen en t=0)"
+
+\end_inset
+
+ 
+\begin_inset Formula $\frac{M}{\rho}=1$
+\end_inset
+
+ y multiplicando por el volumen 
+\begin_inset Formula $4\pi r^{2}dr$
+\end_inset
+
+ de la capa esférica tenemos
+\begin_inset Formula 
+\begin{equation}
+w\left(r,t\right)dr=\frac{1}{2\sqrt{\pi D^{3}t^{3}}}\exp\left(-\frac{r^{2}}{4Dt}\right)r^{2}dr\label{L6 p13 ec59.1 Prob. de encontrar la partícula en una capa esférica}
+\end{equation}
+
+\end_inset
+
+Deteminamos la distancia cuadrática media respecto al origen en el instante
+ 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Tenemos:
+\begin_inset Formula 
+\begin{equation}
+\overline{r^{2}}=\int_{0}^{\infty}r^{2}w\left(r,t\right)dr\label{L6 p13 ec:59.2  Dist. cuadrática media}
+\end{equation}
+
+\end_inset
+
+El resultado, usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p13 ec59.1 Prob. de encontrar la partícula en una capa esférica"
+
+\end_inset
+
+, es
+\begin_inset Formula 
+\begin{equation}
+\overline{r^{2}}=6Dt\label{L6 p13 ec59.3}
+\end{equation}
+
+\end_inset
+
+Es decir, la distancia media recorrida por la partícula durante un tiempo
+ cualquiera es proporcional a la raíz cuadrada del tiempo.
+\end_layout
+
+\begin_layout Standard
+El coeficiente de difusión para las partículas suspendidas en un fluido
+ puede calcularse a partir de lo que se denomina su 
+\emph on
+movilidad
+\emph default
+.
+ Supongamos que actúa sobre las partículas una cierta fuerza externa constante
+ 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ (la fuerza de gravedad, por ejemplo).
+ En un estado estacionario la fuerza que actúa sobre cada partícula debe
+ estar equilibrada por la fuerza de arrastre o de rozamiento ejercida sobre
+ la partícula.
+ Cuando la velocidad es pequeña, la fuerza de rozamiento es proporcional
+ a ella y vale 
+\begin_inset Formula $\mathbf{v}/b$
+\end_inset
+
+, siendo 
+\begin_inset Formula $b$
+\end_inset
+
+ una constante.
+ Igualando esta expresión a la fuerza externa 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+\mathbf{v}=b\mathbf{f}\label{L6 p14 ec59.4 Velocidad de la partícula}
+\end{equation}
+
+\end_inset
+
+es decir, la velocidad adquirida por la partícula bajo la acción de la fuerza
+ externa es proporcional a esta fuerza.
+ La constante 
+\begin_inset Formula $b$
+\end_inset
+
+ se denomina 
+\emph on
+movilidad
+\emph default
+ y puede calcularse, en principio, a partir de las ecuaciones de la dinámica
+ de fluidos.
+ Por ejemplo, en el caso de partículas esféricas de radio 
+\begin_inset Formula $R$
+\end_inset
+
+, la fuerza de arrastre es 
+\begin_inset Formula $6\pi\eta Rv$
+\end_inset
+
+ (ver fórmula de Stokes, 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p25 ec:20.14 Fórmula de Stokes"
+
+\end_inset
+
+) y por tanto la movilidad es
+\begin_inset Formula 
+\begin{equation}
+b=\frac{1}{6}\pi\eta R\label{L6 p14 ec59.5 Movilidad (part. esféricas)}
+\end{equation}
+
+\end_inset
+
+En el caso de partículas no esféricas, el arrastre depende de la dirección
+ del movimiento; puede escribirse en forma 
+\begin_inset Formula $a_{ik}v_{k}$
+\end_inset
+
+, siendo 
+\begin_inset Formula $a_{ik}$
+\end_inset
+
+ un tensor simétrico (ver 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L2 p26 ec:20.15 Relacion entre la dirección de la velocidad del cuerpo y la fuerza de arrastre"
+
+\end_inset
+
+).
+ Para calcular la movilidad hemos de promediar respecto a todas las orientacione
+s de la partícula; si 
+\begin_inset Formula $a_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{3}$
+\end_inset
+
+ son los valores principales del tensor simétrico 
+\begin_inset Formula $a_{ik}$
+\end_inset
+
+, tendremos entonces:
+\begin_inset Formula 
+\begin{equation}
+b=\frac{1}{3}\left(\frac{1}{a_{1}}+\frac{1}{a_{2}}+\frac{1}{a_{3}}\right)\label{L6 p14 ec59.6 Movilidad (part. no esféricas)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La movilidad 
+\begin_inset Formula $b$
+\end_inset
+
+ está relacionada con el coeficiente de difusión 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Para deducir esta relación escribimos el flujo de difusión 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+, que contiene el término normal 
+\begin_inset Formula $-\rho D\mathbf{grad}c$
+\end_inset
+
+ debido al gradiente de concentración (suponemos que la temperatura es constante
+) y también un término en el que interviene la velocidad adquirida por la
+ partícula debida a las fuerzas externas.
+ Este último término es 
+\begin_inset Formula $\rho c\mathbf{v}$
+\end_inset
+
+.
+ Así
+\begin_inset Formula 
+\begin{equation}
+\mathbf{i}=-\rho D\mathbf{grad}c+\rho cb\mathbf{v}\label{L6 p14 ec59.7 Flujo de difusión}
+\end{equation}
+
+\end_inset
+
+en donde hemos usado la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p14 ec59.4 Velocidad de la partícula"
+
+\end_inset
+
+.
+ En un estado de equilibrio termodinámico no existe difusión y el flujo
+ 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ debe ser nulo.
+ La distribución de equilibrio de la concentración de partículas suspendidas
+ en un fluido, en un campo externo, viene determinada por la fórmula de
+ Boltzmann, de manera que 
+\begin_inset Formula $c=constante\times e^{-U/kT}$
+\end_inset
+
+, donde 
+\begin_inset Formula $U$
+\end_inset
+
+ es la energía potencial de la partícula en el campo exteno.
+ Como 
+\begin_inset Formula $\mathbf{f}=-\mathbf{grad}U$
+\end_inset
+
+, encontramos que el gradiente de concentraciones de equilibrio debe ser
+ 
+\begin_inset Formula $\mathbf{grad}c=\frac{c\mathbf{f}}{kT}$
+\end_inset
+
+.
+ Sustituyendo esta expresión en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p14 ec59.7 Flujo de difusión"
+
+\end_inset
+
+ e igualando 
+\begin_inset Formula $\mathbf{i}$
+\end_inset
+
+ a cero tenemo
+\begin_inset Formula 
+\begin{equation}
+D=kTb\label{L6 p15 ec59.8 Relación de Einstein entre el coef. de difusión y la movilidad}
+\end{equation}
+
+\end_inset
+
+Esta es la 
+\emph on
+relación de Einstein
+\emph default
+ entre el coeficiente de difusión 
+\begin_inset Formula $D$
+\end_inset
+
+ y la movilidad 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Susituyendo 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p14 ec59.5 Movilidad (part. esféricas)"
+
+\end_inset
+
+ en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p15 ec59.8 Relación de Einstein entre el coef. de difusión y la movilidad"
+
+\end_inset
+
+ encontramos la expresión para el coeficiente de difusión para partículas
+ esféricas:
+\begin_inset Formula 
+\begin{equation}
+D=\frac{kT}{6\pi\eta R}\label{L6 p15 ec59.9 Coef. de Difusión (part. esféricas)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además del movimiento de traslación browniano y la difusión de partículas
+ suspendidas, podemos considerar también su difusión y movimiento browniano
+ de rotación.
+ Así como el coeficiente de difusión de traslación se calcula en función
+ de la fuerza de arrastre de rozamiento, el coeficiente de difusión por
+ rotación puede expresarse en función de las fuerzas que actúan sobre una
+ partícula que realiza un movimiento de rotación en el fluido.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
