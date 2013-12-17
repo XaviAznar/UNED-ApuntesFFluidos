@@ -84,5 +84,623 @@ name "L7 sec:60 Fórmula-de-Laplace (B)"
 
 \end_layout
 
+\begin_layout Standard
+En este capíitulo estudiaremos los fenómenos que se producen cerca de la
+ superficie que separa dos medios continuos.
+ Si la superficie de separación es curva, las presiones cerca de la misma
+ en ambos medios es diferente.
+ Para determinar la diferencia de presiones (denominada 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Presión superficial
+\end_layout
+
+\end_inset
+
+presión superficial
+\emph default
+) escribimos a continuación la condición de que los medios estén en equilibrio
+ termodinámico conjuntamente, teniendo en cuenta la superficie de separación.
+\end_layout
+
+\begin_layout Standard
+Suponemos que la superficie sufre un desplazamiento infinitesimal.
+ En cada punto de la superficie no desplazada dibujemos la normal.
+ La longitud del segmento de la normal, comprendida entre los puntos en
+ que corta a la superficie desplazada y no desplazada se designa por 
+\begin_inset Formula $\delta\zeta$
+\end_inset
+
+.
+ Entonces un elemento de volumen comprendido entre ambas superficies es
+ 
+\begin_inset Formula $\delta\zeta df$
+\end_inset
+
+, donde 
+\begin_inset Formula $df$
+\end_inset
+
+ es una elemento de superficie.
+ Sean 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+y 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ las presiones en los dos medios y admitimos que 
+\begin_inset Formula $\delta\zeta$
+\end_inset
+
+ es positivo si el desplazamiento de la superficie es hacia el medio 2 (por
+ ejemplo).
+ Entonces el trabajo necesario para realizar la variación de volumen anterior
+ es
+\begin_inset Formula 
+\[
+\int\left(-p_{1}+p_{2}\right)\delta\zeta df
+\]
+
+\end_inset
+
+El trabajo total 
+\begin_inset Formula $\delta R$
+\end_inset
+
+ realizado en el desplazamiento de la superficie se obtiene sumando a este
+ trabajo el conectado con la variación de de área de la superficie.
+ Esta parte del trabajo es proporcional a la variación 
+\begin_inset Formula $\delta f$
+\end_inset
+
+ del área de la superficie y puede ponerse como 
+\begin_inset Formula $\alpha\delta f$
+\end_inset
+
+, en donde 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ se denomina 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Coeficiente de tensión superficial 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+coeficiente de tensión superficial
+\emph default
+.
+ Así el trabajo total es
+\begin_inset Formula 
+\begin{equation}
+\delta R=-\int\left(p_{1}-p_{2}\right)\delta\zeta df+\alpha\delta f\label{L7 p5 ec60.1 Trabajo total}
+\end{equation}
+
+\end_inset
+
+La condición de equilibrio termodinámico exige que 
+\begin_inset Formula $\delta R=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación suponemos que 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ son los radios principales de curvatura en un punto determinado de la superfici
+e; consideramos 
+\begin_inset Formula $R_{1},R_{2}>0$
+\end_inset
+
+ si se trazan en el medio 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Entonces los elementos de longitud 
+\begin_inset Formula $dl_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $dl_{2}$
+\end_inset
+
+ sobre la superficie en sus secciones principales reciben incrementos 
+\begin_inset Formula $\frac{\delta\zeta}{R_{1}}dl_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{\delta\zeta}{R_{2}}dl_{2}$
+\end_inset
+
+ respectivamente, cuando la superficie sufre un desplazamiento infinitesimal;
+ aquí 
+\begin_inset Formula $dl_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $dl_{2}$
+\end_inset
+
+ se consideran como elementos de las circunferencias de radios 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+.
+ De aquí que el elemento superficial 
+\begin_inset Formula $df=dl_{1}dl_{2}$
+\end_inset
+
+ resulte, después del desplazamiento
+\begin_inset Formula 
+\[
+dl_{1}\left(1+\frac{\delta\zeta}{R_{1}}\right)dl_{2}\left(1+\frac{\delta\zeta}{R_{2}}\right)\approx dl_{1}dl_{2}\left(1+\frac{\delta\zeta}{R_{1}}+\frac{\delta\zeta}{R_{2}}\right)
+\]
+
+\end_inset
+
+es decir, varía en la cantidad 
+\begin_inset Formula $\delta\zeta df\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)$
+\end_inset
+
+.
+ A partir de aquí vemos que la variación total del área de la superficie
+ de separación es
+\begin_inset Formula 
+\begin{equation}
+\delta f=\int\delta\zeta\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)df\label{L7 p5 ec60.2 Variación de la sup. de separación}
+\end{equation}
+
+\end_inset
+
+Sustituyendo estas expresiones en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.1 Trabajo total"
+
+\end_inset
+
+ e igualando a cero obtnemos la ecuación de equilibrio en la forma: 
+\begin_inset Formula 
+\[
+\delta f=\int\delta\zeta\left(\left(p_{1}-p_{2}\right)-\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)\right)df=0
+\]
+
+\end_inset
+
+Esta condición debe ser válida para cualquier desplazamiento infinitesimal
+ de la superficie, es decir, para todo 
+\begin_inset Formula $\delta\zeta$
+\end_inset
+
+.
+ Por tanto, la expresión del integrando debe ser cero:
+\begin_inset Formula 
+\begin{equation}
+p_{1}-p_{2}=\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)\quad\text{Fórmula de Laplace}\label{L7 p5 ec60.3 Fórmula de Laplace}
+\end{equation}
+
+\end_inset
+
+Esta es la 
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Fórmula de Laplace 
+\begin_inset Formula $p_{1}-p_{2}=\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+fórmula de Laplace
+\series default
+ que da la presión superficial.
+ Vemos que si 
+\begin_inset Formula $R_{1},R_{2}>0$
+\end_inset
+
+ entonces 
+\begin_inset Formula $p_{1}-p_{2}>0$
+\end_inset
+
+.
+ Esto significa que la presión es mayor en el medio cuya superficie es convexa.
+ Si 
+\begin_inset Formula $R_{1}=R_{2}=\infty$
+\end_inset
+
+, es decir, la superficie de separación es plana, la presión es la misma
+ en los dos medios, como era de esperar.
+\end_layout
+
+\begin_layout Standard
+Aplicamos ahora la fórmula de Laplace 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.3 Fórmula de Laplace"
+
+\end_inset
+
+ para investigar el equilibrio mecánico de dos medios en contacto.
+ Suponemos que no existen fuerzas externas que actúan entre ellos en la
+ superficie de separación o en los propios medios.
+ Usando 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.3 Fórmula de Laplace"
+
+\end_inset
+
+ podemos escribir entonces la ecuación de equilibrio como 
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{R_{1}}+\frac{1}{R_{2}}=constante\label{L7 p5 ec60.4 Cond. de equilibrio mecánico}
+\end{equation}
+
+\end_inset
+
+Así, la suma de las curvaturas debe ser una constante en cualquier superficie
+ de separación.
+ Si la superficie completa es libre, la condición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.4 Cond. de equilibrio mecánico"
+
+\end_inset
+
+ significa que debe ser esférica (por ejemplo la superficie de una pequeña
+ gota cuando puede despreciarse el efecto de la gravedad).
+ Sin embargo, si la superficie está apoyada a lo largo de una curva determinada,
+ su forma es menos simple.
+\end_layout
+
+\begin_layout Standard
+Cuando se aplica la condición de equilibrio mecánico 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.4 Cond. de equilibrio mecánico"
+
+\end_inset
+
+ al equilibrio de películas delgadas apoyadas en marcos rígidos debe ser
+ cero la constante del segundo miembro.
+ En este caso, la suma 
+\begin_inset Formula $1/R_{1}+1/R_{2}$
+\end_inset
+
+ debe ser la misma en todos los puntos de la superficie libre de la partícula,
+ mientras que en caras opuestas de los mismos debe tener signos opuestos,
+ por lo que si un lado es convexo, el otro será cóncavo y los radios de
+ curvatura serán iguales pero de signos opuestos.
+ De aquí se deduce que la condición de equilibrio para una película delgada
+ es
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{R_{1}}+\frac{1}{R_{2}}=0\label{L7 p6 ec60.5 Cond. equilibrio (marcos rígidos)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+
+\family sans
+\series medium
+\shape smallcaps
+Condición de equilibrio en la superficie de un medio dentro de un campo
+ gravitatorio
+\family default
+\series default
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+Por sencillez, admitiremos que el medio 2 es la atmósfera, cuya presión
+ puede considerarse como constante en toda la superficie y que el medio
+ 1 es un fluido incompresible.
+ Entonces tenemos que 
+\begin_inset Formula $p_{2}=constante$
+\end_inset
+
+, mientras que 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ es la presión del fluido, 
+\begin_inset Formula $p=constante-\rho gz$
+\end_inset
+
+, midiéndose la coordenada 
+\begin_inset Formula $z$
+\end_inset
+
+ verticalmente hacia arriba.
+ Así pues, la condición de equilibrio se transforma en 
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{R_{1}}+\frac{1}{R_{2}}+\frac{\rho gz}{\alpha}=constante\label{L7 p6 ec60.6 Cond. equilibrio (en campo gravitatorio)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para determinar la forma de equilibrio de la superficie del fluido en casos
+ particulares es normalmente más conveniente utilizar la condición de equilibrio
+ no en la forma 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p6 ec60.6 Cond. equilibrio (en campo gravitatorio)"
+
+\end_inset
+
+, sino la obtenida directamente el problema variacional de minimizar la
+ energía libre total.
+ La energía libre interna de un fluido incompresible depende únicamente
+ del volumen del mismo y no de la forma de su superficie.
+ De esta última depende, en primer lugar, la energía libre de la superficie
+ 
+\begin_inset Formula $\int\alpha df$
+\end_inset
+
+ y en segudno lugar, la energía del campo exterior (gravedad), que es 
+\begin_inset Formula $g\rho\int zdV$
+\end_inset
+
+.
+ Así pues, la condición de equilibrio puede escribirse como
+\begin_inset Formula 
+\begin{equation}
+\alpha\int df+g\rho\int zdV=\text{mínimo}\label{L7 p6 ec60.7}
+\end{equation}
+
+\end_inset
+
+El mínimo deberá determinarse sometido a la condición 
+\begin_inset Formula 
+\begin{equation}
+\int dV=constante\label{L7 p6 ec60.8}
+\end{equation}
+
+\end_inset
+
+que expresa el hecho de que el volumen del fluido es constante.
+\end_layout
+
+\begin_layout Standard
+Las constantes 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\rho$
+\end_inset
+
+ y 
+\begin_inset Formula $g$
+\end_inset
+
+ aparecen en las condiciones de equilibrio 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p6 ec60.6 Cond. equilibrio (en campo gravitatorio)"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p6 ec60.7"
+
+\end_inset
+
+ únicamente en la forma 
+\begin_inset Formula $\alpha/g\rho$
+\end_inset
+
+.
+ Este cociente tiene las dimensiones de 
+\begin_inset Formula $cm^{2}$
+\end_inset
+
+.
+ La longitud 
+\begin_inset Formula 
+\begin{equation}
+a=\sqrt{\frac{2\alpha}{g\rho}}\label{L7 p7 ec60.9 Constante de capilaridad}
+\end{equation}
+
+\end_inset
+
+se denomina 
+\emph on
+constante de capilaridad
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Constante de capilaridad 
+\begin_inset Formula $a=\sqrt{\frac{2\alpha}{g\rho}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\emph default
+ para la sustancia.
+ 
+\series bold
+La forma de la superficie del fluido está determinada únicamente por esta
+ magnitud
+\series default
+.
+ Si la constante capilar es grande en comparación con la dimensión del medio
+ podemos despreciar la gravedad en la determinación de la superficie.
+\end_layout
+
+\begin_layout Standard
+Con objeto de hallar la forma de la superficie a partir de la condición
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.4 Cond. de equilibrio mecánico"
+
+\end_inset
+
+ o 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p6 ec60.6 Cond. equilibrio (en campo gravitatorio)"
+
+\end_inset
+
+ necesitamos fórmulas que determinen los radios de curvatura a partir de
+ la forma de la superficie.
+ Estas fórmulas son en general muy complicadas pero se simplifican cuando
+ las superficie se desvían de un plano sólo ligeramente.
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $z=\zeta\left(x,y\right)$
+\end_inset
+
+ la ecuación de la superficie y supongamos que 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ es pequeña en todos los puntos; es decir, que la superficie se desvía sólo
+ ligeramente del plano 
+\begin_inset Formula $z=0$
+\end_inset
+
+.
+ El área 
+\begin_inset Formula $f$
+\end_inset
+
+ de la superficie viene dada por la integral
+\begin_inset Formula 
+\[
+f=\int\sqrt{1+\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\left(\frac{\partial\zeta}{\partial y}\right)^{2}}dxdy
+\]
+
+\end_inset
+
+o sea, para valores pequeños de 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ podemos aproximar por 
+\begin_inset Formula 
+\begin{equation}
+f\simeq\int\left(1+\frac{1}{2}\left(\frac{\partial\zeta}{\partial x}\right)^{2}+\frac{1}{2}\left(\frac{\partial\zeta}{\partial y}\right)^{2}\right)dx\, dy\label{L7 p7 ec60.10 Area de la superficie (aprox)}
+\end{equation}
+
+\end_inset
+
+La variación 
+\begin_inset Formula $\delta f$
+\end_inset
+
+ es
+\begin_inset Formula 
+\[
+\delta f=\int\left(\frac{\partial\zeta}{\partial x}\frac{\partial\delta\zeta}{\partial x}+\frac{\partial\zeta}{\partial y}\frac{\partial\delta\zeta}{\partial y}\right)\delta\zeta\, dx\, dy
+\]
+
+\end_inset
+
+Comparando este resultado con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.2 Variación de la sup. de separación"
+
+\end_inset
+
+ tenemos
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{R_{1}}+\frac{1}{R_{2}}=-\left(\frac{\partial^{2}\zeta}{\partial x^{2}}+\frac{\partial^{2}\zeta}{\partial y^{2}}\right)\label{L7 p7 ec60.11 Suma de las curvaturas de una superficie ligeramente curvada}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando están en equilibrio tres medios en contacto las superficies de separación
+ son tales que la resultante de las fuerzas superficie-tensión es nula en
+ la línea común de intersección.
+ Esta condición implica que las superficies de separación deben cortarse
+ en ángulos (denominados 
+\emph on
+ángulos de contacto
+\emph default
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Ángulos de contacto
+\end_layout
+
+\end_inset
+
+) determinados por los valores de los coeficientes de tensión superficial.
+\end_layout
+
+\begin_layout Standard
+PAG8
+\end_layout
+
 \end_body
 \end_document
