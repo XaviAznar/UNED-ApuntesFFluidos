@@ -85,10 +85,10 @@ name "L7 sec:60 Fórmula-de-Laplace (B)"
 \end_layout
 
 \begin_layout Standard
-En este capíitulo estudiaremos los fenómenos que se producen cerca de la
+En este capítulo estudiaremos los fenómenos que se producen cerca de la
  superficie que separa dos medios continuos.
  Si la superficie de separación es curva, las presiones cerca de la misma
- en ambos medios es diferente.
+ en ambos medios son diferentes.
  Para determinar la diferencia de presiones (denominada 
 \emph on
 
@@ -156,7 +156,7 @@ El trabajo total
 \end_inset
 
  realizado en el desplazamiento de la superficie se obtiene sumando a este
- trabajo el conectado con la variación de de área de la superficie.
+ trabajo el conectado con la variación de área de la superficie.
  Esta parte del trabajo es proporcional a la variación 
 \begin_inset Formula $\delta f$
 \end_inset
@@ -291,7 +291,7 @@ reference "L7 p5 ec60.1 Trabajo total"
 
 \end_inset
 
- e igualando a cero obtnemos la ecuación de equilibrio en la forma: 
+ e igualando a cero obtenemos la ecuación de equilibrio en la forma: 
 \begin_inset Formula 
 \[
 \delta f=\int\delta\zeta\left(\left(p_{1}-p_{2}\right)-\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)\right)df=0
@@ -485,7 +485,7 @@ reference "L7 p6 ec60.6 Cond. equilibrio (en campo gravitatorio)"
 \begin_inset Formula $\int\alpha df$
 \end_inset
 
- y en segudno lugar, la energía del campo exterior (gravedad), que es 
+ y en segundo lugar, la energía del campo exterior (gravedad), que es 
 \begin_inset Formula $g\rho\int zdV$
 \end_inset
 
@@ -753,7 +753,7 @@ reference "L6 p8 ec60.13"
 \begin_inset Formula $\alpha$
 \end_inset
 
- de tensión superficial puede no ser consatnte en toda la superficie (por
+ de tensión superficial puede no ser constante en toda la superficie (por
  ejemplo, si tenemos en cuenta variaciones de temperatura).
  Entonces, además de la fuerza normal (que es cero en el caso de una superficie
  plana) existe otra fuerza tangencial a la superficie.
@@ -813,8 +813,672 @@ reference "L6 p8 ec60.14 Condición límite (con tensión superf.)"
  miembro, en este caso, es un vector tangencial.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
+Ondas de capilaridad (E) 
+\begin_inset CommandInset label
+LatexCommand label
+name "L6 sec:61 Ondas de capilaridad (E)"
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las superficies de los fluidos tienden a adquirir una forma de equilibrio,
+ tanto bajo la acción de la fuerza de la gravedad como por las fuerzas de
+ tensión superficial.
+ La capilaridad tiene una influencia importante sobre las ondas de gravedad
+ de pequeña longitud de onda.
+\end_layout
+
+\begin_layout Standard
+Como en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:12 Ondas-de-gravedad"
+
+\end_inset
+
+ suponemos que la amplitud de las oscilaciones es pequeña comparada con
+ la longitud de onda
+\begin_inset Formula 
+\[
+a\ll\lambda
+\]
+
+\end_inset
+
+ Para el potencial de velocidad tenemos como antes la ecuación 
+\begin_inset Formula $\Delta\phi=0$
+\end_inset
+
+.
+ Pero ahora la condición en la superficie del fluido es diferente: la diferencia
+ de presiones entre las dos caras de la superficie no es cero, sino que
+ viene dada por la fórmula de Laplace 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.3 Fórmula de Laplace"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Llamamos 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ a la coordenada 
+\begin_inset Formula $z$
+\end_inset
+
+ de un punto de la superficie.
+ Como 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ es pequeña podemos utilizar la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p7 ec60.11 Suma de las curvaturas de una superficie ligeramente curvada"
+
+\end_inset
+
+ y escribir la fórmula de Laplace en la forma
+\begin_inset Formula 
+\[
+p-p_{0}=\alpha\left(\frac{\partial^{2}\zeta}{\partial x^{2}}+\frac{\partial^{2}\zeta}{\partial y^{2}}\right)
+\]
+
+\end_inset
+
+Aquí 
+\begin_inset Formula $p$
+\end_inset
+
+ es la presión en el fluido cerca de la superficie y 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ es la presión externa constante.
+ Para 
+\begin_inset Formula $p$
+\end_inset
+
+ podemos sustituir, de acuerdo con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 p44 ec:12.2 Ecuación para la presión (onda de gravedad)"
+
+\end_inset
+
+ por 
+\begin_inset Formula 
+\[
+p=-\rho g\zeta-\rho\frac{\partial\phi}{\partial t}
+\]
+
+\end_inset
+
+ obteniendo
+\begin_inset Formula 
+\[
+\rho g\zeta+\rho\frac{\partial\phi}{\partial t}-\alpha\left(\frac{\partial^{2}\zeta}{\partial x^{2}}+\frac{\partial^{2}\zeta}{\partial y^{2}}\right)r=0
+\]
+
+\end_inset
+
+Por las mismas razones que en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:12 Ondas-de-gravedad"
+
+\end_inset
+
+, podemos omitir la constante 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+ redefiniendo 
+\begin_inset Formula $\phi$
+\end_inset
+
+.
+ Derivando esta expresión respecto a 
+\begin_inset Formula $t$
+\end_inset
+
+ y sustituyendo 
+\begin_inset Formula $\frac{\partial\zeta}{\partial t}$
+\end_inset
+
+ por 
+\begin_inset Formula $\frac{\partial\phi}{\partial z}$
+\end_inset
+
+ tenemos la condición límite sobre el potencial 
+\begin_inset Formula $\phi$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\rho gz\frac{\partial\phi}{\partial z}+\rho\frac{\partial^{2}\phi}{\partial t^{2}}-\alpha\frac{\partial}{\partial z}\left(\frac{\partial^{2}\phi}{\partial x^{2}}+\frac{\partial^{2}\phi}{\partial y^{2}}\right)=0\text{ para }z=0\label{L6 p13 ec61.1 Cond.limite para el potencial}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consideramos una onda plana que se propaga en la dirección del eje 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Como en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:12 Ondas-de-gravedad"
+
+\end_inset
+
+, obtenemos una solución de la forma 
+\begin_inset Formula $\phi=Ae^{kz}\cos\left(kx-\omega t\right)$
+\end_inset
+
+.
+ Se obtiene ahora la relación entre 
+\begin_inset Formula $k$
+\end_inset
+
+ y 
+\begin_inset Formula $\omega$
+\end_inset
+
+ a partir de la condición límite 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.1 Trabajo total"
+
+\end_inset
+
+ y resulta ser:
+\begin_inset Formula 
+\begin{equation}
+\omega^{2}=gk+\frac{\alpha k^{3}}{\rho}\label{L6 p13 ec51.2 Relacion w y k}
+\end{equation}
+
+\end_inset
+
+Vemos que en el caso de longitudes de onda largas, 
+\begin_inset Formula $k\ll\sqrt{\frac{g\rho}{\alpha}}$
+\end_inset
+
+ o sea, 
+\begin_inset Formula $k\ll1/a$
+\end_inset
+
+ (en donde 
+\begin_inset Formula $a$
+\end_inset
+
+ es la constante de capilaridad) puede despreciarse el efecto de la capilaridad
+ y tenemos una onda de gravedad pura.
+ En el caso opuesto, de longitudes de onda cortas, puede despreciarse el
+ efecto de la gravedad.
+ Entonces:
+\begin_inset Formula 
+\begin{equation}
+\omega^{2}=\frac{\alpha k^{3}}{\rho}\label{L6 p13 ec61.3 Relación w y k (longitudes de onda cortas)}
+\end{equation}
+
+\end_inset
+
+Estas ondas se denominan 
+\emph on
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+
+\emph off
+Ondas de capilaridad
+\end_layout
+
+\end_inset
+
+ondas de capilaridad
+\emph default
+.
+ Los casos intemedios se denomina 
+\emph on
+ondas de gravedad y capilaridad
+\emph default
+.
+\end_layout
+
+\begin_layout Standard
+A continuación nos concentramos en la naturaleza de las oscilaciones de
+ una gota esférica de fluido incompresible bajo la acción de fuerzas capilares.
+ Las oscilaciones hacen que la superficie de la gota se desvíe de su forma
+ esférica.
+ Como es normal, supondremos que la amplitud de las oscilaciones es pequeña.
+\end_layout
+
+\begin_layout Standard
+Empezaremos por determinar el valor de la suma 
+\begin_inset Formula $1/R_{1}+1/R_{2}$
+\end_inset
+
+ para una superficie ligeramente distinta de una esfera.
+ A continuación procederemos como en la deducción de la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p7 ec60.11 Suma de las curvaturas de una superficie ligeramente curvada"
+
+\end_inset
+
+.
+ El área de una superficie dada en coordenadas esféricas 
+\begin_inset Formula $r,\theta,\phi$
+\end_inset
+
+ mediante una función 
+\begin_inset Formula $r=r\left(\theta,\phi\right)$
+\end_inset
+
+ es
+\begin_inset Formula 
+\begin{equation}
+f=\int_{0}^{2\pi}\int_{0}^{\pi}\sqrt{r^{2}+\left(\frac{\partial r}{\partial\theta}\right)^{2}+\frac{1}{\sin^{2}\theta}\left(\frac{\partial r}{\partial\phi}\right)^{2}}r\sin\theta d\theta d\phi\label{L6 p13 ec61.4}
+\end{equation}
+
+\end_inset
+
+Una superficie esférica viene dada por 
+\begin_inset Formula $r=constante=R$
+\end_inset
+
+ siendo 
+\begin_inset Formula $R$
+\end_inset
+
+ el radio de la esfera, y una superficie próxima viene dada por 
+\begin_inset Formula $r=R+\zeta$
+\end_inset
+
+, donde 
+\begin_inset Formula $\zeta$
+\end_inset
+
+ es pequeño.
+ Sustituyendo en 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p13 ec61.4"
+
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\[
+f=\int_{0}^{2\pi}\int_{0}^{\pi}\left[\left(R+\zeta\right)^{2}+\frac{1}{2}\left(\frac{\partial\zeta}{\partial\theta}\right)^{2}+\frac{1}{\sin^{2}\theta}\left(\frac{\partial\zeta}{\partial\phi}\right)^{2}\right]\sin\theta d\theta d\phi
+\]
+
+\end_inset
+
+Encontremos la variación 
+\begin_inset Formula $\delta f$
+\end_inset
+
+ del área cuando varía 
+\begin_inset Formula $\zeta$
+\end_inset
+
+.
+ Tenemos
+\begin_inset Formula 
+\[
+\delta f=\int_{0}^{2\pi}\int_{0}^{\pi}\left[2\left(R+\zeta\right)\delta\zeta+\frac{\partial\zeta}{\partial\theta}\frac{\partial\delta\zeta}{\partial\theta}+\frac{1}{\sin^{2}\theta}\frac{\partial\zeta}{\partial\phi}\frac{\partial\delta\zeta}{\partial\phi}\right]\sin\theta d\theta d\phi
+\]
+
+\end_inset
+
+Integrando el segundo término por partes respecto a 
+\begin_inset Formula $\theta$
+\end_inset
+
+ y el tercero por partes respecto a 
+\begin_inset Formula $\phi$
+\end_inset
+
+ obtenemos
+\begin_inset Formula 
+\[
+\delta f=\int_{0}^{2\pi}\int_{0}^{\pi}\left[2\left(R+\zeta\right)-\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\zeta}{\partial\theta}\right)-\frac{1}{\sin^{2}\theta}\frac{\partial^{2}\zeta}{\partial\phi^{2}}\right]\delta\zeta\sin\theta d\theta d\phi
+\]
+
+\end_inset
+
+ Si dividimos la expresión entre llaves por 
+\begin_inset Formula $R\left(R+2\zeta\right)$
+\end_inset
+
+, el coeficiente resultande de 
+\begin_inset Formula $\delta\zeta\delta f\approx\delta\zeta R\left(R+2\zeta\right)\sin\theta d\theta d\phi$
+\end_inset
+
+ en el integrando es, según la fórmula 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.2 Variación de la sup. de separación"
+
+\end_inset
+
+ , precisamente la suma requerida de las curvaturas, corregidas hasta los
+ términos de primer orden en 
+\begin_inset Formula $\zeta$
+\end_inset
+
+.
+ Así obtenemos
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{R_{1}}+\frac{1}{R_{2}}=\frac{2}{R}-\frac{2\zeta}{R^{2}}-\frac{1}{R^{2}}\left(\frac{1}{\sin^{2}\theta}\frac{\partial^{2}\zeta}{\partial\phi^{2}}+\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\zeta}{\partial\theta}\right)\right)\label{L6 p14 ec61.5 Suma de curvaturas (esfera)}
+\end{equation}
+
+\end_inset
+
+El primer término corresponde a una superficie esférica, en la cual 
+\begin_inset Formula $R_{1}=R=R_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El potencial de velocidades 
+\begin_inset Formula $\psi$
+\end_inset
+
+ satisface la ecuación de Laplace 
+\begin_inset Formula $\Delta\psi=0$
+\end_inset
+
+ con una condición límite en 
+\begin_inset Formula $r=R$
+\end_inset
+
+ semejante a la de una superficie plana:
+\begin_inset Formula 
+\[
+\rho\frac{\partial\psi}{\partial t}+\alpha\left(\frac{2}{R}-\frac{2\zeta}{R^{2}}-\frac{1}{R^{2}}\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial\zeta}{\partial\theta}\right)+\frac{1}{\sin^{2}\theta}\frac{\partial^{2}\zeta}{\partial\phi^{2}}\right]\right)+p_{0}=0
+\]
+
+\end_inset
+
+La constante 
+\begin_inset Formula $p_{0}+\frac{2\alpha}{R}$
+\end_inset
+
+ puede omitirse de nuevo; derivando respecto al tiempo y poniendo 
+\begin_inset Formula $\partial\zeta/\partial t=v_{\tau}=\partial\psi/\partial r$
+\end_inset
+
+, tenemos la condición límite sobre 
+\begin_inset Formula $\psi$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+\rho\frac{\partial^{2}\psi}{\partial t^{2}}-\frac{\alpha}{R^{2}}\left(2\frac{\partial\psi}{\partial r}+\frac{\partial}{\partial r}\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\frac{\partial\psi}{\partial\theta}\right)+\frac{1}{\sin^{2}\theta}\frac{\partial^{2}\psi}{\partial\phi^{2}}\right]\right)=0\text{ para }r=R\label{L6 p14 ec61.6}
+\end{equation}
+
+\end_inset
+
+ Buscamos una solución en forma de onda estacionaria 
+\begin_inset Formula $\psi=e^{-i\omega t}f\left(r,\theta,\phi\right)$
+\end_inset
+
+ en donde la función 
+\begin_inset Formula $f$
+\end_inset
+
+ satisface la ecuación de Laplace 
+\begin_inset Formula $\Delta f=0$
+\end_inset
+
+.
+ Cualquier solución de la ecuación de Laplace puede representarse como una
+ combinación lineal de 
+\emph on
+funciones armónicas esféricas volumétricas
+\emph default
+ 
+\begin_inset Formula $r^{l}Y_{lm}\left(\theta,\phi\right)$
+\end_inset
+
+ en donde 
+\begin_inset Formula $Y_{lm}\left(\theta,\phi\right)$
+\end_inset
+
+ son los armónicos esféricos de Laplace: 
+\begin_inset Formula $Y_{lm}\left(\theta,\phi\right)=P_{l}^{m}\left(\cos\theta\right)e^{im\phi}$
+\end_inset
+
+.
+ Aquí 
+\begin_inset Formula $P_{l}^{m}\left(\cos\theta\right)=\sin^{m}\theta\frac{d^{m}P_{l}\left(\cos\theta\right)}{d\left(\cos\theta\right)^{m}}$
+\end_inset
+
+ es lo que se denomina una 
+\emph on
+función de Legendre asociada
+\emph default
+, siendo 
+\begin_inset Formula $P_{l}\left(\cos\theta\right)$
+\end_inset
+
+ el polinomio de Legendre de orden 
+\begin_inset Formula $l$
+\end_inset
+
+.
+ Como se sabe 
+\begin_inset Formula $l$
+\end_inset
+
+ adquiere todos los valores enteros desde cero en adelante, mientras que
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ toma los valores 
+\begin_inset Formula $0,\pm1,\pm2,\ldots,\pm l$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De acuerdo con ello buscaremos una solución particular del problema en la
+ forma
+\begin_inset Formula 
+\begin{equation}
+\psi=Ae^{-i\omega t}r^{l}P_{l}^{m}\left(\cos\theta\right)e^{im\phi}\label{L6 p15 ec61.7 Forma de la solución}
+\end{equation}
+
+\end_inset
+
+La frecuencia 
+\begin_inset Formula $\omega$
+\end_inset
+
+ debe ser de tal tipo que satisfaga la condición límite 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p14 ec61.6"
+
+\end_inset
+
+.
+ Sustituyendo la expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p15 ec61.7 Forma de la solución"
+
+\end_inset
+
+ y utilizando el hecho de que el armónico esférico 
+\begin_inset Formula $Y_{lm}$
+\end_inset
+
+ satisface 
+\begin_inset Formula 
+\[
+\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial Y_{lm}}{\partial\theta}\right)+\frac{1}{\sin^{2}\theta}\frac{\partial^{2}Y_{lm}}{\partial\phi^{2}}+l\left(l+1\right)Y_{lm}=0
+\]
+
+\end_inset
+
+ se halla (eliminando 
+\begin_inset Formula $\psi$
+\end_inset
+
+)
+\begin_inset Formula 
+\[
+\rho\omega+l\alpha\frac{2-l\left(l+1\right)}{R^{3}}=0
+\]
+
+\end_inset
+
+o sea, 
+\begin_inset Formula 
+\begin{equation}
+\omega^{2}=\frac{\alpha l\left(l-1\right)\left(l+2\right)}{\rho R^{3}}\label{L6 p15 ec61.8 Frecuencias propias de las oscilaciones por capilaridad de una gota esférica}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta fórmula da las frecuencias propias de las oscilaciones por capilaridad
+ de una gota esférica.
+ Vemos que depende únicamente de 
+\begin_inset Formula $l$
+\end_inset
+
+ y no de 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Sin embargo, para un valor dado de 
+\begin_inset Formula $l$
+\end_inset
+
+, existen 
+\begin_inset Formula $2l+1$
+\end_inset
+
+ funciones diferentes en correspondencia con 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p15 ec61.7 Forma de la solución"
+
+\end_inset
+
+.
+ Así, a cada una de las frecuencia 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p15 ec61.8 Frecuencias propias de las oscilaciones por capilaridad de una gota esférica"
+
+\end_inset
+
+ le corresponden 
+\begin_inset Formula $2l+1$
+\end_inset
+
+ oscilaciones distintas.
+ Las oscilaciones independientes que poseen la misma frecuencia se dice
+ que son 
+\emph on
+degeneradas
+\emph default
+; en este caso, tenemos una degeneración de orden 
+\begin_inset Formula $2l+1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La expresión 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p15 ec61.8 Frecuencias propias de las oscilaciones por capilaridad de una gota esférica"
+
+\end_inset
+
+ se anula para 
+\begin_inset Formula $l=0$
+\end_inset
+
+ y 
+\begin_inset Formula $l=1$
+\end_inset
+
+.
+ El valor 
+\begin_inset Formula $l=0$
+\end_inset
+
+ corresponde a oscilaciones radiales, es decir, pulsaciones con simetría
+ esférica de la gota; en el caso de un fluido incompresible, dichas oscilaciones
+ son imposibles.
+ Para 
+\begin_inset Formula $l=1$
+\end_inset
+
+ el movimiento es simplemente un movimiento de traslación de la gota como
+ un todo.
+ La frecuencia de oscilación más pequeña posible de la gota corresponde
+ a 
+\begin_inset Formula $l=2$
+\end_inset
+
+ y es
+\begin_inset Formula 
+\begin{equation}
+\omega_{min}=\sqrt{\frac{8\alpha}{\rho R^{3}}}\label{L6 p15 ec61.9 Frec. min. de osc.}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Influencia de películas absorvidas sobre el movimiento de un líquido (L)
+\end_layout
+
+\begin_layout Standard
+Esta sección está marcada como 
+\emph on
+sólo de lectura
+\emph default
+ en la Guía de la Asignatura.
 \end_layout
 
 \end_body
