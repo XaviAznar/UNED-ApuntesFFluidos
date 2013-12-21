@@ -699,7 +699,122 @@ status open
 \end_layout
 
 \begin_layout Standard
-PAG8
+Finalmente consideramos el tema de las condiciones límites que deben satisfacers
+e en la frontera entre dos fluidos en movimiento cuando se tienen en cuenta
+ las fuerzas de tensión superficial.
+ Si se desprecian, se tiene que en la frontera 
+\begin_inset Formula $n_{k}\left(\sigma_{2,ik}-\sigma_{1,ik}\right)=0$
+\end_inset
+
+, que significa que la fuerza de rozamiento viscoso en la superficie de
+ cada fluido es igual a la del otro.
+ Cuando se incluye la tensión superficial, tenemos que sumar en el segundo
+ miembro una fuerza determinada por la fórmula de Laplace dirigida a lo
+ largo de la normal:
+\begin_inset Formula 
+\begin{equation}
+n_{k}\sigma_{2,ik}-n_{k}\sigma_{1,ik}=\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)n_{i}\label{L6 p8 ec60.12 Fuerza de rozamiento en la frontera entre dos fluidos (con tensión superficial)}
+\end{equation}
+
+\end_inset
+
+Esta ecuación puede escribirse también en la forma:
+\begin_inset Formula 
+\begin{equation}
+\left(p_{1}-p_{2}\right)n_{i}=\left(\sigma_{1,ik}^{\prime}-\sigma_{2,ik}^{\prime}\right)n_{k}+\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)n_{i}\label{L6 p8 ec60.13}
+\end{equation}
+
+\end_inset
+
+Si ambos fluidos son ideales, las tensiones viscosas 
+\begin_inset Formula $\sigma_{ik}^{\prime}$
+\end_inset
+
+ son cero y nos encontramos de nuevo con la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L7 p5 ec60.3 Fórmula de Laplace"
+
+\end_inset
+
+ de la fórmula de Laplace.
+\end_layout
+
+\begin_layout Standard
+Pero la condición 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p8 ec60.13"
+
+\end_inset
+
+ todavía no es completamente general.
+ La razón es que el coeficiente 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ de tensión superficial puede no ser consatnte en toda la superficie (por
+ ejemplo, si tenemos en cuenta variaciones de temperatura).
+ Entonces, además de la fuerza normal (que es cero en el caso de una superficie
+ plana) existe otra fuerza tangencial a la superficie.
+ Del mismo modo que existe una fuerza volumétrica 
+\begin_inset Formula $-\mathbf{grad}p$
+\end_inset
+
+ por unidad de volumen (como vimos en la sección 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L1 sec:2 Ecuación-de-Euler"
+
+\end_inset
+
+) en aquellos casos en los que la presión no es uniforme, aquí tenemos una
+ fuerza tangencial 
+\begin_inset Formula $\mathbf{f}_{i}=\mathbf{grad}\alpha$
+\end_inset
+
+ por unidad de área de la superficie de separación.
+ En este caso tomaremos el gradiente como positivo, debido a que las fuerzas
+ de tensión superficial tienden a reducir el área de la superficie, mientras
+ que la fuerza de la presión tiende a aumentar el volumen.
+ Sumando esta fuerza al segundo miembro de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p8 ec60.13"
+
+\end_inset
+
+ obtenemos la condición límite:
+\begin_inset Formula 
+\begin{equation}
+\left(p_{1}-p_{2}-\alpha\left(\frac{1}{R_{1}}+\frac{1}{R_{2}}\right)\right)n_{i}=\left(\sigma_{1,ik}^{\prime}-\sigma_{2,ik}^{\prime}\right)n_{k}+\frac{\partial\alpha}{\partial x_{i}}\label{L6 p8 ec60.14 Condición límite (con tensión superf.)}
+\end{equation}
+
+\end_inset
+
+ (el vector normal 
+\begin_inset Formula $\mathbf{n}$
+\end_inset
+
+ está dirigido hacia el medio 1).
+ Esta condición sólo puede satisfacerse en el caso de un fluido viscoso:
+ en un fluido ideal 
+\begin_inset Formula $\sigma_{ik}^{\prime}=0$
+\end_inset
+
+ y el primer miembro de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "L6 p8 ec60.14 Condición límite (con tensión superf.)"
+
+\end_inset
+
+ es un vector dirigido a lo largo de la normal, mientras que el segundo
+ miembro, en este caso, es un vector tangencial.
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
