@@ -145,6 +145,16 @@ thepage
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "L1-fluidos_ideales.lyx"
