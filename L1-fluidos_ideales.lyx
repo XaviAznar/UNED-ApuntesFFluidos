@@ -3472,7 +3472,7 @@ función de corriente
  de manera que las componentes de la velocidad se pueden escribir como 
 \begin_inset Formula 
 \begin{equation}
-v_{x}=\frac{\partial\psi}{\partial y}\quad v_{y}=\frac{\partial\psi}{\partial x}\label{L1 p28 ec:10.9 Velocidad en función de la función de corriente}
+v_{x}=\frac{\partial\psi}{\partial y}\quad v_{y}=-\frac{\partial\psi}{\partial x}\label{L1 p28 ec:10.9 Velocidad en función de la función de corriente}
 \end{equation}
 
 \end_inset
