@@ -1,0 +1,282 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass amsart
+\use_default_options true
+\begin_removed_modules
+eqs-within-sections
+figs-within-sections
+\end_removed_modules
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman bookman
+\font_sans helvet
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Examen 2012-1S Cuestión 1
+\end_layout
+
+\begin_layout Author
+Xavier Aznar
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Cuestión 1
+\series default
+.
+ Demuestre, mediante un análisis de órdenes de magnitud que la fuerza por
+ unidad de superficie ejercida por un fluido (con densidad 
+\begin_inset Formula $\rho$
+\end_inset
+
+ y viscosidad 
+\begin_inset Formula $\mu$
+\end_inset
+
+) sobre un objeto de longitud característica 
+\begin_inset Formula $L$
+\end_inset
+
+ moviéndose con velocidad 
+\begin_inset Formula $U$
+\end_inset
+
+ a bajos números de Reynolds es del orden de 
+\begin_inset Formula $\mu U/L$
+\end_inset
+
+, mientras que a números de Reynolds altos es del orden de 
+\begin_inset Formula $\rho U^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+La fuerza ejercida por el fluido por unidad de longitud y superficie 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ viene dada a partir de 
+\begin_inset Formula 
+\begin{equation}
+F_{i}=-\sigma_{ik}\cdot n_{k}\label{eq:fuerza viscosa}
+\end{equation}
+
+\end_inset
+
+donde 
+\begin_inset Formula $\sigma_{ik}$
+\end_inset
+
+ es el tensor de tensiones y 
+\begin_inset Formula $n_{k}$
+\end_inset
+
+ es un vector normal a la superficie.
+ El tensor de tensiones viene dado por 
+\begin_inset Formula 
+\begin{equation}
+\sigma_{ik}=-p\delta_{ik}+\mu\left(\frac{\partial v_{i}}{\partial x_{k}}+\frac{\partial v_{k}}{\partial x_{i}}\right)\label{eq: tensor de tensiones}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Aunque podemos determinar directamente el orden de magnitud del término
+ relacionado con la viscosidad, debemos obtener el orden de magnitud del
+ término de presión 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Para ello, recurrimos a la ecuación de Navier-Stokes:
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula 
+\begin{equation}
+\rho\frac{\partial\mathbf{v}}{\partial t}+\rho\left(\mathbf{v}\cdot\nabla\right)\mathbf{v}=-\nabla p+\mu\Delta\mathbf{v}\label{eq:NS}
+\end{equation}
+
+\end_inset
+
+Consideramos que la velocidad característica 
+\begin_inset Formula $U$
+\end_inset
+
+ es muy inferior a la velocidad del sonido 
+\begin_inset Formula $c$
+\end_inset
+
+ en el fluido, de manera que el número de Mach es muy inferior a la unidad
+ y podemos considerar el fluido como incompresible (
+\begin_inset Formula $\rho=cte$
+\end_inset
+
+).
+ Por otro lado, consideramos una escala de tiempos en la que la velocidad
+ no varía apreciablemente, por lo que podemos considerar el sistema en régimen
+ estacionario y despreciar las variaciones temporales.
+\end_layout
+
+\begin_layout Proof
+En estas condiciones, la ecuación de Navier-Stokes se simplifica:
+\begin_inset Formula 
+\begin{equation}
+\rho\left(\mathbf{v}\cdot\nabla\right)\mathbf{v}=-\nabla p+\mu\Delta\mathbf{v}\label{eq:NS-simplificada}
+\end{equation}
+
+\end_inset
+
+Si evaluamos el cociente entre los términos inercial y viscoso:
+\begin_inset Formula 
+\begin{equation}
+\frac{\rho\left(\mathbf{v}\cdot\nabla\right)\mathbf{v}}{\mu\Delta\mathbf{v}}\sim\frac{\rho U^{2}/L}{\mu U/L^{2}}=\frac{\rho UL}{\mu}\equiv Re\label{eq:orden de magnitud del cociente inercial vs viscoso}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Así, en el límite de números de Reynolds bajos 
+\begin_inset Formula $\left(Re\ll1\right)$
+\end_inset
+
+ predomina el término viscoso sobre el inercial.
+ En este caso, de la ecuación de Navier-Stokes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:NS-simplificada"
+
+\end_inset
+
+ queda
+\begin_inset Formula 
+\[
+0=-\nabla p+\mu\Delta\mathbf{v}
+\]
+
+\end_inset
+
+por lo que el orden de magnitud de la variación de la presión 
+\begin_inset Formula 
+\begin{equation}
+\frac{\Delta p}{L}\sim\frac{\mu U}{L^{2}}\Rightarrow\Delta p\sim\frac{\mu U}{L}\label{eq:p en Re bajos}
+\end{equation}
+
+\end_inset
+
+Así, el orden de magnitud de la fuerza, 
+\begin_inset Formula $\Delta F\sim\Delta\sigma$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Delta F\sim\Delta p+\frac{\mu U}{L}=\frac{\mu U}{L}\qquad\left(Re\ll1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+En el caso opuesto, para números de Reynolds altos 
+\begin_inset Formula $Re\gg1$
+\end_inset
+
+ predomina el término inercial (podemos considerar 
+\begin_inset Formula $\mu\sim0$
+\end_inset
+
+), por lo que ahora el orden de de magnitud de las variaciones de presión
+ 
+\begin_inset Formula $\Delta p$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\rho\frac{U^{2}}{L}=\frac{\Delta p}{L}\Rightarrow\Delta p\sim\rho U^{2}\label{eq:p en Re altos}
+\end{equation}
+
+\end_inset
+
+Así que el orden de magnitud de la fuerza en este caso 
+\begin_inset Formula 
+\[
+\Delta F\sim\Delta\sigma\sim\Delta p\sim\rho U^{2}\qquad\left(Re\gg1\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
